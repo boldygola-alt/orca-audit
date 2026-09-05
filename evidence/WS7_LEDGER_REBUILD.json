@@ -1,0 +1,22 @@
+{
+  "session": "WS7",
+  "date": "2026-09-05",
+  "action": "Rebuild and validate machine-readable ledger from evidence files",
+  "originalFile": "reports/TESTS_MACHINE_READABLE.json",
+  "rebuiltFile": "reports/TESTS_MACHINE_READABLE_WS7.json",
+  "rebuildToolsUsed": ["python3 tools/ledger.py", "python3 tools/normalize_ledger.py", "python3 tools/build_ws6_ledger.py"],
+  "countsVerified": {
+    "entries": 322,
+    "withTransactionSignature": 309,
+    "withoutTransactionSignature": 13,
+    "openItems": 10,
+    "reconciliationEntriesAdded": 4
+  },
+  "discrepanciesCorrectedInThisPass": [
+    "validUntil enforcement (previous misread corrected by BBS3_expiry_diff.json)",
+    "Swap handler implementation (previous account-count artifact corrected by BB_tagsweep.json)",
+    "Reserves-vs-vault divergence (previous measurement artifact corrected by busybox_custody_true.json)",
+    "Program upgrade control (shared root PDA; separate legacy AMM plain key; all four still upgradable)"
+  ],
+  "notes": "The ledger was rebuilt from the original evidence files using the existing tools. No new tests executed for this rebuild; counts validated by comparing rebuilt file against original. The 4 reconciliation entries (WS7-RECON-01 through WS7-RECON-04) document corrections made since previous record."
+}

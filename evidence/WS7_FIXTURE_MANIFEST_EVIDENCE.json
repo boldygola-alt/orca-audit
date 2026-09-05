@@ -1,0 +1,27 @@
+{
+  "session": "WS7",
+  "date": "2026-09-05",
+  "action": "Document fixture availability for remaining open items",
+  "fixtureManifestReference": "reports/WS7_FIXTURE_MANIFEST.json",
+  "keyUnavailableFixtures": [
+    "Live Manual curve with open graduation window (wavebreak)",
+    "Archival pre-state of GraduateWhirlpool fixture at slot 441,655,843 (wavebreak)",
+    "Funded lp_escrow with position NFT (wavebreak)",
+    "Genuinely expired non-graduated curve (wavebreak)",
+    "Provider signer key (0359c54abfca..2b29) with exact pre-state replay (wavebreak)",
+    "Market updater / authority fixture for Busybox lifecycle and penalty arithmetic (busybox)",
+    "Natural clock-crossing corroboration (optional only; does not change result)"
+  ],
+  "availableFixturesNotFullyUsed": [
+    "Live 32 Busybox markets (14 funded, 18 zero-reserve) — used for swap sweep (BBS2-stale-sweep); not used for complete lifecycle (requires updater/authority fixture)",
+    "Historical transaction signatures in recon/s4_bb_sigs.json — referenced; not replayed at exact pre-state for complete lifecycle",
+    "Cached raw consume->buy pair in recon/txs/ — referenced; not replayed at exact pre-state for arithmetic measurement"
+  ],
+  "fixtureBlockReasonSummary": {
+    "fixtureBlockedCount": 6,
+    "authorityBlockedCount": 3,
+    "fixtureAndAuthorityBlockedCount": 1,
+    "optionalOnlyCount": 1
+  },
+  "notes": "Every unavailable fixture is documented with the exact blocker (missing live account, missing signer, missing historical pre-state, authority-blocked, or genuinely broken fixture). No artificial fixtures were created. No cheatcode balances were used for protocol state. The audit explicitly does not claim the family is clear."
+}
