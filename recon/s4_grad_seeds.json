@@ -1,0 +1,29 @@
+{
+ "checks": {
+  "oracle": "True",
+  "position": "True",
+  "lock_config": "True",
+  "fee_tier_index": "2049",
+  "pool": "mintA=base,mintB=quote,feeTierIndex=2049"
+ },
+ "solved": {
+  "lp_authority": null,
+  "position_mint": null,
+  "quote_token_badge": [
+   "whirl",
+   "token_badge",
+   "whirlpool_config",
+   "quote_mint",
+   null
+  ],
+  "base_token_badge": [
+   "whirl",
+   "token_badge",
+   "whirlpool_config",
+   "base_mint",
+   null
+  ],
+  "whirlpool_init_authority": null,
+  "whirlpool_update_authority": null
+ }
+}

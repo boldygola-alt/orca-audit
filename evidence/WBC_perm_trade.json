@@ -1,0 +1,1913 @@
+{
+ "forkSlotEnd": 444280512,
+ "results": [
+  {
+   "case": "WB-P01 consume: zero signature",
+   "note": "attacker-generated message, all-zero signature",
+   "expect": "rejected: signature/pubkey binding",
+   "forkSlotBefore": 444280476,
+   "forkSlotAfter": 444280478,
+   "sig": "3VeDAGo3DfgVGBEdGSCrALofyWKtQv1a2ijaZSFdgqGZZsGABLMJVw9YthLHZrXPPE1hfznxk2Jqq4PVsSQax4ne",
+   "txErr": {
+    "InstructionError": [
+     1,
+     "ProgramFailedToComplete"
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: solana-program/src/util/secp256k1.rs",
+    "Program log: ** PANICKED **",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 32635 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: SBF program panicked"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "UxcMN9mYG6aJoqikG23pjFhGz5qevvwJD8xa5L8dY84": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983045760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "UxcMN9mYG6aJoqikG23pjFhGz5qevvwJD8xa5L8dY84": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983040760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "UxcMN9mYG6aJoqikG23pjFhGz5qevvwJD8xa5L8dY84": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-P02 consume: claim allowed signer, attacker signature",
+   "note": "tests pubkey-recovery binding",
+   "expect": "rejected: Permission signature is invalid",
+   "forkSlotBefore": 444280478,
+   "forkSlotAfter": 444280480,
+   "sig": "2uXKWyXGxsjdQWTEsr6env8eRZ2EiPB6xU9ioAhmyVqv7m916uchqJfWp15h5khbXFSXDvA9ExitXuRxoj37CCac",
+   "txErr": {
+    "InstructionError": [
+     1,
+     "ProgramFailedToComplete"
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: solana-program/src/util/secp256k1.rs",
+    "Program log: ** PANICKED **",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 37135 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: SBF program panicked"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "E7dXUopKy8FFypC6hb4UcaAYwrb8sHgXCrHETd9fiVBe": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983040760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "E7dXUopKy8FFypC6hb4UcaAYwrb8sHgXCrHETd9fiVBe": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983035760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "E7dXUopKy8FFypC6hb4UcaAYwrb8sHgXCrHETd9fiVBe": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-P03 consume: expired permission",
+   "note": "validUntil in the past",
+   "expect": "rejected: Permission has expired",
+   "forkSlotBefore": 444280480,
+   "forkSlotAfter": 444280482,
+   "sig": "4ytMFVKAWHrYUwBN6skufq3Q2iCGtUfoFUjVpw3afc6vjLr3VsrTcEveUBNqmT5NBciFZBkBU7tC7272fmBdaAhD",
+   "txErr": {
+    "InstructionError": [
+     1,
+     "ProgramFailedToComplete"
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: solana-program/src/util/secp256k1.rs",
+    "Program log: ** PANICKED **",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 32635 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: SBF program panicked"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "UxcMN9mYG6aJoqikG23pjFhGz5qevvwJD8xa5L8dY84": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983035760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "UxcMN9mYG6aJoqikG23pjFhGz5qevvwJD8xa5L8dY84": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983030760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "UxcMN9mYG6aJoqikG23pjFhGz5qevvwJD8xa5L8dY84": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-P04 consume: consumerProgram = busybox",
+   "note": "cross-program permission reuse",
+   "expect": "rejected",
+   "forkSlotBefore": 444280482,
+   "forkSlotAfter": 444280483,
+   "sig": "3BeSz3w5yjtgwCAFF2R43uWVHjjSU3uq7xZhbJhLxgUGv6sVYSqi4r51KpSN5rKDyiHEDavdXP38rRxWPTKByiKL",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Account 8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 23819 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983030760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983025760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-P05 consume: discs=[99] (no trade ix)",
+   "note": "permission not bound to the trade instruction",
+   "expect": "rejected",
+   "forkSlotBefore": 444280484,
+   "forkSlotAfter": 444280486,
+   "sig": "Zcy6QEX7m6AtNk4hzeGr1R4x1a34UM8KALdWXT4wcpBX3vA6iPEyN9nCNB8cmwS3KMZRsoxSTy5yAMpe9M9t3FV",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6004
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Permission signature is invalid",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 35208 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1774"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "EDY4yzk4aynYg4wrnwu4c8G6Ycdj4uqdrwi1JS5N5bju": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983025760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "EDY4yzk4aynYg4wrnwu4c8G6Ycdj4uqdrwi1JS5N5bju": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983020760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "EDY4yzk4aynYg4wrnwu4c8G6Ycdj4uqdrwi1JS5N5bju": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-P06 consume: unknown permissionType",
+   "note": "bitmap/permissionType binding",
+   "expect": "rejected",
+   "forkSlotBefore": 444280486,
+   "forkSlotAfter": 444280488,
+   "sig": "5ugcyfMX22VyiVGRtW8GqcuXoNxZpdi4DvAvHs5cR7fhgv7nLyfxPAMC3vzbMtZfEbyHGX7pzrhd5azcwa8dKDCk",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6004
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Permission signature is invalid",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 34820 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1774"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "C6HUGAX8PRzvjfLjEWLKPsV7eCkURVvieL1RYfy3De9X": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983020760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "C6HUGAX8PRzvjfLjEWLKPsV7eCkURVvieL1RYfy3De9X": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983015760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "C6HUGAX8PRzvjfLjEWLKPsV7eCkURVvieL1RYfy3De9X": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-P07 consume: subject != consumer",
+   "note": "attacker consumes a permission issued for another wallet",
+   "expect": "rejected: subject binding",
+   "forkSlotBefore": 444280488,
+   "forkSlotAfter": 444280489,
+   "sig": "3qfka82ZLMCu862DPJ1m8Aj2HMi14xjSANKzddtA8o19p8HmMnFPwp86p36fdY2i3fDn7EAD3JGrsSBMrUGNkpkD",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Permission subject 9gmP91zD3DP5NGJzuZqKAXqY4PpQq3pBQqJ3MhJcE1oq does not match permission consumer 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 47739 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1771"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "5KsUj13XYFcpnohbbGwABzrDWV6ZYvWN5kkELLEH8uyB": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983015760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "5KsUj13XYFcpnohbbGwABzrDWV6ZYvWN5kkELLEH8uyB": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983010760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "5KsUj13XYFcpnohbbGwABzrDWV6ZYvWN5kkELLEH8uyB": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-P08 consumeCpi as top-level",
+   "note": "tag 1 (CPI variant) called directly",
+   "expect": "rejected: must be called via CPI",
+   "forkSlotBefore": 444280489,
+   "forkSlotAfter": 444280490,
+   "sig": "5qiuYCtohhMEGskncrfvyQD9mQqNM5th5fbjFTTUwyiuXCc9ZbmSV1f6ncaLqPfn9uCCiFSkTkSsrVUhEbBnw9eA",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6006
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 880 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1776"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "Fz7yN4vnpJkNmjhjaxsFn2oVK3xeRQugAVvJf93dkwcN": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983010760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    },
+    "Fz7yN4vnpJkNmjhjaxsFn2oVK3xeRQugAVvJf93dkwcN": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983005760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    },
+    "Fz7yN4vnpJkNmjhjaxsFn2oVK3xeRQugAVvJf93dkwcN": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    }
+   }
+  },
+  {
+   "case": "WB-P09 duplicate consume in one tx",
+   "note": "same permission consumed twice in one tx",
+   "expect": "rejected: duplicate/already-consumed",
+   "forkSlotBefore": 444280490,
+   "forkSlotAfter": 444280492,
+   "sig": "xjegp73nz9mXegzeb3SKEN9pMRa5BAefT8qA9AU2ueHP9aede751rw8G9HwVzWUyz1xfLPkb3bcew1ZmH6yZyM4",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Second PermissionConsumeTopLevel instruction found at index 2",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 8442 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1789"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "5ghRYxwRaj9C68ppZ7LDJqZLLUk8SrX5tPFu2cr5oU5L": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983005760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "5ghRYxwRaj9C68ppZ7LDJqZLLUk8SrX5tPFu2cr5oU5L": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983000760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "5ghRYxwRaj9C68ppZ7LDJqZLLUk8SrX5tPFu2cr5oU5L": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "hash": "6cea66d8a02c5ad7",
+     "token": 10539,
+     "supply": 17816428023126867786,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-P10 consume(attacker-signed) then buy",
+   "note": "permissionless trade via self-signed permission",
+   "expect": "rejected before any transfer",
+   "forkSlotBefore": 444280492,
+   "forkSlotAfter": 444280493,
+   "sig": "TUeggGhFCZvAfN4qqsnfuvxdmiud68r2AFi2L8UEpzKWiEXjR3ZZeFDuCqQL95wBSSGt2pnLYpPSuuMiB1Gsywq",
+   "txErr": {
+    "InstructionError": [
+     1,
+     "ProgramFailedToComplete"
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: solana-program/src/util/secp256k1.rs",
+    "Program log: ** PANICKED **",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 37216 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: SBF program panicked"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    },
+    "FRxE1tbiweNtExiKdgRcCC6dfeaKiYbur9BFCzaVEzPv": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999983000760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    },
+    "FRxE1tbiweNtExiKdgRcCC6dfeaKiYbur9BFCzaVEzPv": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982995760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    },
+    "FRxE1tbiweNtExiKdgRcCC6dfeaKiYbur9BFCzaVEzPv": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    }
+   }
+  },
+  {
+   "case": "WB-C01 buy with no consume ix",
+   "note": "live curve, funded attacker WSOL, no permission",
+   "expect": "6018 missing permission consume",
+   "forkSlotBefore": 444280493,
+   "forkSlotAfter": 444280495,
+   "sig": "3M2qMQCxt5UvQZNW1LxKEcS1YTjHHCSTXxXMiCfAfSGjZeNKPscvWKtGrvE8qhcLd5RP1orEZY4gFhxaQ1z6TuUa",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Could not find a matching PermissionConsume instruction in transaction",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 15968 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1782"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982995760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982990760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-C01b buy zero amount",
+   "note": "zero amount",
+   "expect": "rejected/denied deterministically",
+   "forkSlotBefore": 444280495,
+   "forkSlotAfter": 444280497,
+   "sig": "2UNVDCj2JDStE4nUqPWqCejLaW8cY2EL3MTW5XLei8ZezuFueNxEDMPGFP22PUFKRY2EbBmKvZenyKMPgzs8PdPU",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Could not find a matching PermissionConsume instruction in transaction",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 15966 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1782"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982990760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982985760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-C01b buy max u64",
+   "note": "max u64",
+   "expect": "rejected/denied deterministically",
+   "forkSlotBefore": 444280497,
+   "forkSlotAfter": 444280500,
+   "sig": "4rM1wKuyHKr3dPVDppusUKGJC1vWHBG2iD6optBdU7BRnfmdudQaoTHiY318624qqyL7VW6YyK89DM84eXZuDPHx",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Could not find a matching PermissionConsume instruction in transaction",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 15966 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1782"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982985760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982980760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-C01b buy partial-fill allowed",
+   "note": "partial-fill allowed",
+   "expect": "rejected/denied deterministically",
+   "forkSlotBefore": 444280500,
+   "forkSlotAfter": 444280502,
+   "sig": "5j6ACa3ov8sJwAJJvjVe8dL63UjyrEPq8X8ygiDgDbojiC6dcYompWgxnNt8Ght5eLmhtfaZZmSWSM6mG158Zkem",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Could not find a matching PermissionConsume instruction in transaction",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 15968 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1782"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982980760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982975760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-C01b buy tight threshold",
+   "note": "tight threshold",
+   "expect": "rejected/denied deterministically",
+   "forkSlotBefore": 444280502,
+   "forkSlotAfter": 444280503,
+   "sig": "k4oHrSAMwDdUY8VmTHuGeDEKFEzR669T2ASpABBTvjWNicGYJvQ8J8qLJPxVd4HpThk3UW4KauzBz2aiWCFXnLs",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Could not find a matching PermissionConsume instruction in transaction",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 15984 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1782"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982975760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982970760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-C05a buy: quoteTokenProgram = Token-2022",
+   "note": "wrong quote token program",
+   "expect": "rejected",
+   "forkSlotBefore": 444280503,
+   "forkSlotAfter": 444280505,
+   "sig": "5chgwT1wHEEz5fog7LUvobbFZDgBZtbDZYPV6vV17y9uvx5digKgXiKMbM3ySeZmHuT8HixPgksSZagZMieDfJCU",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6024
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Account So11111111111111111111111111111111111111112 is not owned by TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 44939 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1788"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982970760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982965760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-C05b buy: vault = attacker-owned ATA",
+   "note": "quoteVault replaced by the buyer's own ATA",
+   "expect": "rejected",
+   "forkSlotBefore": 444280506,
+   "forkSlotAfter": 444280508,
+   "sig": "3QwBusMHHcytSgW7GpwqD3nwPzashvs678Z6WZTLDxbwNEiF1Tju8vYd4KjPfn7X5sxg4rZ6JCZ7S5oTxkwo3EEQ",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Account HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 27642 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982965760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982960760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-C05c buy: duplicate mutable account (buyer == vault)",
+   "note": "same account twice / vault is a signer account",
+   "expect": "rejected",
+   "forkSlotBefore": 444280508,
+   "forkSlotAfter": 444280510,
+   "sig": "5LVGbvF1yuF2raExSaxjY75oFndEjEiZnWq3qCVDQjm3ZuYqeqoBEX4mN7iaV2CYTaQ4zLFCusySycFwVBQ7TVyR",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6024
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f is not owned by TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 45622 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1788"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982960760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982955760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-C05d buy: baseMint = other curve's mint",
+   "note": "mint substitution",
+   "expect": "rejected",
+   "forkSlotBefore": 444280510,
+   "forkSlotAfter": 444280511,
+   "sig": "3n1TjwQevrki1QNrSbf3Ukvq8zKxj3LbBhbjrmVjvUuGqqfsNwyhpx9mZzGJTd3w8VzMZeDbsZg4ukdANcHf4x6M",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Account AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 28055 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982955760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982950760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   }
+  },
+  {
+   "case": "WB-C02 buy+buy in one tx",
+   "note": "same instruction twice against the same curve",
+   "expect": "no state carry-over profit",
+   "forkSlotBefore": 444280511,
+   "forkSlotAfter": 444280512,
+   "sig": "4numYf9uqmEExCAeNhSQhgnwjjhVfEzheiERzPhkWdU92m1mt1FZimyJBmeE8DRpW8LfTzdWhiKzs44aSAGiFSan",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Could not find a matching PermissionConsume instruction in transaction",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 15968 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1782"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982950760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999982945760,
+     "hash": "e3b0c44298fc1c14",
+     "token": null,
+     "supply": null,
+     "absent": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "hash": "9627cfc6291b0e6d",
+     "token": 2442025182,
+     "supply": 324600366115867446,
+     "absent": null
+    },
+    "DvbbWHx1CkFi8B8KrMpM5qb7BhHaFb4tkBC7Vdye4UJj": {
+     "lamports": null,
+     "hash": "",
+     "token": null,
+     "supply": null,
+     "absent": true
+    },
+    "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR": {
+     "lamports": 15144960,
+     "hash": "3df13eb804850b60",
+     "token": 13557563334688490753,
+     "supply": 9180864386924543575,
+     "absent": null
+    },
+    "BPmatUT74i3ZMb48JKitYaiuQXuk5Jz7MwDaoESfJcat": {
+     "lamports": 139402787,
+     "hash": "235e39ba24d7d0cc",
+     "token": 137363507,
+     "supply": 14285809269623839622,
+     "absent": null
+    }
+   }
+  }
+ ]
+}

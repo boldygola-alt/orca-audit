@@ -1,0 +1,75 @@
+{
+ "parsed": {
+  "nonce": 1370021847938669,
+  "consumerProgram": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+  "subject": "FyRe6exmXqBh77QQWwzYHQ4cJh2LSAkc3Pfp4XJR7enS",
+  "validUntil": 441643521,
+  "permissionType": 0,
+  "discs": [
+   "08"
+  ],
+  "signer": "0359c54abfca3ce4aa40f74eec17c50f22de42c1002e871fcd98d36f6f186b2b29",
+  "consumedPda": "2fbqsoevHpzejgyZVb2M1W4eRPffAsfvEVyVBr73C64s",
+  "consumedExistsAtFork": false
+ },
+ "results": [
+  {
+   "case": "WB-RP1 exact replay of a live consume (attacker as consumer)",
+   "note": "public permission data; expired permission (validUntil slot 441643521 vs now 444223845)",
+   "forkSlotBefore": 444223845,
+   "forkSlotAfter": 444223847,
+   "sig": "5snmGZUDwA6WCt6Rn2dJFUoPQxnf2h688xKkLgx5MkkTna2Dpkf8kLcY6FJyEE9pciU8D2NqWdxYQVbgRXGWkwTV",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Permission subject FyRe6exmXqBh77QQWwzYHQ4cJh2LSAkc3Pfp4XJR7enS does not match permission consumer 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 47839 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1771"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "attackerTokenDeltas": {}
+  },
+  {
+   "case": "WB-RP2 subject swapped to the attacker, original signature kept",
+   "note": "signature must not verify for a mutated message",
+   "forkSlotBefore": 444223847,
+   "forkSlotAfter": 444223848,
+   "sig": "5eqEx7VLn4dRBpnnoxktKAFEPLrP8VZFCkPTfXK3DEHiNJFSkfPpHNY38cPWiqW3nM1yHDETEfLJGFLwrC9CK9zz",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6006
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 647 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1776"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "attackerTokenDeltas": {}
+  }
+ ]
+}

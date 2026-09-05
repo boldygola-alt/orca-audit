@@ -1,0 +1,58 @@
+{
+ "busyboxOracleCats": {
+  "oracle EXPIRED": 7,
+  "no-oracle(zero reserves)": 10,
+  "oracle valid (future)": 15
+ },
+ "programLamports": {
+  "wavebreak": 1141440,
+  "busybox": 1360441,
+  "orca_amm": 2441443,
+  "whirlpool": 31850581
+ },
+ "farFutureWindows": [
+  {
+   "market": "2JVQeq8rDwYzdocXZ2CYCUhxVYR3rXWb3DsZAuEssPWr",
+   "extraSlots": 84851277,
+   "resA": 0,
+   "resB": 0
+  },
+  {
+   "market": "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci",
+   "extraSlots": 90335362,
+   "resA": 24985402745,
+   "resB": 25109012840
+  },
+  {
+   "market": "7qvjJJZVh9fk2ZTYCpSjoexYomVPr7qtNTFF3ey4JcjQ",
+   "extraSlots": 18446744073265318255,
+   "resA": 0,
+   "resB": 0
+  },
+  {
+   "market": "8RadFPWSmbCLX9bKeYM8Az4x5rkNdyfsRt51Jk2VyYBi",
+   "extraSlots": 86990207,
+   "resA": 0,
+   "resB": 0
+  },
+  {
+   "market": "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia",
+   "extraSlots": 87197017,
+   "resA": 3028513048,
+   "resB": 4168841739
+  },
+  {
+   "market": "B7gLw7KaFFg5vZ4311nfZ6mX6g9DTo5QAXRSJe9FumWm",
+   "extraSlots": 84851150,
+   "resA": 0,
+   "resB": 0
+  },
+  {
+   "market": "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579",
+   "extraSlots": 84851002,
+   "resA": 12416724,
+   "resB": 13667464
+  }
+ ],
+ "ammPoolCount": 0
+}

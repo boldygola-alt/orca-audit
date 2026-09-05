@@ -1,0 +1,96 @@
+{
+ "GwH3Hiv5.jsonl": {
+  "events": 102,
+  "decoded": 102,
+  "unavailable": 0,
+  "kinds": [
+   [
+    "setAuthority:8xtBvp5VS4vyZYfGnykooVyWVsPNSA4A9z62s7RwCX46",
+    2
+   ],
+   [
+    "setAuthority:BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C",
+    2
+   ],
+   [
+    "setAuthority:r21Gamwd9DtyjHeGywsneoQYR39C1VDwrw7tWxHAwh6",
+    1
+   ],
+   [
+    "setAuthority:94kZD71sbTKhqhcvY9D9Ra5BsLzKRZgznbBbQpBWmKrT",
+    1
+   ]
+  ],
+  "topPrograms": [
+   [
+    "11111111111111111111111111111111",
+    122
+   ],
+   [
+    "ComputeBudget111111111111111111111111111111",
+    34
+   ],
+   [
+    "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf",
+    29
+   ],
+   [
+    "BPFLoaderUpgradeab1e11111111111111111111111",
+    6
+   ],
+   [
+    "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY",
+    4
+   ],
+   [
+    "DeJBGdMFa1uynnnKiwrVioatTuHmNLpyFKnmB5kaFdzQ",
+    3
+   ],
+   [
+    "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+    3
+   ]
+  ]
+ },
+ "23zF9Azp.jsonl": {
+  "events": 71,
+  "decoded": 71,
+  "unavailable": 0,
+  "kinds": [
+   [
+    "setAuthority:23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+    1
+   ]
+  ],
+  "topPrograms": [
+   [
+    "11111111111111111111111111111111",
+    41
+   ],
+   [
+    "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY",
+    7
+   ],
+   [
+    "ComputeBudget111111111111111111111111111111",
+    6
+   ],
+   [
+    "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+    3
+   ],
+   [
+    "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    3
+   ],
+   [
+    "BPFLoaderUpgradeab1e11111111111111111111111",
+    1
+   ],
+   [
+    "DeJBGdMFa1uynnnKiwrVioatTuHmNLpyFKnmB5kaFdzQ",
+    1
+   ]
+  ]
+ }
+}

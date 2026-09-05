@@ -1,0 +1,7 @@
+{
+ "account": "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f",
+ "lamports": 2000000000000000,
+ "method": "surfnet_setAccount (fork cheatcode)",
+ "purpose": "pay transaction fees on the local fork for the fresh session actor; the account is the actor's OWN, no protocol balance is involved; never cited as exploit evidence",
+ "fork": "http://127.0.0.1:8899"
+}

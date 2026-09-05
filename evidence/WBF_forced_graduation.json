@@ -1,0 +1,258 @@
+{
+ "curve": "4U4kEQ4nHnF8PuXcCWq9FsTyHyZiCCbHMeMUjGStFj68",
+ "baseMint": "2thCwsk3yxjEB54g8xYUDNeaUFdC8gjWKNfXeJvMT3Mt",
+ "quoteMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+ "destination": "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C",
+ "vault": "G5zcT2QgWpoq4ToV9xC9awtCvmj655W69kx77cQHPAwq",
+ "lpEscrow": "3AJ7A1AZGTM9CpUW2JBpN1HVFBvhBSuu1fHQ4aF5G9sy",
+ "results": [
+  {
+   "case": "WB-F01 attacker triggers graduateManual (target NOT met)",
+   "note": "attacker signs; destination bound to the curve record",
+   "forkSlotBefore": 444222230,
+   "forkSlotAfter": 444222232,
+   "sig": "4kwu8eFnodWPVCFSwTY6Ush1gJ4D8CjsGyUpTkrNSohq8jDfR3eYobKX9Fr5mdx7VwvCfrudhvNHAjeGCuVy3Xuu",
+   "err": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4437 of 1383224 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1377477 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 183 of 1370612 compute units",
+    "Program return: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA pQAAAAAAAAA=",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program 11111111111111111111111111111111 invoke [3]",
+    "Program 11111111111111111111111111111111 success",
+    "Program log: Initialize the associated token account",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 38 of 1365519 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 235 of 1363055 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 13525 of 1376041 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 161 of 1361280 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 38871 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -2044280
+    },
+    "4U4kEQ4nHnF8PuXcCWq9FsTyHyZiCCbHMeMUjGStFj68": {
+     "curveFields": {
+      "baseAmount": [
+       19772848,
+       24742847
+      ],
+      "method1_graduated": [
+       0,
+       1
+      ]
+     }
+    },
+    "G5zcT2QgWpoq4ToV9xC9awtCvmj655W69kx77cQHPAwq": {
+     "tokenAmount": -497
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "tokenAmount": 497
+    },
+    "BnEzz2mkSsNcfEVmderfzB64azEhHhRgH96q15dnRPP1": {
+     "lamports": 2039280
+    },
+    "2thCwsk3yxjEB54g8xYUDNeaUFdC8gjWKNfXeJvMT3Mt": {
+     "supply": 4969999
+    }
+   },
+   "attackerLamportsDelta": -2044280
+  },
+  {
+   "case": "WB-F02 sell AFTER forced graduation",
+   "note": "post-graduation exit for holders",
+   "forkSlotBefore": 444222232,
+   "forkSlotAfter": 444222234,
+   "sig": "3Vx238HzjbozH1qpDSygedCpuXRVnRuNCkAtoTp2BxBFxovt2ddWa97e3hCMfZCj4zyLsyyHrPvV1LreK8Xiotxf",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Token has met graduation conditions and is ready to be graduated",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 10575 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1783"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "attackerLamportsDelta": -5000
+  },
+  {
+   "case": "WB-F03 tokenRefund AFTER forced graduation",
+   "note": "post-graduation refund path",
+   "forkSlotBefore": 444222234,
+   "forkSlotAfter": 444222236,
+   "sig": "cJ8uDqez7AzM486hH4z2RznDnPP6h4JFAM91Lrr7oKYYd7DVs8zY727jpFvPifM3v3cnzpi1YJiB4mpnAT5bK9Z",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenRefund",
+    "Program log: Bonding curve has not expired",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 10781 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1780"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "attackerLamportsDelta": -5000
+  },
+  {
+   "case": "WB-F04 graduateManual AGAIN (repeated payout)",
+   "note": "double-graduation / repeated escrow payout",
+   "forkSlotBefore": 444222236,
+   "forkSlotAfter": 444222238,
+   "sig": "5L1R9NnycgXovR3EeevvmYZWpoCCKw1Guch2BXKCogCKuf1FZ5E66n6Z2vvfZKUxLaQjs3Q26uPY16anoMqKyuDZ",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program log: Bonding curve does not have a Manual instruction or Manual instruction is already called",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 5389 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x177f"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "attackerLamportsDelta": -5000
+  },
+  {
+   "case": "WB-F05 bondingCurveClose by attacker after graduation",
+   "note": "rent/refund custody close gate",
+   "forkSlotBefore": 444222239,
+   "forkSlotAfter": 444222240,
+   "sig": "t3fiSEmZTrWjMct6LyztzU66aK1gnRuQwWr8cAyFG7tGev4NjJwhsyqaFLzRZKWF1t4mRXrHtAWj2NA5s7Kyuoq",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: BondingCurveClose",
+    "Program log: Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f does not have required privilege 10",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 28934 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "attackerLamportsDelta": -5000
+  },
+  {
+   "case": "WB-F00 post-graduation state of 7pjREHY (from WB-G10)",
+   "curve": {
+    "lamports": 15144961,
+    "space": 2048,
+    "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+    "hash": "eab3d00b2f16ec5718da120df91f6391e0f74dbc22590a18a6c24289424fcb0e",
+    "curve": {
+     "discriminator": 2,
+     "base_mint": "FRxED9kiegrioJax6mCAFYKYGKSzBa3dTWXqwGSRx6w3",
+     "quote_mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "creator": "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C",
+     "retainMintAuthority": 1,
+     "buyRequiresPermission": 1,
+     "sellRequiresPermission": 0,
+     "quoteFeeBps": 0,
+     "baseFeeBps": 0,
+     "startPrice": "4124817371235594752",
+     "endPrice": "5833372668713516032",
+     "quoteAmount": 11560648,
+     "baseAmount": 287538580,
+     "launchTime": 355621669,
+     "creatorReward": 0,
+     "graduationTarget": 1677572460000,
+     "graduationTime": 357133594,
+     "graduationReward": 0,
+     "maxBuyAmount": 10000000000,
+     "maxSellAmount": 18446744073709551615,
+     "swapFeeBps": 50,
+     "baseAllocationBps": 10000,
+     "method0_label": 1,
+     "method0_graduated": 0,
+     "method0_feeTier": 2049,
+     "method0_splitBps": 5000,
+     "method0_destination": "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C",
+     "method0_unlocked": 1,
+     "method1_label": 2,
+     "method1_graduated": 1,
+     "method1_feeTier": 0,
+     "method1_splitBps": 5000,
+     "method1_destination": "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C",
+     "method1_unlocked": 0,
+     "minReserveBps": 0,
+     "premintedSupply": 800000000000000
+    }
+   },
+   "mainnetSnapshot": {
+    "quote_amount": 11560648,
+    "base_amount": 229735341,
+    "graduation_reward": 0,
+    "creator_reward": 0,
+    "graduation_target": 1677572460000
+   }
+  }
+ ],
+ "fundingNote": "attacker base balance supplied by fork cheatcodes (fixture only)"
+}

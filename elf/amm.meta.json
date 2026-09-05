@@ -1,0 +1,15 @@
+{
+ "program": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
+ "pd": "DrrJDyBzyuyYAzkkjd6Vu9ZzaDLsKRf4RPXyRE7Uk2A8",
+ "pd_len": 691149,
+ "lamports": 4811287920,
+ "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+ "executable": false,
+ "accountType": 36,
+ "upgrade_slot": 72057594038557537,
+ "upgrade_authority": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+ "header_len": 45,
+ "elf_len": 691104,
+ "elf_sha256": "930a47e23fe7f8185557c1b5acabf658f97ca0f4c6cdd1f0d0510a897a9322e6",
+ "elf_sha256_8": "930a47e23fe7f818"
+}

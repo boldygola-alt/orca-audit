@@ -1,0 +1,477 @@
+{
+ "mainnetSlotAtScan": 444306688,
+ "candidates": {
+  "Pr8kEpckXp": "Pr8kEpckXpoasxBhnCYNKSARA9eSfcxTKMt9QM5Yy4b",
+  "gToveevei3": "gToveevei3ZxJf2byHqz2kAoE3qE2PR8knH88YmTaGp",
+  "2FiXtA6nkM": "2FiXtA6nkMWADDWMzJMFNh46gc6SHNirR4vuoNsh6xYG",
+  "2JVQeq8rDw": "2JVQeq8rDwYzdocXZ2CYCUhxVYR3rXWb3DsZAuEssPWr",
+  "2any1YNCuw": "2any1YNCuwq9aus6a5xHiiZ9t9W9cJc2BVxfLbnQJt7b",
+  "2de7oMLemc": "2de7oMLemcVNo8vaXBxJcx63DHCv2CzPCZtHxN8soRsF",
+  "3b9qGj3HoJ": "3b9qGj3HoJeM7eRYd6NUNWjPJnLmX5aqA81tHCPHJT52",
+  "4AFfguVTj7": "4AFfguVTj7sqSkEU6fzq79ELjw27Cu5YK4fm8HXxnTzw",
+  "5783KdWDm8": "5783KdWDm8neUV3yR7JEDnv3YjxdNXzPZuQAcN5j3rJj",
+  "5aU1HMwjZn": "5aU1HMwjZnRpVeFP1WnzEwPQgX9rgazum1xTvT6ueCiE",
+  "6Vzx4ASRjU": "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci",
+  "6p6Bz97LNP": "6p6Bz97LNPZgTWgRykWoVJx4EtweKTfWkkrr5JmeJ52J",
+  "7fd9UrdnqZ": "7fd9UrdnqZhWAdA6UdkDCXedzWEbZoEQfzBbX3Neek9L",
+  "7qvjJJZVh9": "7qvjJJZVh9fk2ZTYCpSjoexYomVPr7qtNTFF3ey4JcjQ",
+  "8RadFPWSmb": "8RadFPWSmbCLX9bKeYM8Az4x5rkNdyfsRt51Jk2VyYBi",
+  "8VCQDXXksF": "8VCQDXXksFJruJFRfNgwHfA4UkwgESE6pCVaZwmP37hY",
+  "8hbdkPt2CU": "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia",
+  "9Bc7tyaZft": "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN",
+  "9HRPQ3RTJC": "9HRPQ3RTJCc84tueGVY6o3j1gyLMgHYdrfbuePobWTzN",
+  "9PwXMVkFzW": "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf",
+  "B7gLw7KaFF": "B7gLw7KaFFg5vZ4311nfZ6mX6g9DTo5QAXRSJe9FumWm",
+  "BAHUJWuq67": "BAHUJWuq67psgvderBwWm9w4dvvPVWedg3CmFdANjbVZ",
+  "BuCHbw2aCW": "BuCHbw2aCWHjq8m4phReDPrf2tJC59WM9EEXBwNavGda",
+  "CNp3etjEmW": "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd",
+  "CzuQmqj4dS": "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW",
+  "FefUJfaS2V": "FefUJfaS2VpkKCCR7fodHP4xzgEA3qz1NASqdxhQ8Czv",
+  "G9pQE63etk": "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD",
+  "GtBJeuFzSC": "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579",
+  "GvTxvFaHqM": "GvTxvFaHqM6TmxjYeCjSKC4WGLiaD7jzScxZQg2rS4Sy",
+  "GxGxQBvMQ7": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+  "HpGbZwwQ66": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+  "HxNaPy1oYA": "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack"
+ },
+ "cases": [
+  {
+   "case": "BB-DIFF 1 baseline (unmodified expired market) | CzuQmqj4dS slot=444304048 validUntil=415068462 (EXPIRED) | expect the same Oracle-data-is-invalid rejection seen in the sweep",
+   "note": "identical instruction, only the market's validUntil field differs between probes",
+   "forkSlotBefore": 444304048,
+   "forkSlotAfter": 444304049,
+   "sig": "62hpFzTKX7GJJEHCEkVL7EFrf2MVDLVYKK3fK7NKKNoaz1AZsuhsyLv5tBT93zQj5ko7iaCVH3Mpk1dZKqV9SWv3",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Oracle data is invalid",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 9688 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 10900000000,
+    "resB": 500000000,
+    "seq": 642827,
+    "vu": 415068462
+   },
+   "marketAfter": {
+    "resA": 10900000000,
+    "resB": 500000000,
+    "seq": 642827,
+    "vu": 415068462
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW": 7634573591195076395,
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 163500001,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 110000000,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW": 7634573591195076395,
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 163500001,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 110000000,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "forkSlot": 444304048,
+   "validUntil": 415068462,
+   "expired": true,
+   "amount": 54500000,
+   "direction": "A"
+  },
+  {
+   "case": "BB-DIFF 2 same market, validUntil := forkSlot+5000 | CzuQmqj4dS slot=444304049 validUntil=444309049 (valid) | if this succeeds where probe 1 failed, the rejection IS caused by the expiry field",
+   "note": "identical instruction, only the market's validUntil field differs between probes",
+   "forkSlotBefore": 444304049,
+   "forkSlotAfter": 444304050,
+   "sig": "4SmvAbM51QtnbDnbENDxwNFmbo1TNxyx4RxPDT2fkVEFkKs8XDmWbLHXSXhoBQD3YQGrwpia9Yp3pLgUEGbK9JD9",
+   "err": {
+    "InstructionError": [
+     1,
+     "ArithmeticOverflow"
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 10358 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: Program arithmetic overflowed"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 10900000000,
+    "resB": 500000000,
+    "seq": 642827,
+    "vu": 444309049
+   },
+   "marketAfter": {
+    "resA": 10900000000,
+    "resB": 500000000,
+    "seq": 642827,
+    "vu": 444309049
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW": 7634573591195076395,
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 218000001,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 219000000,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW": 7634573591195076395,
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 218000001,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 219000000,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "forkSlot": 444304049,
+   "validUntil": 444309049,
+   "expired": false,
+   "amount": 54500000,
+   "direction": "A"
+  },
+  {
+   "case": "BB-DIFF 3 restored original bytes | CzuQmqj4dS slot=444304050 validUntil=415068462 (EXPIRED) | control: same rejection as probe 1 means the flip - not ordering - caused probe 2",
+   "note": "identical instruction, only the market's validUntil field differs between probes",
+   "forkSlotBefore": 444304050,
+   "forkSlotAfter": 444304052,
+   "sig": "BetDgfrFAXCbbuVNeU5LnjFvJeJKeBGZcHcAsa4KDpmc5WpD7z39erz9uNfArpFifHL6aYNJZYESKYLjSpwqvEZ",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Oracle data is invalid",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 9688 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 10900000000,
+    "resB": 500000000,
+    "seq": 642827,
+    "vu": 415068462
+   },
+   "marketAfter": {
+    "resA": 10900000000,
+    "resB": 500000000,
+    "seq": 642827,
+    "vu": 415068462
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW": 7634573591195076395,
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 272500001,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 328000000,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW": 7634573591195076395,
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 272500001,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 328000000,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "forkSlot": 444304050,
+   "validUntil": 415068462,
+   "expired": true,
+   "amount": 54500000,
+   "direction": "A"
+  },
+  {
+   "case": "BB-DIFF 4a live market before edit | 9PwXMVkFzW slot=444304052 validUntil=444304270 (valid) | control",
+   "note": "identical instruction, only the market's validUntil field differs between probes",
+   "forkSlotBefore": 444304052,
+   "forkSlotAfter": 444304054,
+   "sig": "ZeRUX2UWTe4YGMzANtM88mz7LVpDBnwxJz9v6PJ7XbKpjmGt8jafVHGcb2oggBwtdogyUYEEJxv1YHrfJG8tivy",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1370177 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1365022 compute units",
+    "Program log: Ancient whale song \ud83d\udc0b",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 79907 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": -355823518,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 359405391,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 355823518,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": -359405391
+   },
+   "marketBefore": {
+    "resA": 90167501928,
+    "resB": 35143710108,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "marketAfter": {
+    "resA": 90523325446,
+    "resB": 34784304717,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 15898641244,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 26389621867,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90167501928,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 35143710108
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 15542817726,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 26749027258,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90523325446,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 34784304717
+   },
+   "forkSlot": 444304052,
+   "validUntil": 444304270,
+   "expired": false,
+   "amount": 355823518,
+   "direction": "A"
+  },
+  {
+   "case": "BB-DIFF 4b same live market, validUntil := slot-10 | 9PwXMVkFzW slot=444304054 validUntil=444304044 (EXPIRED) | if this still succeeds the deployed swap path does not enforce validUntil at all",
+   "note": "identical instruction, only the market's validUntil field differs between probes",
+   "forkSlotBefore": 444304054,
+   "forkSlotAfter": 444304055,
+   "sig": "2Qkm34rRrf2PtWN3m7QDHiQE9K3ADvxnpcs3qVawqfgTTwh9JrFQRdTyQ9hD5aZY7HZXrxzwfgLT7H8t6w9pmrBJ",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Oracle data is invalid",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 6711 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 90523325446,
+    "resB": 34784304717,
+    "seq": 4101846,
+    "vu": 444304044
+   },
+   "marketAfter": {
+    "resA": 90523325446,
+    "resB": 34784304717,
+    "seq": 4101846,
+    "vu": 444304044
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 15898641244,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 27460674294,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90523325446,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 34784304717
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 15898641244,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 27460674294,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90523325446,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 34784304717
+   },
+   "forkSlot": 444304054,
+   "validUntil": 444304044,
+   "expired": true,
+   "amount": 355823518,
+   "direction": "A"
+  },
+  {
+   "case": "BB-DIFF 4c restored live market | 9PwXMVkFzW slot=444304055 validUntil=444304270 (valid) | control",
+   "note": "identical instruction, only the market's validUntil field differs between probes",
+   "forkSlotBefore": 444304055,
+   "forkSlotAfter": 444304056,
+   "sig": "2EDQ2Tu4Nt891nR6bwSwmCUyDutJpiGYtWyU7bkQqH3sPd5QoYePU1eW55FNUgCPWHXKyWypccvxNnseRM6aQLRX",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1370174 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1365019 compute units",
+    "Program log: Drifting along \ud83c\udf0a",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 79885 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": -355823518,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 359399994,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 355823518,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": -359399994
+   },
+   "marketBefore": {
+    "resA": 90523325446,
+    "resB": 34784304717,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "marketAfter": {
+    "resA": 90879148964,
+    "resB": 34424904723,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 16254464762,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 28172321330,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90523325446,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 34784304717
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 15898641244,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 28531721324,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90879148964,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 34424904723
+   },
+   "forkSlot": 444304055,
+   "validUntil": 444304270,
+   "expired": false,
+   "amount": 355823518,
+   "direction": "A"
+  }
+ ],
+ "fundingAndEdits": [
+  {
+   "ata": "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46",
+   "amount": 163500001,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+   "amount": 110000000,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "editedAccount": "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW",
+   "why": "validUntil moved forward to clear the expiry field",
+   "note": "fork-only single-field diagnostic toggle of the market's own validUntil; not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46",
+   "amount": 218000001,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+   "amount": 219000000,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "editedAccount": "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW",
+   "why": "restore of the market's original bytes",
+   "note": "fork-only single-field diagnostic toggle of the market's own validUntil; not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46",
+   "amount": 272500001,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+   "amount": 328000000,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA",
+   "amount": 15898641244,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb",
+   "amount": 26389621867,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "editedAccount": "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf",
+   "why": "validUntil moved into the past on a live market (diagnostic only)",
+   "note": "fork-only single-field diagnostic toggle of the market's own validUntil; not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA",
+   "amount": 15898641244,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb",
+   "amount": 27460674294,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "editedAccount": "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf",
+   "why": "restore of the market's original bytes",
+   "note": "fork-only single-field diagnostic toggle of the market's own validUntil; not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA",
+   "amount": 16254464762,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb",
+   "amount": 28172321330,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  }
+ ],
+ "verdict": "deployed swap handler DOES enforce validUntil: the same swap is rejected once the market's expiry field is in the past (and accepted after restore)"
+}

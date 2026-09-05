@@ -1,0 +1,4171 @@
+{
+ "mainnetSlotAtScan": 444305594,
+ "externalPriceSlot": 444303057,
+ "prices": {
+  "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH": 1.0002765399971103,
+  "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN": 2.258334794884332,
+  "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 0.9999845378454958,
+  "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": 1.0001666399525178,
+  "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn": 131.7955655908505,
+  "So11111111111111111111111111111111111111112": 101.31672152922121,
+  "Xs8S1uUs1zvS2p7iwtsG3b6fkhpvmwz4GYU3gWAmWHZ": 716.6776364614467,
+  "XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB": 351.8060505378922,
+  "XsP7xzNPvEHS1m6qfanPUGjNmdnmsLKEoNAnHjdxxyZ": 141.836785811058,
+  "Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh": 230.29852767687473,
+  "XsoCS1TfEyfFhfvj8EtZ528L3CaKBDBRqRapnBbDF2W": 769.4272995142878,
+  "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": 101.01906110040741,
+  "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE": 1.2490993968399053,
+  "pSo1f9nQXWgXibFtKf7NWYxb5enAM4qfP6UJSiXRQfL": 111.2367441182984
+ },
+ "cases": [
+  {
+   "case": "BB-S01 swap on EXPIRED-oracle market 4AFfguVTj7 (var0, expired by 901192 slots)",
+   "note": "does the swap path enforce check_oracle_validity (current_slot > valid_until)?",
+   "forkSlotBefore": 444303182,
+   "forkSlotAfter": 444303185,
+   "sig": "uUdrYjaJx1MQsr7K2kmbCVrmk2ghbjatMr3yqFQuhTP3x6o7v9ubXjEH3DtqRxWnxNu7Q7P6LNxmD4P4LYF5NTF",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Oracle data is invalid",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 6686 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 48280765628,
+    "resB": 5384659508,
+    "seq": 1299632,
+    "vu": 443404402
+   },
+   "marketAfter": {
+    "resA": 48280765628,
+    "resB": 5384659508,
+    "seq": 1299632,
+    "vu": 443404402
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "4AFfguVTj7sqSkEU6fzq79ELjw27Cu5YK4fm8HXxnTzw": 11486068557851767264,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 481307657,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16919665940,
+    "6ndUYkuaDGbEtoSqPNePQjvEZ2kmQX5gXehy74nyymES": 48280765628,
+    "Aw5bP8U141uTkELnanr56AodzWeK3PNiUFx4ZYiu6Xm4": 5384659508
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "4AFfguVTj7sqSkEU6fzq79ELjw27Cu5YK4fm8HXxnTzw": 11486068557851767264,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 481307657,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16919665940,
+    "6ndUYkuaDGbEtoSqPNePQjvEZ2kmQX5gXehy74nyymES": 48280765628,
+    "Aw5bP8U141uTkELnanr56AodzWeK3PNiUFx4ZYiu6Xm4": 5384659508
+   },
+   "market": {
+    "addr": "4AFfguVTj7sqSkEU6fzq79ELjw27Cu5YK4fm8HXxnTzw",
+    "lamports": 8017920,
+    "cu_pen": 0,
+    "imb": 100,
+    "id": 2041821263,
+    "authority": "CYkPyQ2cdAh1rvevZWZUi1mKhDrSzD2wtEnhcNgDdQ5h",
+    "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+    "mint_a": "So11111111111111111111111111111111111111112",
+    "mint_b": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "seq": 1299632,
+    "valid_until": 443404402,
+    "min_spread": -1000,
+    "arb_pen": 300,
+    "jit": 100,
+    "minO": 922337203685477580,
+    "maxO": 2767011611056432743,
+    "skew_min": 0,
+    "skew_max": 0,
+    "maxA": 0,
+    "maxB": 0,
+    "resA": 48280765628,
+    "resB": 5384659508,
+    "variant": 0,
+    "stale_by": 901192,
+    "oracle_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "prog_a": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "prog_b": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "mv_a": "6ndUYkuaDGbEtoSqPNePQjvEZ2kmQX5gXehy74nyymES",
+    "mv_b": "Aw5bP8U141uTkELnanr56AodzWeK3PNiUFx4ZYiu6Xm4",
+    "u_a": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+    "u_b": "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb"
+   }
+  },
+  {
+   "case": "BB-S01 swap on EXPIRED-oracle market 5783KdWDm8 (var0, expired by 16838467 slots)",
+   "note": "does the swap path enforce check_oracle_validity (current_slot > valid_until)?",
+   "forkSlotBefore": 444303185,
+   "forkSlotAfter": 444303186,
+   "sig": "3eb6uS9ujLoombbuuycDgBP6qiyypJ2XMsM5SJ6UuuQjMorFFhAdfPzrPLso7Aitagt8oFWGMCg9HBZ4JYVssmUG",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Oracle data is invalid",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 11186 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 10251,
+    "resB": 1941619797,
+    "seq": 93911,
+    "vu": 427467127
+   },
+   "marketAfter": {
+    "resA": 10251,
+    "resB": 1941619797,
+    "seq": 93911,
+    "vu": 427467127
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "5783KdWDm8neUV3yR7JEDnv3YjxdNXzPZuQAcN5j3rJj": 11486068557851767264,
+    "F7rUM1BaZ6ukTYCdH2j2N77kvRau63SQARvKVyEzR4sc": 103,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16921607559,
+    "ABsXJTHvGk25UaFM1XhXUsXfSQuPXQECb9DDmHf8G4Eb": 10251,
+    "FELMfoouJUgx17mCT4kQjnU7CahVKxySo2vf4Lepe4Yy": 1941619797
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "5783KdWDm8neUV3yR7JEDnv3YjxdNXzPZuQAcN5j3rJj": 11486068557851767264,
+    "F7rUM1BaZ6ukTYCdH2j2N77kvRau63SQARvKVyEzR4sc": 103,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16921607559,
+    "ABsXJTHvGk25UaFM1XhXUsXfSQuPXQECb9DDmHf8G4Eb": 10251,
+    "FELMfoouJUgx17mCT4kQjnU7CahVKxySo2vf4Lepe4Yy": 1941619797
+   },
+   "market": {
+    "addr": "5783KdWDm8neUV3yR7JEDnv3YjxdNXzPZuQAcN5j3rJj",
+    "lamports": 8017920,
+    "cu_pen": 0,
+    "imb": 100,
+    "id": 4114436123,
+    "authority": "CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH",
+    "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+    "mint_a": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
+    "mint_b": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+    "seq": 93911,
+    "valid_until": 427467127,
+    "min_spread": 0,
+    "arb_pen": 300,
+    "jit": 100,
+    "minO": 0,
+    "maxO": 340282366920938463463374607431768211455,
+    "skew_min": 0,
+    "skew_max": 0,
+    "maxA": 0,
+    "maxB": 0,
+    "resA": 10251,
+    "resB": 1941619797,
+    "variant": 0,
+    "stale_by": 16838467,
+    "oracle_hex": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "prog_a": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "prog_b": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "mv_a": "ABsXJTHvGk25UaFM1XhXUsXfSQuPXQECb9DDmHf8G4Eb",
+    "mv_b": "FELMfoouJUgx17mCT4kQjnU7CahVKxySo2vf4Lepe4Yy",
+    "u_a": "F7rUM1BaZ6ukTYCdH2j2N77kvRau63SQARvKVyEzR4sc",
+    "u_b": "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb"
+   }
+  },
+  {
+   "case": "BB-S01 swap on EXPIRED-oracle market CzuQmqj4dS (var3, expired by 29237132 slots)",
+   "note": "does the swap path enforce check_oracle_validity (current_slot > valid_until)?",
+   "forkSlotBefore": 444303186,
+   "forkSlotAfter": 444303188,
+   "sig": "4JQBtBuzwfNnFFd3SuzH3CDP7b5PipvnttebXVJZEUhj8Qsxk1bqkhMjnjApm8XHRViija6iccmWKqicCkZTHEuC",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Oracle data is invalid",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 9686 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 10900000000,
+    "resB": 500000000,
+    "seq": 642827,
+    "vu": 415068462
+   },
+   "marketAfter": {
+    "resA": 10900000000,
+    "resB": 500000000,
+    "seq": 642827,
+    "vu": 415068462
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW": 7634573591195076395,
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 109000001,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 481807657,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW": 7634573591195076395,
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 109000001,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 481807657,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "market": {
+    "addr": "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW",
+    "lamports": 8017920,
+    "cu_pen": 0,
+    "imb": 100,
+    "id": 1090603650,
+    "authority": "CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH",
+    "updater": "6CXqCWbyYj8JZra2gEB3SUF2ZCrCbeT6F4eCoCGDQVcL",
+    "mint_a": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+    "mint_b": "So11111111111111111111111111111111111111112",
+    "seq": 642827,
+    "valid_until": 415068462,
+    "min_spread": 0,
+    "arb_pen": 300,
+    "jit": 100,
+    "minO": 0,
+    "maxO": 340282366920938463463374607431768211455,
+    "skew_min": 0,
+    "skew_max": 0,
+    "maxA": 0,
+    "maxB": 0,
+    "resA": 10900000000,
+    "resB": 500000000,
+    "variant": 3,
+    "stale_by": 29237132,
+    "oracle_hex": "0300705ad91bbd5446010000000000000001640000000000c96f03006cd10200744d020015db01004e7a0100202b01008aed0000c1b80000c48c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c96f03006cd10200744d020015db01004e7a0100202b01008aed0000c1b80000c48c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "prog_a": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "prog_b": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "mv_a": "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG",
+    "mv_b": "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2",
+    "u_a": "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46",
+    "u_b": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh"
+   }
+  },
+  {
+   "case": "BB-SW 4AFfguVTj7 var0 resA=48,280,765,628/resB=5,384,659,508 staleBy=901,192 | exact-in A 1% (482,807,656)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303188,
+   "forkSlotAfter": 444303189,
+   "sig": "3wEzGqfYwweTZoTBQuci732fSiajKBtKWasLGFiwTqj1e8TnJYWrvyuz8WQarmhvWPAQGQ5M6iSur95WEMCtiFh8",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Oracle data is invalid",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 6688 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 48280765628,
+    "resB": 5384659508,
+    "seq": 1299632,
+    "vu": 443404402
+   },
+   "marketAfter": {
+    "resA": 48280765628,
+    "resB": 5384659508,
+    "seq": 1299632,
+    "vu": 443404402
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "4AFfguVTj7sqSkEU6fzq79ELjw27Cu5YK4fm8HXxnTzw": 11486068557851767264,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 1000000,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16921607559,
+    "6ndUYkuaDGbEtoSqPNePQjvEZ2kmQX5gXehy74nyymES": 48280765628,
+    "Aw5bP8U141uTkELnanr56AodzWeK3PNiUFx4ZYiu6Xm4": 5384659508
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "4AFfguVTj7sqSkEU6fzq79ELjw27Cu5YK4fm8HXxnTzw": 11486068557851767264,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 1000000,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16921607559,
+    "6ndUYkuaDGbEtoSqPNePQjvEZ2kmQX5gXehy74nyymES": 48280765628,
+    "Aw5bP8U141uTkELnanr56AodzWeK3PNiUFx4ZYiu6Xm4": 5384659508
+   },
+   "market_addr": "4AFfguVTj7sqSkEU6fzq79ELjw27Cu5YK4fm8HXxnTzw",
+   "measured": {
+    "amount_in": 0,
+    "amount_out": 0,
+    "usd_in": null,
+    "usd_out": null,
+    "net_usd": null,
+    "rate_out_per_in": null,
+    "reserve_rate": 0.11152804720389965
+   }
+  },
+  {
+   "case": "BB-SW 5783KdWDm8 var0 resA=10,251/resB=1,941,619,797 staleBy=16,838,467 | exact-in A 1% (102)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303189,
+   "forkSlotAfter": 444303191,
+   "sig": "5y54ZuPh8FJKcn7VorTX6B7qjkWXNHzYtfBqbgrX8BM9ByPBym6eTyQ3HSsXGcWrFFSUnhG1zW5FktaeTDRJeXqU",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Oracle data is invalid",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 11188 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 10251,
+    "resB": 1941619797,
+    "seq": 93911,
+    "vu": 427467127
+   },
+   "marketAfter": {
+    "resA": 10251,
+    "resB": 1941619797,
+    "seq": 93911,
+    "vu": 427467127
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "5783KdWDm8neUV3yR7JEDnv3YjxdNXzPZuQAcN5j3rJj": 11486068557851767264,
+    "F7rUM1BaZ6ukTYCdH2j2N77kvRau63SQARvKVyEzR4sc": 103,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16921607559,
+    "ABsXJTHvGk25UaFM1XhXUsXfSQuPXQECb9DDmHf8G4Eb": 10251,
+    "FELMfoouJUgx17mCT4kQjnU7CahVKxySo2vf4Lepe4Yy": 1941619797
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "5783KdWDm8neUV3yR7JEDnv3YjxdNXzPZuQAcN5j3rJj": 11486068557851767264,
+    "F7rUM1BaZ6ukTYCdH2j2N77kvRau63SQARvKVyEzR4sc": 103,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16921607559,
+    "ABsXJTHvGk25UaFM1XhXUsXfSQuPXQECb9DDmHf8G4Eb": 10251,
+    "FELMfoouJUgx17mCT4kQjnU7CahVKxySo2vf4Lepe4Yy": 1941619797
+   },
+   "market_addr": "5783KdWDm8neUV3yR7JEDnv3YjxdNXzPZuQAcN5j3rJj",
+   "measured": {
+    "amount_in": 0,
+    "amount_out": 0,
+    "usd_in": null,
+    "usd_out": null,
+    "net_usd": null,
+    "rate_out_per_in": null,
+    "reserve_rate": 189407.84284460053
+   }
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,649,966,519/resB=25,444,659,605 staleBy=-90,263,128 | exact-in A 1% (246,499,665)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303191,
+   "forkSlotAfter": 444303192,
+   "sig": "qe7WH86DiiwfziphmLLBm6bEoaVy4XkncfWQ5gnTBnxfWdw26pJyLMYNWu9T1sKKeQraJhxQtmwmx7ZvP6Wzz1e",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 867015 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 865691 compute units",
+    "Program log: Electric eel shock \u26a1",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 536083 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -246499665,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 246395227,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 246499665,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": -246395227
+   },
+   "marketBefore": {
+    "resA": 24528128220,
+    "resB": 25572930567,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "marketAfter": {
+    "resA": 24774627885,
+    "resB": 25326535340,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8012863769,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16921607559,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 24528128220,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 25572930567
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 7766364104,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 17168002786,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 24774627885,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 25326535340
+   },
+   "market_addr": "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci",
+   "measured": {
+    "amount_in": 246499665,
+    "amount_out": 246395227,
+    "usd_in": 246.54074169247124,
+    "usd_out": 246.39141719893104,
+    "net_usd": -0.14932449354020605,
+    "rate_out_per_in": 0.9995763158542224,
+    "reserve_rate": 1.03223911421492
+   }
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,649,966,519/resB=25,444,659,605 staleBy=-90,263,128 | exact-in A 5% (1,232,498,325)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303192,
+   "forkSlotAfter": 444303194,
+   "sig": "66fzWoh6abARZ84wSaaSGvpmk4FaAg7g2uwSG1z3N74nT4SUBDBjG9RxGPnaUaerHnjfTzHFwHgcyTdxBuZ43PsM",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 866922 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 865598 compute units",
+    "Program log: Going with the flow \ud83d\udca7",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 536159 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -1232498325,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 1231976137,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 1232498325,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": -1231976137
+   },
+   "marketBefore": {
+    "resA": 24774627885,
+    "resB": 25326535340,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "marketAfter": {
+    "resA": 26007126210,
+    "resB": 24094559203,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 7766364104,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 17168002786,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 24774627885,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 25326535340
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 6533865779,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 18399978923,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 26007126210,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 24094559203
+   },
+   "market_addr": "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci",
+   "measured": {
+    "amount_in": 1232498325,
+    "amount_out": 1231976137,
+    "usd_in": 1232.7037084623562,
+    "usd_out": 1231.9570879946243,
+    "net_usd": -0.7466204677318728,
+    "rate_out_per_in": 0.9995763174769426,
+    "reserve_rate": 1.03223911421492
+   }
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,649,966,519/resB=25,444,659,605 staleBy=-90,263,128 | exact-in A 25% (6,162,491,629)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303194,
+   "forkSlotAfter": 444303195,
+   "sig": "4vC1r83AhJNhRE2hRKasia11effptjbaZcNjGvbvxAa4mmSp5J9MP5QijxtMjPVnZDJtvhBL1LhzpMnb5FUqSBBN",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 866831 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 865507 compute units",
+    "Program log: Bobbing along \ud83e\udda6",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 536250 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -6162491629,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 6155194240,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 6162491629,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": -6155194240
+   },
+   "marketBefore": {
+    "resA": 26007126210,
+    "resB": 24094559203,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "marketAfter": {
+    "resA": 32169617839,
+    "resB": 17939364963,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 6533865779,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 18399978923,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 26007126210,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 24094559203
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 371374150,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 24555173163,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 32169617839,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 17939364963
+   },
+   "market_addr": "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci",
+   "measured": {
+    "amount_in": 6162491629,
+    "amount_out": 6155194240,
+    "usd_in": 6163.518546312448,
+    "usd_out": 6155.099067435657,
+    "net_usd": -8.41947887679089,
+    "rate_out_per_in": 0.9988158379046457,
+    "reserve_rate": 1.03223911421492
+   }
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,649,966,519/resB=25,444,659,605 staleBy=-90,263,128 | exact-in B 1% (254,446,596)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303195,
+   "forkSlotAfter": 444303196,
+   "sig": "2w6Lxsykefw3xyYS5HiPc2HnDvth712xhUR7QtG8pkqe9SQSwcuJ7Q3vjViux5gqqmxHnGCcJT5g5JjgabZ4jgDP",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 859998 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 858664 compute units",
+    "Program log: Riding the wave \ud83c\udfc4\u200d\u2642\ufe0f",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 543093 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 254660160,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -254446596,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": -254660160,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 254446596
+   },
+   "marketBefore": {
+    "resA": 32169617839,
+    "resB": 17939364963,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "marketAfter": {
+    "resA": 31914957679,
+    "resB": 18193811559,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 371374150,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 24555173163,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 32169617839,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 17939364963
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 626034310,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 24300726567,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 31914957679,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 18193811559
+   },
+   "market_addr": "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci",
+   "measured": {
+    "amount_in": 254446596,
+    "amount_out": 254660160,
+    "usd_in": 254.44266170741957,
+    "usd_out": 254.70259655697055,
+    "net_usd": 0.259934849550973,
+    "rate_out_per_in": 1.000839327400552,
+    "reserve_rate": 1.03223911421492
+   }
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,649,966,519/resB=25,444,659,605 staleBy=-90,263,128 | exact-in B 5% (1,272,232,980)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303196,
+   "forkSlotAfter": 444303197,
+   "sig": "2PV9wefPSQoDahWkHCi9FjyFa2t7fjsdC3CCvVvKzYSsMP8zpkwp93XfULBLKEaZh9nx7hARMvBduFi6R6sappei",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 859791 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 858457 compute units",
+    "Program log: Coasting through \ud83d\udedf",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 543300 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 1273300805,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -1272232980,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": -1273300805,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 1272232980
+   },
+   "marketBefore": {
+    "resA": 31914957679,
+    "resB": 18193811559,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "marketAfter": {
+    "resA": 30641656874,
+    "resB": 19466044539,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 626034310,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 24300726567,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 31914957679,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 18193811559
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 1899335115,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 23028493587,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 30641656874,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 19466044539
+   },
+   "market_addr": "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci",
+   "measured": {
+    "amount_in": 1272232980,
+    "amount_out": 1273300805,
+    "usd_in": 1272.2133085370979,
+    "usd_out": 1273.5129877856862,
+    "net_usd": 1.2996792485882906,
+    "rate_out_per_in": 1.0008393313306498,
+    "reserve_rate": 1.03223911421492
+   }
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,649,966,519/resB=25,444,659,605 staleBy=-90,263,128 | exact-in B 25% (6,361,164,901)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303197,
+   "forkSlotAfter": 444303198,
+   "sig": "5Mo1WRST5ZW2UaGuUMHXdCQCycCChHY9YnE12eVapqp8PMyEMaw2VaPV9bty1GfdPS3hxhf55MFzj2JwNBSH1uYJ",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 859882 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 858548 compute units",
+    "Program log: Bobbing along \ud83e\udda6",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 543209 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 6361572123,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -6361164901,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": -6361572123,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 6361164901
+   },
+   "marketBefore": {
+    "resA": 30641656874,
+    "resB": 19466044539,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "marketAfter": {
+    "resA": 24280084751,
+    "resB": 25827209440,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 1899335115,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 23028493587,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 30641656874,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 19466044539
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8260907238,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16667328686,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 24280084751,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 25827209440
+   },
+   "market_addr": "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci",
+   "measured": {
+    "amount_in": 6361164901,
+    "amount_out": 6361572123,
+    "usd_in": 6361.066543685474,
+    "usd_out": 6362.6322150765145,
+    "net_usd": 1.5656713910402686,
+    "rate_out_per_in": 1.0000640168909842,
+    "reserve_rate": 1.03223911421492
+   }
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,649,966,519/resB=25,444,659,605 staleBy=-90,263,128 | ROUND TRIP A->B->A in one tx (exact-in 123,249,832 then exact-out 123,249,832 A)",
+   "note": "second leg is exact-out for the same token A amount: measures the round-trip cost and any carry-over edge",
+   "forkSlotBefore": 444303199,
+   "forkSlotAfter": 444303200,
+   "sig": "EsmauKCJLYSAugXPvtWhyJT7DAqWhQ7TKcWWyDMFzUqUM9a5bVmuYWpDwREv5YuG2yjF1qpn4uxrQQGgq9pynoR",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 860157 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 858833 compute units",
+    "Program log: Dolphin pod passing \ud83d\udc2c",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 542933 of 1399850 compute units",
+    "Program log: Instruction: SwapExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 318252 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 316918 compute units",
+    "Program log: Tide's turning \ud83c\udf05",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 541906 of 856917 compute units"
+   ],
+   "tokenDeltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -141442,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 141442
+   },
+   "marketBefore": {
+    "resA": 24280084751,
+    "resB": 25827209440,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "marketAfter": {
+    "resA": 24280084751,
+    "resB": 25827350882,
+    "seq": 9,
+    "vu": 534568722
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8384157070,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16667328686,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 24280084751,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 25827209440
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": 11486068557851767264,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8384157070,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16667187244,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 24280084751,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 25827350882
+   },
+   "market_addr": "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci"
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,124,783 | exact-in A 1% (33,619,740)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303200,
+   "forkSlotAfter": 444303202,
+   "sig": "9vv8F1WzUdXoRnpiCXgbzXa5n12VHLAVQtfcuGHnTy2KRCKiQuhzjar5xEvtkFx1Em9AumzJzcB8eRLF2Ad8r4z",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 857443 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 852258 compute units",
+    "Program log: Paddling through \ud83d\udef6",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 549499 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": -33619740,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 33606053,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 33619740,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": -33606053
+   },
+   "marketBefore": {
+    "resA": 3215733503,
+    "resB": 3982911459,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "marketAfter": {
+    "resA": 3249353243,
+    "resB": 3949305406,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 1205262422,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16667187244,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 3215733503,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 3982911459
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 1171642682,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16700793297,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 3249353243,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 3949305406
+   },
+   "market_addr": "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia",
+   "measured": {
+    "amount_in": 33619740,
+    "amount_out": 33606053,
+    "usd_in": 33.62903720280245,
+    "usd_out": 33.60553337801624,
+    "net_usd": -0.023503824786210714,
+    "rate_out_per_in": 0.999592887987831,
+    "reserve_rate": 1.1407942166150329
+   }
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,124,783 | exact-in A 5% (168,098,704)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303202,
+   "forkSlotAfter": 444303203,
+   "sig": "3eCnzPvji6BUYTAmutLsrziuGFVwNB3d1ub1zVA8yko52c5xmhYuwMS48BDnmTR25XKmcEnTHvpF6svEF5x4FtPR",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 857351 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 852166 compute units",
+    "Program log: Mythical sea serpent \ud83d\udc0d",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 549616 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": -168098704,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 168030272,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 168098704,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": -168030272
+   },
+   "marketBefore": {
+    "resA": 3249353243,
+    "resB": 3949305406,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "marketAfter": {
+    "resA": 3417451947,
+    "resB": 3781275134,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 1171642682,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16700793297,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 3249353243,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 3949305406
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 1003543978,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16868823569,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 3417451947,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 3781275134
+   },
+   "market_addr": "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia",
+   "measured": {
+    "amount_in": 168098704,
+    "amount_out": 168030272,
+    "usd_in": 168.1451900151184,
+    "usd_out": 168.02767388997296,
+    "net_usd": -0.11751612514544263,
+    "rate_out_per_in": 0.9995929058441759,
+    "reserve_rate": 1.1407942166150329
+   }
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,124,783 | exact-in A 25% (840,493,522)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303203,
+   "forkSlotAfter": 444303204,
+   "sig": "4WxvtaHsq1i7YdkbDz2vW9ZxEhdAhedFKw7BpG2PKHbRM1YiXTv5xwbErdknmUkKSF6BYKoiUsWcaWeEsuXt2YW3",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 849562 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 844377 compute units",
+    "Program log: Starfish aligned \u2b50",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 557389 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": -840493522,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 839787147,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 840493522,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": -839787147
+   },
+   "marketBefore": {
+    "resA": 3417451947,
+    "resB": 3781275134,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "marketAfter": {
+    "resA": 4257945469,
+    "resB": 2941487987,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 1003543978,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16868823569,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 3417451947,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 3781275134
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 163050456,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 17708610716,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 4257945469,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 2941487987
+   },
+   "market_addr": "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia",
+   "measured": {
+    "amount_in": 840493522,
+    "amount_out": 839787147,
+    "usd_in": 840.7259520761451,
+    "usd_out": 839.7741620813824,
+    "net_usd": -0.9517899947626347,
+    "rate_out_per_in": 0.99915957115491,
+    "reserve_rate": 1.1407942166150329
+   }
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,124,783 | exact-in B 1% (38,353,205)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303204,
+   "forkSlotAfter": 444303205,
+   "sig": "2Dt2K5ccfNFZiXsNTpitQ6j7n8ZAik1ArGgbR779fVUVSeyBF5mAkPsMWbfPCZMMMEdTpgpWaFeh591fR61LbWQ6",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 848235 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 846880 compute units",
+    "Program log: Making a splash \ud83d\udca6",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 558738 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 38344953,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -38353205,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": -38344953,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 38353205
+   },
+   "marketBefore": {
+    "resA": 4257945469,
+    "resB": 2941487987,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "marketAfter": {
+    "resA": 4219600516,
+    "resB": 2979841192,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 163050456,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 17708610716,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 4257945469,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 2941487987
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 201395409,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 17670257511,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 4219600516,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 2979841192
+   },
+   "market_addr": "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia",
+   "measured": {
+    "amount_in": 38353205,
+    "amount_out": 38344953,
+    "usd_in": 38.35261197681856,
+    "usd_out": 38.35555691319181,
+    "net_usd": 0.0029449363732538814,
+    "rate_out_per_in": 0.999784841970834,
+    "reserve_rate": 1.1407942166150329
+   }
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,124,783 | exact-in B 5% (191,766,029)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303205,
+   "forkSlotAfter": 444303206,
+   "sig": "2qqiABPweWjPQAH14nW3yWRFXUE3hZeFLVrWawWZS5oJMTfMcn4RYjFXPTLA5Z1ZooiMARECwesDhZCJPoaRJKhb",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 847962 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 846607 compute units",
+    "Program log: Riding the wave \ud83c\udfc4\u200d\u2642\ufe0f",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 559011 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 191724772,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -191766029,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": -191724772,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 191766029
+   },
+   "marketBefore": {
+    "resA": 4219600516,
+    "resB": 2979841192,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "marketAfter": {
+    "resA": 4027875744,
+    "resB": 3171607221,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 201395409,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 17670257511,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 4219600516,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 2979841192
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 393120181,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 17478491482,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 4027875744,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 3171607221
+   },
+   "market_addr": "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia",
+   "measured": {
+    "amount_in": 191766029,
+    "amount_out": 191724772,
+    "usd_in": 191.76306388403094,
+    "usd_out": 191.77779156789487,
+    "net_usd": 0.014727683863924312,
+    "rate_out_per_in": 0.9997848576193857,
+    "reserve_rate": 1.1407942166150329
+   }
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,124,783 | exact-in B 25% (958,830,149)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303206,
+   "forkSlotAfter": 444303208,
+   "sig": "9zzSgoE7d9sQoxG6KjeQQMVLUergiBdSSXzkTgttvwKetyaoCrMTfv5QgVKUm6k96GX7gkj5RPvVjgZD72Fk2vd",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 847619 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 846264 compute units",
+    "Program log: Nautilus shell found \ud83d\udc1a",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 559371 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 958169547,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -958830149,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": -958169547,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 958830149
+   },
+   "marketBefore": {
+    "resA": 4027875744,
+    "resB": 3171607221,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "marketAfter": {
+    "resA": 3069706197,
+    "resB": 4130437370,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 393120181,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 17478491482,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 4027875744,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 3171607221
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 1351289728,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16519661333,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 3069706197,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 4130437370
+   },
+   "market_addr": "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia",
+   "measured": {
+    "amount_in": 958830149,
+    "amount_out": 958169547,
+    "usd_in": 958.8153234200929,
+    "usd_out": 958.4345192037586,
+    "net_usd": -0.38080421633435435,
+    "rate_out_per_in": 0.9993110333454899,
+    "reserve_rate": 1.1407942166150329
+   }
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,124,783 | ROUND TRIP A->B->A in one tx (exact-in 16,809,870 then exact-out 16,809,870 A)",
+   "note": "second leg is exact-out for the same token A amount: measures the round-trip cost and any carry-over edge",
+   "forkSlotBefore": 444303208,
+   "forkSlotAfter": 444303209,
+   "sig": "3ESCxFc6Df7BRCaQCiUXSeNujdqJgDWqrycumKGseMe3kEhF5nnPnHz39ZtaMp5n3u2QWFWu5hpFpZvgVz8mSaPZ",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 847260 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 842075 compute units",
+    "Program log: Tide's turning \ud83c\udf05",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 559682 of 1399850 compute units",
+    "Program log: Instruction: SwapExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 295556 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 294201 compute units",
+    "Program log: Cruising the current \ud83c\udfca",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 551735 of 840168 compute units"
+   ],
+   "tokenDeltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -23080,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 23080
+   },
+   "marketBefore": {
+    "resA": 3069706197,
+    "resB": 4130437370,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "marketAfter": {
+    "resA": 3069706197,
+    "resB": 4130460450,
+    "seq": 1,
+    "vu": 531430377
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 1368099598,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16519661333,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 3069706197,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 4130437370
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia": 11486068557851767264,
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 1368099598,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16519638253,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 3069706197,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 4130460450
+   },
+   "market_addr": "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia"
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,252,408,346/resB=19,586,305,087 staleBy=-39 | exact-in A 1% (42,524,083)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303209,
+   "forkSlotAfter": 444303211,
+   "sig": "3pcbgccf3AVBmNKyk8MkZL5h6UPBNvpDk2iGr3EVcQdCCp5RqbxPpmVDFh4qFphfrCMpyDDQgjSBohDaE8yE4Ujx",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1367439 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1362284 compute units",
+    "Program log: Octopus ink cloud \ud83d\udc19",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 82629 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": -42524083,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 305040735,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 42524083,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": -305040735
+   },
+   "marketBefore": {
+    "resA": 4735743817,
+    "resB": 16124461737,
+    "seq": 171519,
+    "vu": 444304815
+   },
+   "marketAfter": {
+    "resA": 4778267900,
+    "resB": 15819421002,
+    "seq": 171519,
+    "vu": 444304815
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN": 11486068557851767264,
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 864085632,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16519638253,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 4735743817,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 16124461737
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN": 11486068557851767264,
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 821561549,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16824678988,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 4778267900,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 15819421002
+   },
+   "market_addr": "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN",
+   "measured": {
+    "amount_in": 42524083,
+    "amount_out": 305040735,
+    "usd_in": 304.7605929713039,
+    "usd_out": 305.0360184130253,
+    "net_usd": 0.27542544172143835,
+    "rate_out_per_in": 7.17336420870028,
+    "reserve_rate": 4.605932331363174
+   }
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,252,408,346/resB=19,586,305,087 staleBy=-39 | exact-in A 5% (212,620,417)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303211,
+   "forkSlotAfter": 444303212,
+   "sig": "2jGAzvHamuVzY456h1wyp3g5Ek5bTBEub18qWmW6pyumT7rf9VHPV4suAvTQPhRf9bAf6waW7TKBxrkNfb2GirMk",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1367439 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1362284 compute units",
+    "Program log: Anglerfish lurking \ud83d\udc1f",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 82629 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": -212620417,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 1525156369,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 212620417,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": -1525156369
+   },
+   "marketBefore": {
+    "resA": 4778267900,
+    "resB": 15819421002,
+    "seq": 171519,
+    "vu": 444304815
+   },
+   "marketAfter": {
+    "resA": 4990888317,
+    "resB": 14294264633,
+    "seq": 171519,
+    "vu": 444304815
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN": 11486068557851767264,
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 821561549,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 16824678988,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 4778267900,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 15819421002
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN": 11486068557851767264,
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 608941132,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 18349835357,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 4990888317,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 14294264633
+   },
+   "market_addr": "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN",
+   "measured": {
+    "amount_in": 212620417,
+    "amount_out": 1525156369,
+    "usd_in": 1523.802979190072,
+    "usd_out": 1525.1327867965795,
+    "net_usd": 1.3298076065075293,
+    "rate_out_per_in": 7.173141650832149,
+    "reserve_rate": 4.605932331363174
+   }
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,252,408,346/resB=19,586,305,087 staleBy=-39 | exact-in A 25% (1,063,102,086)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303212,
+   "forkSlotAfter": 444303214,
+   "sig": "2utRR1KNQrQ3bS9CqGPz9ZmaAea6N58VK8hnkd7huV4UnErdK7cvp7cuwDbN3a1CVsZrNrJXewxN1yusVGi1QojK",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program log: Error: insufficient funds",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1551 of 1366197 compute units",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 35204 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0x1"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 4990888317,
+    "resB": 14294264633,
+    "seq": 171519,
+    "vu": 444304815
+   },
+   "marketAfter": {
+    "resA": 4990888317,
+    "resB": 14294264633,
+    "seq": 171519,
+    "vu": 444304815
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN": 11486068557851767264,
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 454160955,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 18349835357,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 4990888317,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 14294264633
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN": 11486068557851767264,
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 454160955,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 18349835357,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 4990888317,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 14294264633
+   },
+   "market_addr": "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN",
+   "measured": {
+    "amount_in": 0,
+    "amount_out": 0,
+    "usd_in": null,
+    "usd_out": null,
+    "net_usd": null,
+    "rate_out_per_in": null,
+    "reserve_rate": 4.605932331363174
+   }
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,252,408,346/resB=19,586,305,087 staleBy=-39 | ROUND TRIP A->B->A in one tx (exact-in 21,262,041 then exact-out 21,262,041 A)",
+   "note": "second leg is exact-out for the same token A amount: measures the round-trip cost and any carry-over edge",
+   "forkSlotBefore": 444303214,
+   "forkSlotAfter": 444303215,
+   "sig": "2oerqsJK6v14XW3Ysk7r375dohmR18HSGTzHeAfejNdjKMby4iG7Wq63NWiAMYxLYZtFBzYzCZUGHrzaVPrFhEgc",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1366328 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1361173 compute units",
+    "Program log: Bobbing along \ud83e\udda6",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 83731 of 1399850 compute units",
+    "Program log: Instruction: SwapExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1275835 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1274499 compute units",
+    "Program log: Floating by \ud83c\udf88",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 90297 of 1316119 compute units"
+   ],
+   "tokenDeltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -394842,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 394842
+   },
+   "marketBefore": {
+    "resA": 4990888317,
+    "resB": 14294264633,
+    "seq": 171519,
+    "vu": 444304815
+   },
+   "marketAfter": {
+    "resA": 4990888317,
+    "resB": 14294659475,
+    "seq": 171519,
+    "vu": 444304815
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN": 11486068557851767264,
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 475422996,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 18349835357,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 4990888317,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 14294264633
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN": 11486068557851767264,
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 475422996,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 18349440515,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 4990888317,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 14294659475
+   },
+   "market_addr": "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN"
+  },
+  {
+   "case": "BB-SW 9PwXMVkFzW var3 resA=71,894,232,515/resB=53,582,656,753 staleBy=-39 | exact-in A 1% (718,942,325)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303215,
+   "forkSlotAfter": 444303217,
+   "sig": "4J6AecWkvMfEFonyD6Cka6QbbkRiZEifmAhoxvW7smvScbAEgtMpr1ZnkEzRK8L3yjSG9ikydZyzELYipFsq3jRT",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1370179 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1365024 compute units",
+    "Program log: Wading in \ud83e\uddb6",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 79880 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": -718942325,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 726304551,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 718942325,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": -726304551
+   },
+   "marketBefore": {
+    "resA": 85853847978,
+    "resB": 39500054075,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "marketAfter": {
+    "resA": 86572790303,
+    "resB": 38773749524,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 7103865515,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 18349440515,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 85853847978,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 39500054075
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 6384923190,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 19075745066,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 86572790303,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 38773749524
+   },
+   "market_addr": "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf",
+   "measured": {
+    "amount_in": 718942325,
+    "amount_out": 726304551,
+    "usd_in": 726.2687865684396,
+    "usd_out": 726.2933207668153,
+    "net_usd": 0.024534198375704364,
+    "rate_out_per_in": 1.0102403569020644,
+    "reserve_rate": 0.7452984040384676
+   }
+  },
+  {
+   "case": "BB-SW 9PwXMVkFzW var3 resA=71,894,232,515/resB=53,582,656,753 staleBy=-39 | exact-in A 5% (3,594,711,625)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303217,
+   "forkSlotAfter": 444303218,
+   "sig": "4QSAKHmqmuVsZ6tNsP1JRWxDzKPK6g2ZM45Y9yxVBYDVD7wvJHCypoJJ2QLhY8NgU5jZLhyg8HwmZkRGvrpTuTLx",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1370179 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1365024 compute units",
+    "Program log: Drifting along \ud83c\udf0a",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 79880 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": -3594711625,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 3631417347,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 3594711625,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": -3631417347
+   },
+   "marketBefore": {
+    "resA": 86572790303,
+    "resB": 38773749524,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "marketAfter": {
+    "resA": 90167501928,
+    "resB": 35142332177,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 6384923190,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 19075745066,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 86572790303,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 38773749524
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 2790211565,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22707162413,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90167501928,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 35142332177
+   },
+   "market_addr": "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf",
+   "measured": {
+    "amount_in": 3594711625,
+    "amount_out": 3631417347,
+    "usd_in": 3631.3439328421982,
+    "usd_out": 3631.3611974639116,
+    "net_usd": 0.01726462171336607,
+    "rate_out_per_in": 1.0102110338266703,
+    "reserve_rate": 0.7452984040384676
+   }
+  },
+  {
+   "case": "BB-SW 9PwXMVkFzW var3 resA=71,894,232,515/resB=53,582,656,753 staleBy=-39 | exact-in A 25% (17,973,558,128)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303218,
+   "forkSlotAfter": 444303219,
+   "sig": "2TdoG4qSbwBKmn4qt2MHkLx2qGK3EAPrty8sQUvkq6AvrHdZcahxkcAviQ6gokV3T8WfmGW4R7iqRURqnWKRQygx",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program log: Error: insufficient funds",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1551 of 1368777 compute units",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 32624 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0x1"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 90167501928,
+    "resB": 35142332177,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "marketAfter": {
+    "resA": 90167501928,
+    "resB": 35142332177,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 15183346564,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22707162413,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90167501928,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 35142332177
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 15183346564,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22707162413,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90167501928,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 35142332177
+   },
+   "market_addr": "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf",
+   "measured": {
+    "amount_in": 0,
+    "amount_out": 0,
+    "usd_in": null,
+    "usd_out": null,
+    "net_usd": null,
+    "rate_out_per_in": null,
+    "reserve_rate": 0.7452984040384676
+   }
+  },
+  {
+   "case": "BB-SW 9PwXMVkFzW var3 resA=71,894,232,515/resB=53,582,656,753 staleBy=-39 | ROUND TRIP A->B->A in one tx (exact-in 359,471,162 then exact-out 359,471,162 A)",
+   "note": "second leg is exact-out for the same token A amount: measures the round-trip cost and any carry-over edge",
+   "forkSlotBefore": 444303219,
+   "forkSlotAfter": 444303220,
+   "sig": "5QB3oKt5LA24i6Cogpp2R4sadyW1j7cjasg8PiWU4cmix6Rife38YG6Sw5XHKGft1CDP4FFjHwPVy9z518CxnX8b",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1369069 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363914 compute units",
+    "Program log: Lobster trap \ud83e\udd9e",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 80999 of 1399850 compute units",
+    "Program log: Instruction: SwapExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1281568 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1280232 compute units",
+    "Program log: Smooth sailing \u26f5",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 87296 of 1318851 compute units"
+   ],
+   "tokenDeltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -1377931,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 1377931
+   },
+   "marketBefore": {
+    "resA": 90167501928,
+    "resB": 35142332177,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "marketAfter": {
+    "resA": 90167501928,
+    "resB": 35143710108,
+    "seq": 4101846,
+    "vu": 444304270
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 15542817726,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22707162413,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90167501928,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 35142332177
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": 11486068557851767264,
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": 15542817726,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22705784482,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 90167501928,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 35143710108
+   },
+   "market_addr": "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf"
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,793,515,405/resB=28,470,359,181 staleBy=-32 | exact-in A 1% (177,935,154)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303220,
+   "forkSlotAfter": 444303221,
+   "sig": "5UNqsGhhPyQcP85Me5fEWQWtSRmGu6LADTAn9vvsSFLCNf6JRE2Tp76WVWPeFPf4dhygFrhCBZKdHQ9eM5AiauBQ",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1367077 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1361922 compute units",
+    "Program log: Riding the wave \ud83c\udfc4\u200d\u2642\ufe0f",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 82864 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": -177935154,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 251956832,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 177935154,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": -251956832
+   },
+   "marketBefore": {
+    "resA": 17099623336,
+    "resB": 29469231010,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "marketAfter": {
+    "resA": 17277558490,
+    "resB": 29217274178,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 6306864586,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22705784482,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 17099623336,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 29469231010
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 6128929432,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22957741314,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 17277558490,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 29217274178
+   },
+   "market_addr": "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd",
+   "measured": {
+    "amount_in": 177935154,
+    "amount_out": 251956832,
+    "usd_in": 252.3775032615562,
+    "usd_out": 251.9529362045352,
+    "net_usd": -0.42456705702099384,
+    "rate_out_per_in": 1.4160036751366174,
+    "reserve_rate": 1.6000412809376496
+   }
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,793,515,405/resB=28,470,359,181 staleBy=-32 | exact-in A 5% (889,675,770)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303221,
+   "forkSlotAfter": 444303223,
+   "sig": "aJFpSPkXwSWC6mCyCt9ndP9zrppvXMnCSePcU1tEEQcYJhMraAAvDVEiSr9oF4CtPodTNLa56xXNodYbwLZhJXx",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1367080 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1361925 compute units",
+    "Program log: Tide's turning \ud83c\udf05",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 82861 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": -889675770,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 1259755195,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 889675770,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": -1259755195
+   },
+   "marketBefore": {
+    "resA": 17277558490,
+    "resB": 29217274178,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "marketAfter": {
+    "resA": 18167234260,
+    "resB": 27957518983,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 6128929432,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22957741314,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 17277558490,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 29217274178
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 5239253662,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 24217496509,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 18167234260,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 27957518983
+   },
+   "market_addr": "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd",
+   "measured": {
+    "amount_in": 889675770,
+    "amount_out": 1259755195,
+    "usd_in": 1261.8875163077812,
+    "usd_out": 1259.7357164705375,
+    "net_usd": -2.1517998372437432,
+    "rate_out_per_in": 1.4159711183322437,
+    "reserve_rate": 1.6000412809376496
+   }
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,793,515,405/resB=28,470,359,181 staleBy=-32 | exact-in A 25% (4,448,378,851)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303223,
+   "forkSlotAfter": 444303224,
+   "sig": "3npUMteKGqtUpVii4jA1aXcvvGNLra1RUfpBert3AhYbMecH65bFztc37T8k22ZBdi2w29juW1M9xLN3iwWdnTJS",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1367098 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1361943 compute units",
+    "Program log: Tide's turning \ud83c\udf05",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 82843 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": -4448378851,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 6298032888,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 4448378851,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": -6298032888
+   },
+   "marketBefore": {
+    "resA": 18167234260,
+    "resB": 27957518983,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "marketAfter": {
+    "resA": 22615613111,
+    "resB": 21659486095,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 5239253662,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 24217496509,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 18167234260,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 27957518983
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 790874811,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 30515529397,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 22615613111,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 21659486095
+   },
+   "market_addr": "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd",
+   "measured": {
+    "amount_in": 4448378851,
+    "amount_out": 6298032888,
+    "usd_in": 6309.437582957273,
+    "usd_out": 6297.935506842413,
+    "net_usd": -11.502076114859847,
+    "rate_out_per_in": 1.4158040713155975,
+    "reserve_rate": 1.6000412809376496
+   }
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,793,515,405/resB=28,470,359,181 staleBy=-32 | exact-in B 1% (284,703,591)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303224,
+   "forkSlotAfter": 444303226,
+   "sig": "dPWWyRfn4Vp4YGqwzeJMEMFTvHQtYi7jGnBuhtEje5Ph57QJ6FjmEUtqatqSzDrkgjNehNU85pNwo56x7hi4482",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363397 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1362061 compute units",
+    "Program log: Lobster trap \ud83e\udd9e",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 86465 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 200645015,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -284703591,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": -200645015,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 284703591
+   },
+   "marketBefore": {
+    "resA": 22615613111,
+    "resB": 21659486095,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "marketAfter": {
+    "resA": 22414968096,
+    "resB": 21944189686,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 790874811,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 30515529397,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 22615613111,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 21659486095
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 991519826,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 30230825806,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 22414968096,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 21944189686
+   },
+   "market_addr": "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd",
+   "measured": {
+    "amount_in": 284703591,
+    "amount_out": 200645015,
+    "usd_in": 284.69918886908806,
+    "usd_out": 284.5884401661152,
+    "net_usd": -0.11074870297284178,
+    "rate_out_per_in": 0.7047505593282102,
+    "reserve_rate": 1.6000412809376496
+   }
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,793,515,405/resB=28,470,359,181 staleBy=-32 | exact-in B 5% (1,423,517,959)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303226,
+   "forkSlotAfter": 444303227,
+   "sig": "C3Xh7tErPup97xqwvm6N4QvW5cbEcpzDWfuzZDG1MWcHHMD2j6gnnX7o64qSLWi4CeVTogwP8DGqT4BNqQdnVNr",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363398 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1362062 compute units",
+    "Program log: Barnacle bonanza \ud83c\udfaf",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 86472 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 1003198989,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -1423517959,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": -1003198989,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 1423517959
+   },
+   "marketBefore": {
+    "resA": 22414968096,
+    "resB": 21944189686,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "marketAfter": {
+    "resA": 21411769107,
+    "resB": 23367707645,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 991519826,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 30230825806,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 22414968096,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 21944189686
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 1994718815,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 28807307847,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 21411769107,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 23367707645
+   },
+   "market_addr": "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd",
+   "measured": {
+    "amount_in": 1423517959,
+    "amount_out": 1003198989,
+    "usd_in": 1423.4959483453783,
+    "usd_out": 1422.9052012866293,
+    "net_usd": -0.5907470587490025,
+    "rate_out_per_in": 0.7047322323244395,
+    "reserve_rate": 1.6000412809376496
+   }
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,793,515,405/resB=28,470,359,181 staleBy=-32 | exact-in B 25% (7,117,589,795)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303227,
+   "forkSlotAfter": 444303229,
+   "sig": "5Uvs3AjRuiTb6y215QyzGKDXzCfAoS1PKWchkeEm74GuhtTjo2F94p5zDh3XyJFsbj3AkvasZLFcK6vhWbwKCCXL",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363156 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1361820 compute units",
+    "Program log: Drifting along \ud83c\udf0a",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 86697 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 5015327605,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -7117589795,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": -5015327605,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 7117589795
+   },
+   "marketBefore": {
+    "resA": 21411769107,
+    "resB": 23367707645,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "marketAfter": {
+    "resA": 16396441502,
+    "resB": 30485297440,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 1994718815,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 28807307847,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 21411769107,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 23367707645
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 7010046420,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 21689718052,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 16396441502,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 30485297440
+   },
+   "market_addr": "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd",
+   "measured": {
+    "amount_in": 7117589795,
+    "amount_out": 5015327605,
+    "usd_in": 7117.479741726892,
+    "usd_out": 7113.579472826716,
+    "net_usd": -3.900268900176343,
+    "rate_out_per_in": 0.7046384730577185,
+    "reserve_rate": 1.6000412809376496
+   }
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,793,515,405/resB=28,470,359,181 staleBy=-32 | ROUND TRIP A->B->A in one tx (exact-in 88,967,577 then exact-out 88,967,577 A)",
+   "note": "second leg is exact-out for the same token A amount: measures the round-trip cost and any carry-over edge",
+   "forkSlotBefore": 444303229,
+   "forkSlotAfter": 444303230,
+   "sig": "43nMxvsW94fTNLAf1Qzv6AQF3YbG64DuY9L1SArAKKAYqjsZiqAj5zfFzi96RtecxiEFvb33gMRBKrAEtNj3kTGa",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1365976 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1360821 compute units",
+    "Program log: Riding the wave \ud83c\udfc4\u200d\u2642\ufe0f",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 83965 of 1399850 compute units",
+    "Program log: Instruction: SwapExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1278140 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1276804 compute units",
+    "Program log: Making a splash \ud83d\udca6",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 87748 of 1315885 compute units"
+   ],
+   "tokenDeltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -351860,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 351860
+   },
+   "marketBefore": {
+    "resA": 16396441502,
+    "resB": 30485297440,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "marketAfter": {
+    "resA": 16396441502,
+    "resB": 30485649300,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 7099013997,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 21689718052,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 16396441502,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 30485297440
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 7099013997,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 21689366192,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 16396441502,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 30485649300
+   },
+   "market_addr": "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd"
+  },
+  {
+   "case": "BB-SW CzuQmqj4dS var3 resA=10,900,000,000/resB=500,000,000 staleBy=29,237,132 | exact-in A 1% (109,000,000)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303230,
+   "forkSlotAfter": 444303231,
+   "sig": "3nHsmgZUyNc8C7m438rYMnRRi6BypkmL6DdUdd38V1mRERzN2CENnrnTjxdeLjXPdAnbg25fNjFaQzdNGGcqiTX9",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Oracle data is invalid",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 9688 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 10900000000,
+    "resB": 500000000,
+    "seq": 642827,
+    "vu": 415068462
+   },
+   "marketAfter": {
+    "resA": 10900000000,
+    "resB": 500000000,
+    "seq": 642827,
+    "vu": 415068462
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW": 7634573591195076395,
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 109000001,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 1000000,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW": 7634573591195076395,
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 109000001,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 1000000,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "market_addr": "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW",
+   "measured": {
+    "amount_in": 0,
+    "amount_out": 0,
+    "usd_in": null,
+    "usd_out": null,
+    "net_usd": null,
+    "rate_out_per_in": null,
+    "reserve_rate": 0.045871559633027525
+   }
+  },
+  {
+   "case": "BB-SW FefUJfaS2V var4 resA=237,375,794,984/resB=3,546 staleBy=-490,813 | exact-in A 1% (2,373,757,949)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303232,
+   "forkSlotAfter": 444303233,
+   "sig": "5QYqoQv9LGtbgpRm3ZnPoUec5o45x1giSd2aNzLLU9sT67YvwPJvVXR8J5xtZtdDgiaSjahPtWdttxDMR8EFZfuo",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Partial fill is not allowed",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 441215 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0x17d3"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 237375794984,
+    "resB": 3546,
+    "seq": 1195,
+    "vu": 444796407
+   },
+   "marketAfter": {
+    "resA": 237375794984,
+    "resB": 3546,
+    "seq": 1195,
+    "vu": 444796407
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "FefUJfaS2VpkKCCR7fodHP4xzgEA3qz1NASqdxhQ8Czv": 11486068557851767264,
+    "4HieNMNmrJJxVrCcGXXnfsyHVbqjLZWatGoM2ybe1KKD": 2373757950,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 1000000,
+    "cE6AJDvmJe6yBm8TZ6BF337fmXjew2JxWao3i2PR1ZX": 237375794984,
+    "EPUFGAeSa4B24beoAisr1ctkJHqzma3HVi2qsUEibom8": 3546
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "FefUJfaS2VpkKCCR7fodHP4xzgEA3qz1NASqdxhQ8Czv": 11486068557851767264,
+    "4HieNMNmrJJxVrCcGXXnfsyHVbqjLZWatGoM2ybe1KKD": 2373757950,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 1000000,
+    "cE6AJDvmJe6yBm8TZ6BF337fmXjew2JxWao3i2PR1ZX": 237375794984,
+    "EPUFGAeSa4B24beoAisr1ctkJHqzma3HVi2qsUEibom8": 3546
+   },
+   "market_addr": "FefUJfaS2VpkKCCR7fodHP4xzgEA3qz1NASqdxhQ8Czv",
+   "measured": {
+    "amount_in": 0,
+    "amount_out": 0,
+    "usd_in": null,
+    "usd_out": null,
+    "net_usd": null,
+    "rate_out_per_in": null,
+    "reserve_rate": 1.493833859614462e-08
+   }
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,490,213,549/resB=43,423,209,455 staleBy=-35 | exact-in A 1% (74,902,135)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303233,
+   "forkSlotAfter": 444303234,
+   "sig": "55gZCs9NEvnhxFtiAJFo5KH8EBoTsxsneL1JPVYgw1u7b76nzsRRGXgNmBvTQAzRzJqaXbHjaucFKFKpqLYg39cW",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1371937 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1366782 compute units",
+    "Program log: Going with the flow \ud83d\udca7",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 78122 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": -74902135,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 578555908,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 74902135,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": -578555908
+   },
+   "marketBefore": {
+    "resA": 8255504803,
+    "resB": 37521838971,
+    "seq": 830053,
+    "vu": 444304862
+   },
+   "marketAfter": {
+    "resA": 8330406938,
+    "resB": 36943283063,
+    "seq": 830053,
+    "vu": 444304862
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD": 11486068557851767264,
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 1742206321,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 21689366192,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 8255504803,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 37521838971
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD": 11486068557851767264,
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 1667304186,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22267922100,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 8330406938,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 36943283063
+   },
+   "market_addr": "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD",
+   "measured": {
+    "amount_in": 74902135,
+    "amount_out": 578555908,
+    "usd_in": 576.3174746090463,
+    "usd_out": 578.5469622791612,
+    "net_usd": 2.2294876701149633,
+    "rate_out_per_in": 7.724157769334613,
+    "reserve_rate": 5.79732596019206
+   }
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,490,213,549/resB=43,423,209,455 staleBy=-35 | exact-in A 5% (374,510,677)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303234,
+   "forkSlotAfter": 444303235,
+   "sig": "5En9YETXFzKM6pXW3wvr3PiYKxsw5oZgyophg4Ruhj1Fzp4z3VBMvukKGNW5nnjAHRbRcS2p7FbRfsA6WRJ5Lc4T",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1371938 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1366783 compute units",
+    "Program log: Riding the wave \ud83c\udfc4\u200d\u2642\ufe0f",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 78121 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": -374510677,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 2892695613,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 374510677,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": -2892695613
+   },
+   "marketBefore": {
+    "resA": 8330406938,
+    "resB": 36943283063,
+    "seq": 830053,
+    "vu": 444304862
+   },
+   "marketAfter": {
+    "resA": 8704917615,
+    "resB": 34050587450,
+    "seq": 830053,
+    "vu": 444304862
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD": 11486068557851767264,
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 1667304186,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22267922100,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 8330406938,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 36943283063
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD": 11486068557851767264,
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 1292793509,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25160617713,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 8704917615,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 34050587450
+   },
+   "market_addr": "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD",
+   "measured": {
+    "amount_in": 374510677,
+    "amount_out": 2892695613,
+    "usd_in": 2881.587388433777,
+    "usd_out": 2892.650885693498,
+    "net_usd": 11.063497259720862,
+    "rate_out_per_in": 7.723933630335457,
+    "reserve_rate": 5.79732596019206
+   }
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,490,213,549/resB=43,423,209,455 staleBy=-35 | exact-in A 25% (1,872,553,387)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303235,
+   "forkSlotAfter": 444303236,
+   "sig": "5snFqvZyCnuALvXMdFy5oZRZi2WLDyPoy7Gz849wkWb3qVKKo2X2GJWzGGYPqdEyLSWQ8mcA6CxQPbURvXqJMbcb",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program log: Error: insufficient funds",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1551 of 1371318 compute units",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 30083 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0x1"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 8704917615,
+    "resB": 34050587450,
+    "seq": 830053,
+    "vu": 444304862
+   },
+   "marketAfter": {
+    "resA": 8704917615,
+    "resB": 34050587450,
+    "seq": 830053,
+    "vu": 444304862
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD": 11486068557851767264,
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 579759879,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25160617713,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 8704917615,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 34050587450
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD": 11486068557851767264,
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 579759879,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25160617713,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 8704917615,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 34050587450
+   },
+   "market_addr": "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD",
+   "measured": {
+    "amount_in": 0,
+    "amount_out": 0,
+    "usd_in": null,
+    "usd_out": null,
+    "net_usd": null,
+    "rate_out_per_in": null,
+    "reserve_rate": 5.79732596019206
+   }
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,490,213,549/resB=43,423,209,455 staleBy=-35 | ROUND TRIP A->B->A in one tx (exact-in 37,451,067 then exact-out 37,451,067 A)",
+   "note": "second leg is exact-out for the same token A amount: measures the round-trip cost and any carry-over edge",
+   "forkSlotBefore": 444303236,
+   "forkSlotAfter": 444303238,
+   "sig": "5cwL6Sy4TXczwjJSaL8C3hXxJ7wiK5eue9AqXkGBuGtDn9g28j6874dceWgV73JZKzwmwTqNdt8EYxmspJkR1PHt",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1370830 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1365675 compute units",
+    "Program log: Tide's turning \ud83c\udf05",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 79229 of 1399850 compute units",
+    "Program log: Instruction: SwapExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1284837 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1283501 compute units",
+    "Program log: Caught in the riptide \ud83c\udf00",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 85797 of 1320621 compute units"
+   ],
+   "tokenDeltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -748888,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 748888
+   },
+   "marketBefore": {
+    "resA": 8704917615,
+    "resB": 34050587450,
+    "seq": 830053,
+    "vu": 444304862
+   },
+   "marketAfter": {
+    "resA": 8704917615,
+    "resB": 34051336338,
+    "seq": 830053,
+    "vu": 444304862
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD": 11486068557851767264,
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 617210946,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25160617713,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 8704917615,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 34050587450
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD": 11486068557851767264,
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 617210946,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25159868825,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 8704917615,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 34051336338
+   },
+   "market_addr": "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD"
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,778,768 | exact-in A 1% (121,311)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303238,
+   "forkSlotAfter": 444303239,
+   "sig": "5oHTwvPw1RZ58fpVbTa7kTidZpNQmzR2KmZkm8hmG2aXFkAgr18kY517F4TjgW2apdUYcQxh7ew276W1ro2JPPg2",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 863658 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 862334 compute units",
+    "Program log: Coasting through \ud83d\udedf",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 539423 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -121311,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 121296,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 121311,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": -121296
+   },
+   "marketBefore": {
+    "resA": 11566057,
+    "resB": 14523591,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "marketAfter": {
+    "resA": 11687368,
+    "resB": 14402295,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8384157070,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25159868825,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 11566057,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 14523591
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8384035759,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25159990121,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 11687368,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 14402295
+   },
+   "market_addr": "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579",
+   "measured": {
+    "amount_in": 121311,
+    "amount_out": 121296,
+    "usd_in": 0.12133121525927988,
+    "usd_out": 0.12129412450250726,
+    "net_usd": -3.7090756772620304e-05,
+    "rate_out_per_in": 0.9998763508667804,
+    "reserve_rate": 1.1504206924464953
+   }
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,778,768 | exact-in A 5% (606,559)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303239,
+   "forkSlotAfter": 444303241,
+   "sig": "N6LC4MkN6gbffic21LUSxhGkT1c9adWetqzX7BpqdHcUZ3nn8YudJuafCyX4vYB3H9zDBi13Ae7cLWNPW4mpFbe",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 863682 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 862358 compute units",
+    "Program log: Skimming the surface \ud83e\udebc",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 539399 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -606559,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 606490,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 606559,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": -606490
+   },
+   "marketBefore": {
+    "resA": 11687368,
+    "resB": 14402295,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "marketAfter": {
+    "resA": 12293927,
+    "resB": 13795805,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8384035759,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25159990121,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 11687368,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 14402295
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8383429200,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25160596611,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 12293927,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 13795805
+   },
+   "market_addr": "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579",
+   "measured": {
+    "amount_in": 606559,
+    "amount_out": 606490,
+    "usd_in": 0.6066600769629592,
+    "usd_out": 0.6064806223579147,
+    "net_usd": -0.0001794546050445378,
+    "rate_out_per_in": 0.9998862435476186,
+    "reserve_rate": 1.1504206924464953
+   }
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,778,768 | exact-in A 25% (3,032,797)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303241,
+   "forkSlotAfter": 444303242,
+   "sig": "VYL8ibo1QoPe8cGwAcVxjLbz1q327qx71fwjjFh8Ldwrpi1Nc1KVvxwTVteZYTkNf5mkLUkZq2fU7ycCv2uhPvL",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 863441 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 862117 compute units",
+    "Program log: Caught in the riptide \ud83c\udf00",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 539640 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -3032797,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 3031150,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 3032797,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": -3031150
+   },
+   "marketBefore": {
+    "resA": 12293927,
+    "resB": 13795805,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "marketAfter": {
+    "resA": 15326724,
+    "resB": 10764655,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8383429200,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25160596611,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 12293927,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 13795805
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8380396403,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25163627761,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 15326724,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 10764655
+   },
+   "market_addr": "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579",
+   "measured": {
+    "amount_in": 3032797,
+    "amount_out": 3031150,
+    "usd_in": 3.033302385148076,
+    "usd_out": 3.0311031318903745,
+    "net_usd": -0.002199253257701539,
+    "rate_out_per_in": 0.9994569369463238,
+    "reserve_rate": 1.1504206924464953
+   }
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,778,768 | exact-in B 1% (139,559)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303242,
+   "forkSlotAfter": 444303244,
+   "sig": "4ERcJMXnjFw5Q2Y4q69oMMvEwaJLGuvsy9bdSZDNM8W59kXXqZE2PngnZ2xciUnii2p8ubAYzyzJuVRSs1GnizFy",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 861818 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 860484 compute units",
+    "Program log: Floating by \ud83c\udf88",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 541273 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 139570,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -139559,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": -139570,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 139559
+   },
+   "marketBefore": {
+    "resA": 15326724,
+    "resB": 10764655,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "marketAfter": {
+    "resA": 15187154,
+    "resB": 10904214,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8380396403,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25163627761,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 15326724,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 10764655
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8380535973,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25163488202,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 15187154,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 10904214
+   },
+   "market_addr": "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579",
+   "measured": {
+    "amount_in": 139559,
+    "amount_out": 139570,
+    "usd_in": 0.13955684211717953,
+    "usd_out": 0.1395932579381729,
+    "net_usd": 3.6415820993368486e-05,
+    "rate_out_per_in": 1.00007881971066,
+    "reserve_rate": 1.1504206924464953
+   }
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,778,768 | exact-in B 5% (697,798)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303244,
+   "forkSlotAfter": 444303245,
+   "sig": "424YmwcqwpL5XjDj5Ljet8FU8eUW8rLKtB8mwzaWKHVuoixDxGJgNBR9dFfok8ytm5TR9uu2QviYhui99tSXs6QN",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 861939 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 860605 compute units",
+    "Program log: Nautilus shell found \ud83d\udc1a",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 541169 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 697853,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -697798,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": -697853,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 697798
+   },
+   "marketBefore": {
+    "resA": 15187154,
+    "resB": 10904214,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "marketAfter": {
+    "resA": 14489301,
+    "resB": 11602012,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8380535973,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25163488202,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 15187154,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 10904214
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8381233826,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25162790404,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 14489301,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 11602012
+   },
+   "market_addr": "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579",
+   "measured": {
+    "amount_in": 697798,
+    "amount_out": 697853,
+    "usd_in": 0.6977872105395113,
+    "usd_out": 0.6979692901907844,
+    "net_usd": 0.00018207965127303716,
+    "rate_out_per_in": 1.0000788193717953,
+    "reserve_rate": 1.1504206924464953
+   }
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,778,768 | exact-in B 25% (3,488,993)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303245,
+   "forkSlotAfter": 444303246,
+   "sig": "5j79UbnEWZ5ek9Bh2pRxXaco2zuCYaqmiYhH97rkdpoTJE4Go9AZjVkD5Cd7ERd1JRJDCZLGK9CTCsC1Q5HLQJs1",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 868765 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 867431 compute units",
+    "Program log: Cruising the current \ud83c\udfca",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 534326 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 3487596,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -3488993,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": -3487596,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 3488993
+   },
+   "marketBefore": {
+    "resA": 14489301,
+    "resB": 11602012,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "marketAfter": {
+    "resA": 11001705,
+    "resB": 15091005,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8381233826,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25162790404,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 14489301,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 11602012
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8384721422,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25159301411,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 11001705,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 15091005
+   },
+   "market_addr": "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579",
+   "measured": {
+    "amount_in": 3488993,
+    "amount_out": 3487596,
+    "usd_in": 3.48893905265117,
+    "usd_out": 3.488177172831841,
+    "net_usd": -0.0007618798193287368,
+    "rate_out_per_in": 0.9995995979355647,
+    "reserve_rate": 1.1504206924464953
+   }
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,778,768 | ROUND TRIP A->B->A in one tx (exact-in 60,655 then exact-out 60,655 A)",
+   "note": "second leg is exact-out for the same token A amount: measures the round-trip cost and any carry-over edge",
+   "forkSlotBefore": 444303246,
+   "forkSlotAfter": 444303247,
+   "sig": "4LLQixjR5xnqa8eYfFtM7XQTQTW7QZv84To2EFyN52uUgB7xZazKMXtjEdFa5sxLZjSN7KYxSuobBDfu84Fq7npe",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 869801 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 868477 compute units",
+    "Program log: Seahorse gallop \ud83d\udc34",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 533289 of 1399850 compute units",
+    "Program log: Instruction: SwapExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 336935 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 335601 compute units",
+    "Program log: Tide's turning \ud83c\udf05",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 532867 of 866561 compute units"
+   ],
+   "tokenDeltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -50,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 50
+   },
+   "marketBefore": {
+    "resA": 11001705,
+    "resB": 15091005,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "marketAfter": {
+    "resA": 11001705,
+    "resB": 15091055,
+    "seq": 3,
+    "vu": 529084362
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8384782077,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25159301411,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 11001705,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 15091005
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579": 13012283665274054136,
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 8384782077,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25159301361,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 11001705,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 15091055
+   },
+   "market_addr": "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579"
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,414,472,855/resB=55,917,307,952 staleBy=-37 | exact-in A 1% (204,144,728)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303247,
+   "forkSlotAfter": 444303248,
+   "sig": "24zPT3HiZnAgTyHMG1mx7NxzgEccNGJVDeeXnHDmFR8u6oDpVK1NW922M4goWbCnzwUU2jxHUXatKSBCXd7T2FVn",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1359576 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1354421 compute units",
+    "Program log: Smooth sailing \u26f5",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 90365 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": -204144728,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 470233220,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 204144728,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": -470233220
+   },
+   "marketBefore": {
+    "resA": 19263441262,
+    "resB": 58600666974,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "marketAfter": {
+    "resA": 19467585990,
+    "resB": 58130433754,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 7606098377,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25159301361,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 19263441262,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 58600666974
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 7401953649,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25629534581,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 19467585990,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 58130433754
+   },
+   "market_addr": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+   "measured": {
+    "amount_in": 204144728,
+    "amount_out": 470233220,
+    "usd_in": 470.1423029139606,
+    "usd_out": 470.22594918129937,
+    "net_usd": 0.08364626733879277,
+    "rate_out_per_in": 2.303430632800863,
+    "reserve_rate": 2.7391012420046152
+   }
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,414,472,855/resB=55,917,307,952 staleBy=-37 | exact-in A 5% (1,020,723,642)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303248,
+   "forkSlotAfter": 444303250,
+   "sig": "5VGEGVuxL9jNMSiLcKf1wiYVDWD4MrDmUxJxLf5q8XxS99SUiQ8UxeKUFwhPGcGCUvxrH7J6K2Bkkv4Shn27UHs4",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1359755 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1354600 compute units",
+    "Program log: Caught in the riptide \ud83c\udf00",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 90186 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": -1020723642,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 2351112051,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 1020723642,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": -2351112051
+   },
+   "marketBefore": {
+    "resA": 19467585990,
+    "resB": 58130433754,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "marketAfter": {
+    "resA": 20488309632,
+    "resB": 55779321703,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 7401953649,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25629534581,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 19467585990,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 58130433754
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 6381230007,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 27980646632,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 20488309632,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 55779321703
+   },
+   "market_addr": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+   "measured": {
+    "amount_in": 1020723642,
+    "amount_out": 2351112051,
+    "usd_in": 2350.7115191757734,
+    "usd_out": 2351.0756977422107,
+    "net_usd": 0.3641785664372037,
+    "rate_out_per_in": 2.3033776766385508,
+    "reserve_rate": 2.7391012420046152
+   }
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,414,472,855/resB=55,917,307,952 staleBy=-37 | exact-in A 25% (5,103,618,213)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303250,
+   "forkSlotAfter": 444303251,
+   "sig": "4X39J2PvaK5Y9LZXJvc92Tncuavmzx6Q9jTJM4NtFUkV8VNKiACvNtsQo82n2dP4dg2pJJnJts1HUVFMp7tomFeD",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1359777 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1354622 compute units",
+    "Program log: Paddling through \ud83d\udef6",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 90164 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": -5103618213,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 11754220560,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 5103618213,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": -11754220560
+   },
+   "marketBefore": {
+    "resA": 20488309632,
+    "resB": 55779321703,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "marketAfter": {
+    "resA": 25591927845,
+    "resB": 44025101143,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 6381230007,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 27980646632,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 20488309632,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 55779321703
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 1277611794,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 39734867192,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 25591927845,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 44025101143
+   },
+   "market_addr": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+   "measured": {
+    "amount_in": 5103618213,
+    "amount_out": 11754220560,
+    "usd_in": 11753.557602787825,
+    "usd_out": 11754.038814425625,
+    "net_usd": 0.48121163779978815,
+    "rate_out_per_in": 2.3031151762213526,
+    "reserve_rate": 2.7391012420046152
+   }
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,414,472,855/resB=55,917,307,952 staleBy=-37 | exact-in B 1% (559,173,079)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303251,
+   "forkSlotAfter": 444303253,
+   "sig": "TEbsKoemMn8MZaeyvD8x3tYsAvcXd9yf87sDH6HF94mhEinABfENB8ytYCmyqBhkpMSKXApcz5Jh84APN6GGP6f",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1355910 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1354574 compute units",
+    "Program log: Smooth sailing \u26f5",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 93943 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 242249362,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -559173079,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": -242249362,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 559173079
+   },
+   "marketBefore": {
+    "resA": 25591927845,
+    "resB": 44025101143,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "marketAfter": {
+    "resA": 25349678483,
+    "resB": 44584274222,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 1277611794,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 39734867192,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 25591927845,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 44025101143
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 1519861156,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 39175694113,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 25349678483,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 44584274222
+   },
+   "market_addr": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+   "measured": {
+    "amount_in": 559173079,
+    "amount_out": 242249362,
+    "usd_in": 559.164432979458,
+    "usd_out": 557.8967139926225,
+    "net_usd": -1.2677189868354617,
+    "rate_out_per_in": 0.43322787004200536,
+    "reserve_rate": 2.7391012420046152
+   }
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,414,472,855/resB=55,917,307,952 staleBy=-37 | exact-in B 5% (2,795,865,397)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303253,
+   "forkSlotAfter": 444303254,
+   "sig": "4eNx8h2VU8tqRwy5vPjwQMXNvsUt8GsUcnyWTdfoBXWEqKGYfXPT4Adx2RsA7VeVwKdCpmFgjpgPY2xJUxhrqJNN",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1355909 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1354573 compute units",
+    "Program log: Going with the flow \ud83d\udca7",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 93944 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 1211214100,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -2795865397,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": -1211214100,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 2795865397
+   },
+   "marketBefore": {
+    "resA": 25349678483,
+    "resB": 44584274222,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "marketAfter": {
+    "resA": 24138464383,
+    "resB": 47380139619,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 1519861156,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 39175694113,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 25349678483,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 44584274222
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 2731075256,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 36379828716,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 24138464383,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 47380139619
+   },
+   "market_addr": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+   "measured": {
+    "amount_in": 2795865397,
+    "amount_out": 1211214100,
+    "usd_in": 2795.8221668972587,
+    "usd_out": 2789.408239314709,
+    "net_usd": -6.413927582549604,
+    "rate_out_per_in": 0.4332161703133665,
+    "reserve_rate": 2.7391012420046152
+   }
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,414,472,855/resB=55,917,307,952 staleBy=-37 | exact-in B 25% (13,979,326,988)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303254,
+   "forkSlotAfter": 444303256,
+   "sig": "3HgoNESBcnDnDo2LvUbKfBnrfWdFJctjNCEwV6ymk8vFU85kJqBnyNZKYrkDP88ASgCQuPSijzeWMDDUZ9sn9qNu",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1355248 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1353912 compute units",
+    "Program log: Caught in the riptide \ud83c\udf00",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 94664 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 6055092320,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -13979326988,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": -6055092320,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 13979326988
+   },
+   "marketBefore": {
+    "resA": 24138464383,
+    "resB": 47380139619,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "marketAfter": {
+    "resA": 18083372063,
+    "resB": 61359466607,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 2731075256,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 36379828716,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 24138464383,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 47380139619
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 8786167576,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22400501728,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 18083372063,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 61359466607
+   },
+   "market_addr": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+   "measured": {
+    "amount_in": 13979326988,
+    "amount_out": 6055092320,
+    "usd_in": 13979.110837486247,
+    "usd_out": 13944.788462435516,
+    "net_usd": -34.32237505073135,
+    "rate_out_per_in": 0.43314619689472567,
+    "reserve_rate": 2.7391012420046152
+   }
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,414,472,855/resB=55,917,307,952 staleBy=-37 | ROUND TRIP A->B->A in one tx (exact-in 102,072,364 then exact-out 102,072,364 A)",
+   "note": "second leg is exact-out for the same token A amount: measures the round-trip cost and any carry-over edge",
+   "forkSlotBefore": 444303256,
+   "forkSlotAfter": 444303257,
+   "sig": "1F3sb33okwbRS5gYcJ8oknBx5Argrce6tFZxfNBfFoQh2fvufa8RcGVGqGrSexgTNKx6e3ShPsRMBaGuHazMA7Y",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1358470 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1353315 compute units",
+    "Program log: Tide's turning \ud83c\udf05",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 91476 of 1399850 compute units",
+    "Program log: Instruction: SwapExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1264891 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1263555 compute units",
+    "Program log: Barnacle bonanza \ud83c\udfaf",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 93562 of 1308374 compute units"
+   ],
+   "tokenDeltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -774553,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 774553
+   },
+   "marketBefore": {
+    "resA": 18083372063,
+    "resB": 61359466607,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "marketAfter": {
+    "resA": 18083372063,
+    "resB": 61360241160,
+    "seq": 940777,
+    "vu": 444304874
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 8888239940,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22400501728,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 18083372063,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 61359466607
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa": 11486068557851767264,
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 8888239940,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22399727175,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 18083372063,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 61360241160
+   },
+   "market_addr": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa"
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=513,476,091/resB=8,812,166,239 staleBy=-31 | exact-in A 1% (5,134,760)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303257,
+   "forkSlotAfter": 444303259,
+   "sig": "4z68w2FasZ44qDdPSFDuvqb5grAPwQrPq8uiayed7goBYf9tDfH6BXFPGNqAEihvmvevgUQ9AqahmoXbz3TMRcXQ",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1364356 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363032 compute units",
+    "Program log: Coasting through \ud83d\udedf",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 81641 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": -5134760,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 11570183,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 5134760,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": -11570183
+   },
+   "marketBefore": {
+    "resA": 434641086,
+    "resB": 8991012902,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "marketAfter": {
+    "resA": 439775846,
+    "resB": 8979442719,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 236864657,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22399727175,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 434641086,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 8991012902
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 231729897,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22411297358,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 439775846,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 8979442719
+   },
+   "market_addr": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+   "measured": {
+    "amount_in": 5134760,
+    "amount_out": 11570183,
+    "usd_in": 11.596007171380274,
+    "usd_out": 11.570004100042812,
+    "net_usd": -0.026003071337461492,
+    "rate_out_per_in": 2.2533055098972494,
+    "reserve_rate": 17.16178492719732
+   }
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=513,476,091/resB=8,812,166,239 staleBy=-31 | exact-in A 5% (25,673,804)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303259,
+   "forkSlotAfter": 444303261,
+   "sig": "N8NsjSgKj5hGhaJ8YeRbGzquNRcWJPVMAzkSAK1GJe6aJpbWiX414RU7yArSgabT1G3QMhRncnkfcuots9MnwhQ",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1364356 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363032 compute units",
+    "Program log: Skimming the surface \ud83e\udebc",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 81641 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": -25673804,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 57850583,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 25673804,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": -57850583
+   },
+   "marketBefore": {
+    "resA": 439775846,
+    "resB": 8979442719,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "marketAfter": {
+    "resA": 465449650,
+    "resB": 8921592136,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 231729897,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22411297358,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 439775846,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 8979442719
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 206056093,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22469147941,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 465449650,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 8921592136
+   },
+   "market_addr": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+   "measured": {
+    "amount_in": 25673804,
+    "amount_out": 57850583,
+    "usd_in": 57.98004489024055,
+    "usd_out": 57.849688505347494,
+    "net_usd": -0.13035638489305512,
+    "rate_out_per_in": 2.253292227361399,
+    "reserve_rate": 17.16178492719732
+   }
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=513,476,091/resB=8,812,166,239 staleBy=-31 | exact-in A 25% (128,369,022)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303261,
+   "forkSlotAfter": 444303263,
+   "sig": "3sLFbcn4emCpPt5pAQzyfjJPFXUq4GZNA92VHxiCM5A2hYPrUoupDpZnc7dRATG4JmCcvHsNMXQTRJR6YJvNbG7D",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1364358 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363034 compute units",
+    "Program log: Seahorse gallop \ud83d\udc34",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 81648 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": -128369022,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 289244553,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 128369022,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": -289244553
+   },
+   "marketBefore": {
+    "resA": 465449650,
+    "resB": 8921592136,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "marketAfter": {
+    "resA": 593818672,
+    "resB": 8632347583,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 206056093,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22469147941,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 465449650,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 8921592136
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 77687071,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22758392494,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 593818672,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 8632347583
+   },
+   "market_addr": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+   "measured": {
+    "amount_in": 128369022,
+    "amount_out": 289244553,
+    "usd_in": 289.90022896787235,
+    "usd_out": 289.24008065603203,
+    "net_usd": -0.6601483118403166,
+    "rate_out_per_in": 2.2532270519284627,
+    "reserve_rate": 17.16178492719732
+   }
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=513,476,091/resB=8,812,166,239 staleBy=-31 | exact-in B 1% (88,121,662)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303263,
+   "forkSlotAfter": 444303264,
+   "sig": "3cw6188i9rmrfdNwaZLAJwvytKqTLc1SsdgTGqwS9hmAUhbgRSc8gwHEJXg4BFYcubrkCfguWX8DwanPL66rJc7h",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1364991 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363657 compute units",
+    "Program log: Drifting along \ud83c\udf0a",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 81078 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 38995671,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -88121662,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": -38995671,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 88121662
+   },
+   "marketBefore": {
+    "resA": 593818672,
+    "resB": 8632347583,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "marketAfter": {
+    "resA": 554823001,
+    "resB": 8720469245,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 77687071,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22758392494,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 593818672,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 8632347583
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 116682742,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22670270832,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 554823001,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 8720469245
+   },
+   "market_addr": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+   "measured": {
+    "amount_in": 88121662,
+    "amount_out": 38995671,
+    "usd_in": 88.12029944924699,
+    "usd_out": 88.06528066916191,
+    "net_usd": -0.05501878008507788,
+    "rate_out_per_in": 0.44252082989537805,
+    "reserve_rate": 17.16178492719732
+   }
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=513,476,091/resB=8,812,166,239 staleBy=-31 | exact-in B 5% (440,608,311)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303264,
+   "forkSlotAfter": 444303266,
+   "sig": "3e5FCuXGpBBfxvrziJD6Nf89r6kzJAxYFAXBNUAgQBYgQGeVwXJvvA5VyVPVhAa6HPXYrvTJHkWp1MTr7SJ7QoWn",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1364439 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363105 compute units",
+    "Program log: Octopus ink cloud \ud83d\udc19",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 81698 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 194933332,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -440608311,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": -194933332,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 440608311
+   },
+   "marketBefore": {
+    "resA": 554823001,
+    "resB": 8720469245,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "marketAfter": {
+    "resA": 359889669,
+    "resB": 9161077556,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 116682742,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22670270832,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 554823001,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 8720469245
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 311616074,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22229662521,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 359889669,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 9161077556
+   },
+   "market_addr": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+   "measured": {
+    "amount_in": 440608311,
+    "amount_out": 194933332,
+    "usd_in": 440.6014982462195,
+    "usd_out": 440.22472633833945,
+    "net_usd": -0.3767719078800269,
+    "rate_out_per_in": 0.4424186451625966,
+    "reserve_rate": 17.16178492719732
+   }
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=513,476,091/resB=8,812,166,239 staleBy=-31 | exact-in B 25% (2,203,041,559)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303266,
+   "forkSlotAfter": 444303267,
+   "sig": "2V5ZvUAHVCPzX4WDRRR2KQcE7HiDdBaCpadD1ZuUyKsbWHhpdZMwRHi8s9MbU4B91YtatihYATYb54DZdvjepD6H",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Partial fill is not allowed",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 35939 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0x17d3"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 359889669,
+    "resB": 9161077556,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "marketAfter": {
+    "resA": 359889669,
+    "resB": 9161077556,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 311616074,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22229662521,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 359889669,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 9161077556
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 311616074,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22229662521,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 359889669,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 9161077556
+   },
+   "market_addr": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+   "measured": {
+    "amount_in": 0,
+    "amount_out": 0,
+    "usd_in": null,
+    "usd_out": null,
+    "net_usd": null,
+    "rate_out_per_in": null,
+    "reserve_rate": 17.16178492719732
+   }
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=513,476,091/resB=8,812,166,239 staleBy=-31 | ROUND TRIP A->B->A in one tx (exact-in 2,567,380 then exact-out 2,567,380 A)",
+   "note": "second leg is exact-out for the same token A amount: measures the round-trip cost and any carry-over edge",
+   "forkSlotBefore": 444303267,
+   "forkSlotAfter": 444303269,
+   "sig": "HeKQu8MM146wME75T51LmGyF3LegUWn2JBcNVB2k7P2wV5TtAzVTCGiEaF5nbS6z8Xwau4VduJmoNWbKZptfPBm",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363253 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1361929 compute units",
+    "Program log: Going with the flow \ud83d\udca7",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 82749 of 1399850 compute units",
+    "Program log: Instruction: SwapExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1283139 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1281805 compute units",
+    "Program log: Drifting along \ud83c\udf0a",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 80240 of 1317101 compute units"
+   ],
+   "tokenDeltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -21998,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 21998
+   },
+   "marketBefore": {
+    "resA": 359889669,
+    "resB": 9161077556,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "marketAfter": {
+    "resA": 359889669,
+    "resB": 9161099554,
+    "seq": 254893,
+    "vu": 444304889
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 314183454,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22229662521,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 359889669,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 9161077556
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG": 11486068557851767264,
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 314183454,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22229640523,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 359889669,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 9161099554
+   },
+   "market_addr": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG"
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-37 | exact-in A 1% (157,783,504)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303269,
+   "forkSlotAfter": 444303270,
+   "sig": "3MAwbg2c6CNwsFzZSeCi6nbV5Za9bL12FroXrgBsqhE5kFmJoeSqJNosXKRgbJFqQaDoMHGWbKHU85uV9BjikKsk",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1370014 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1364859 compute units",
+    "Program log: Hammerhead hunting \ud83d\udd28",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 80003 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": -157783504,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 553887571,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 157783504,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": -553887571
+   },
+   "marketBefore": {
+    "resA": 16019123595,
+    "resB": 51987942651,
+    "seq": 3338869,
+    "vu": 444304910
+   },
+   "marketAfter": {
+    "resA": 16176907099,
+    "resB": 51434055080,
+    "seq": 3338869,
+    "vu": 444304910
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack": 11486068557851767264,
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 4729407302,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22229640523,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 16019123595,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 51987942651
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack": 11486068557851767264,
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 4571623798,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22783528094,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 16176907099,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 51434055080
+   },
+   "market_addr": "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack",
+   "measured": {
+    "amount_in": 157783504,
+    "amount_out": 553887571,
+    "usd_in": 555.0919138226972,
+    "usd_out": 553.8790067047992,
+    "net_usd": -1.2129071178979984,
+    "rate_out_per_in": 3.510427623663371,
+    "reserve_rate": 3.3465441419510746
+   }
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-37 | exact-in A 5% (788,917,524)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303270,
+   "forkSlotAfter": 444303271,
+   "sig": "39hExS3nXB3qAhYBuEXgpYc8Lf9Z6QSjXDvfRAbssz8ZLX3wVKhsHhfZjCEsxLEL5oTxe42fr2d6DZiiuYExS1yY",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1370013 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1364858 compute units",
+    "Program log: Tide's turning \ud83c\udf05",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 79987 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": -788917524,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 2769368633,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 788917524,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": -2769368633
+   },
+   "marketBefore": {
+    "resA": 16176907099,
+    "resB": 51434055080,
+    "seq": 3338869,
+    "vu": 444304910
+   },
+   "marketAfter": {
+    "resA": 16965824623,
+    "resB": 48664686447,
+    "seq": 3338869,
+    "vu": 444304910
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack": 11486068557851767264,
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 4571623798,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 22783528094,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 16176907099,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 51434055080
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack": 11486068557851767264,
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 3782706274,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25552896727,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 16965824623,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 48664686447
+   },
+   "market_addr": "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack",
+   "measured": {
+    "amount_in": 788917524,
+    "amount_out": 2769368633,
+    "usd_in": 2775.4595831857278,
+    "usd_out": 2769.3258125943175,
+    "net_usd": -6.133770591410212,
+    "rate_out_per_in": 3.510339862852381,
+    "reserve_rate": 3.3465441419510746
+   }
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-37 | exact-in A 25% (3,944,587,623)",
+   "note": "realized exchange rate vs external reference price",
+   "forkSlotBefore": 444303271,
+   "forkSlotAfter": 444303272,
+   "sig": "KRm7tu3Q6HDnRvWGFSiRCQgJdmWtvsktFSgZd4buDpnNanWAhTRTcyuMb7n3xf6wa7eGafSgSJntD9FNdMBFuqB",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program log: Error: insufficient funds",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1551 of 1370037 compute units",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 31364 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0x1"
+   ],
+   "tokenDeltas": {},
+   "marketBefore": {
+    "resA": 16965824623,
+    "resB": 48664686447,
+    "seq": 3338869,
+    "vu": 444304910
+   },
+   "marketAfter": {
+    "resA": 16965824623,
+    "resB": 48664686447,
+    "seq": 3338869,
+    "vu": 444304910
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack": 11486068557851767264,
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 161881350,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25552896727,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 16965824623,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 48664686447
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack": 11486068557851767264,
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 161881350,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25552896727,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 16965824623,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 48664686447
+   },
+   "market_addr": "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack",
+   "measured": {
+    "amount_in": 0,
+    "amount_out": 0,
+    "usd_in": null,
+    "usd_out": null,
+    "net_usd": null,
+    "rate_out_per_in": null,
+    "reserve_rate": 3.3465441419510746
+   }
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-37 | ROUND TRIP A->B->A in one tx (exact-in 78,891,752 then exact-out 78,891,752 A)",
+   "note": "second leg is exact-out for the same token A amount: measures the round-trip cost and any carry-over edge",
+   "forkSlotBefore": 444303272,
+   "forkSlotAfter": 444303273,
+   "sig": "4y8kHu1AyBMnmzGpWSaPGKoKLikLX4LwVoZvDZTSkNLqLYYA7Nn9SogFZjWUtHJHdhyRzkyxgA9pdXAzsuwedwSJ",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1368929 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363774 compute units",
+    "Program log: Manta ray glide \ud83e\udd88",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 81080 of 1399850 compute units",
+    "Program log: Instruction: SwapExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1282971 compute units",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1281635 compute units",
+    "Program log: Starfish aligned \u2b50",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 85816 of 1318770 compute units"
+   ],
+   "tokenDeltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -912150,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 912150
+   },
+   "marketBefore": {
+    "resA": 16965824623,
+    "resB": 48664686447,
+    "seq": 3338869,
+    "vu": 444304910
+   },
+   "marketAfter": {
+    "resA": 16965824623,
+    "resB": 48665598597,
+    "seq": 3338869,
+    "vu": 444304910
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack": 11486068557851767264,
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 240773102,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25552896727,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 16965824623,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 48664686447
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack": 11486068557851767264,
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 240773102,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25551984577,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 16965824623,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 48665598597
+   },
+   "market_addr": "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack"
+  },
+  {
+   "case": "BB-EXP control: swap on CNp3etjEmW while slot <= validUntil (444305626)",
+   "note": "identical instruction used again after the fork slot passes validUntil",
+   "forkSlotBefore": 444303273,
+   "forkSlotAfter": 444303274,
+   "sig": "2KioN8rrvD72A3RZrR3k9H2455LAY5UXs1AwywEYhemBKYiiVt7HmGqQrjmy3WdSN7ihE45XgwnBLNdmjVgku897",
+   "err": null,
+   "instructionError": null,
+   "logs": [
+    "Program log: Instruction: SwapExactIn",
+    "Program log: TransferFeeInstruction: TransferCheckedWithFee",
+    "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1367078 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1361923 compute units",
+    "Program log: Swordfish strike \u2694\ufe0f",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 82880 of 1399850 compute units"
+   ],
+   "tokenDeltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": -88967577,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 125990254,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 88967577,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": -125990254
+   },
+   "marketBefore": {
+    "resA": 16396441502,
+    "resB": 30485649300,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "marketAfter": {
+    "resA": 16485409079,
+    "resB": 30359659046,
+    "seq": 379829,
+    "vu": 444304832
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 7187981574,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25551984577,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 16396441502,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 30485649300
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": null,
+    "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd": 11486068557851767264,
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 7099013997,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 25677974831,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 16485409079,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 30359659046
+   },
+   "market_addr": "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd"
+  }
+ ],
+ "funding": [
+  {
+   "ata": "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb",
+   "amount": 16919665940,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb",
+   "amount": 16921607559,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+   "amount": 481807657,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+   "amount": 1000000,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P",
+   "amount": 8384157070,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2",
+   "amount": 1368099598,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX",
+   "amount": 454160955,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX",
+   "amount": 475422996,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA",
+   "amount": 15183346564,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA",
+   "amount": 15542817726,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu",
+   "amount": 7099013997,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o",
+   "amount": 579759879,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o",
+   "amount": 617210946,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P",
+   "amount": 8384782077,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN",
+   "amount": 8888239940,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z",
+   "amount": 314183454,
+   "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15",
+   "amount": 161881350,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15",
+   "amount": 240773102,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  },
+  {
+   "ata": "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu",
+   "amount": 7187981574,
+   "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+   "why": "fork-only fixture funding of the attacker's OWN account so the swap path is reached; not protocol state, not exploit evidence",
+   "result": true
+  }
+ ],
+ "note": "partial dump: written before the controlled expiry-gate wait"
+}

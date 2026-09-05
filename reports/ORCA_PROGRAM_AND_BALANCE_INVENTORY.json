@@ -1,0 +1,124 @@
+
+{
+  "generatedAt": "2026-09-03T18:39:42.178Z",
+  "method": "read-only mainnet RPC + prior reconstruction caches; fork-agnostic inventory",
+  "programs": [
+    {
+      "name": "Whirlpool",
+      "addr": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+      "pd": "CtXfPzz36dH5Ws4UYKZvrQ1Xqzn42ecDW6y8NKuiN8nD",
+      "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "lastUpgradeSlot": 440170207,
+      "live": true,
+      "tvsUsd": 405000000,
+      "programOwnedAccounts": 1106108,
+      "pools": 156285,
+      "stdConfigPools": 154766
+    },
+    {
+      "name": "AMM",
+      "addr": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
+      "pd": "DrrJDyBzyuyYAzkkjd6Vu9ZzaDLsKRf4RPXyRE7Uk2A8",
+      "upgradeAuthority": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+      "lastUpgradeSlot": 161177892,
+      "live": false,
+      "note": "dormant since 2021"
+    },
+    {
+      "name": "riptK81h",
+      "addr": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+      "pd": "4RhNxb6VAhj9EMsnmyxz8giXsuaMcnjCUKxPtUvhBeRu",
+      "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "lastUpgradeSlot": 440010891,
+      "live": true,
+      "programOwnedAccounts": 32,
+      "tokenAccounts": 0,
+      "ownedLamports": 256747447,
+      "note": "ORCA TOKEN-LAUNCH PLATFORM: BondingCurve->GraduateWhirlpool (InitializePoolWithAdaptiveFee, OpenPositionWithTokenExtensions, LockPosition); HOLDS WSOL ESCROW CUSTODY per launch (measured CdPRm4HJ->82sv2xcg 281663128 lamports; 5-record scan up to 14172763); 500KB ELF; NOT decompiled â€” BALANCE-HOLDING companion",
+      "handlerMix": "TokenSellExactIn x12, TokenBuyExactIn x15, PermissionConsumeTopLevel x15, PermissionRefund x53, BondingCurveGraduate x1, GraduateWhirlpool x1, InitializePoolWithAdaptiveFee x1, InitializeDynamicTickArray x2, OpenPositionWithTokenExtensions x1, LockPosition x1 (last 40 txs)",
+      "custody": {
+        "wsolEscrowSamples": [
+          {
+            "record": "CdPRm4HJakKGmN5Q44t7euJ1cXSa7yR92eH61GC2ibWd",
+            "tokenAcct": "82sv2xcgFsgG1L4xHQbpdqnvXQGJk5Rs7mBwpC6Fihbp",
+            "lamports": "281663128"
+          },
+          {
+            "record": "1Zx1k9Nz (head rec)",
+            "tokenAcct": "HGDmxsgi",
+            "lamports": "4975001"
+          },
+          {
+            "record": "13Td3zT7",
+            "tokenAcct": "E8ShcbGH",
+            "lamports": "0"
+          },
+          {
+            "record": "13hhHzBA",
+            "tokenAcct": "NnbTFLwP",
+            "lamports": "199001"
+          },
+          {
+            "record": "14UartwS",
+            "tokenAcct": "9sTkdSPC",
+            "lamports": "14172763"
+          },
+          {
+            "record": "5gPiVfN7",
+            "tokenAcct": "HWn1N8eu",
+            "lamports": "3243250"
+          }
+        ]
+      }
+    },
+    {
+      "name": "waveQX2y",
+      "addr": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+      "pd": "nEuknUvGZK5UVyq3Tf18tcpNtC7dmjPMirrry66SkAs",
+      "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "lastUpgradeSlot": 365746180,
+      "live": true,
+      "programOwnedAccounts": 1572,
+      "tokenAccounts": 0,
+      "ownedLamports": 23395853334,
+      "handler": "TokenSellExactIn",
+      "note": "orca_busybox DEX ROUTER: RouteV2, SwapV2 (Whirlpool CPI), Swap2 (AMM), SwapExactIn/Out, TransferChecked(WithFee), MarketDeposit/Withdraw/Close, SetTokenLedger, OracleUpdate; 32x1024B market records; no measured custodial token accounts; NOT decompiled â€” BALANCE-CONTROLLING companion",
+      "handlerMix": "RouteV2 x1, SwapExactIn x2, SwapV2 x2, Route x1, Swap2 x2, TransferChecked x4, TransferCheckedWithFee x1, SetTokenLedger x1, RouteWithTokenLedger x1 (last 40 txs)"
+    }
+  ],
+  "config": {
+    "addr": "2LecshUwdy9xi7meFgHtFJQNSKk4KdTrcpvaB56dP2NQ",
+    "feeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+    "collectProtocolFeesAuthority": "CRQd5wvbf6FKVmjHC7on8w4pzFPzudij2BKXRcMCu7aK",
+    "rewardEmissionsSuperAuthority": "DXnB9N9JLH5c9AYdKMGHQyspewSsvhFnwLK1tz1iPmZw",
+    "defaultProtocolFeeRate": 1300,
+    "flags": 1
+  },
+  "squadsVaults": [
+    {
+      "addr": "BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF",
+      "owner": "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf",
+      "len": 1155,
+      "lamports": 8929680
+    },
+    {
+      "addr": "DNUJ3ByF4z7u4TaLSx7oGXGe6QuvjR1CJa5BCHuqWfq9",
+      "owner": "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf",
+      "len": 1318,
+      "lamports": 10064160
+    },
+    {
+      "addr": "DCuDSLc7rH5K3Y4ht5oFBR4W1DKnmvXFqvaMi2S1dVjJ",
+      "owner": "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf",
+      "len": 378,
+      "lamports": 3521760
+    },
+    {
+      "addr": "4ZnVFX2c2XYSfBbYq3eegrULkcMtqChkAgshkToQKGqg",
+      "owner": "11111111111111111111111111111111",
+      "len": 0,
+      "lamports": 69972864,
+      "note": "system-owned; no program state"
+    }
+  ]
+}

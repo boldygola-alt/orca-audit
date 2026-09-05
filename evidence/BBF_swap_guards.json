@@ -1,0 +1,1183 @@
+{
+ "forkSlotEnd": 444223459,
+ "results": [
+  {
+   "case": "BB-F01 swapExactIn on a market whose stored oracle has EXPIRED",
+   "note": "expiry guard: does the program still price the swap off the stale stored oracle?",
+   "forkSlotBefore": 444223443,
+   "forkSlotAfter": 444223444,
+   "sig": "WZzxzpATdJz2A47miyNV9YJrHKz575WLwDGdo7EGcciMG9d3B8QwG8rHDpKfnpnwkcHgL7dY7DG6kV4y7ATvvGY",
+   "err": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j invoke [1]",
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Account 9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA is not owned by TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 9459 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: Provided owner is not allowed"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978975200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7108fc496e7933e4cbe378ebaa7042896b5f946215b86c130f8e3fc21b6ca6f6",
+     "market": {
+      "disc": 2,
+      "authority": "2C7K3BN63MAgguLaY9NthPDrtFvriXYa1FzRQvQ1QhH6",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 4068486,
+      "validUntil": 444228234,
+      "reservesA": 65180026503,
+      "reservesB": 60540566254,
+      "oracleNonzero": 80
+     }
+    },
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": {
+     "lamports": 2136720,
+     "space": 179,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "1e7f2d8b95ef31360f91c5dce145682105aadc1a99ae90ecaad57d25c1b64dd2"
+    },
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fc37b757d01deff882b74ad0110f1528c9ed8e3f76fc170aff5223a869d302e2",
+     "tokenAmount": 60540566254
+    },
+    "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+     "lamports": 2477494330,
+     "space": 679,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "7ce9bee7cf950ce3b2f307ef891e827ee398991d59e8761d062b5d97b51cfb16"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978970200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7108fc496e7933e4cbe378ebaa7042896b5f946215b86c130f8e3fc21b6ca6f6",
+     "market": {
+      "disc": 2,
+      "authority": "2C7K3BN63MAgguLaY9NthPDrtFvriXYa1FzRQvQ1QhH6",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 4068486,
+      "validUntil": 444228234,
+      "reservesA": 65180026503,
+      "reservesB": 60540566254,
+      "oracleNonzero": 80
+     }
+    },
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": {
+     "lamports": 2136720,
+     "space": 179,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "1e7f2d8b95ef31360f91c5dce145682105aadc1a99ae90ecaad57d25c1b64dd2"
+    },
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fc37b757d01deff882b74ad0110f1528c9ed8e3f76fc170aff5223a869d302e2",
+     "tokenAmount": 60540566254
+    },
+    "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+     "lamports": 2477494330,
+     "space": 679,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "7ce9bee7cf950ce3b2f307ef891e827ee398991d59e8761d062b5d97b51cfb16"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "attackerTokenDeltas": {
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 0,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 0
+   }
+  },
+  {
+   "case": "BB-F02 swapExactOut on the same stale market",
+   "note": "exact-out variant",
+   "forkSlotBefore": 444223444,
+   "forkSlotAfter": 444223445,
+   "sig": "5JP7VAxBxbxiU2LP5smMhw23z9vSDzVH7MpGqNcEn94NdcGmr75CtoJcBetkK2UPApacCdAGBMVH5GoY8tTmYZik",
+   "err": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j invoke [1]",
+    "Program log: Instruction: SwapExactOut",
+    "Program log: Account 9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA is not owned by TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 9458 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: Provided owner is not allowed"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978970200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7108fc496e7933e4cbe378ebaa7042896b5f946215b86c130f8e3fc21b6ca6f6",
+     "market": {
+      "disc": 2,
+      "authority": "2C7K3BN63MAgguLaY9NthPDrtFvriXYa1FzRQvQ1QhH6",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 4068486,
+      "validUntil": 444228234,
+      "reservesA": 65180026503,
+      "reservesB": 60540566254,
+      "oracleNonzero": 80
+     }
+    },
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": {
+     "lamports": 2136720,
+     "space": 179,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "1e7f2d8b95ef31360f91c5dce145682105aadc1a99ae90ecaad57d25c1b64dd2"
+    },
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fc37b757d01deff882b74ad0110f1528c9ed8e3f76fc170aff5223a869d302e2",
+     "tokenAmount": 60540566254
+    },
+    "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+     "lamports": 2477494330,
+     "space": 679,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "7ce9bee7cf950ce3b2f307ef891e827ee398991d59e8761d062b5d97b51cfb16"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978965200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7108fc496e7933e4cbe378ebaa7042896b5f946215b86c130f8e3fc21b6ca6f6",
+     "market": {
+      "disc": 2,
+      "authority": "2C7K3BN63MAgguLaY9NthPDrtFvriXYa1FzRQvQ1QhH6",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 4068486,
+      "validUntil": 444228234,
+      "reservesA": 65180026503,
+      "reservesB": 60540566254,
+      "oracleNonzero": 80
+     }
+    },
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": {
+     "lamports": 2136720,
+     "space": 179,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "1e7f2d8b95ef31360f91c5dce145682105aadc1a99ae90ecaad57d25c1b64dd2"
+    },
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fc37b757d01deff882b74ad0110f1528c9ed8e3f76fc170aff5223a869d302e2",
+     "tokenAmount": 60540566254
+    },
+    "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+     "lamports": 2477494330,
+     "space": 679,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "7ce9bee7cf950ce3b2f307ef891e827ee398991d59e8761d062b5d97b51cfb16"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "attackerTokenDeltas": {
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 0,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 0
+   }
+  },
+  {
+   "case": "BB-F03 swapExactIn on a market with a FRESH oracle (contrast)",
+   "note": "same code path, non-expired oracle",
+   "forkSlotBefore": 444223446,
+   "forkSlotAfter": 444223448,
+   "sig": "51HsCs6ZJKrNHwLzrFeDXCmEJCZiQbV8XCGiDgmPXugPWN6jUVDdAwtuL6bWofrGnsjpHR5URAPygTR4pzzvcC2U",
+   "err": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j invoke [1]",
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Account Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P is not owned by TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 7936 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: Provided owner is not allowed"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978965200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7914bb45c52746acaa923f05a2916ba1a2fd81ef87dc1953e6fe38be32ce1b36",
+     "market": {
+      "disc": 2,
+      "authority": "CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 9,
+      "validUntil": 534568722,
+      "reservesA": 24987026212,
+      "reservesB": 25107388359,
+      "oracleNonzero": 18
+     }
+    },
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "25d0a8a829be3c7949caa86377fb9cf207b02e268fb05bafedf42bf6ea45477c",
+     "tokenAmount": 24987026212
+    },
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "6eb999ecc69456c7660c0494d63ec288e35f16bc3363b9d46c830ff563700051",
+     "tokenAmount": 25107388359
+    },
+    "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+     "lamports": 212183525507,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "2ae04da074815b2a8eb10101d50f156e52b94774fe1ae3a35dacff6bb0359063",
+     "supply": 3839903875137951,
+     "mintAuthority": "4uQeVncbrNXnmShbdAUxSqj4u2jk5s8hA1aYc6KLveN"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978960200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7914bb45c52746acaa923f05a2916ba1a2fd81ef87dc1953e6fe38be32ce1b36",
+     "market": {
+      "disc": 2,
+      "authority": "CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 9,
+      "validUntil": 534568722,
+      "reservesA": 24987026212,
+      "reservesB": 25107388359,
+      "oracleNonzero": 18
+     }
+    },
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "25d0a8a829be3c7949caa86377fb9cf207b02e268fb05bafedf42bf6ea45477c",
+     "tokenAmount": 24987026212
+    },
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "6eb999ecc69456c7660c0494d63ec288e35f16bc3363b9d46c830ff563700051",
+     "tokenAmount": 25107388359
+    },
+    "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": {
+     "lamports": 212183525507,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "2ae04da074815b2a8eb10101d50f156e52b94774fe1ae3a35dacff6bb0359063",
+     "supply": 3839903875137951,
+     "mintAuthority": "4uQeVncbrNXnmShbdAUxSqj4u2jk5s8hA1aYc6KLveN"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "attackerTokenDeltas": {
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 0,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 0
+   }
+  },
+  {
+   "case": "BB-F04 swapExactIn with authorityA aliased onto the market vault",
+   "note": "duplicate/aliased mutable account",
+   "forkSlotBefore": 444223448,
+   "forkSlotAfter": 444223449,
+   "sig": "2LoSzSjh1KBPjAZVaw2fNc5keRjoeUGu3nZb7WuKhp9aCwxuB5hFjRCuQmVtjvxtkevcwoSEfoLEVXrTiQACLuhe",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j invoke [1]",
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Token account 3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W has wrong owner",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 8024 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978960200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7108fc496e7933e4cbe378ebaa7042896b5f946215b86c130f8e3fc21b6ca6f6",
+     "market": {
+      "disc": 2,
+      "authority": "2C7K3BN63MAgguLaY9NthPDrtFvriXYa1FzRQvQ1QhH6",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 4068486,
+      "validUntil": 444228234,
+      "reservesA": 65180026503,
+      "reservesB": 60540566254,
+      "oracleNonzero": 80
+     }
+    },
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": {
+     "lamports": 2136720,
+     "space": 179,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "1e7f2d8b95ef31360f91c5dce145682105aadc1a99ae90ecaad57d25c1b64dd2"
+    },
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fc37b757d01deff882b74ad0110f1528c9ed8e3f76fc170aff5223a869d302e2",
+     "tokenAmount": 60540566254
+    },
+    "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+     "lamports": 2477494330,
+     "space": 679,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "7ce9bee7cf950ce3b2f307ef891e827ee398991d59e8761d062b5d97b51cfb16"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978955200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7108fc496e7933e4cbe378ebaa7042896b5f946215b86c130f8e3fc21b6ca6f6",
+     "market": {
+      "disc": 2,
+      "authority": "2C7K3BN63MAgguLaY9NthPDrtFvriXYa1FzRQvQ1QhH6",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 4068486,
+      "validUntil": 444228234,
+      "reservesA": 65180026503,
+      "reservesB": 60540566254,
+      "oracleNonzero": 80
+     }
+    },
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": {
+     "lamports": 2136720,
+     "space": 179,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "1e7f2d8b95ef31360f91c5dce145682105aadc1a99ae90ecaad57d25c1b64dd2"
+    },
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fc37b757d01deff882b74ad0110f1528c9ed8e3f76fc170aff5223a869d302e2",
+     "tokenAmount": 60540566254
+    },
+    "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+     "lamports": 2477494330,
+     "space": 679,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "7ce9bee7cf950ce3b2f307ef891e827ee398991d59e8761d062b5d97b51cfb16"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "attackerTokenDeltas": {
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 0,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 0
+   }
+  },
+  {
+   "case": "BB-F05 swapExactIn on a never-initialized (empty oracle) market",
+   "note": "OracleData::Empty path",
+   "forkSlotBefore": 444223450,
+   "forkSlotAfter": 444223452,
+   "sig": "49NyxcFfiyd3w6KKs5P1iLqGiL7CnSRr3xT6RZFABzx7GuTKqogYpN4dDy4aWaCYHNYbM47G4QbtnHpg7uhfy7mU",
+   "err": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j invoke [1]",
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Account 6t23RzkPUaMtXL5uQRBA5YEDD81ykabrg1q2REK7mBYZ is not owned by TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 14063 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: Provided owner is not allowed"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978955200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "gToveevei3ZxJf2byHqz2kAoE3qE2PR8knH88YmTaGp": {
+     "lamports": 8017920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "e4e04cc1888b870b6efceeaeef29186bb288ab42f6eabd864ad66a0e3f362287",
+     "market": {
+      "disc": 2,
+      "authority": "CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "So11111111111111111111111111111111111111112",
+      "mintB": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB",
+      "sequence": 0,
+      "validUntil": 0,
+      "reservesA": 0,
+      "reservesB": 0,
+      "oracleNonzero": 0
+     }
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978950200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "gToveevei3ZxJf2byHqz2kAoE3qE2PR8knH88YmTaGp": {
+     "lamports": 8017920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "e4e04cc1888b870b6efceeaeef29186bb288ab42f6eabd864ad66a0e3f362287",
+     "market": {
+      "disc": 2,
+      "authority": "CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "So11111111111111111111111111111111111111112",
+      "mintB": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB",
+      "sequence": 0,
+      "validUntil": 0,
+      "reservesA": 0,
+      "reservesB": 0,
+      "oracleNonzero": 0
+     }
+    }
+   },
+   "attackerTokenDeltas": {
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 0,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 0
+   }
+  },
+  {
+   "case": "BB-F06 swapExactIn with is_token_a flag inconsistent with the funded account",
+   "note": "flag/mint mismatch",
+   "forkSlotBefore": 444223452,
+   "forkSlotAfter": 444223453,
+   "sig": "4jjJgsCAN4VPFQv4imQjm77W2YEtKcdqB2NZ1FU8EqJMXfBdYSUeMU5peyrZBLxXYnwUbib7cUg7RZXFmRoaL4yi",
+   "err": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j invoke [1]",
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Account 9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA is not owned by TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 9461 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: Provided owner is not allowed"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978950200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7108fc496e7933e4cbe378ebaa7042896b5f946215b86c130f8e3fc21b6ca6f6",
+     "market": {
+      "disc": 2,
+      "authority": "2C7K3BN63MAgguLaY9NthPDrtFvriXYa1FzRQvQ1QhH6",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 4068486,
+      "validUntil": 444228234,
+      "reservesA": 65180026503,
+      "reservesB": 60540566254,
+      "oracleNonzero": 80
+     }
+    },
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": {
+     "lamports": 2136720,
+     "space": 179,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "1e7f2d8b95ef31360f91c5dce145682105aadc1a99ae90ecaad57d25c1b64dd2"
+    },
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fc37b757d01deff882b74ad0110f1528c9ed8e3f76fc170aff5223a869d302e2",
+     "tokenAmount": 60540566254
+    },
+    "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+     "lamports": 2477494330,
+     "space": 679,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "7ce9bee7cf950ce3b2f307ef891e827ee398991d59e8761d062b5d97b51cfb16"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978945200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7108fc496e7933e4cbe378ebaa7042896b5f946215b86c130f8e3fc21b6ca6f6",
+     "market": {
+      "disc": 2,
+      "authority": "2C7K3BN63MAgguLaY9NthPDrtFvriXYa1FzRQvQ1QhH6",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 4068486,
+      "validUntil": 444228234,
+      "reservesA": 65180026503,
+      "reservesB": 60540566254,
+      "oracleNonzero": 80
+     }
+    },
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": {
+     "lamports": 2136720,
+     "space": 179,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "1e7f2d8b95ef31360f91c5dce145682105aadc1a99ae90ecaad57d25c1b64dd2"
+    },
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fc37b757d01deff882b74ad0110f1528c9ed8e3f76fc170aff5223a869d302e2",
+     "tokenAmount": 60540566254
+    },
+    "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+     "lamports": 2477494330,
+     "space": 679,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "7ce9bee7cf950ce3b2f307ef891e827ee398991d59e8761d062b5d97b51cfb16"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "attackerTokenDeltas": {
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 0,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 0
+   }
+  },
+  {
+   "case": "BB-F07 swapExactIn with mintB token program replaced by Token-2022",
+   "note": "pinning",
+   "forkSlotBefore": 444223453,
+   "forkSlotAfter": 444223454,
+   "sig": "3Gz67kqPzP9hLXUp5ZMTqQNh39cXxqMk48GCz2NxqwX2cJwfWuxWdH5YWPpJopXFdq4qF1ymLTKTM426VPFr7Gxt",
+   "err": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j invoke [1]",
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Account 9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA is not owned by TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 7990 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: Provided owner is not allowed"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978945200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7108fc496e7933e4cbe378ebaa7042896b5f946215b86c130f8e3fc21b6ca6f6",
+     "market": {
+      "disc": 2,
+      "authority": "2C7K3BN63MAgguLaY9NthPDrtFvriXYa1FzRQvQ1QhH6",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 4068486,
+      "validUntil": 444228234,
+      "reservesA": 65180026503,
+      "reservesB": 60540566254,
+      "oracleNonzero": 80
+     }
+    },
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": {
+     "lamports": 2136720,
+     "space": 179,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "1e7f2d8b95ef31360f91c5dce145682105aadc1a99ae90ecaad57d25c1b64dd2"
+    },
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fc37b757d01deff882b74ad0110f1528c9ed8e3f76fc170aff5223a869d302e2",
+     "tokenAmount": 60540566254
+    },
+    "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+     "lamports": 2477494330,
+     "space": 679,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "7ce9bee7cf950ce3b2f307ef891e827ee398991d59e8761d062b5d97b51cfb16"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978940200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2070671,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fdb09d2b6fd67a80475868711f45271e9225060944cf7e8abde1fd3ca61ab51e",
+     "tokenAmount": 100000000000
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "9406fdcf4475822f5055861dd88ecc771a41e54a8389bf9068b4f96ee8a73e12",
+     "tokenAmount": 100000000
+    },
+    "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf": {
+     "lamports": 8018920,
+     "space": 1024,
+     "owner": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+     "hash": "7108fc496e7933e4cbe378ebaa7042896b5f946215b86c130f8e3fc21b6ca6f6",
+     "market": {
+      "disc": 2,
+      "authority": "2C7K3BN63MAgguLaY9NthPDrtFvriXYa1FzRQvQ1QhH6",
+      "updater": "BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4",
+      "mintA": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+      "mintB": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "sequence": 4068486,
+      "validUntil": 444228234,
+      "reservesA": 65180026503,
+      "reservesB": 60540566254,
+      "oracleNonzero": 80
+     }
+    },
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": {
+     "lamports": 2136720,
+     "space": 179,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "1e7f2d8b95ef31360f91c5dce145682105aadc1a99ae90ecaad57d25c1b64dd2"
+    },
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": {
+     "lamports": 2039280,
+     "space": 165,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "fc37b757d01deff882b74ad0110f1528c9ed8e3f76fc170aff5223a869d302e2",
+     "tokenAmount": 60540566254
+    },
+    "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1": {
+     "lamports": 2477494330,
+     "space": 679,
+     "owner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+     "hash": "7ce9bee7cf950ce3b2f307ef891e827ee398991d59e8761d062b5d97b51cfb16"
+    },
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+     "lamports": 526986586549,
+     "space": 82,
+     "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+     "hash": "1c358a9468e59b9781d999cbe951428e5908e58f9a230db67ec3aaa64c41a634",
+     "supply": 7970960134245324,
+     "mintAuthority": "4uQeWjotFQ8mRjq8F3d4FAToDyEVDHw16XjkWLX3W4b"
+    }
+   },
+   "attackerTokenDeltas": {
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 0,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 0
+   }
+  },
+  {
+   "case": "BB-F08 marketInitialize by the attacker (permissionless create)",
+   "note": "does the program let any wallet create a market it controls?",
+   "forkSlotBefore": 444223456,
+   "forkSlotAfter": 444223459,
+   "sig": "xqjmum6efBL2M54TW9DAU8tox5T9JScUjJuPVvPP8WhpqoxSiUmegfnWNc9jb1gAaaFjiihPgSNmvN8mGaNZben",
+   "err": {
+    "InstructionError": [
+     1,
+     "IncorrectAuthority"
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j invoke [1]",
+    "Program log: Instruction: MarketInitialize",
+    "Program log: Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f is not the authority",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 2544 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: Incorrect authority provided"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978940200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "8f26Ee4hQxo2bkiW4q8aVx9rP8mH1DnuCoWezj6QYqmd": null,
+    "2RgoWqzHbXBGmofXj9oVQsdZ57cKGPrmRtmQCbsuxNnu": null,
+    "65g8hkvFdNtkSoF3wcoMY7iC6iTRqH4nMEH7omtfXYi2": null
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994978935200,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "8f26Ee4hQxo2bkiW4q8aVx9rP8mH1DnuCoWezj6QYqmd": null,
+    "2RgoWqzHbXBGmofXj9oVQsdZ57cKGPrmRtmQCbsuxNnu": null,
+    "65g8hkvFdNtkSoF3wcoMY7iC6iTRqH4nMEH7omtfXYi2": null
+   },
+   "attackerTokenDeltas": {}
+  }
+ ],
+ "fundingNote": "attacker's own WSOL/USDC test balances set by fork cheatcode; no protocol-owned balance was fabricated",
+ "marketClassification": {
+  "stale": [
+   "4AFfguVTj7sqSkEU6fzq79ELjw27Cu5YK4fm8HXxnTzw",
+   "5783KdWDm8neUV3yR7JEDnv3YjxdNXzPZuQAcN5j3rJj",
+   "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN",
+   "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf",
+   "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd",
+   "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW",
+   "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD",
+   "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+   "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+   "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack"
+  ],
+  "fresh": [
+   "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci",
+   "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia",
+   "FefUJfaS2VpkKCCR7fodHP4xzgEA3qz1NASqdxhQ8Czv",
+   "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579"
+  ]
+ }
+}

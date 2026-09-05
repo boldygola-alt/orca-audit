@@ -1,0 +1,131 @@
+{
+ "market": "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW",
+ "forkSlotStart": 444227417,
+ "decimals": [
+  9,
+  9
+ ],
+ "results": [
+  {
+   "case": "BB-STALE-01 swapExactIn 0.4 WSOL -> jitoSOL against an EXPIRED oracle",
+   "sig": "4w2jCbX4R9jnVHuBhQPWqVMXouznQxv9rVD6UCUTV8yb2NBULPrno58JNPMNk3FPZ5DWEPEdb6Nts6QEKmgdvEnK",
+   "forkSlot": 444227423,
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j invoke [1]",
+    "Program log: Instruction: SwapExactIn",
+    "Program log: Oracle data is invalid",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 9686 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for instruction"
+   ],
+   "tokenBefore": {
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 0,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 100000000000,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000,
+    "_mstate": {
+     "disc": 2,
+     "bump": 255,
+     "cuPen": 0,
+     "imb": 100,
+     "authority": "CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH",
+     "updater": "6CXqCWbyYj8JZra2gEB3SUF2ZCrCbeT6F4eCoCGDQVcL",
+     "mintA": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+     "mintB": "So11111111111111111111111111111111111111112",
+     "sequence": 642827,
+     "validUntil": 415068462,
+     "variant": 3,
+     "priceQ": 23514627481716551680,
+     "minSpread": 0,
+     "arbPenalty": 300,
+     "jitod": 100,
+     "minOracle": 0,
+     "maxOracle": 340282366920938463463374607431768211455,
+     "skewMin": 0,
+     "skewMax": 0,
+     "maxA": 0,
+     "maxB": 0,
+     "reservesA": 10900000000,
+     "reservesB": 500000000,
+     "lamports": 8017920
+    }
+   },
+   "tokenAfter": {
+    "DWbewUaucG4vPvN8Uef7PbHfp7uyt5X6esJKq37BDq46": 0,
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": 100000000000,
+    "FSU8d9CZssCrX9DL7BaXcFL5xRKNVzYGzBhFtRYhJaMG": 10900000000,
+    "7UqwcN8M1QZSbSqN4o9zSRhsRpazVokJoC8aBUZU9Qy2": 500000000
+   },
+   "marketBefore": {
+    "disc": 2,
+    "bump": 255,
+    "cuPen": 0,
+    "imb": 100,
+    "authority": "CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH",
+    "updater": "6CXqCWbyYj8JZra2gEB3SUF2ZCrCbeT6F4eCoCGDQVcL",
+    "mintA": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+    "mintB": "So11111111111111111111111111111111111111112",
+    "sequence": 642827,
+    "validUntil": 415068462,
+    "variant": 3,
+    "priceQ": 23514627481716551680,
+    "minSpread": 0,
+    "arbPenalty": 300,
+    "jitod": 100,
+    "minOracle": 0,
+    "maxOracle": 340282366920938463463374607431768211455,
+    "skewMin": 0,
+    "skewMax": 0,
+    "maxA": 0,
+    "maxB": 0,
+    "reservesA": 10900000000,
+    "reservesB": 500000000,
+    "lamports": 8017920
+   },
+   "marketAfter": {
+    "disc": 2,
+    "bump": 255,
+    "cuPen": 0,
+    "imb": 100,
+    "authority": "CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH",
+    "updater": "6CXqCWbyYj8JZra2gEB3SUF2ZCrCbeT6F4eCoCGDQVcL",
+    "mintA": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+    "mintB": "So11111111111111111111111111111111111111112",
+    "sequence": 642827,
+    "validUntil": 415068462,
+    "variant": 3,
+    "priceQ": 23514627481716551680,
+    "minSpread": 0,
+    "arbPenalty": 300,
+    "jitod": 100,
+    "minOracle": 0,
+    "maxOracle": 340282366920938463463374607431768211455,
+    "skewMin": 0,
+    "skewMax": 0,
+    "maxA": 0,
+    "maxB": 0,
+    "reservesA": 10900000000,
+    "reservesB": 500000000,
+    "lamports": 8017920
+   },
+   "note": "does the swap use the stale embedded price?"
+  }
+ ],
+ "log": [
+  {
+   "fixtureFunding": {
+    "account": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+    "amount": 100000000000,
+    "note": "attacker's own WSOL/jitoSOL balances set by fork cheatcode so the swap reaches pricing; no protocol-owned balance was fabricated"
+   }
+  }
+ ],
+ "fundingNote": "attacker's own jitoSOL/WSOL balances set by fork cheatcode (fixture funding; no protocol balance fabricated)"
+}

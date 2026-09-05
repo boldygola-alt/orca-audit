@@ -1,0 +1,1259 @@
+{
+ "log": "s4_sweep.log",
+ "cases": [
+  {
+   "case": "BB-S01 swap on EXPIRED-oracle market 4AFfguVTj7 (var0, expired by 900285 slots)",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "deltas": {},
+   "market": {},
+   "tail": "Program log: Oracle data is invalid | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 6686 of 1399850 compute units | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for inst",
+   "sig": "5LWbBqwc8xT4jy9zvcZHfUjJ",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-S01 swap on EXPIRED-oracle market 5783KdWDm8 (var0, expired by 16837560 slots)",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "deltas": {},
+   "market": {},
+   "tail": "Program log: Oracle data is invalid | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 11186 of 1399850 compute units | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for ins",
+   "sig": "MEK5djx7fJTcWVGDhhHvKmHk",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-S01 swap on EXPIRED-oracle market CzuQmqj4dS (var3, expired by 29236225 slots)",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "deltas": {},
+   "market": {},
+   "tail": "Program log: Oracle data is invalid | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 9686 of 1399850 compute units | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for inst",
+   "sig": "brvYcr5vH1g9SaCqqyrdb6Xf",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 4AFfguVTj7 var0 resA=48,280,765,628/resB=5,384,659,508 staleBy=900,285 | exact-in A 1% (482,807,656)",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "deltas": {},
+   "market": {},
+   "tail": "Program log: Oracle data is invalid | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 6688 of 1399850 compute units | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for inst",
+   "sig": "gjd1djpEawxbCnxp4B7pG2Do",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 5783KdWDm8 var0 resA=10,251/resB=1,941,619,797 staleBy=16,837,560 | exact-in A 1% (102)",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "deltas": {},
+   "market": {},
+   "tail": "Program log: Oracle data is invalid | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 11188 of 1399850 compute units | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for ins",
+   "sig": "2LojfDi6cG1Z1pSs1kJ7ApJ6",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,651,792,579/resB=25,442,832,403 staleBy=-90,264,035 | exact-in A 1% (246,517,925)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -246517925,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 246413479,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 246517925,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": -246413479
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 858557 compute units | Program log: Caught in the riptide \ud83c\udf00 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 543200 of 1399850 compute uni",
+   "sig": "26vbpAgNq7SZ5TnXucgH2KPZ",
+   "market_raw": "{'resA': (24651792579, 24898310504), 'resB': (25442832403, 25196418924)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,651,792,579/resB=25,442,832,403 staleBy=-90,264,035 | exact-in A 5% (1,232,589,628)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -1232589628,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 1232067402,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 1232589628,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": -1232067402
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 865601 compute units | Program log: Mermaid sighting \ud83e\udddc\u200d\u2640\ufe0f | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 536173 of 1399850 compute units",
+   "sig": "34DA6iDUW58nsfZF24z89CXC",
+   "market_raw": "{'resA': (24898310504, 26130900132), 'resB': (25196418924, 23964351522)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,651,792,579/resB=25,442,832,403 staleBy=-90,264,035 | exact-in A 25% (6,162,948,144)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -6162948144,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 6155633713,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 6162948144,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": -6155633713
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 865307 compute units | Program log: Paddling through \ud83d\udef6 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 536450 of 1399850 compute units",
+   "sig": "52cLLEQS6utPQfqgi9QbJMPp",
+   "market_raw": "{'resA': (26130900132, 32293848276), 'resB': (23964351522, 17808717809)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,651,792,579/resB=25,442,832,403 staleBy=-90,264,035 | exact-in B 1% (254,428,324)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 254641873,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -254428324,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": -254641873,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 254428324
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 858748 compute units | Program log: Pirate's bounty \u2693 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 543026 of 1399850 compute units",
+   "sig": "2gYpjr1orHEg38XqcGmq3kUv",
+   "market_raw": "{'resA': (32293848276, 32039206403), 'resB': (17808717809, 18063146133)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,651,792,579/resB=25,442,832,403 staleBy=-90,264,035 | exact-in B 5% (1,272,141,620)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 1273209370,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -1272141620,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": -1273209370,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 1272141620
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 851480 compute units | Program log: Jellyfish spotted \ud83e\udebc | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 550286 of 1399850 compute units",
+   "sig": "3wEVdj8a8FZgP2ABzer2cqNi",
+   "market_raw": "{'resA': (32039206403, 30765997033), 'resB': (18063146133, 19335287753)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,651,792,579/resB=25,442,832,403 staleBy=-90,264,035 | exact-in B 25% (6,360,708,100)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 6361127775,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -6360708100,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": -6361127775,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 6360708100
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 858685 compute units | Program log: Seahorse gallop \ud83d\udc34 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 543081 of 1399850 compute units",
+   "sig": "7RDBGicGxjFe2g4H3w8CopcY",
+   "market_raw": "{'resA': (30765997033, 24404869258), 'resB': (19335287753, 25695995853)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 6Vzx4ASRjU var4 resA=24,651,792,579/resB=25,442,832,403 staleBy=-90,264,035 | ROUND TRIP A->B->A in one tx (exact-in 123,258,962 then exact-out 123,258,962 A)",
+   "err": null,
+   "deltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -141453,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": 141453
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 331202 compute units | Program log: Caught in the riptide \ud83c\udf00 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 534415 of 863710 compute unit",
+   "sig": "2Px8KQzjknctaeBzBaFHDg2S",
+   "market_raw": "{'resB': (25695995853, 25696137306)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,125,690 | exact-in A 1% (33,619,740)",
+   "err": null,
+   "deltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": -33619740,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 33606053,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 33619740,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": -33606053
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 844724 compute units | Program log: Floating by \ud83c\udf88 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 557033 of 1399850 compute units",
+   "sig": "5jH1ygGq9FMFNx7Dr4P59Qht",
+   "market_raw": "{'resA': (3361974088, 3395593828), 'resB': (3835320596, 3801714543)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,125,690 | exact-in A 5% (168,098,704)",
+   "err": null,
+   "deltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": -168098704,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 167998768,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 168098704,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": -167998768
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 846469 compute units | Program log: Crab scuttle \ud83e\udd80 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 555297 of 1399850 compute units",
+   "sig": "676kKx2aNzsMVdybVxJMvnmU",
+   "market_raw": "{'resA': (3395593828, 3563692532), 'resB': (3801714543, 3633715775)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,125,690 | exact-in A 25% (840,493,522)",
+   "err": null,
+   "deltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": -840493522,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 839776775,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": 840493522,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": -839776775
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 844529 compute units | Program log: Wading in \ud83e\uddb6 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 557228 of 1399850 compute units",
+   "sig": "BhFKzwjLUFQHr9e3a4LDZb9H",
+   "market_raw": "{'resA': (3563692532, 4404186054), 'resB': (3633715775, 2793939000)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,125,690 | exact-in B 1% (38,353,205)",
+   "err": null,
+   "deltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 38352145,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -38353205,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": -38352145,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 38353205
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 845331 compute units | Program log: Crab scuttle \ud83e\udd80 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 560296 of 1399850 compute units",
+   "sig": "3czqWrnrUna3QLSthqaKVQAc",
+   "market_raw": "{'resA': (4404186054, 4365833909), 'resB': (2793939000, 2832292205)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,125,690 | exact-in B 5% (191,766,029)",
+   "err": null,
+   "deltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 191760729,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -191766029,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": -191760729,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 191766029
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 852760 compute units | Program log: Catching some surf \ud83c\udfc4 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 552858 of 1399850 compute units",
+   "sig": "46LNHRHydqMw9fywkCJ23T8t",
+   "market_raw": "{'resA': (4365833909, 4174073180), 'resB': (2832292205, 3024058234)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,125,690 | exact-in B 25% (958,830,149)",
+   "err": null,
+   "deltas": {
+    "Ekc8ZrrnCLwcQxbTaeshySzPfgwHK9Bgz1WEtGtEAeU2": 958339677,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -958830149,
+    "AzLCFCMKn4aYZKMBctunMNqcCR63UfeSUgPV49nh34h9": -958339677,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 958830149
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 844665 compute units | Program log: Crab scuttle \ud83e\udd80 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 560962 of 1399850 compute units",
+   "sig": "4psStLAKpeFJxNuCkU5cxYnG",
+   "market_raw": "{'resA': (4174073180, 3215733503), 'resB': (3024058234, 3982888383)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 8hbdkPt2CU var4 resA=3,361,974,088/resB=3,835,320,596 staleBy=-87,125,690 | ROUND TRIP A->B->A in one tx (exact-in 16,809,870 then exact-out 16,809,870 A)",
+   "err": null,
+   "deltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -23076,
+    "Eaa8QwtBuf98FscUrB3dcWKfQoMWmVBu1uTSiGiWncaS": 23076
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3966 of 301825 compute units | Program log: Turtle power \ud83d\udc22 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 553035 of 849083 compute units",
+   "sig": "5tTdziaY3NYfCZ3eHtruudhh",
+   "market_raw": "{'resB': (3982888383, 3982911459)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,258,425,437/resB=19,543,023,193 staleBy=-42 | exact-in A 1% (42,584,254)",
+   "err": null,
+   "deltas": {
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": -42584254,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 305943866,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 42584254,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": -305943866
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1355634 compute units | Program log: Paddling through \ud83d\udef6 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 89034 of 1399850 compute units",
+   "sig": "5XPRtJmKxRV3Fbj4EgFVpzmN",
+   "market_raw": "{'resA': (4258425437, 4301009691), 'resB': (19543023193, 19237079327)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,258,425,437/resB=19,543,023,193 staleBy=-42 | exact-in A 5% (212,921,271)",
+   "err": null,
+   "deltas": {
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": -212921271,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 1529671891,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 212921271,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": -1529671891
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1355634 compute units | Program log: Turtle power \ud83d\udc22 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 89043 of 1399850 compute units",
+   "sig": "3eYaTi9CdWxHixBCkJ1YrE6o",
+   "market_raw": "{'resA': (4301009691, 4513930962), 'resB': (19237079327, 17707407436)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,258,425,437/resB=19,543,023,193 staleBy=-42 | exact-in A 25% (1,064,606,359)",
+   "err": null,
+   "deltas": {
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": -1064606359,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 7641678362,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": 1064606359,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": -7641678362
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1353150 compute units | Program log: Shipwreck treasure \ud83d\udcb0 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 91771 of 1399850 compute units",
+   "sig": "4qdNSjon5VuvH6eadaZPvecQ",
+   "market_raw": "{'resA': (4513930962, 5578537321), 'resB': (17707407436, 10065729074)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,258,425,437/resB=19,543,023,193 staleBy=-42 | exact-in B 1% (195,430,231)",
+   "err": null,
+   "deltas": {
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 27189543,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -195430231,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": -27189543,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 195430231
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1359087 compute units | Program log: Pelican dive \ud83e\udda4 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 89449 of 1399850 compute units",
+   "sig": "371w8S8Z4npwZszADjMZFpiu",
+   "market_raw": "{'resA': (5578537321, 5551347778), 'resB': (10065729074, 10261159305)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,258,425,437/resB=19,543,023,193 staleBy=-42 | exact-in B 5% (977,151,159)",
+   "err": null,
+   "deltas": {
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 135944997,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -977151159,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": -135944997,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 977151159
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1359090 compute units | Program log: Coral reef discovered \ud83e\udeb8 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 89446 of 1399850 compute un",
+   "sig": "2BeaNe1YZDTqeJ5Q6rWHFsAB",
+   "market_raw": "{'resA': (5551347778, 5415402781), 'resB': (10261159305, 11238310464)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,258,425,437/resB=19,543,023,193 staleBy=-42 | exact-in B 25% (4,885,755,798)",
+   "err": null,
+   "deltas": {
+    "BgorHc2RCxhGM4HHJEtsrgNtSrTqfPbJPYkhF5scXrCX": 679658964,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -4885755798,
+    "7C9TnmiBwD8fbpHmtsZYZV8hGFUzXFbeRJo2CPFwDBZx": -679658964,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 4885755798
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1359087 compute units | Program log: Going with the flow \ud83d\udca7 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 89440 of 1399850 compute unit",
+   "sig": "jtqRkwtiT863BhDSCtxPT7xo",
+   "market_raw": "{'resA': (5415402781, 4735743817), 'resB': (11238310464, 16124066262)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9Bc7tyaZft var3 resA=4,258,425,437/resB=19,543,023,193 staleBy=-42 | ROUND TRIP A->B->A in one tx (exact-in 21,292,127 then exact-out 21,292,127 A)",
+   "err": null,
+   "deltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -395475,
+    "FoHtzR1wcb7TULWmWKrj45U3zhNhveDcbfi8bvkeeEuE": 395475
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1274501 compute units | Program log: Crab scuttle \ud83e\udd80 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 90306 of 1316121 compute units",
+   "sig": "3kcvh54eEUzdLPwiJfbc8NAU",
+   "market_raw": "{'resB': (16124066262, 16124461737)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9PwXMVkFzW var3 resA=73,534,915,834/resB=51,923,043,770 staleBy=-40 | exact-in A 1% (735,349,158)",
+   "err": null,
+   "deltas": {
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": -735349158,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 743010265,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 735349158,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": -743010265
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1365022 compute units | Program log: Smooth sailing \u26f5 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 79882 of 1399850 compute units",
+   "sig": "5PnKYUFbpEUa4JNZ1Rj2jZe2",
+   "market_raw": "{'resA': (81441753029, 82177102187), 'resB': (43956598234, 43213587969)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9PwXMVkFzW var3 resA=73,534,915,834/resB=51,923,043,770 staleBy=-40 | exact-in A 5% (3,676,745,791)",
+   "err": null,
+   "deltas": {
+    "9R5dHFS76i55ycFd8ggXbsc768tXybRW5ew837uHwpHA": -3676745791,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 3714943515,
+    "3oPXiwQ1QnQkVsbeSPHYu6xJ3mCofsct3iosakXrFc4W": 3676745791,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": -3714943515
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1365021 compute units | Program log: Riding the wave \ud83c\udfc4\u200d\u2642\ufe0f | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 79883 of 1399850 compute units",
+   "sig": "5UCY7vUmVizEDfysjqM4oSyp",
+   "market_raw": "{'resA': (82177102187, 85853847978), 'resB': (43213587969, 39498644454)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9PwXMVkFzW var3 resA=73,534,915,834/resB=51,923,043,770 staleBy=-40 | exact-in A 25% (18,383,728,958)",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "deltas": {},
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 31922 of 1399850 compute units | Program riptK81hDxhe5pW5jSzSM9iRA8azgE",
+   "sig": "5Kq8Qjx8Bo9PeSUrwfUYyH5u",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW 9PwXMVkFzW var3 resA=73,534,915,834/resB=51,923,043,770 staleBy=-40 | ROUND TRIP A->B->A in one tx (exact-in 367,674,579 then exact-out 367,674,579 A)",
+   "err": null,
+   "deltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -1409621,
+    "4PiuG6CaMXsAXmhv9cnZMmcQj2eYdghzcFg5d39hUwCw": 1409621
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1280241 compute units | Program log: Mermaid sighting \ud83e\udddc\u200d\u2640\ufe0f | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 87314 of 1318861 compute unit",
+   "sig": "2S7ogDUSsdwoHabXuNdUzWAc",
+   "market_raw": "{'resB': (39498644454, 39500054075)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,799,610,588/resB=28,461,712,751 staleBy=-40 | exact-in A 1% (177,996,105)",
+   "err": null,
+   "deltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": -177996105,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 252272103,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 177996105,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": -252272103
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1358914 compute units | Program log: Treasure chest unlocked \ud83c\udff4\u200d\u2620\ufe0f | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 85771 of 1399850 comput",
+   "sig": "21JjZjjfXBJ6eWQ3u7GkdxDd",
+   "market_raw": "{'resA': (17799610588, 17977606693), 'resB': (28461712751, 28209440648)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,799,610,588/resB=28,461,712,751 staleBy=-40 | exact-in A 5% (889,980,529)",
+   "err": null,
+   "deltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": -889980529,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 1261331516,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 889980529,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": -1261331516
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1358916 compute units | Program log: Smooth sailing \u26f5 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 85752 of 1399850 compute units",
+   "sig": "5EbWtQM3dvr9TW7ZkDpJVAv1",
+   "market_raw": "{'resA': (17977606693, 18867587222), 'resB': (28209440648, 26948109132)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,799,610,588/resB=28,461,712,751 staleBy=-40 | exact-in A 25% (4,449,902,647)",
+   "err": null,
+   "deltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": -4449902647,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 6302361020,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": 4449902647,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": -6302361020
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1357674 compute units | Program log: Bobbing along \ud83e\udda6 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 87112 of 1399850 compute units",
+   "sig": "4DsFqGTCGbU7wx3KQGaapnTJ",
+   "market_raw": "{'resA': (18867587222, 23317489869), 'resB': (26948109132, 20645748112)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,799,610,588/resB=28,461,712,751 staleBy=-40 | exact-in B 1% (284,617,127)",
+   "err": null,
+   "deltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 200602946,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -284617127,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": -200602946,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 284617127
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1362077 compute units | Program log: Lobster trap \ud83e\udd9e | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 86449 of 1399850 compute units",
+   "sig": "3Zn93o8kcFsJeXYejAvLSPer",
+   "market_raw": "{'resA': (23317489869, 23116886923), 'resB': (20645748112, 20930365239)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,799,610,588/resB=28,461,712,751 staleBy=-40 | exact-in B 5% (1,423,085,637)",
+   "err": null,
+   "deltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 1002987638,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -1423085637,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": -1002987638,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 1423085637
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1362078 compute units | Program log: Riding the wave \ud83c\udfc4\u200d\u2642\ufe0f | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 86439 of 1399850 compute units",
+   "sig": "5rFkMRceNYn2Bu4hcGUmrFod",
+   "market_raw": "{'resA': (23116886923, 22113899285), 'resB': (20930365239, 22353450876)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,799,610,588/resB=28,461,712,751 staleBy=-40 | exact-in B 25% (7,115,428,187)",
+   "err": null,
+   "deltas": {
+    "EG1b9ALRx1AV5JGkAJ9em6kHh1kg9u9vNYDSE2ndJSpu": 5014275949,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -7115428187,
+    "CVvttGi1Nx81YnxfVT5Bu1BbxisaSii2n1q2cTsfE8VQ": -5014275949,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 7115428187
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1361818 compute units | Program log: Crab scuttle \ud83e\udd80 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 86708 of 1399850 compute units",
+   "sig": "3EAZdjWKiNanUF5MoXU9Ae9w",
+   "market_raw": "{'resA': (22113899285, 17099623336), 'resB': (22353450876, 29468879063)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW CNp3etjEmW var3 resA=17,799,610,588/resB=28,461,712,751 staleBy=-40 | ROUND TRIP A->B->A in one tx (exact-in 88,998,052 then exact-out 88,998,052 A)",
+   "err": null,
+   "deltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -351947,
+    "J9nymd2zGejC4n1tko2PpA97faUwk4FiNZGapDDtE8NG": 351947
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1276791 compute units | Program log: Going with the flow \ud83d\udca7 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 87748 of 1315872 compute unit",
+   "sig": "2YDxKDrXCqv6Edcww4dxSmVo",
+   "market_raw": "{'resB': (29468879063, 29469231010)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW CzuQmqj4dS var3 resA=10,900,000,000/resB=500,000,000 staleBy=29,236,225 | exact-in A 1% (109,000,000)",
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "deltas": {},
+   "market": {},
+   "tail": "Program log: Oracle data is invalid | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 9688 of 1399850 compute units | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid account data for inst",
+   "sig": "5h4cexZZS6FViRkpPwq9Kuva",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW FefUJfaS2V var4 resA=237,375,794,984/resB=3,546 staleBy=-491,720 | exact-in A 1% (2,373,757,949)",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "deltas": {},
+   "market": {},
+   "tail": "Program log: Partial fill is not allowed | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 441215 of 1399850 compute units | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error:",
+   "sig": "5111VZNE6jLah9D44AUwfEHE",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,602,822,148/resB=42,550,074,436 staleBy=-40 | exact-in A 1% (76,028,221)",
+   "err": null,
+   "deltas": {
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": -76028221,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 588105646,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 76028221,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": -588105646
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1360133 compute units | Program log: Coral reef discovered \ud83e\udeb8 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 84544 of 1399850 compute uni",
+   "sig": "43NaVDZApGzQLGGfmgF2yYwg",
+   "market_raw": "{'resA': (7602822148, 7678850369), 'resB': (42550074436, 41961968790)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,602,822,148/resB=42,550,074,436 staleBy=-40 | exact-in A 5% (380,141,107)",
+   "err": null,
+   "deltas": {
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": -380141107,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 2940442940,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 380141107,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": -2940442940
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1360135 compute units | Program log: Turtle power \ud83d\udc22 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 84542 of 1399850 compute units",
+   "sig": "2dnxiDSeSYDptg6UKQrwhhuj",
+   "market_raw": "{'resA': (7678850369, 8058991476), 'resB': (41961968790, 39021525850)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,602,822,148/resB=42,550,074,436 staleBy=-40 | exact-in A 25% (1,900,705,537)",
+   "err": null,
+   "deltas": {
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": -1900705537,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 14690970230,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": 1900705537,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": -14690970230
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1357653 compute units | Program log: Skimming the surface \ud83e\udebc | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 87251 of 1399850 compute unit",
+   "sig": "3SPfrbipKRkwvGg8Dp9pRvep",
+   "market_raw": "{'resA': (8058991476, 9959697013), 'resB': (39021525850, 24330555620)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,602,822,148/resB=42,550,074,436 staleBy=-40 | exact-in B 1% (425,500,744)",
+   "err": null,
+   "deltas": {
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 54979677,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -425500744,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": -54979677,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 425500744
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1363587 compute units | Program log: Cruising the current \ud83c\udfca | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 84940 of 1399850 compute uni",
+   "sig": "SoSjFadWCGog95w964oQZfuH",
+   "market_raw": "{'resA': (9959697013, 9904717336), 'resB': (24330555620, 24756056364)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,602,822,148/resB=42,550,074,436 staleBy=-40 | exact-in B 5% (2,127,503,721)",
+   "err": null,
+   "deltas": {
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 274892606,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -2127503721,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": -274892606,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 2127503721
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1363589 compute units | Program log: Bobbing along \ud83e\udda6 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 84938 of 1399850 compute units",
+   "sig": "3ET9PPMTEbiTtsirU8GywvCH",
+   "market_raw": "{'resA': (9904717336, 9629824730), 'resB': (24756056364, 26883560085)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,602,822,148/resB=42,550,074,436 staleBy=-40 | exact-in B 25% (10,637,518,609)",
+   "err": null,
+   "deltas": {
+    "HUPcARm6939PiqDtGWmJxm948w5iJG7GQJVdpf9uYz3o": 1374319927,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -10637518609,
+    "En9pUA2JtWH5FX1Uw1mbhKphceWdUwYsF4DBPesU5Lgn": -1374319927,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 10637518609
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1363588 compute units | Program log: Coasting through \ud83d\udedf | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 84939 of 1399850 compute units",
+   "sig": "2cvNivjEbHF67R4Kjj88hnoA",
+   "market_raw": "{'resA': (9629824730, 8255504803), 'resB': (26883560085, 37521078694)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW G9pQE63etk var3 resA=7,602,822,148/resB=42,550,074,436 staleBy=-40 | ROUND TRIP A->B->A in one tx (exact-in 38,014,110 then exact-out 38,014,110 A)",
+   "err": null,
+   "deltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -760277,
+    "B1wi8gwEc5CDyHi8q6tD2FBpKC58TMHkDUobCUjygV2N": 760277
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1283495 compute units | Program log: Drifting along \ud83c\udf0a | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 85796 of 1320614 compute units",
+   "sig": "3BdDESuQdALxMfiG6Uma15xf",
+   "market_raw": "{'resB': (37521078694, 37521838971)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,779,675 | exact-in A 1% (121,311)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -121311,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 121296,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 121311,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": -121296
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 862511 compute units | Program log: Caught in the riptide \ud83c\udf00 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 539246 of 1399850 compute uni",
+   "sig": "49h5u4BUyaVQd9aq1BuSguK1",
+   "market_raw": "{'resA': (12131190, 12252501), 'resB': (13955972, 13834676)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,779,675 | exact-in A 5% (606,559)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -606559,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 606376,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 606559,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": -606376
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 864313 compute units | Program log: Wading in \ud83e\uddb6 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 537444 of 1399850 compute units",
+   "sig": "4MsbJEUvAvft7srxXHJCn7ZJ",
+   "market_raw": "{'resA': (12252501, 12859060), 'resB': (13834676, 13228300)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,779,675 | exact-in A 25% (3,032,797)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -3032797,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 3031109,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": 3032797,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": -3031109
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 862377 compute units | Program log: Seahorse gallop \ud83d\udc34 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 539389 of 1399850 compute units",
+   "sig": "2vVYQgjfZGDaFHAxcWjpYfYk",
+   "market_raw": "{'resA': (12859060, 15891857), 'resB': (13228300, 10197191)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,779,675 | exact-in B 1% (139,559)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 139596,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -139559,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": -139596,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 139559
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 859100 compute units | Program log: Pelican dive \ud83e\udda4 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 542666 of 1399850 compute units",
+   "sig": "3w97vHA7XLHyAcPyVjJBtp95",
+   "market_raw": "{'resA': (15891857, 15752261), 'resB': (10197191, 10336750)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,779,675 | exact-in B 5% (697,798)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 697984,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -697798,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": -697984,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 697798
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 859123 compute units | Program log: Tide's turning \ud83c\udf05 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 542634 of 1399850 compute units",
+   "sig": "3iZrzTbqUNtTCAZXcbPWXyQz",
+   "market_raw": "{'resA': (15752261, 15054277), 'resB': (10336750, 11034548)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,779,675 | exact-in B 25% (3,488,993)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": 3488220,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -3488993,
+    "EaKRFCxErmuwtCFiqsiEWS3SG4yu4rQA7Ck8wEkijygP": -3488220,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 3488993
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 858611 compute units | Program log: Paddling through \ud83d\udef6 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 543146 of 1399850 compute units",
+   "sig": "5kWJo2DgF7wpoU2yxRcfrZik",
+   "market_raw": "{'resA': (15054277, 11566057), 'resB': (11034548, 14523541)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GtBJeuFzSC var4 resA=12,131,190/resB=13,955,972 staleBy=-84,779,675 | ROUND TRIP A->B->A in one tx (exact-in 60,655 then exact-out 60,655 A)",
+   "err": null,
+   "deltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -50,
+    "4AViVBDu9zR45xXTktWhm9xKWrq9oVXQecp6pQyNh9RR": 50
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 327995 compute units | Program log: Mermaid sighting \ud83e\udddc\u200d\u2640\ufe0f | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 534331 of 860402 compute units",
+   "sig": "5yHG8YfVCW3M52KJVPJpXF8k",
+   "market_raw": "{'resB': (14523541, 14523591)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,433,109,993/resB=55,874,307,952 staleBy=-39 | exact-in A 1% (204,331,099)",
+   "err": null,
+   "deltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": -204331099,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 471071714,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 204331099,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": -471071714
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1351415 compute units | Program log: Drifting along \ud83c\udf0a | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 93253 of 1399850 compute units",
+   "sig": "5eu6yAACxJDFyw2jKff4odEM",
+   "market_raw": "{'resA': (20433109993, 20637441092), 'resB': (55874307952, 55403236238)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,433,109,993/resB=55,874,307,952 staleBy=-39 | exact-in A 5% (1,021,655,499)",
+   "err": null,
+   "deltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": -1021655499,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 2355306777,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 1021655499,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": -2355306777
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1351414 compute units | Program log: Neptune's blessing \ud83d\udc51 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 93279 of 1399850 compute units",
+   "sig": "3jBhesNo4SWhmxLjsxWn5Wvi",
+   "market_raw": "{'resA': (20637441092, 21659096591), 'resB': (55403236238, 53047929461)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,433,109,993/resB=55,874,307,952 staleBy=-39 | exact-in A 25% (5,108,277,498)",
+   "err": null,
+   "deltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": -5108277498,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 11768955407,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": 5108277498,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": -11768955407
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1350148 compute units | Program log: Catching some surf \ud83c\udfc4 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 94638 of 1399850 compute units",
+   "sig": "2MnrGtqTQbCsmgffeNXiGPuf",
+   "market_raw": "{'resA': (21659096591, 26767374089), 'resB': (53047929461, 41278974054)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,433,109,993/resB=55,874,307,952 staleBy=-39 | exact-in B 1% (558,743,079)",
+   "err": null,
+   "deltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 242095042,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -558743079,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": -242095042,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 558743079
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1354571 compute units | Program log: Cruising the current \ud83c\udfca | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 93946 of 1399850 compute uni",
+   "sig": "4Zgun4PyGot1eYgBZPrrqmk8",
+   "market_raw": "{'resA': (26767374089, 26525279047), 'resB': (41278974054, 41837717133)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,433,109,993/resB=55,874,307,952 staleBy=-39 | exact-in B 5% (2,793,715,397)",
+   "err": null,
+   "deltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 1210442517,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -2793715397,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": -1210442517,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 2793715397
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1354573 compute units | Program log: Tide's turning \ud83c\udf05 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 93944 of 1399850 compute units",
+   "sig": "3nDmkJpzFQ7J7o3R2yUpccYW",
+   "market_raw": "{'resA': (26525279047, 25314836530), 'resB': (41837717133, 44631432530)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,433,109,993/resB=55,874,307,952 staleBy=-39 | exact-in B 25% (13,968,576,988)",
+   "err": null,
+   "deltas": {
+    "BSNtBBSTv6q5eNcpsrzsQnS8d332jHBXEVXBf2fCQ5kN": 6051395268,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -13968576988,
+    "DbacGfGKxa72cL53hNgL6TUfm5YtSLfu6Ez6P9HNPJ5J": -6051395268,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 13968576988
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1354331 compute units | Program log: Smooth sailing \u26f5 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 94186 of 1399850 compute units",
+   "sig": "4ZKim6CNMeanp7T1nTo1gixB",
+   "market_raw": "{'resA': (25314836530, 19263441262), 'resB': (44631432530, 58600009518)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW GxGxQBvMQ7 var3 resA=20,433,109,993/resB=55,874,307,952 staleBy=-39 | ROUND TRIP A->B->A in one tx (exact-in 102,165,549 then exact-out 102,165,549 A)",
+   "err": null,
+   "deltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -657456,
+    "8BDShequzTVN5rQz1MAxbinuigpUY33ycdLSZR1ioA21": 657456
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1261815 compute units | Program log: Seahorse gallop \ud83d\udc34 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 95245 of 1308384 compute units",
+   "sig": "4y21hBxFfLgsnjGZK6aU8VLK",
+   "market_raw": "{'resB': (58600009518, 58600666974)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=510,650,756/resB=8,818,543,912 staleBy=-35 | exact-in A 1% (5,106,507)",
+   "err": null,
+   "deltas": {
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": -5106507,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 11505533,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 5106507,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": -11505533
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363034 compute units | Program log: Going with the flow \ud83d\udca7 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 81634 of 1399850 compute units",
+   "sig": "4BY4JAAPq8LLiyWH48hLBaAe",
+   "market_raw": "{'resA': (510650756, 515757263), 'resB': (8818543912, 8807038379)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=510,650,756/resB=8,818,543,912 staleBy=-35 | exact-in A 5% (25,532,537)",
+   "err": null,
+   "deltas": {
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": -25532537,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 57527330,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 25532537,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": -57527330
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363034 compute units | Program log: Maelstrom vortex \ud83c\udf00 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 81659 of 1399850 compute units",
+   "sig": "3TdAk1hyPNY96vhgETmLn155",
+   "market_raw": "{'resA': (515757263, 541289800), 'resB': (8807038379, 8749511049)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=510,650,756/resB=8,818,543,912 staleBy=-35 | exact-in A 25% (127,662,689)",
+   "err": null,
+   "deltas": {
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": -127662689,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 287628334,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": 127662689,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": -287628334
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1363034 compute units | Program log: Bioluminescence glow \u2728 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 81651 of 1399850 compute unit",
+   "sig": "3RoXXD9QsNQiGLEw2Py8XhJY",
+   "market_raw": "{'resA': (541289800, 668952489), 'resB': (8749511049, 8461882715)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=510,650,756/resB=8,818,543,912 staleBy=-35 | exact-in B 1% (88,185,439)",
+   "err": null,
+   "deltas": {
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 39056454,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -88185439,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": -39056454,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 88185439
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1361902 compute units | Program log: Octopus ink cloud \ud83d\udc19 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 82783 of 1399850 compute units",
+   "sig": "58YkxSJ8hy2EPWHFbNeLEU8L",
+   "market_raw": "{'resA': (668952489, 629896035), 'resB': (8461882715, 8550068154)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=510,650,756/resB=8,818,543,912 staleBy=-35 | exact-in B 5% (440,927,195)",
+   "err": null,
+   "deltas": {
+    "FPyB9zXDZWUkDCQCw3qvVGFgRHTCUQfLEndwWgCn4S6z": 195254949,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -440927195,
+    "GsaC3f2RGdnRo38w1xurLfNc5k7F7zY7fVrCyWwPVukX": -195254949,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 440927195
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1361350 compute units | Program log: Nautilus shell found \ud83d\udc1a | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 83402 of 1399850 compute unit",
+   "sig": "5UUDi1nGWCLKoDpLEttANpsX",
+   "market_raw": "{'resA': (629896035, 434641086), 'resB': (8550068154, 8990995349)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=510,650,756/resB=8,818,543,912 staleBy=-35 | exact-in B 25% (2,204,635,978)",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "deltas": {},
+   "market": {},
+   "tail": "Program log: Partial fill is not allowed | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 38243 of 1399850 compute units | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0",
+   "sig": "2Y3HrFVhZdYAN6xWRFqe13KD",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HpGbZwwQ66 var3 resA=510,650,756/resB=8,818,543,912 staleBy=-35 | ROUND TRIP A->B->A in one tx (exact-in 2,553,253 then exact-out 2,553,253 A)",
+   "err": null,
+   "deltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -17553,
+    "isWhU4VRKFLjddnWFgSKhmqkcj5yhVwDhYwnerNcpZw": 17553
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1280029 compute units | Program log: Coasting through \ud83d\udedf | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 81935 of 1317079 compute units",
+   "sig": "nBzsa7QyzBc2fTDsq8gdtirZ",
+   "market_raw": "{'resB': (8990995349, 8991012902)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-35 | exact-in A 1% (157,783,504)",
+   "err": null,
+   "deltas": {
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": -157783504,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 554741704,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 157783504,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": -554741704
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1360119 compute units | Program log: Paddling through \ud83d\udef6 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 84549 of 1399850 compute units",
+   "sig": "4CmbaMxKtWJ4VBLRgdambqBU",
+   "market_raw": "{'resA': (15778350493, 15936133997), 'resB': (52802946412, 52248204708)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-35 | exact-in A 5% (788,917,524)",
+   "err": null,
+   "deltas": {
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": -788917524,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 2773636419,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 788917524,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": -2773636419
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1360121 compute units | Program log: Seagull overhead \ud83e\udd85 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 84556 of 1399850 compute units",
+   "sig": "2biHyH9n62deXmpiJKGXGp1F",
+   "market_raw": "{'resA': (15936133997, 16725051521), 'resB': (52248204708, 49474568289)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-35 | exact-in A 25% (3,944,587,623)",
+   "err": null,
+   "deltas": {
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": -3944587623,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 13856451316,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": 3944587623,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": -13856451316
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 1358272 compute units | Program log: Jellyfish spotted \ud83e\udebc | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 86582 of 1399850 compute units",
+   "sig": "2r7mubLrACjgGq9mcrGctAph",
+   "market_raw": "{'resA': (16725051521, 20669639144), 'resB': (49474568289, 35618116973)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-35 | exact-in B 1% (528,029,464)",
+   "err": null,
+   "deltas": {
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 150034889,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -528029464,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": -150034889,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 528029464
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1363589 compute units | Program log: Great white breach \ud83e\udd88 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 84950 of 1399850 compute units",
+   "sig": "236eUk9vPq4RNuQuyw6gMwmE",
+   "market_raw": "{'resA': (20669639144, 20519604255), 'resB': (35618116973, 36146146437)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-35 | exact-in B 5% (2,640,147,320)",
+   "err": null,
+   "deltas": {
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 750156429,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -2640147320,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": -750156429,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 2640147320
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1363578 compute units | Program log: Crab scuttle \ud83e\udd80 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 84953 of 1399850 compute units",
+   "sig": "5R1KPb4BeY5tZH2aS2ZaWCxs",
+   "market_raw": "{'resA': (20519604255, 19769447826), 'resB': (36146146437, 38786293757)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-35 | exact-in B 25% (13,200,736,603)",
+   "err": null,
+   "deltas": {
+    "qxjGKh1mevXD3qMtY6vvrn1tkj7bKFiCaLuQ6wXHo15": 3750324231,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -13200736603,
+    "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F": -3750324231,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 13200736603
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1363522 compute units | Program log: Catching some surf \ud83c\udfc4 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 85000 of 1399850 compute units",
+   "sig": "65nYt1TCeuajvoM1H478AkaM",
+   "market_raw": "{'resA': (19769447826, 16019123595), 'resB': (38786293757, 51987030360)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-SW HxNaPy1oYA var3 resA=15,778,350,493/resB=52,802,946,412 staleBy=-35 | ROUND TRIP A->B->A in one tx (exact-in 78,891,752 then exact-out 78,891,752 A)",
+   "err": null,
+   "deltas": {
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": -912291,
+    "CKUd5BRCYSmixBVfFGHN23XTvP28gLcquzVZDc4gWTeR": 912291
+   },
+   "market": {},
+   "tail": "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 3936 of 1281754 compute units | Program log: Caught in the riptide \ud83c\udf00 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 85805 of 1318887 compute un",
+   "sig": "5uJTTS1EKhcXhGLhWcqCZ1Sn",
+   "market_raw": "{'resB': (51987030360, 51987942651)}",
+   "extra_lines": [
+    ""
+   ]
+  },
+  {
+   "case": "BB-EXP control: swap on 6Vzx4ASRjU while slot <= validUntil (534568722)",
+   "err": null,
+   "deltas": {
+    "Gj6VV8paUEraP7sdRov9WmsLJwwmyBFJXiLGspB1Tq6P": -123258962,
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": 123206739,
+    "A6rHcum9j6Sp9aqC4HeicRCxs1Q9bHKSUYkFJcpSd42m": 123258962,
+    "6mPqT4tT2YjgSRrVCkcf1LDdvTWVSR4NQRy6ddfrST8": -123206739
+   },
+   "market": {},
+   "tail": "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 105 of 865697 compute units | Program log: Going with the flow \ud83d\udca7 | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 536060 of 1399850 compute units",
+   "sig": "4RjJSXcjbVhvXkVkyRtPuAez",
+   "market_raw": "{'resA': (24404869258, 24528128220), 'resB': (25696137306, 25572930567)}",
+   "extra_lines": [
+    "",
+    ""
+   ],
+   "note": "waiting for fork slot 444302565 to pass validUntil=534568722"
+  }
+ ]
+}

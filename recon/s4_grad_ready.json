@@ -1,0 +1,25 @@
+[
+ {
+  "addr": "Ec5jrDHtT1iFnjzBqQTCfiGMmiGfEQVGdm42aM8Doo2N",
+  "q": 50000000000,
+  "tgt": 50000000000,
+  "base": 990040170780015757,
+  "base_mint": "F2FbvxXLxo4h1fJBTVuggHF4Ev2c3ZEyxZTSrAJvwave",
+  "quote_mint": "7M6UCJXpxkdr9eZBMcUwrvd66QzscbQVL6f6c98iEPxT",
+  "creator": "FEDMRB62snymMLV75sdBCCeEfDM4EVdp3xBXrMSTA2FS",
+  "launch": 350875914,
+  "gtime": 0,
+  "l0": {
+   "grad": false,
+   "dest": "11111111111111111111111111111111",
+   "tier": 0
+  },
+  "l1": {
+   "grad": true,
+   "dest": "FEDMRB62snymMLV75sdBCCeEfDM4EVdp3xBXrMSTA2FS",
+   "tier": 32896
+  },
+  "min_res": 0,
+  "premint": 0
+ }
+]

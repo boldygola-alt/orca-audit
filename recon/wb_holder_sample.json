@@ -1,0 +1,150 @@
+{
+ "mint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+ "holders": [
+  {
+   "ata": "3AYhCmfv3xgNhdGh9E6nyYu8u5m9yv9sJMejCX2PYxDp",
+   "owner": "GijFWw4oNyh9ko3FaZforNsi3jk6wDovARpkKahPD4o5",
+   "amount": 18938384669961507
+  },
+  {
+   "ata": "7MfEM23hRsGmJf8PTnQ8aztg46s6RvJZJeSD3T3ndAvi",
+   "owner": "6hHfDSagPQv4ouhr7x17jp9tQNfqUhdJWFHY5mEHnLp2",
+   "amount": 10000000000000000
+  },
+  {
+   "ata": "67VNwru4xqKvh55npH6TqzzKgLw1kTd8jiyTxyYWpwPt",
+   "owner": "Cqdt4AN7yitTcj2Nyvi7iffhjUmZmRXKv8RqiifxTeMg",
+   "amount": 9669134987893763
+  },
+  {
+   "ata": "7xYFxV4yo6DW7vzKGvcYgJ5pjhEANp9dLjUeAAGoP2PF",
+   "owner": "9EUaZqB4tusJe2Vm2iqfSoENMQhACeNTwvk88ZJFamX5",
+   "amount": 6113128666069802
+  },
+  {
+   "ata": "8LuGcLdu4PKc7qVTkJzmvzVTo6HMaRn4wTBzui78GQ7w",
+   "owner": "9dq7N8xgD3Mwukxt6m6DNLKGXwZARNEUn1cimKkutzbc",
+   "amount": 333953487821346
+  },
+  {
+   "ata": "GnuH1aG4XbMcKRy9vDNpz2RXDEeYHv3umqAMW5o6foLr",
+   "owner": "41BC8izoNoM55tJVG9vHtaPjvaLG5TBB5Tx4UPuFx1sa",
+   "amount": 120799200779563
+  },
+  {
+   "ata": "DjCPd33Hq53YngNqEQQDaumjw1jFSdFLZz3gKBEoYw4n",
+   "owner": "As7YTw9BhDSercGYypzPg7MaJbhE93mrmUMafxdSEeLh",
+   "amount": 92852136207723
+  },
+  {
+   "ata": "FnDseqkcS3PcLGqEJfYHN8QTm5y3RmrhbEGWFYhwtwiH",
+   "owner": "ZG98FUCjb8mJ824Gbs6RsgVmr1FhXb2oNiJHa2dwmPd",
+   "amount": 58852781890887
+  },
+  {
+   "ata": "Fec8kLp6PHZ3nJX4HPLNVgNbeJ5KCorLUfE6ZJLn3ygS",
+   "owner": "cakewAiZcEFuE3YjRd6KzBVqdpykNCZupJxdft7u5vW",
+   "amount": 22027398132480
+  },
+  {
+   "ata": "5jRvA5P5ZFyXpae1QDfPCyoVAZPFHzwK7F1RRDDv9PTo",
+   "owner": "GN7jJSDqiF2F6JFFoDCJ6jeKdjYZdFhHG3gC3jHosnLX",
+   "amount": 2439422265594
+  },
+  {
+   "ata": "ASSKUpMTNX38u2zCz2aFyXs9CvmoMYEkcJZaRZsgfhcf",
+   "owner": "FQLvKbmkke9Pzy4typEXvv76RYegA3dkBhWbEGqbzMaa",
+   "amount": 1484054687
+  },
+  {
+   "ata": "9ySiPrrMTF8c5SK27914fdhiJfRULxJB551xeQuoe5HQ",
+   "owner": "JD6rVaerbyz6wjQ433nrw6bFTgFrp46MiYmi8EtUAfsG",
+   "amount": 4741183
+  },
+  {
+   "ata": "Bzsrirh5z99suQCwKmPYHsivv7gKqgcFaNv8AuQJ2HGs",
+   "owner": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+   "amount": 128
+  },
+  {
+   "ata": "EzWrKCQFzgEMasVi1pvqtDo7n1o5GeisgznJHLn4HN3r",
+   "owner": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+   "amount": 3
+  },
+  {
+   "ata": "eQnNcQY2Emn17bDdUKsi8TqDMWC7xA9gAigo7eRPufD",
+   "owner": "4ywa3NKfWRX3jpMxWydiWzELuSbdDUhTV5QnoGexjV3e",
+   "amount": 0
+  },
+  {
+   "ata": "J3gqF69VGBYN5qqLKvb2H1nrerd5WeocAmoep5cHXY7V",
+   "owner": "DjuYmVEKFRrxfTgZvD2PyECPfVHL7ukZLYrkKX9XQKnx",
+   "amount": 0
+  },
+  {
+   "ata": "GTPKoRD12pExywYwqWkq1zZiBYBXA8a3bs6djA4oergU",
+   "owner": "EH7K5oUEL6pHkk6JTPfmD5RfTAKWVsfD7sU2qBuRNfwE",
+   "amount": 0
+  },
+  {
+   "ata": "DTXWLtw6abRvgrHiU5bUHLzsf73j73Qzn6xbS6PzGTxd",
+   "owner": "9Ss3kGqEQQYK2ZRsGdCUX1mqFimkJdwQe7ZYQwU4Jt9f",
+   "amount": 0
+  },
+  {
+   "ata": "CSRQnfnw8j2MrhfgYDdNxxvFFgfmCVbQScB3GbbWQQPW",
+   "owner": "kup6kLbBk2cqthjaFDSNs3tnTBG7E64y4nfbA7PUsqd",
+   "amount": 0
+  },
+  {
+   "ata": "C4oHCYS4GBwPQGTSUqn9yUAeHuAAjXVcNxrML6uiuNtr",
+   "owner": "Bxpa7S3pJuZQWP8dUXRnwNb8b6LVSg688MKdKi8R1E1E",
+   "amount": 0
+  },
+  {
+   "ata": "8zBSahCehsjTkBRY13sDHycnTFAMtvCrk1xrmSMDqJ1P",
+   "owner": "7mMxGd5zCsMiTTWm6pEFi6CUKQT3Z15r6aycVr9mKF2k",
+   "amount": 0
+  },
+  {
+   "ata": "79KLC8UWaa1AorAnNafPvRUoikaZuqiPCAy4SoVeazuY",
+   "owner": "9dusDMjHADPFvMt7QA5jp5Afs4kHQDaiy3RTjhjK69su",
+   "amount": 0
+  },
+  {
+   "ata": "74cPtmCDoxMfPmg2kuQbzYCJGtTwd6JpeZ1sND8YAq13",
+   "owner": "Dkod74dHSzwEB1Jz6Fk6UAhvuqjnHiyNCyNgHiKiSWfz",
+   "amount": 0
+  },
+  {
+   "ata": "61MaUCRrgfGt9EUhRfB7ngZ39ibNGmfhGjhJYK2Rqpjw",
+   "owner": "GPSAUWWemZ8BgEZ2Xhxk3nb4Zwh96hhxU8XceMv1JV8L",
+   "amount": 0
+  },
+  {
+   "ata": "5abJykx13w6WcB54VWu5AET4hQUFyGuz1pceDkN4sMha",
+   "owner": "F5AYeH9JUj53mB6Jf5BAuo5NV2Evs14gWgmuh7Z5DhE",
+   "amount": 0
+  },
+  {
+   "ata": "5AZatWpLcZXTPHEAuN69x3UmyKZE4FxPwueDkUJixTb1",
+   "owner": "4EWqcx3aNZmMetCnxwLYwyNjan6XLGp3Ca2W316vrSjv",
+   "amount": 0
+  },
+  {
+   "ata": "4uYzPQUyPuRLVRqqvtz5r7Dzozz6zviVydpki454AtZF",
+   "owner": "4nE98eYJ4YySNFgz58NyyqwodxExEkbnnZYZmyPNPvu5",
+   "amount": 0
+  },
+  {
+   "ata": "3Fo8BZa1UeQF61WV1FUmKdMQLgACXqLNe3xRT8ZKQaPr",
+   "owner": "5d8tDay1ZDV4XVUBtTvFvQiLxDe8dz2ZCdsrkmTDcbm5",
+   "amount": 0
+  },
+  {
+   "ata": "2ScZn8Md6VJL7eKgS5pehRfFC23yubTmrUmh3ir5qSDN",
+   "owner": "9WMsvJYThpChihLFcYUUYp5qkMJapg23Pxhp23CHYCUZ",
+   "amount": 0
+  }
+ ]
+}

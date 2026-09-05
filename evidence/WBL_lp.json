@@ -1,0 +1,235 @@
+{
+ "pdaVectorsRecomputed": {
+  "lp_escrow": [
+   "DKX4hTCVRzu9nLJJvmtxiKU2wBLUyQby5k6cMDgNsSz2",
+   "DKX4hTCVRzu9nLJJvmtxiKU2wBLUyQby5k6cMDgNsSz2",
+   true
+  ],
+  "mint_config": [
+   "4UUnyGNdumaALFL21mFwocZvLuoqFeBrszJkkET3LJJH",
+   "4UUnyGNdumaALFL21mFwocZvLuoqFeBrszJkkET3LJJH",
+   true
+  ],
+  "bonding_curve": [
+   "umyTygGGkyBw4oCxxKRPrkFCAFg1bL7DqSHwtgfKoh3",
+   "umyTygGGkyBw4oCxxKRPrkFCAFg1bL7DqSHwtgfKoh3",
+   true
+  ],
+  "permission_config": [
+   "GBriG7QANWP33M5diRdCUruEXcWmu3YCo8kAjEJDEUA9",
+   "GBriG7QANWP33M5diRdCUruEXcWmu3YCo8kAjEJDEUA9",
+   true
+  ]
+ },
+ "escrowLive": "3AJ7A1AZGTM9CpUW2JBpN1HVFBvhBSuu1fHQ4aF5G9sy",
+ "escrowAttacker": "HZGM71GG1B9y4khytBoxrvz9XQL1zwfxos5FP65d7dto",
+ "results": [
+  {
+   "case": "WB-L01 lpTransfer signed by a LIVE authority key? (we cannot sign as it -> attacker-signed variant)",
+   "note": "attacker as lpAuthority over the live escrow PDA",
+   "forkSlotBefore": 444279773,
+   "forkSlotAfter": 444279776,
+   "sig": "5wq4k5mMmuHiduaT1amEfz5Z4N2EsDwrebtWuBsoKLRwrJaSeDu6f3Tpgp51N8nLgDja12RRB3bTFMMnGdJJuwAF",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: LpTransfer",
+    "Program log: Account 3AJ7A1AZGTM9CpUW2JBpN1HVFBvhBSuu1fHQ4aF5G9sy has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 23018 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985500040,
+      4999985495040
+     ],
+     "hashChanged": false
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985500040,
+     "space": 0
+    },
+    "3AJ7A1AZGTM9CpUW2JBpN1HVFBvhBSuu1fHQ4aF5G9sy": {
+     "lamports": null,
+     "space": null
+    },
+    "HZGM71GG1B9y4khytBoxrvz9XQL1zwfxos5FP65d7dto": {
+     "lamports": null,
+     "space": null
+    },
+    "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C": {
+     "lamports": 586636420,
+     "space": 0
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985495040,
+     "space": 0
+    },
+    "3AJ7A1AZGTM9CpUW2JBpN1HVFBvhBSuu1fHQ4aF5G9sy": {
+     "lamports": null,
+     "space": null
+    },
+    "HZGM71GG1B9y4khytBoxrvz9XQL1zwfxos5FP65d7dto": {
+     "lamports": null,
+     "space": null
+    },
+    "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C": {
+     "lamports": 586636420,
+     "space": 0
+    }
+   }
+  },
+  {
+   "case": "WB-L02 lpTakeover by attacker (ExecuteLpTakeover privilege holder only)",
+   "note": "does the attacker reach a position move?",
+   "forkSlotBefore": 444279777,
+   "forkSlotAfter": 444279779,
+   "sig": "2jDux3xmUT6fyNZbpNK1bkm53uoM3nx2QuMvaq2SptFR4bpegHS44WS69QCXK7aNn2A1EjiYCLZecqJqMuHbjSbb",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: LpTakeover",
+    "Program log: Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f does not have required privilege 11",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25566 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985495040,
+      4999985490040
+     ],
+     "hashChanged": false
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985495040,
+     "space": 0
+    },
+    "3AJ7A1AZGTM9CpUW2JBpN1HVFBvhBSuu1fHQ4aF5G9sy": {
+     "lamports": null,
+     "space": null
+    },
+    "HZGM71GG1B9y4khytBoxrvz9XQL1zwfxos5FP65d7dto": {
+     "lamports": null,
+     "space": null
+    },
+    "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C": {
+     "lamports": 586636420,
+     "space": 0
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985490040,
+     "space": 0
+    },
+    "3AJ7A1AZGTM9CpUW2JBpN1HVFBvhBSuu1fHQ4aF5G9sy": {
+     "lamports": null,
+     "space": null
+    },
+    "HZGM71GG1B9y4khytBoxrvz9XQL1zwfxos5FP65d7dto": {
+     "lamports": null,
+     "space": null
+    },
+    "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C": {
+     "lamports": 586636420,
+     "space": 0
+    }
+   }
+  },
+  {
+   "case": "WB-L03 lpHarvest by attacker on the live escrow",
+   "note": "31-account live shape, attacker as lpAuthority",
+   "forkSlotBefore": 444279779,
+   "forkSlotAfter": 444279781,
+   "sig": "2zAPK8tRDKSy22dz6H52m64ZdGTNMnckuVZbRZ97rCdPdqLExqfg2npFyDW2d8pfvZhiGWpEfdLvbLwthVM4rXsf",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: LpHarvest",
+    "Program log: Account 3AJ7A1AZGTM9CpUW2JBpN1HVFBvhBSuu1fHQ4aF5G9sy has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 23339 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985490040,
+      4999985485040
+     ],
+     "hashChanged": false
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985490040,
+     "space": 0
+    },
+    "3AJ7A1AZGTM9CpUW2JBpN1HVFBvhBSuu1fHQ4aF5G9sy": {
+     "lamports": null,
+     "space": null
+    },
+    "HZGM71GG1B9y4khytBoxrvz9XQL1zwfxos5FP65d7dto": {
+     "lamports": null,
+     "space": null
+    },
+    "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C": {
+     "lamports": 586636420,
+     "space": 0
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985485040,
+     "space": 0
+    },
+    "3AJ7A1AZGTM9CpUW2JBpN1HVFBvhBSuu1fHQ4aF5G9sy": {
+     "lamports": null,
+     "space": null
+    },
+    "HZGM71GG1B9y4khytBoxrvz9XQL1zwfxos5FP65d7dto": {
+     "lamports": null,
+     "space": null
+    },
+    "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C": {
+     "lamports": 586636420,
+     "space": 0
+    }
+   }
+  }
+ ]
+}

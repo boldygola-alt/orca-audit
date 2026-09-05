@@ -1,0 +1,4356 @@
+{
+ "generated": "2026-09-04",
+ "openItems": [
+  {
+   "program": "wavebreak",
+   "item": "graduateManual is an unauthenticated trigger (no privilege, no creator signature)",
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH",
+   "detail": "Executed 5x from a fresh attacker key against live curves whose creator is a third party: method[1].graduated 0->1; the curve's remaining quote moved to the destination recorded in the curve (5,780,324 units on 7pjREHYMKCou); residual base supply minted to that destination's ATA (supply +57,803,239). Caller gained nothing (net -5,000 lamports fee per attempt; one attempt also paid 2,039,280 of ATA rent). Repeated calls rejected 6015. The deployed binary carries the design text 'Launch is expired but the token did not meet the graduation conditions. Manual graduation is required to continue trading.', so the trigger is intended and destination-bound. Undecided on live state: whether it can fire while a Manual curve's launch window is still open (all 7 live Manual curves have graduation_time in the past), and the fact that any wallet may pick the finalization moment ahead of the creator.",
+   "cases": [
+    "WB-T4",
+    "WB-T4b",
+    "WB-R3",
+    "WB-R3b",
+    "WB-G10",
+    "WB-F01",
+    "WB-Gate"
+   ],
+   "evidence": [
+    "evidence/WBF_final.json",
+    "evidence/WBF_final2.json",
+    "evidence/WBG2_grad_refund.json",
+    "evidence/WBF_forced_graduation.json",
+    "evidence/WBG_gate.json"
+   ]
+  },
+  {
+   "program": "wavebreak",
+   "item": "GraduateWhirlpool end-to-end (LP escrow and position custody binding)",
+   "status": "INCOMPLETE",
+   "detail": "Not decided. The freshest live GraduateWhirlpool transaction (slot 441,655,843; 35 accounts) has 7 accounts already closed at both fork tips (bondingCurve, quoteVault, lpAuthorityQuoteAta, positionTokenAccount, both token badges, whirlpoolInitAuthority), and no Whirlpool pool exists for the largest pre-graduation WSOL curves, so attacker-submitted variants terminated on 6022/6023 account checks rather than on an authorization decision. Replaying this fixture needs an archival RPC that can serve the exact fork slot; the public endpoints used here return 'Block not available' for those slots.",
+   "cases": [
+    "WB-GW1",
+    "WB-GW2",
+    "WB-G02",
+    "WB-D00(prior run)"
+   ],
+   "evidence": [
+    "recon/wb_graduate_fixture.json",
+    "evidence/WBZ_final3.json",
+    "reports/runtime_WB1_auth.json"
+   ]
+  },
+  {
+   "program": "wavebreak",
+   "item": "LpHarvest / LpTransfer against a funded live escrow",
+   "status": "INCOMPLETE",
+   "detail": "No lp_escrow PDA exists on mainnet (0 token-2022 positions held by any escrow; the escrow PDAs derived for both the live authority and the attacker are absent), so the position-transfer and vault-binding path could not be exercised with funded state. Executed attempts hit the seed check (6023) for a non-existent escrow; LpTakeover did reach its privilege gate (6027, privilege 11).",
+   "cases": [
+    "WB-L01",
+    "WB-L02",
+    "WB-L03"
+   ],
+   "evidence": [
+    "evidence/WBL_lp.json"
+   ]
+  },
+  {
+   "program": "wavebreak",
+   "item": "TokenRefund payout arithmetic on a genuinely expired, non-graduated curve",
+   "status": "INCOMPLETE",
+   "detail": "Every candidate returned 6016 (bonding curve still active), so the refund payout math against the quote vault was never reached. The gate itself is enforced; the accounting is unmeasured.",
+   "cases": [
+    "WB-RF1",
+    "WB-G03",
+    "WB-G12",
+    "WB-A07(prior run)"
+   ],
+   "evidence": [
+    "evidence/WBF_final2.json",
+    "evidence/WBG2_grad_refund.json",
+    "reports/runtime_WB1_auth.json"
+   ]
+  },
+  {
+   "program": "wavebreak",
+   "item": "buy path with a genuine provider-signed permission",
+   "status": "INCOMPLETE",
+   "detail": "All 1,537 live curves set buy_requires_permission=true, so every buy needs a secp256k1 signature from the single configured allowed signer (0359c54abfca..2b29). Without that key the buy-side payout/fee/rounding arithmetic cannot be reached; we deliberately did not forge a consumed-permission account or use cheatcodes to fabricate authority-side state. What we did measure: the gate fires (6018), the subject/consumer and signature bindings reject attacker-crafted and replayed live messages (6001/6004), and substitution of vault/mint/ATA/token program is rejected (6023/6024/6001).",
+   "cases": [
+    "WB-C01",
+    "WB-P01",
+    "WB-P02",
+    "WB-P05",
+    "WB-P06",
+    "WB-P10",
+    "WB-RP1",
+    "WB-RP2",
+    "WB-RP3",
+    "WB-C05a-d"
+   ],
+   "evidence": [
+    "evidence/WBC_perm_trade.json",
+    "evidence/WBRP_permission.json"
+   ]
+  },
+  {
+   "program": "busybox",
+   "item": "legitimate funded deposit -> swap -> withdraw -> close accounting",
+   "status": "INCOMPLETE",
+   "detail": "Unmeasurable without a market authority key, and no self-owned fixture is possible: MarketInitialize with the correct 10-account shape and an attacker-chosen market id terminates with 'Account <attacker> is not the authority', i.e. market creation itself is authority-gated in the deployed v2.1.1 build. We did not call owner/authority functions or use cheatcodes to obtain that state.",
+   "cases": [
+    "BB-L01",
+    "BB-A01",
+    "BB-A02",
+    "BB-A03",
+    "BB-A04",
+    "BB-T5a/b/c/d"
+   ],
+   "evidence": [
+    "evidence/UBL_lifecycle.json",
+    "evidence/BBA_auth_sweep.json",
+    "evidence/BUSYBOX_MARKET_REPORT.md"
+   ]
+  },
+  {
+   "program": "busybox",
+   "item": "swap guard completeness (oracle freshness, sequence monotonicity, penalty bypass)",
+   "status": "INCOMPLETE",
+   "detail": "Permissionless swaps are live and we executed several against real reserves (each was value-negative for the swapper). The expiry field is not a slot-vs-slot check: a market whose stored validUntil was 6.5k slots in the past still traded, while two markets with an empty (variant 0) oracle payload were rejected with 'Oracle data is invalid'. Whether the arb/CU/JIT penalties can be bypassed, and whether a stale-but-valid payload can be profitably traded against an external price, needs the updater key to push a controlled price - out of reach without impersonation.",
+   "cases": [
+    "BB-RT1",
+    "BB-RT2",
+    "BB-RT5",
+    "BB-P02",
+    "BB-P03",
+    "BB-STALE-01",
+    "BB-A05",
+    "BB-A06",
+    "BB-A07",
+    "BB-A11"
+   ],
+   "evidence": [
+    "evidence/BBR_roundtrip.json",
+    "evidence/BBP_swap_profit.json",
+    "evidence/BBS_stale_oracle.json",
+    "evidence/BBA_auth_sweep.json"
+   ]
+  },
+  {
+   "program": "family",
+   "item": "legacy AMM per-account custody; 637 authority events; Squads membership",
+   "status": "INCOMPLETE",
+   "detail": "Legacy AMM custody sits in pool-owned vaults and the program's 1,246,422 owned accounts cannot be enumerated through the public RPC (getProgramAccounts is capped: 167 accounts / 1,296,458,888 lamports returned here versus 41,124,583,108,449 lamports measured via the indexer in the earlier pass). GwH3Hiv5 exposes only its most recent 230 signatures to getSignaturesForAddress, of which 102 were fetched and classified this session (10 program-upgrade/authority, 11 Squads, 76 plain transfers, 2 cNFT, 3 other). The Squads multisig account (3GiPhEnWforYgzGtnaAJ2G7MQMs5SNAyYwVN84VaQaHV, 1,318 bytes, owned by SQDS4ep6..) does not decode with the layout available in this environment, and none of the six family keys appear as raw bytes inside it.",
+   "cases": [],
+   "evidence": [
+    "recon/program_identities.json",
+    "recon/authority_events/",
+    "recon/authority_events_classes.json",
+    "recon/squads_candidates.json",
+    "recon/amm_custody.json"
+   ]
+  },
+  {
+   "program": "family",
+   "item": "Whirlpool and legacy AMM handler-level review",
+   "status": "INCOMPLETE",
+   "detail": "Both hold custody (Whirlpool programdata 72,981,780,480 lamports / 10,485,715-byte ELF; AMM programdata 4,811,287,920 lamports / 691,104-byte ELF) and were not reviewed at handler level in this pass, so the family cannot be dispositioned clear.",
+   "cases": [],
+   "evidence": [
+    "recon/program_identities.json"
+   ]
+  }
+ ],
+ "fork": "Surfpool 1.5.0 mainnet fork (fork-only; no mainnet broadcast)",
+ "programs": {
+  "wavebreak": {
+   "address": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+   "programdata": "nEuknUvGZK5UVyq3Tf18tcpNtC7dmjPMirrry66SkAs",
+   "elfSha256": "8cd60d772f1d8a97a6f879c545e2827914c1d285c0edca22148ac231f21e9742",
+   "elfBytes": 500448,
+   "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+   "embeddedVersion": "1.1.5"
+  },
+  "busybox": {
+   "address": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+   "programdata": "4RhNxb6VAhj9EMsnmyxz8giXsuaMcnjCUKxPtUvhBeRu",
+   "elfSha256": "32a8a8f75662cfdc8d29abe4bf6826c9c027a4b9222d544f46285762c661ab86",
+   "elfBytes": 258992,
+   "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+   "embeddedVersion": "2.1.1 (SECURITY.TXT name: Riptide AMM Program)"
+  }
+ },
+ "attackerKey": "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f (generated this session; secret never recorded)",
+ "statusCounts": {
+  "NO CONFIRMED PERMISSIONLESS PROFIT PATH": 178,
+  "INCOMPLETE": 8
+ },
+ "tests": [
+  {
+   "id": "BBA_auth_sweep.json:BB-A01 marketDeposit by non-authority",
+   "program": "busybox",
+   "handler": "marketDeposit by non-authority",
+   "case": "BB-A01 marketDeposit by non-authority",
+   "note": "must be authority-gated",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "3Bq2s4rHkKYARkKZAXNgRsL13goMYL5tpbM6BwaRWusafczavMutytKFoYfYcAWdqd2TKgYoGYDk2LZSi2xLEzap",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IncorrectAuthority"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IncorrectAuthority",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A02 marketWithdraw by non-authority",
+   "program": "busybox",
+   "handler": "marketWithdraw by non-authority",
+   "case": "BB-A02 marketWithdraw by non-authority",
+   "note": "must be authority-gated",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "5zpGTa5R4MMkLuvYScFibec8DGUYjmQsaEuLhn2F16zrxCFopXHw8ZMibnNam1mYYE3LANgHryfVtDBpb8Z16Aw8",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IncorrectAuthority"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IncorrectAuthority",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A03 marketUpdate by non-authority",
+   "program": "busybox",
+   "handler": "marketUpdate by non-authority",
+   "case": "BB-A03 marketUpdate by non-authority",
+   "note": "cu penalty change by non-authority",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "5M2ahYcMGmgxuRTGULgziknQo7LPpgY8zjNPVuaSR5XEucmNwjazjF7NA64kWPeVXSTmx4rE4WLnh66TPhDRhwAc",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IncorrectAuthority"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IncorrectAuthority",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A04 marketClose by non-authority",
+   "program": "busybox",
+   "handler": "marketClose by non-authority",
+   "case": "BB-A04 marketClose by non-authority",
+   "note": "close gate",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "3QgDaonowiNDoK2GBBCJhu82XH4Pv5dHK4kWDh6FKitjD5WxaYErU3um82Trh9hsgvZE3H6RDGpmtecfMDGzEV1g",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IncorrectAuthority"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IncorrectAuthority",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A05 oracleUpdate by non-updater (correct 529B payload)",
+   "program": "busybox",
+   "handler": "oracleUpdate by non-updater",
+   "case": "BB-A05 oracleUpdate by non-updater (correct 529B payload)",
+   "note": "attacker-signed price push",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "VvFZ351axD4w9cYUaSWt3UV7oYGSMM88rKPW9CtsLbfage41pzNyLNQ9Ma8Q6K3TJVHQDchkrpvR42rUjb2NKqG",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IncorrectAuthority"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IncorrectAuthority",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A06 oracleUpdate sequence replay (old sequence)",
+   "program": "busybox",
+   "handler": "oracleUpdate sequence replay",
+   "case": "BB-A06 oracleUpdate sequence replay (old sequence)",
+   "note": "replay of the current sequence number",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "UQ5oqVC7BvmFgR6xjpmC53n7kTcJ9jad5n5opJJM8d6R3jQgo14t14i84YV1dyb9QiAp23CTRytVmczDPp3yyG9",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IncorrectAuthority"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IncorrectAuthority",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A07 swapExactIn on this market (stale-oracle guard)",
+   "program": "busybox",
+   "handler": "swapExactIn on this market",
+   "case": "BB-A07 swapExactIn on this market (stale-oracle guard)",
+   "note": "oracle validUntil vs fork slot",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "2dFJjmkfGB9ZVEVFTiM7XBai8q1EfA7ahM5ddYh7GsY49v8pcVZpEXd8LSM79tGGErfGVxcZk8LdyeFvqYUiNmiM",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "guard": "denied by: partial fill is not allowed",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A08 swapExactIn with duplicate mutable account (authorityA := marketVaultA)",
+   "program": "busybox",
+   "handler": "swapExactIn with duplicate mutable account",
+   "case": "BB-A08 swapExactIn with duplicate mutable account (authorityA := marketVaultA)",
+   "note": "vault aliasing",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "SfDQ6dTD61ZD48UWdpinkQgJ3vG7zywW1MktRzYxeK4HNnqBK3v2KxQ5EBkEPmListcqZQMybwHZvvMVYqA6VzK",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: InvalidAccountData",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A09 swapExactIn max-u64 amount",
+   "program": "busybox",
+   "handler": "swapExactIn max-u64 amount",
+   "case": "BB-A09 swapExactIn max-u64 amount",
+   "note": "overflow / partial-fill guard",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "4131cVfTvy5fsSWqic7TY614FhGcDSZRtrnhfoUfHEoui3zLtFHTwLtBZ8qr6S1WX3zzvszsY9apeupJ1nQzuHLi",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "guard": "denied by: partial fill is not allowed",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A10 swapExactIn zero amount",
+   "program": "busybox",
+   "handler": "swapExactIn zero amount",
+   "case": "BB-A10 swapExactIn zero amount",
+   "note": "zero-input path",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "62VHSb3NdGMiy87Naf6umxP5ZRmhUB6JQVFf3Hz5w5WVpEfMUYGc1cYcVVyyGwa3xnazC1YPDG2sCeFQJwiA8aEf",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A11 swapExactOut whole vault with partial fill",
+   "program": "busybox",
+   "handler": "swapExactOut whole vault with partial fill",
+   "case": "BB-A11 swapExactOut whole vault with partial fill",
+   "note": "exact-out bounded by reserves",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "4GMB7Qefuzmy2usds3aFEd8Zn7fJDfgv1eGYY4ZZNmFSHyxcijBYoCj7MoAivtMFq54NjTt6nQMJTdhaVbuTddpS",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBA_auth_sweep.json:BB-A12 swapExactIn with tight MaxExecutionPrice",
+   "program": "busybox",
+   "handler": "swapExactIn with tight MaxExecutionPrice",
+   "case": "BB-A12 swapExactIn with tight MaxExecutionPrice",
+   "note": "slippage guard",
+   "evidence": "evidence/BBA_auth_sweep.json",
+   "forkSlotBefore": 444280295,
+   "forkSlotAfter": null,
+   "txSignature": "YUcWeSi6BSdnP6H7PwnxEzS4LDjXwGQNKJYrAwQeFoD2ghiWv8GX4skFBmcszpDBwDmnUp9Xpp89Lh8hrNKETNV",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "guard": "denied by: partial fill is not allowed",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBF_swap_guards.json:BB-F01 swapExactIn on a market whose stored oracle has EXPIRED",
+   "program": "busybox",
+   "handler": "swapExactIn on a market whose stored oracle has EXPIRED",
+   "case": "BB-F01 swapExactIn on a market whose stored oracle has EXPIRED",
+   "note": "expiry guard: does the program still price the swap off the stale stored oracle?",
+   "evidence": "evidence/BBF_swap_guards.json",
+   "forkSlotBefore": 444223443,
+   "forkSlotAfter": 444223444,
+   "txSignature": "WZzxzpATdJz2A47miyNV9YJrHKz575WLwDGdo7EGcciMG9d3B8QwG8rHDpKfnpnwkcHgL7dY7DG6kV4y7ATvvGY",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IllegalOwner",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBF_swap_guards.json:BB-F02 swapExactOut on the same stale market",
+   "program": "busybox",
+   "handler": "swapExactOut on the same stale market",
+   "case": "BB-F02 swapExactOut on the same stale market",
+   "note": "exact-out variant",
+   "evidence": "evidence/BBF_swap_guards.json",
+   "forkSlotBefore": 444223444,
+   "forkSlotAfter": 444223445,
+   "txSignature": "5JP7VAxBxbxiU2LP5smMhw23z9vSDzVH7MpGqNcEn94NdcGmr75CtoJcBetkK2UPApacCdAGBMVH5GoY8tTmYZik",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IllegalOwner",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBF_swap_guards.json:BB-F03 swapExactIn on a market with a FRESH oracle (contrast)",
+   "program": "busybox",
+   "handler": "swapExactIn on a market with a FRESH oracle",
+   "case": "BB-F03 swapExactIn on a market with a FRESH oracle (contrast)",
+   "note": "same code path, non-expired oracle",
+   "evidence": "evidence/BBF_swap_guards.json",
+   "forkSlotBefore": 444223446,
+   "forkSlotAfter": 444223448,
+   "txSignature": "51HsCs6ZJKrNHwLzrFeDXCmEJCZiQbV8XCGiDgmPXugPWN6jUVDdAwtuL6bWofrGnsjpHR5URAPygTR4pzzvcC2U",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IllegalOwner",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBF_swap_guards.json:BB-F04 swapExactIn with authorityA aliased onto the market vault",
+   "program": "busybox",
+   "handler": "swapExactIn with authorityA aliased onto the market vaul",
+   "case": "BB-F04 swapExactIn with authorityA aliased onto the market vault",
+   "note": "duplicate/aliased mutable account",
+   "evidence": "evidence/BBF_swap_guards.json",
+   "forkSlotBefore": 444223448,
+   "forkSlotAfter": 444223449,
+   "txSignature": "2LoSzSjh1KBPjAZVaw2fNc5keRjoeUGu3nZb7WuKhp9aCwxuB5hFjRCuQmVtjvxtkevcwoSEfoLEVXrTiQACLuhe",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: InvalidAccountData",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBF_swap_guards.json:BB-F05 swapExactIn on a never-initialized (empty oracle) market",
+   "program": "busybox",
+   "handler": "swapExactIn on a never-initialized",
+   "case": "BB-F05 swapExactIn on a never-initialized (empty oracle) market",
+   "note": "OracleData::Empty path",
+   "evidence": "evidence/BBF_swap_guards.json",
+   "forkSlotBefore": 444223450,
+   "forkSlotAfter": 444223452,
+   "txSignature": "49NyxcFfiyd3w6KKs5P1iLqGiL7CnSRr3xT6RZFABzx7GuTKqogYpN4dDy4aWaCYHNYbM47G4QbtnHpg7uhfy7mU",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IllegalOwner",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBF_swap_guards.json:BB-F06 swapExactIn with is_token_a flag inconsistent with the funded account",
+   "program": "busybox",
+   "handler": "swapExactIn with is_token_a flag inconsistent with the f",
+   "case": "BB-F06 swapExactIn with is_token_a flag inconsistent with the funded account",
+   "note": "flag/mint mismatch",
+   "evidence": "evidence/BBF_swap_guards.json",
+   "forkSlotBefore": 444223452,
+   "forkSlotAfter": 444223453,
+   "txSignature": "4jjJgsCAN4VPFQv4imQjm77W2YEtKcdqB2NZ1FU8EqJMXfBdYSUeMU5peyrZBLxXYnwUbib7cUg7RZXFmRoaL4yi",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IllegalOwner",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBF_swap_guards.json:BB-F07 swapExactIn with mintB token program replaced by Token-2022",
+   "program": "busybox",
+   "handler": "swapExactIn with mintB token program replaced by Token-2",
+   "case": "BB-F07 swapExactIn with mintB token program replaced by Token-2022",
+   "note": "pinning",
+   "evidence": "evidence/BBF_swap_guards.json",
+   "forkSlotBefore": 444223453,
+   "forkSlotAfter": 444223454,
+   "txSignature": "3Gz67kqPzP9hLXUp5ZMTqQNh39cXxqMk48GCz2NxqwX2cJwfWuxWdH5YWPpJopXFdq4qF1ymLTKTM426VPFr7Gxt",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IllegalOwner"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IllegalOwner",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBF_swap_guards.json:BB-F08 marketInitialize by the attacker (permissionless create)",
+   "program": "busybox",
+   "handler": "marketInitialize by the attacker",
+   "case": "BB-F08 marketInitialize by the attacker (permissionless create)",
+   "note": "does the program let any wallet create a market it controls?",
+   "evidence": "evidence/BBF_swap_guards.json",
+   "forkSlotBefore": 444223456,
+   "forkSlotAfter": 444223459,
+   "txSignature": "xqjmum6efBL2M54TW9DAU8tox5T9JScUjJuPVvPP8WhpqoxSiUmegfnWNc9jb1gAaaFjiihPgSNmvN8mGaNZben",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "IncorrectAuthority"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: IncorrectAuthority",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_deficit_probe.json:take entire reservesB (deficit probe)",
+   "program": "busybox",
+   "handler": "take entire reservesB",
+   "case": "take entire reservesB (deficit probe)",
+   "note": "",
+   "evidence": "evidence/BBP_deficit_probe.json",
+   "forkSlotBefore": 444225347,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "guard": "denied by: partial fill is not allowed",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_deficit_probe.json:take entire reservesB, partial allowed",
+   "program": "busybox",
+   "handler": "take entire reservesB, partial allowed",
+   "case": "take entire reservesB, partial allowed",
+   "note": "",
+   "evidence": "evidence/BBP_deficit_probe.json",
+   "forkSlotBefore": 444225349,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_deficit_probe.json:sell huge A into the market",
+   "program": "busybox",
+   "handler": "sell huge A into the market",
+   "case": "sell huge A into the market",
+   "note": "",
+   "evidence": "evidence/BBP_deficit_probe.json",
+   "forkSlotBefore": 444225350,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": null,
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_deficit_probe.json:take entire reservesB (deficit probe)",
+   "program": "busybox",
+   "handler": "take entire reservesB",
+   "case": "take entire reservesB (deficit probe)",
+   "note": "",
+   "evidence": "evidence/BBP_deficit_probe.json",
+   "forkSlotBefore": 444225354,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "guard": "denied by: partial fill is not allowed",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_deficit_probe.json:take entire reservesB, partial allowed",
+   "program": "busybox",
+   "handler": "take entire reservesB, partial allowed",
+   "case": "take entire reservesB, partial allowed",
+   "note": "",
+   "evidence": "evidence/BBP_deficit_probe.json",
+   "forkSlotBefore": 444225355,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_deficit_probe.json:sell huge A into the market",
+   "program": "busybox",
+   "handler": "sell huge A into the market",
+   "case": "sell huge A into the market",
+   "note": "",
+   "evidence": "evidence/BBP_deficit_probe.json",
+   "forkSlotBefore": 444225356,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": null,
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P01 swapExactIn on 6Vzx4ASRjU (take token B; vault>reserves by 228,021,897)",
+   "program": "busybox",
+   "handler": "swapExactIn on 6Vzx4ASRjU",
+   "case": "BB-P01 swapExactIn on 6Vzx4ASRjU (take token B; vault>reserves by 228,021,897)",
+   "note": "reserves-priced swap against a vault that holds more",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225078,
+   "forkSlotAfter": 444225079,
+   "txSignature": "4sRaRTFtZkRsYS2tSFAChFkSEwTSycEQ6186ouAys44qysos3As9TMY5F1QkTwaY7rURcF8Z1ymuWCnVbbj4UaUT",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P01b exact-OUT sweep of the entire vault (asks 25,107,388,359; reserves say 25,214,972,472)",
+   "program": "busybox",
+   "handler": "exact-OUT sweep of the entire vault",
+   "case": "BB-P01b exact-OUT sweep of the entire vault (asks 25,107,388,359; reserves say 25,214,972,472)",
+   "note": "can a swapper take reserves+excess (the vault's whole balance) for a tiny input?",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225079,
+   "forkSlotAfter": 444225080,
+   "txSignature": "3JwE551gXEUbb47VEeDE4LR9pMbULGQahqSetHKtmHo44FUm5nWEkCJu6ZEiWJmt9An2vKZ7pwAbRXLs17e4tuz6",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P02 swapExactIn the other direction on 6Vzx4ASRjU",
+   "program": "busybox",
+   "handler": "swapExactIn the other direction on 6Vzx4ASRjU",
+   "case": "BB-P02 swapExactIn the other direction on 6Vzx4ASRjU",
+   "note": "does the exchange move reserves toward the vault?",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225080,
+   "forkSlotAfter": 444225082,
+   "txSignature": "5Bbqyaj8KNH61wSoCVoX21CrHoj5Y4JYd14AUaf5yhePZet9aFNMYzyYZ7ivTeCn71ysqNHS4sLgJgJzSZLuqhKv",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P01 swapExactIn on 8hbdkPt2CU (take token A; vault>reserves by 1,880,377)",
+   "program": "busybox",
+   "handler": "swapExactIn on 8hbdkPt2CU",
+   "case": "BB-P01 swapExactIn on 8hbdkPt2CU (take token A; vault>reserves by 1,880,377)",
+   "note": "reserves-priced swap against a vault that holds more",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225090,
+   "forkSlotAfter": 444225091,
+   "txSignature": "Vs5PZeUfTXYWnXSVkKVHyr4zi6PNGWDASyMMhd63P1PDML9Pwe3CRFAtWqvj25SYK4nWkKxtheSqZo6WoGNpy1S",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P01b exact-OUT sweep of the entire vault (asks 3,028,513,048; reserves say 4,170,722,454)",
+   "program": "busybox",
+   "handler": "exact-OUT sweep of the entire vault",
+   "case": "BB-P01b exact-OUT sweep of the entire vault (asks 3,028,513,048; reserves say 4,170,722,454)",
+   "note": "can a swapper take reserves+excess (the vault's whole balance) for a tiny input?",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225091,
+   "forkSlotAfter": 444225093,
+   "txSignature": "3rx6oo8JGMrxZd7HMgpunr2Hvuku3AZRkM58aSSS2XN5f9owmC57F8Mc9QQwzxK8psFWSYm9yZTRwBMshfUi8ooM",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P02 swapExactIn the other direction on 8hbdkPt2CU",
+   "program": "busybox",
+   "handler": "swapExactIn the other direction on 8hbdkPt2CU",
+   "case": "BB-P02 swapExactIn the other direction on 8hbdkPt2CU",
+   "note": "does the exchange move reserves toward the vault?",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225093,
+   "forkSlotAfter": 444225094,
+   "txSignature": "dvxYm99SijyyeKCJ32gizxLk9QgHwJstA9NPyTUR8hYQeRMjgSfoUpLoVVrvbAwGT4D7qYgh7Bz9Cuc5G5s1ZhN",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P01 swapExactIn on GtBJeuFzSC (take token B; vault>reserves by 616,034)",
+   "program": "busybox",
+   "handler": "swapExactIn on GtBJeuFzSC",
+   "case": "BB-P01 swapExactIn on GtBJeuFzSC (take token B; vault>reserves by 616,034)",
+   "note": "reserves-priced swap against a vault that holds more",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225101,
+   "forkSlotAfter": 444225102,
+   "txSignature": "3f5iZvJPn8d1uXrj78gktwr8UkNz2KiAYqVV214cDZt5UybZUarYnjQWmScAwj2CqdbEYNDdsyPDS7axfujHA9QC",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P01b exact-OUT sweep of the entire vault (asks 13,667,464; reserves say 13,051,430)",
+   "program": "busybox",
+   "handler": "exact-OUT sweep of the entire vault",
+   "case": "BB-P01b exact-OUT sweep of the entire vault (asks 13,667,464; reserves say 13,051,430)",
+   "note": "can a swapper take reserves+excess (the vault's whole balance) for a tiny input?",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225102,
+   "forkSlotAfter": 444225103,
+   "txSignature": "3adqj4ybfMRQ2x1iS5bCEFb4tKqDphrEMfV4gHVhzUDHU5oRgJdKBQ3fMeJbDyzyufjsD2tedKY5HVDe9BzPEzRG",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P02 swapExactIn the other direction on GtBJeuFzSC",
+   "program": "busybox",
+   "handler": "swapExactIn the other direction on GtBJeuFzSC",
+   "case": "BB-P02 swapExactIn the other direction on GtBJeuFzSC",
+   "note": "does the exchange move reserves toward the vault?",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225103,
+   "forkSlotAfter": 444225104,
+   "txSignature": "BL75x2nQJse7gSoWH55aN6j2kgozx7weTM4GqM8dLrjEodwPxvXrZv74bSPQqb4iFxfAb2hpnr7VjpB8aZQcCXF",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P03 swapExactIn on STALE-oracle market 4AFfguVTj7",
+   "program": "busybox",
+   "handler": "swapExactIn on STALE-oracle market 4AFfguVTj7",
+   "case": "BB-P03 swapExactIn on STALE-oracle market 4AFfguVTj7",
+   "note": "oracle expiry gate with a fully valid account shape",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225108,
+   "forkSlotAfter": 444225109,
+   "txSignature": "573UE8b9DfC1PeHbXrGXjKLzHKWuHoRUWU1pNZwCnqqoZWotgQpus2xNLxwyGNeBZd5eb533WkvqyEmGhxgvRJeP",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: InvalidAccountData",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P03 swapExactIn on STALE-oracle market 5783KdWDm8",
+   "program": "busybox",
+   "handler": "swapExactIn on STALE-oracle market 5783KdWDm8",
+   "case": "BB-P03 swapExactIn on STALE-oracle market 5783KdWDm8",
+   "note": "oracle expiry gate with a fully valid account shape",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225113,
+   "forkSlotAfter": 444225114,
+   "txSignature": "5Krvwd3Nop2TuHsfKuP6ebNvPJBwhhmw23Ys9sMTt5ttoaqVSbcZmqrJ8GjTRgphw5N3uYRvtwNkff3FnF2fHSzR",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: InvalidAccountData",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBP_swap_profit.json:BB-P03 swapExactIn on STALE-oracle market 9Bc7tyaZft",
+   "program": "busybox",
+   "handler": "swapExactIn on STALE-oracle market 9Bc7tyaZft",
+   "case": "BB-P03 swapExactIn on STALE-oracle market 9Bc7tyaZft",
+   "note": "oracle expiry gate with a fully valid account shape",
+   "evidence": "evidence/BBP_swap_profit.json",
+   "forkSlotBefore": 444225117,
+   "forkSlotAfter": 444225118,
+   "txSignature": "5Pioy5ejC1TXGFcGVUkXVJr15AWxbggk2E3QMdmH2ErpcgiuN6MNoEFVKajH9ZheehUCXBQi41Z3wQsjCxB4vQf",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "BBS_stale_oracle.json:BB-STALE-01 swapExactIn 0.4 WSOL -> jitoSOL against an EXPIRED oracle",
+   "program": "busybox",
+   "handler": "swapExactIn 0.4 WSOL -> jitoSOL against an EXPIRED oracl",
+   "case": "BB-STALE-01 swapExactIn 0.4 WSOL -> jitoSOL against an EXPIRED oracle",
+   "note": "does the swap use the stale embedded price?",
+   "evidence": "evidence/BBS_stale_oracle.json",
+   "forkSlotBefore": 444227423,
+   "forkSlotAfter": null,
+   "txSignature": "4w2jCbX4R9jnVHuBhQPWqVMXouznQxv9rVD6UCUTV8yb2NBULPrno58JNPMNk3FPZ5DWEPEdb6Nts6QEKmgdvEnK",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "guard": "denied by runtime/token-program guard: InvalidAccountData",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "marketAfter": {
+     "disc": 2,
+     "bump": 255,
+     "cuPen": 0,
+     "imb": 100,
+     "authority": "CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH",
+     "updater": "6CXqCWbyYj8JZra2gEB3SUF2ZCrCbeT6F4eCoCGDQVcL",
+     "mintA": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+     "mintB": "So11111111111111111111111111111111111111112",
+     "sequence": 642827,
+     "validUntil": 415068462,
+     "variant": 3,
+     "priceQ": 23514627481716551680,
+     "minSpread": 0,
+     "arbPenalty": 300,
+     "jitod": 100,
+     "minOracle": 0,
+     "maxOracle": 340282366920938463463374607431768211455,
+     "skewMin": 0,
+     "skewMax": 0,
+     "maxA": 0,
+     "maxB": 0,
+     "reservesA": 10900000000,
+     "reservesB": 500000000,
+     "lamports": 8017920
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-P01 consume: zero signature",
+   "program": "wavebreak",
+   "handler": "consume: zero signature",
+   "case": "WB-P01 consume: zero signature",
+   "note": "attacker-generated message, all-zero signature",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280476,
+   "forkSlotAfter": 444280478,
+   "txSignature": "3VeDAGo3DfgVGBEdGSCrALofyWKtQv1a2ijaZSFdgqGZZsGABLMJVw9YthLHZrXPPE1hfznxk2Jqq4PVsSQax4ne",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "ProgramFailedToComplete"
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-P02 consume: claim allowed signer, attacker signature",
+   "program": "wavebreak",
+   "handler": "consume: claim allowed signer, attacker signature",
+   "case": "WB-P02 consume: claim allowed signer, attacker signature",
+   "note": "tests pubkey-recovery binding",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280478,
+   "forkSlotAfter": 444280480,
+   "txSignature": "2uXKWyXGxsjdQWTEsr6env8eRZ2EiPB6xU9ioAhmyVqv7m916uchqJfWp15h5khbXFSXDvA9ExitXuRxoj37CCac",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "ProgramFailedToComplete"
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-P03 consume: expired permission",
+   "program": "wavebreak",
+   "handler": "consume: expired permission",
+   "case": "WB-P03 consume: expired permission",
+   "note": "validUntil in the past",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280480,
+   "forkSlotAfter": 444280482,
+   "txSignature": "4ytMFVKAWHrYUwBN6skufq3Q2iCGtUfoFUjVpw3afc6vjLr3VsrTcEveUBNqmT5NBciFZBkBU7tC7272fmBdaAhD",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "ProgramFailedToComplete"
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-P04 consume: consumerProgram = busybox",
+   "program": "wavebreak",
+   "handler": "consume: consumerProgram = busybox",
+   "case": "WB-P04 consume: consumerProgram = busybox",
+   "note": "cross-program permission reuse",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280482,
+   "forkSlotAfter": 444280483,
+   "txSignature": "3BeSz3w5yjtgwCAFF2R43uWVHjjSU3uq7xZhbJhLxgUGv6sVYSqi4r51KpSN5rKDyiHEDavdXP38rRxWPTKByiKL",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-P05 consume: discs=[99] (no trade ix)",
+   "program": "wavebreak",
+   "handler": "consume: discs=[99]",
+   "case": "WB-P05 consume: discs=[99] (no trade ix)",
+   "note": "permission not bound to the trade instruction",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280484,
+   "forkSlotAfter": 444280486,
+   "txSignature": "Zcy6QEX7m6AtNk4hzeGr1R4x1a34UM8KALdWXT4wcpBX3vA6iPEyN9nCNB8cmwS3KMZRsoxSTy5yAMpe9M9t3FV",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6004
+     }
+    ]
+   },
+   "guard": "denied by: permission invalid signature",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-P06 consume: unknown permissionType",
+   "program": "wavebreak",
+   "handler": "consume: unknown permissionType",
+   "case": "WB-P06 consume: unknown permissionType",
+   "note": "bitmap/permissionType binding",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280486,
+   "forkSlotAfter": 444280488,
+   "txSignature": "5ugcyfMX22VyiVGRtW8GqcuXoNxZpdi4DvAvHs5cR7fhgv7nLyfxPAMC3vzbMtZfEbyHGX7pzrhd5azcwa8dKDCk",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6004
+     }
+    ]
+   },
+   "guard": "denied by: permission invalid signature",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-P07 consume: subject != consumer",
+   "program": "wavebreak",
+   "handler": "consume: subject != consumer",
+   "case": "WB-P07 consume: subject != consumer",
+   "note": "attacker consumes a permission issued for another wallet",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280488,
+   "forkSlotAfter": 444280489,
+   "txSignature": "3qfka82ZLMCu862DPJ1m8Aj2HMi14xjSANKzddtA8o19p8HmMnFPwp86p36fdY2i3fDn7EAD3JGrsSBMrUGNkpkD",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "denied by: incorrect account address / subject-consumer binding",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-P08 consumeCpi as top-level",
+   "program": "wavebreak",
+   "handler": "consumeCpi as top-level",
+   "case": "WB-P08 consumeCpi as top-level",
+   "note": "tag 1 (CPI variant) called directly",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280489,
+   "forkSlotAfter": 444280490,
+   "txSignature": "5qiuYCtohhMEGskncrfvyQD9mQqNM5th5fbjFTTUwyiuXCc9ZbmSV1f6ncaLqPfn9uCCiFSkTkSsrVUhEbBnw9eA",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6006
+     }
+    ]
+   },
+   "guard": "denied by: unknown instruction discriminator",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-P09 duplicate consume in one tx",
+   "program": "wavebreak",
+   "handler": "duplicate consume in one tx",
+   "case": "WB-P09 duplicate consume in one tx",
+   "note": "same permission consumed twice in one tx",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280490,
+   "forkSlotAfter": 444280492,
+   "txSignature": "xjegp73nz9mXegzeb3SKEN9pMRa5BAefT8qA9AU2ueHP9aede751rw8G9HwVzWUyz1xfLPkb3bcew1ZmH6yZyM4",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "guard": "denied by: partial fill disallowed / invalid instruction data",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-P10 consume(attacker-signed) then buy",
+   "program": "wavebreak",
+   "handler": "consume",
+   "case": "WB-P10 consume(attacker-signed) then buy",
+   "note": "permissionless trade via self-signed permission",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280492,
+   "forkSlotAfter": 444280493,
+   "txSignature": "TUeggGhFCZvAfN4qqsnfuvxdmiud68r2AFi2L8UEpzKWiEXjR3ZZeFDuCqQL95wBSSGt2pnLYpPSuuMiB1Gsywq",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     "ProgramFailedToComplete"
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-C01 buy with no consume ix",
+   "program": "wavebreak",
+   "handler": "buy with no consume ix",
+   "case": "WB-C01 buy with no consume ix",
+   "note": "live curve, funded attacker WSOL, no permission",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280493,
+   "forkSlotAfter": 444280495,
+   "txSignature": "3M2qMQCxt5UvQZNW1LxKEcS1YTjHHCSTXxXMiCfAfSGjZeNKPscvWKtGrvE8qhcLd5RP1orEZY4gFhxaQ1z6TuUa",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "guard": "denied by: missing permission-consume instruction",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-C01b buy zero amount",
+   "program": "wavebreak",
+   "handler": "buy zero amount",
+   "case": "WB-C01b buy zero amount",
+   "note": "zero amount",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280495,
+   "forkSlotAfter": 444280497,
+   "txSignature": "2UNVDCj2JDStE4nUqPWqCejLaW8cY2EL3MTW5XLei8ZezuFueNxEDMPGFP22PUFKRY2EbBmKvZenyKMPgzs8PdPU",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "guard": "denied by: missing permission-consume instruction",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-C01b buy max u64",
+   "program": "wavebreak",
+   "handler": "buy max u64",
+   "case": "WB-C01b buy max u64",
+   "note": "max u64",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280497,
+   "forkSlotAfter": 444280500,
+   "txSignature": "4rM1wKuyHKr3dPVDppusUKGJC1vWHBG2iD6optBdU7BRnfmdudQaoTHiY318624qqyL7VW6YyK89DM84eXZuDPHx",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "guard": "denied by: missing permission-consume instruction",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-C01b buy partial-fill allowed",
+   "program": "wavebreak",
+   "handler": "buy partial-fill allowed",
+   "case": "WB-C01b buy partial-fill allowed",
+   "note": "partial-fill allowed",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280500,
+   "forkSlotAfter": 444280502,
+   "txSignature": "5j6ACa3ov8sJwAJJvjVe8dL63UjyrEPq8X8ygiDgDbojiC6dcYompWgxnNt8Ght5eLmhtfaZZmSWSM6mG158Zkem",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "guard": "denied by: missing permission-consume instruction",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-C01b buy tight threshold",
+   "program": "wavebreak",
+   "handler": "buy tight threshold",
+   "case": "WB-C01b buy tight threshold",
+   "note": "tight threshold",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280502,
+   "forkSlotAfter": 444280503,
+   "txSignature": "k4oHrSAMwDdUY8VmTHuGeDEKFEzR669T2ASpABBTvjWNicGYJvQ8J8qLJPxVd4HpThk3UW4KauzBz2aiWCFXnLs",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "guard": "denied by: missing permission-consume instruction",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-C05a buy: quoteTokenProgram = Token-2022",
+   "program": "wavebreak",
+   "handler": "buy: quoteTokenProgram = Token-2022",
+   "case": "WB-C05a buy: quoteTokenProgram = Token-2022",
+   "note": "wrong quote token program",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280503,
+   "forkSlotAfter": 444280505,
+   "txSignature": "5chgwT1wHEEz5fog7LUvobbFZDgBZtbDZYPV6vV17y9uvx5digKgXiKMbM3ySeZmHuT8HixPgksSZagZMieDfJCU",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6024
+     }
+    ]
+   },
+   "guard": "denied by: account not owned by the right program",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-C05b buy: vault = attacker-owned ATA",
+   "program": "wavebreak",
+   "handler": "buy: vault = attacker-owned ATA",
+   "case": "WB-C05b buy: vault = attacker-owned ATA",
+   "note": "quoteVault replaced by the buyer's own ATA",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280506,
+   "forkSlotAfter": 444280508,
+   "txSignature": "3QwBusMHHcytSgW7GpwqD3nwPzashvs678Z6WZTLDxbwNEiF1Tju8vYd4KjPfn7X5sxg4rZ6JCZ7S5oTxkwo3EEQ",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-C05c buy: duplicate mutable account (buyer == vault)",
+   "program": "wavebreak",
+   "handler": "buy: duplicate mutable account",
+   "case": "WB-C05c buy: duplicate mutable account (buyer == vault)",
+   "note": "same account twice / vault is a signer account",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280508,
+   "forkSlotAfter": 444280510,
+   "txSignature": "5LVGbvF1yuF2raExSaxjY75oFndEjEiZnWq3qCVDQjm3ZuYqeqoBEX4mN7iaV2CYTaQ4zLFCusySycFwVBQ7TVyR",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6024
+     }
+    ]
+   },
+   "guard": "denied by: account not owned by the right program",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-C05d buy: baseMint = other curve's mint",
+   "program": "wavebreak",
+   "handler": "buy: baseMint = other curve's mint",
+   "case": "WB-C05d buy: baseMint = other curve's mint",
+   "note": "mint substitution",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280510,
+   "forkSlotAfter": 444280511,
+   "txSignature": "3n1TjwQevrki1QNrSbf3Ukvq8zKxj3LbBhbjrmVjvUuGqqfsNwyhpx9mZzGJTd3w8VzMZeDbsZg4ukdANcHf4x6M",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBC_perm_trade.json:WB-C02 buy+buy in one tx",
+   "program": "wavebreak",
+   "handler": "buy+buy in one tx",
+   "case": "WB-C02 buy+buy in one tx",
+   "note": "same instruction twice against the same curve",
+   "evidence": "evidence/WBC_perm_trade.json",
+   "forkSlotBefore": 444280511,
+   "forkSlotAfter": 444280512,
+   "txSignature": "4numYf9uqmEExCAeNhSQhgnwjjhVfEzheiERzPhkWdU92m1mt1FZimyJBmeE8DRpW8LfTzdWhiKzs44aSAGiFSan",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "guard": "denied by: missing permission-consume instruction",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain.json:WB-D01 sell HUGE amount, allow_partial_fill=FALSE",
+   "program": "wavebreak",
+   "handler": "sell HUGE amount, allow_partial_fill=FALSE",
+   "case": "WB-D01 sell HUGE amount, allow_partial_fill=FALSE",
+   "note": "expect: capped payout must revert (6025) rather than pay the vault dry",
+   "evidence": "evidence/WBD_fee_drain.json",
+   "forkSlotBefore": 444221218,
+   "forkSlotAfter": 444221219,
+   "txSignature": "62RMEZP5sHaHjXkgJ7RWh3ohDG1g8gAeHHMgbXKCbxN3pGjEYq7PVH3YkWyR4Xhx4yJiquuso2ppbCFkEz9RRPJP",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "guard": "denied by: partial fill disallowed / invalid instruction data",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain.json:WB-D02 sell HUGE amount, allow_partial_fill=TRUE",
+   "program": "wavebreak",
+   "handler": "sell HUGE amount, allow_partial_fill=TRUE",
+   "case": "WB-D02 sell HUGE amount, allow_partial_fill=TRUE",
+   "note": "KEY TEST: does a partial fill pay out beyond internal accounting (fee custody)?",
+   "evidence": "evidence/WBD_fee_drain.json",
+   "forkSlotBefore": 444221219,
+   "forkSlotAfter": 444221221,
+   "txSignature": "4y5x6pG1wFZLStxUf8ZGiszGHTn7DuexGoDv3erAJGFeKALyRWsgedkgBNH73wP5ujYTPW8AZpvNVgmzZxwN6z2x",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "guard": "denied by: arithmetic error",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain.json:WB-D03 sell exact-out for the whole vault, partial=TRUE",
+   "program": "wavebreak",
+   "handler": "sell exact-out for the whole vault, partial=TRUE",
+   "case": "WB-D03 sell exact-out for the whole vault, partial=TRUE",
+   "note": "exact-out asking for the entire vault balance",
+   "evidence": "evidence/WBD_fee_drain.json",
+   "forkSlotBefore": 444221221,
+   "forkSlotAfter": 444221222,
+   "txSignature": "4LR89Mow5NFHzjtfAVVMbH6gW16uPbDnorPgpABbfoekntrtdA8uE1C9yXU9UXH4sby8cF5GHakHnfYmqwR8eYXk",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "guard": "denied by: arithmetic error",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain.json:WB-D04 repeated WB-D02 in one tx x3",
+   "program": "wavebreak",
+   "handler": "repeated WB-D02 in one tx x3",
+   "case": "WB-D04 repeated WB-D02 in one tx x3",
+   "note": "state carry-over across repeated payout instructions",
+   "evidence": "evidence/WBD_fee_drain.json",
+   "forkSlotBefore": 444221222,
+   "forkSlotAfter": 444221223,
+   "txSignature": "5CJdXiVm2B2ujsKRWzCMRq7Qp4rWuK9imEhWhC1EZrZcSuYeYbt9YhkBX2T1gBB8wdQ7hxtuXhfwZ7vYno2qQTrB",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "guard": "denied by: arithmetic error",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain2.json:WB-DR exact-in no-partial fund=1000 tokens",
+   "program": "wavebreak",
+   "handler": "exact-in no-partial fund=1000 tokens",
+   "case": "WB-DR exact-in no-partial fund=1000 tokens",
+   "note": "",
+   "evidence": "evidence/WBD_fee_drain2.json",
+   "forkSlotBefore": 444221422,
+   "forkSlotAfter": null,
+   "txSignature": "3QSwyRZ4y7o4Jz423MUP2cqSdcX1fXUkoVc4CfgsUojuwCXHoWP85Nc7wju8N6rZJd8f4nYeY2kn4u2QHu21mkC",
+   "instructionError": null,
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 29347,
+   "measured": {
+    "excessCaptured": -297,
+    "curveAfter": {
+     "lamports": 15144960,
+     "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+     "quote_amount": 1367576266,
+     "base_amount": 46132005731776374
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain2.json:WB-DR exact-in partial fund=1000 tokens",
+   "program": "wavebreak",
+   "handler": "exact-in partial fund=1000 tokens",
+   "case": "WB-DR exact-in partial fund=1000 tokens",
+   "note": "",
+   "evidence": "evidence/WBD_fee_drain2.json",
+   "forkSlotBefore": 444221424,
+   "forkSlotAfter": null,
+   "txSignature": "34aj7sh2Qz4igzwuT5CW69q3MmHkmNtb9h34QmGW5CF9keudbKJtEtYmqprP9miGNcw4jwsMPp1QLsnzXsnvvJnz",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "excessCaptured": 0,
+    "curveAfter": {
+     "lamports": 15144960,
+     "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+     "quote_amount": 1367576266,
+     "base_amount": 46132005731776374
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain2.json:WB-DR exact-out partial fund=1000 tokens",
+   "program": "wavebreak",
+   "handler": "exact-out partial fund=1000 tokens",
+   "case": "WB-DR exact-out partial fund=1000 tokens",
+   "note": "",
+   "evidence": "evidence/WBD_fee_drain2.json",
+   "forkSlotBefore": 444221425,
+   "forkSlotAfter": null,
+   "txSignature": "2U68og5x5ps3kCwCga2zA2GEDZAscQtUYCs4S3b1oN7djDcDtyQPvqi478mkQTf29K6Mze5XFrxKTaJryAdtuUhc",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "excessCaptured": 0,
+    "curveAfter": {
+     "lamports": 15144960,
+     "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+     "quote_amount": 1367576266,
+     "base_amount": 46132005731776374
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain2.json:WB-DR exact-out no-partial fund=1000 tokens",
+   "program": "wavebreak",
+   "handler": "exact-out no-partial fund=1000 tokens",
+   "case": "WB-DR exact-out no-partial fund=1000 tokens",
+   "note": "",
+   "evidence": "evidence/WBD_fee_drain2.json",
+   "forkSlotBefore": 444221426,
+   "forkSlotAfter": null,
+   "txSignature": "3HvzoV16Gq41H729PwcTknJTUhN4gBKHE6Pb89gbLjmWnCV5ahbx24p9GGz1VCcKboKiYQjcnqfhs6z9ReTcbjEg",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "guard": "denied by: partial fill disallowed / invalid instruction data",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "excessCaptured": 0,
+    "curveAfter": {
+     "lamports": 15144960,
+     "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+     "quote_amount": 1367576266,
+     "base_amount": 46132005731776374
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain2.json:WB-DR exact-in no-partial fund=100M tokens",
+   "program": "wavebreak",
+   "handler": "exact-in no-partial fund=100M tokens",
+   "case": "WB-DR exact-in no-partial fund=100M tokens",
+   "note": "",
+   "evidence": "evidence/WBD_fee_drain2.json",
+   "forkSlotBefore": 444221428,
+   "forkSlotAfter": null,
+   "txSignature": "T5iZsUENHpFcWuvJEdy15J2SYEogkG7M7kcXRAZBYkXur6u6ZHnNpkZEZyXN8qdCh5iuky2Ywtg6wiG9no3ekvC",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "guard": "denied by: partial fill disallowed / invalid instruction data",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "excessCaptured": 0,
+    "curveAfter": {
+     "lamports": 15144960,
+     "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+     "quote_amount": 1367576266,
+     "base_amount": 46132005731776374
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain2.json:WB-DR exact-in partial fund=100M tokens",
+   "program": "wavebreak",
+   "handler": "exact-in partial fund=100M tokens",
+   "case": "WB-DR exact-in partial fund=100M tokens",
+   "note": "",
+   "evidence": "evidence/WBD_fee_drain2.json",
+   "forkSlotBefore": 444221429,
+   "forkSlotAfter": null,
+   "txSignature": "XkXTECt6T7yZeVm435ui1rAkbpPA9tu952c5suNSVu5d6VT8av7PMSfBC3TYUpnYyq4opec2bQQGE87RihX3Jvx",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "guard": "denied by: arithmetic error",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "excessCaptured": 0,
+    "curveAfter": {
+     "lamports": 15144960,
+     "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+     "quote_amount": 1367576266,
+     "base_amount": 46132005731776374
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain2.json:WB-DR exact-out partial fund=100M tokens",
+   "program": "wavebreak",
+   "handler": "exact-out partial fund=100M tokens",
+   "case": "WB-DR exact-out partial fund=100M tokens",
+   "note": "",
+   "evidence": "evidence/WBD_fee_drain2.json",
+   "forkSlotBefore": 444221430,
+   "forkSlotAfter": null,
+   "txSignature": "63s9frHkyXR6ScToHxkUyArFs247v7VXgR7Rk89VhjNSNhF4kFy5bmXgL12qKrEnAaMQBJ54jabj8vDkUYEYBg42",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "guard": "denied by: arithmetic error",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "excessCaptured": 0,
+    "curveAfter": {
+     "lamports": 15144960,
+     "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+     "quote_amount": 1367576266,
+     "base_amount": 46132005731776374
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBD_fee_drain2.json:WB-DR exact-out no-partial fund=100M tokens",
+   "program": "wavebreak",
+   "handler": "exact-out no-partial fund=100M tokens",
+   "case": "WB-DR exact-out no-partial fund=100M tokens",
+   "note": "",
+   "evidence": "evidence/WBD_fee_drain2.json",
+   "forkSlotBefore": 444221431,
+   "forkSlotAfter": null,
+   "txSignature": "2ssGLUeF377LkwavjaByKyDnxHxoceHhsLVUiTL6Vhud27aHsL9mx3GPtG6Vn52XBi672hnEjjVoQg8wTQmKHW1D",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "guard": "denied by: partial fill disallowed / invalid instruction data",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "excessCaptured": 0,
+    "curveAfter": {
+     "lamports": 15144960,
+     "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+     "quote_amount": 1367576266,
+     "base_amount": 46132005731776374
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBFEE_collect.json:WB-FEE3 collectFees with privilege-1 fee authority (8AbiHetk\u2026)",
+   "program": "wavebreak",
+   "handler": "collectFees with privilege-1 fee authority",
+   "case": "WB-FEE3 collectFees with privilege-1 fee authority (8AbiHetk\u2026)",
+   "note": "",
+   "evidence": "evidence/WBFEE_collect.json",
+   "forkSlotBefore": 444282193,
+   "forkSlotAfter": null,
+   "txSignature": "RbqaDfntCZ9DenU4puB7CT2jFjoUmC3H5BeCVYfeuMZsAyLh6WRpcip84wq2DhiXso5E9TZaQDD2YjPqESBD8S4",
+   "instructionError": null,
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBFEE_collect.json:WB-FEE3 collectFees with ATTACKER as feeAuthority (no privilege)",
+   "program": "wavebreak",
+   "handler": "collectFees with ATTACKER as feeAuthority",
+   "case": "WB-FEE3 collectFees with ATTACKER as feeAuthority (no privilege)",
+   "note": "",
+   "evidence": "evidence/WBFEE_collect.json",
+   "forkSlotBefore": 444282194,
+   "forkSlotAfter": null,
+   "txSignature": "3DY9zoGft2Q5e5fSX7McZQ4cp3nTWZA7qWiBmkXb3otXsv7mR3do57VoxQFjbuahoqdpeEAEUnmSafbvLFGkfQfv",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBFEE_collect.json:WB-FEE3 collectFees with random EOA as feeAuthority",
+   "program": "wavebreak",
+   "handler": "collectFees with random EOA as feeAuthority",
+   "case": "WB-FEE3 collectFees with random EOA as feeAuthority",
+   "note": "",
+   "evidence": "evidence/WBFEE_collect.json",
+   "forkSlotBefore": 444282197,
+   "forkSlotAfter": null,
+   "txSignature": "3MrUjQp7BxZxJ2HHeM91g8ZnChjH7UGWf7v7SdSSDQobULe5VmWTbKGHCJVsuUBJH78WmtmcBJhet96R5ZypanGr",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T1 sell exact-in (small, 1,000,000,000,000 units) on 6n8MPRJ81G [vault excess 667,048,926]",
+   "program": "wavebreak",
+   "handler": "sell exact-in",
+   "case": "WB-T1 sell exact-in (small, 1,000,000,000,000 units) on 6n8MPRJ81G [vault excess 667,048,926]",
+   "note": "funding={\"amount\": 1000000000000, \"decimals\": 9, \"supplyBefore\": 45351574239818666}",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444277746,
+   "forkSlotAfter": 444277792,
+   "txSignature": "4zcPEqtUpB1QCypmF2FijQGU2n5PNh5PtzfWrED4oK6zabYzwnbELiQ3QBEuTssTeKUE8yf7cH67GL83SsG9YatY",
+   "instructionError": null,
+   "guard": "payout 29347 <= accounting release 29644 (fee custody retained; input was fork-fixture funded, so caller gain is not protocol value)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "payoutToAttacker": 29347,
+    "conservation": {
+     "accountingDecrease": 29644,
+     "vaultDecrease": 29347,
+     "attackerWsolDelta": 0,
+     "note": "payout must be <= accounting decrease; vault may exceed accounting only as unclaimed fees"
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T1 sell exact-in (huge, 1,000,000,000,000,000 units) on 6n8MPRJ81G [vault excess 667,048,926]",
+   "program": "wavebreak",
+   "handler": "sell exact-in",
+   "case": "WB-T1 sell exact-in (huge, 1,000,000,000,000,000 units) on 6n8MPRJ81G [vault excess 667,048,926]",
+   "note": "funding={\"amount\": 1000000000000000, \"decimals\": 9, \"supplyBefore\": 45350574239818666}",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444277801,
+   "forkSlotAfter": 444277802,
+   "txSignature": "PNwEGerD9xzavvSsLLn2YueFTQJezh5mwe1meK4g3CTNyDW4ssYtnouU6WEXokARBPEQ3q7sBbVQausB896GT5A",
+   "instructionError": null,
+   "guard": "payout 29348397 <= accounting release 29644846 (fee custody retained; input was fork-fixture funded, so caller gain is not protocol value)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "payoutToAttacker": 29377744,
+    "conservation": {
+     "accountingDecrease": 29644846,
+     "vaultDecrease": 29348397,
+     "attackerWsolDelta": 0,
+     "note": "payout must be <= accounting decrease; vault may exceed accounting only as unclaimed fees"
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T2 exact-OUT asking for the entire vault (2,005,277,092) on 6n8MPRJ81G",
+   "program": "wavebreak",
+   "handler": "exact-OUT asking for the entire vault",
+   "case": "WB-T2 exact-OUT asking for the entire vault (2,005,277,092) on 6n8MPRJ81G",
+   "note": "allow_partial_fill=1",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444277802,
+   "forkSlotAfter": 444277803,
+   "txSignature": "oRHC8NZ5uPBYLruswrvAwvpwrwEtwWCMjANJuHRBeFHJB2wySjTjJkGjxmungQQJzKvVHdJ3NVqoYNLWE6d3FRo",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T1 sell exact-in (small, 1,000,000,000,000 units) on DbRKfbUmxd [vault excess 506,349,347]",
+   "program": "wavebreak",
+   "handler": "sell exact-in",
+   "case": "WB-T1 sell exact-in (small, 1,000,000,000,000 units) on DbRKfbUmxd [vault excess 506,349,347]",
+   "note": "funding={\"amount\": 1000000000000, \"decimals\": 9, \"supplyBefore\": 69123886738876133}",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444277911,
+   "forkSlotAfter": 444277912,
+   "txSignature": "wvG5ZWjuE4f5zqvTGFDo3pVvdV6XwF2KNRqpGewTDQuHyB9w62A73hUQfDKcf4ZrpZ1Nww9dzm2uh94KpEmCeBr",
+   "instructionError": null,
+   "guard": "payout 32315 <= accounting release 32642 (fee custody retained; input was fork-fixture funded, so caller gain is not protocol value)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "payoutToAttacker": 29410059,
+    "conservation": {
+     "accountingDecrease": 32642,
+     "vaultDecrease": 32315,
+     "attackerWsolDelta": 0,
+     "note": "payout must be <= accounting decrease; vault may exceed accounting only as unclaimed fees"
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T1 sell exact-in (huge, 1,000,000,000,000,000 units) on DbRKfbUmxd [vault excess 506,349,347]",
+   "program": "wavebreak",
+   "handler": "sell exact-in",
+   "case": "WB-T1 sell exact-in (huge, 1,000,000,000,000,000 units) on DbRKfbUmxd [vault excess 506,349,347]",
+   "note": "funding={\"amount\": 1000000000000000, \"decimals\": 9, \"supplyBefore\": 69122886738876133}",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444277912,
+   "forkSlotAfter": 444277913,
+   "txSignature": "3vQuna7gVxT9rV2zjKkP5DNjupqycnTCd8s4LRemyi4nyZQFit9U7t68pimyWtsSrMZR7Kg9tNMMWJpR5T5AcQSZ",
+   "instructionError": null,
+   "guard": "payout 32316396 <= accounting release 32642825 (fee custody retained; input was fork-fixture funded, so caller gain is not protocol value)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "payoutToAttacker": 61726455,
+    "conservation": {
+     "accountingDecrease": 32642825,
+     "vaultDecrease": 32316396,
+     "attackerWsolDelta": 0,
+     "note": "payout must be <= accounting decrease; vault may exceed accounting only as unclaimed fees"
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T2 exact-OUT asking for the entire vault (2,755,320,363) on DbRKfbUmxd",
+   "program": "wavebreak",
+   "handler": "exact-OUT asking for the entire vault",
+   "case": "WB-T2 exact-OUT asking for the entire vault (2,755,320,363) on DbRKfbUmxd",
+   "note": "allow_partial_fill=1",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444277913,
+   "forkSlotAfter": 444277914,
+   "txSignature": "HUTqYULYU2CKjSM6ZsMqbmFn8tfFnnaBsFubcGkYmEy9tLMAcgjWHuy2ZbJZFS8MRjMDJzuLc5wTpWVoRQvL3Em",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T4 graduateManual by a NON-CREATOR on 7pjREHYMKCou (target 1,677,572,460,000 vs quote 11,560,648)",
+   "program": "wavebreak",
+   "handler": "graduateManual by a NON-CREATOR on 7pjREHYMKCou",
+   "case": "WB-T4 graduateManual by a NON-CREATOR on 7pjREHYMKCou (target 1,677,572,460,000 vs quote 11,560,648)",
+   "note": "curve creator is a third party; destination taken from the live curve record",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444277997,
+   "forkSlotAfter": 444277998,
+   "txSignature": "yD4KWAnMW1KdGmjfrVMv3yqx23ViU2bzjxwJwD9tWxG1qv5wxcjj6pZG7Z63mmfsUBsSE7gUUKQp6kgNr7gbSwD",
+   "instructionError": null,
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T4b graduateManual AGAIN on 7pjREHYMKCou",
+   "program": "wavebreak",
+   "handler": "graduateManual AGAIN on 7pjREHYMKCou",
+   "case": "WB-T4b graduateManual AGAIN on 7pjREHYMKCou",
+   "note": "repeated-call state carry-over",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444277998,
+   "forkSlotAfter": 444277999,
+   "txSignature": "PEBKzZoyRCjUBgKS3EMVFTeJbz49yK7pnbJ2rwXNrMUfBTq7qSUmmiy24N8fTq3LJ3DC7biMhueU5S2vr3jn225",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T4c sell AFTER forced graduation on 7pjREHYMKCou",
+   "program": "wavebreak",
+   "handler": "sell AFTER forced graduation on 7pjREHYMKCou",
+   "case": "WB-T4c sell AFTER forced graduation on 7pjREHYMKCou",
+   "note": "post-graduation exit for a holder",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444277999,
+   "forkSlotAfter": 444278000,
+   "txSignature": "3xNf7jFS6ks8rdrTaZqt4hj1SV3Z7AtQzhZCqzarHCVKXZYL9zhwWfLUHYYiqoLSdaALFLXCyPzDnSRceJtS5Gzw",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "denied by: incorrect account address / subject-consumer binding",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T4 graduateManual by a NON-CREATOR on 4U4kEQ4nHnF8 (target 10,000,000 vs quote 995)",
+   "program": "wavebreak",
+   "handler": "graduateManual by a NON-CREATOR on 4U4kEQ4nHnF8",
+   "case": "WB-T4 graduateManual by a NON-CREATOR on 4U4kEQ4nHnF8 (target 10,000,000 vs quote 995)",
+   "note": "curve creator is a third party; destination taken from the live curve record",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444278006,
+   "forkSlotAfter": 444278007,
+   "txSignature": "4M5RGPe1UAHjEShvTQAVLdbKtWe2q11vwzSkaorUrmPtWyzoNAjHNeAbezcBuj5UADBqqjivMpzppDaZgrM6as6k",
+   "instructionError": null,
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T4b graduateManual AGAIN on 4U4kEQ4nHnF8",
+   "program": "wavebreak",
+   "handler": "graduateManual AGAIN on 4U4kEQ4nHnF8",
+   "case": "WB-T4b graduateManual AGAIN on 4U4kEQ4nHnF8",
+   "note": "repeated-call state carry-over",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444278007,
+   "forkSlotAfter": 444278008,
+   "txSignature": "PLN52f9zapwck1X9MU22yCVe3mLXmri5LETzd1tRtLYxMbGfEdgPUWqqe4fuXgfDsaov5WmzmahXbovQpVLJuYS",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final.json:WB-T4c sell AFTER forced graduation on 4U4kEQ4nHnF8",
+   "program": "wavebreak",
+   "handler": "sell AFTER forced graduation on 4U4kEQ4nHnF8",
+   "case": "WB-T4c sell AFTER forced graduation on 4U4kEQ4nHnF8",
+   "note": "post-graduation exit for a holder",
+   "evidence": "evidence/WBF_final.json",
+   "forkSlotBefore": 444278008,
+   "forkSlotAfter": 444278010,
+   "txSignature": "2AFxH2uYtiUpY9CiSPgxqbJajcn1kHxbrqgk8monrhhQ4isQYKP9yxY4h8JgAX3vtJ5cbuCe7BbnwxWsFr2vNx4m",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "denied by: incorrect account address / subject-consumer binding",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R1 exact-OUT the whole WSOL vault (2,005,277,092) on 6n8MPRJ81G [excess 667,048,926]",
+   "program": "wavebreak",
+   "handler": "exact-OUT the whole WSOL vault",
+   "case": "WB-R1 exact-OUT the whole WSOL vault (2,005,277,092) on 6n8MPRJ81G [excess 667,048,926]",
+   "note": "funded=1,000,000,000,000,000,000; allow_partial_fill=1",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278298,
+   "forkSlotAfter": 444278299,
+   "txSignature": "59ws36XArJErCpN4DCTaHs2E3DspiPfdkL8geo3G6JbshVbGJYkRcCygEVirYTmeyCaBKDJqjpsWhkyuPrZfJ7yq",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "guard": "denied by: arithmetic error",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R1b exact-OUT half the vault on 6n8MPRJ81G",
+   "program": "wavebreak",
+   "handler": "exact-OUT half the vault on 6n8MPRJ81G",
+   "case": "WB-R1b exact-OUT half the vault on 6n8MPRJ81G",
+   "note": "bounded by reserves?",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278299,
+   "forkSlotAfter": 444278301,
+   "txSignature": "64V5awPA5td8E7esxi4TfqU3AoX69FcJuu7Fi9nacaVNBwpZE5FDrPuuseGGtuLApqi83zaPBhhgzzp1gc7qTeDF",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R4 exact-IN max-u64 with partial fill on 6n8MPRJ81G",
+   "program": "wavebreak",
+   "handler": "exact-IN max-u64 with partial fill on 6n8MPRJ81G",
+   "case": "WB-R4 exact-IN max-u64 with partial fill on 6n8MPRJ81G",
+   "note": "largest possible input; check payout cap",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278301,
+   "forkSlotAfter": 444278302,
+   "txSignature": "Gg5T6bwgtkyz9ZqWx13TESH3SvzjTBHk26S8pnNijYscR2Wizbdjj7M86e5rdVGMJdmSdusksK5wzUYLvqNGBUY",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "guard": "denied by: arithmetic error",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R1 exact-OUT the whole WSOL vault (2,755,320,363) on DbRKfbUmxd [excess 506,349,347]",
+   "program": "wavebreak",
+   "handler": "exact-OUT the whole WSOL vault",
+   "case": "WB-R1 exact-OUT the whole WSOL vault (2,755,320,363) on DbRKfbUmxd [excess 506,349,347]",
+   "note": "funded=1,000,000,000,000,000,000; allow_partial_fill=1",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278303,
+   "forkSlotAfter": 444278304,
+   "txSignature": "5PTvuB6m93Hw1X8Z21B4Xwfsu5exm85TL8itGfk2NXnsHedJLQuiQX3DgtYGN3jtXYJSfNvKutyD4x4SMBeeJt2G",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "guard": "denied by: arithmetic error",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R1b exact-OUT half the vault on DbRKfbUmxd",
+   "program": "wavebreak",
+   "handler": "exact-OUT half the vault on DbRKfbUmxd",
+   "case": "WB-R1b exact-OUT half the vault on DbRKfbUmxd",
+   "note": "bounded by reserves?",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278304,
+   "forkSlotAfter": 444278305,
+   "txSignature": "63CffW4B8zdQSvP3cqmzoWwWMo8HoeSzEtsYqYgobsorXVwzFtoURW7ad5J5HAoeebWVmvBsZH1oinTmvP279g2J",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R4 exact-IN max-u64 with partial fill on DbRKfbUmxd",
+   "program": "wavebreak",
+   "handler": "exact-IN max-u64 with partial fill on DbRKfbUmxd",
+   "case": "WB-R4 exact-IN max-u64 with partial fill on DbRKfbUmxd",
+   "note": "largest possible input; check payout cap",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278305,
+   "forkSlotAfter": 444278306,
+   "txSignature": "4qRzTKE9NLEUNobhdJ3D1G7LLsK8yshJfdkBLUcS9ttZcD9uULMfp6bJFjuUgoaEehJDBtxv8FJYKT4GRCkMGPyB",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "guard": "denied by: arithmetic error",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R2 holder sell after forced graduation, curve 7pjREHYMKC (USDC quote, curve state 1)",
+   "program": "wavebreak",
+   "handler": "holder sell after forced graduation, curve 7pjREHYMKC",
+   "case": "WB-R2 holder sell after forced graduation, curve 7pjREHYMKC (USDC quote, curve state 1)",
+   "note": "graduated curve: exits still honoured? payout vs accounting",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278308,
+   "forkSlotAfter": 444278309,
+   "txSignature": "4AYUhwW1tY5UsLE8Yo3FqtTyLHp3ZExCFzMdeUqU5CMLRT4JQdQjBFDzg1p2jpgfHRMddVCmpJfa5DeSgZnKvCZw",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "guard": "denied by: curve not launched / ready to graduate",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R2b holder tokenRefund after forced graduation, curve 7pjREHYMKC",
+   "program": "wavebreak",
+   "handler": "holder tokenRefund after forced graduation, curve 7pjREH",
+   "case": "WB-R2b holder tokenRefund after forced graduation, curve 7pjREHYMKC",
+   "note": "refund path after graduation",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278309,
+   "forkSlotAfter": 444278310,
+   "txSignature": "QSmJUo4JWKuuGza3zBQ1QkzWNdV3yVr7kgH8zhL93P2SgeukitZJtcD8AZEJHMJTkVDSVybnEygPLrzazHQSFgc",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R2 holder sell after forced graduation, curve 4U4kEQ4nHn (USDC quote, curve state 1)",
+   "program": "wavebreak",
+   "handler": "holder sell after forced graduation, curve 4U4kEQ4nHn",
+   "case": "WB-R2 holder sell after forced graduation, curve 4U4kEQ4nHn (USDC quote, curve state 1)",
+   "note": "graduated curve: exits still honoured? payout vs accounting",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278312,
+   "forkSlotAfter": 444278314,
+   "txSignature": "J7dggdqW9XhH57mA1KEoGsiTrr2Dbbu7Hao3RJdNuf5B8piXdYTSXKYPHBTXGjZoYxRZt48G5S1KEMaYUSsuHWU",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "guard": "denied by: curve not launched / ready to graduate",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R2b holder tokenRefund after forced graduation, curve 4U4kEQ4nHn",
+   "program": "wavebreak",
+   "handler": "holder tokenRefund after forced graduation, curve 4U4kEQ",
+   "case": "WB-R2b holder tokenRefund after forced graduation, curve 4U4kEQ4nHn",
+   "note": "refund path after graduation",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278314,
+   "forkSlotAfter": 444278315,
+   "txSignature": "3prV6bJBZVHZx77JiEz6XFYHuE5NkbrfZqS4vG4Wk55ux6bJsXXLX97xnb98mgV3NviksjmaaZkDTxJz1dmbjKwH",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R3 forced graduateManual on 4U4kEQ4nHn (quote 995 vs target 10,000,000)",
+   "program": "wavebreak",
+   "handler": "forced graduateManual on 4U4kEQ4nHn",
+   "case": "WB-R3 forced graduateManual on 4U4kEQ4nHn (quote 995 vs target 10,000,000)",
+   "note": "unprivileged third party finalizes a live launch",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278315,
+   "forkSlotAfter": 444278316,
+   "txSignature": "tJahwvHp3jmWHJxYK2J2hY7Yn6r6WJAysYEqTwxX1FnW8fgYGa5Fu5JRe2w836rtRZvX5kFNEAXoNmLNkoREYr6",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R3b repeat graduateManual on 4U4kEQ4nHn",
+   "program": "wavebreak",
+   "handler": "repeat graduateManual on 4U4kEQ4nHn",
+   "case": "WB-R3b repeat graduateManual on 4U4kEQ4nHn",
+   "note": "must not pay twice",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278316,
+   "forkSlotAfter": 444278318,
+   "txSignature": "8poHhfmmxaF3q9Wd8MQzVuCpwvrsa7PxwzVK21mqsKE3CQYfCKukeqpXDt7tZ9bSSTtWw8yakpWP9xJiJa82QSk",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R3 forced graduateManual on 6WsxKkEXC3 (quote 0 vs target 8,284,308,600,000)",
+   "program": "wavebreak",
+   "handler": "forced graduateManual on 6WsxKkEXC3",
+   "case": "WB-R3 forced graduateManual on 6WsxKkEXC3 (quote 0 vs target 8,284,308,600,000)",
+   "note": "unprivileged third party finalizes a live launch",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278321,
+   "forkSlotAfter": 444278323,
+   "txSignature": "3pCva37vKNy72dDc3M35gSL8r3cPHZGbge4fMiXkzqZ6FsFVXoXAiDAuUjejKAAXmwq23ePMgDgPUECFY714iXPz",
+   "instructionError": null,
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R3b repeat graduateManual on 6WsxKkEXC3",
+   "program": "wavebreak",
+   "handler": "repeat graduateManual on 6WsxKkEXC3",
+   "case": "WB-R3b repeat graduateManual on 6WsxKkEXC3",
+   "note": "must not pay twice",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278324,
+   "forkSlotAfter": 444278327,
+   "txSignature": "2GxCYWVrBqAML5E87vBdCEutigfF2JWd8ztqMQamRnLy3CHgme4CnriAbRTSzzxBNbLVVRMViuZxCxKS5nqqoRvs",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R3 forced graduateManual on 6tferVP2Sj (quote 0 vs target 8,284,308,600,000)",
+   "program": "wavebreak",
+   "handler": "forced graduateManual on 6tferVP2Sj",
+   "case": "WB-R3 forced graduateManual on 6tferVP2Sj (quote 0 vs target 8,284,308,600,000)",
+   "note": "unprivileged third party finalizes a live launch",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278330,
+   "forkSlotAfter": 444278333,
+   "txSignature": "64Z2tJDQaqB1YJxMYcGhnRRxKouAkgW1qnDZoUqVhK7xYRQwvBMyjSyPyCLPE9EGxGRiUzr7LybWdj8BKksgvTWW",
+   "instructionError": null,
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R3b repeat graduateManual on 6tferVP2Sj",
+   "program": "wavebreak",
+   "handler": "repeat graduateManual on 6tferVP2Sj",
+   "case": "WB-R3b repeat graduateManual on 6tferVP2Sj",
+   "note": "must not pay twice",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278334,
+   "forkSlotAfter": 444278335,
+   "txSignature": "Lo5o7Jcm6wbQH9nUkUwnWzgTuC1kfkHorwpnUonAtRwazDRfAbPQDM79j42neUcZaJYJEeL9NyoU9H84WxXBvJn",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R3 forced graduateManual on 7pjREHYMKC (quote 11,560,648 vs target 1,677,572,460,000)",
+   "program": "wavebreak",
+   "handler": "forced graduateManual on 7pjREHYMKC",
+   "case": "WB-R3 forced graduateManual on 7pjREHYMKC (quote 11,560,648 vs target 1,677,572,460,000)",
+   "note": "unprivileged third party finalizes a live launch",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278335,
+   "forkSlotAfter": 444278337,
+   "txSignature": "4AQaBSMT9AovNqWcRQjoa47TH4jEn6KeTk8rrrzvEAYqs66xv8QEBkN6LUAFqnB8KmUJZP4DLQRtpShCsjLjsYbj",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R3b repeat graduateManual on 7pjREHYMKC",
+   "program": "wavebreak",
+   "handler": "repeat graduateManual on 7pjREHYMKC",
+   "case": "WB-R3b repeat graduateManual on 7pjREHYMKC",
+   "note": "must not pay twice",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278337,
+   "forkSlotAfter": 444278338,
+   "txSignature": "4aBEzZa2aXv7BErZGs2niFehhHw5p7U94Z3ez8Hoe6u2mxD613Aj95LxgKn1jXDqCaNhzyYuWXsf25dqZmV5ZMx1",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R3 forced graduateManual on AyQiXYUjtW (quote 0 vs target 10,000,000)",
+   "program": "wavebreak",
+   "handler": "forced graduateManual on AyQiXYUjtW",
+   "case": "WB-R3 forced graduateManual on AyQiXYUjtW (quote 0 vs target 10,000,000)",
+   "note": "unprivileged third party finalizes a live launch",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278341,
+   "forkSlotAfter": 444278344,
+   "txSignature": "2bLNSkk5RXR1bxDvE8Kx3xuYB3sC6kGbD8GXarYjz2MMvuZvvkQhv6pWGWxda6D1XUaJPG9fnkjhnt9emezqFujg",
+   "instructionError": null,
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_final2.json:WB-R3b repeat graduateManual on AyQiXYUjtW",
+   "program": "wavebreak",
+   "handler": "repeat graduateManual on AyQiXYUjtW",
+   "case": "WB-R3b repeat graduateManual on AyQiXYUjtW",
+   "note": "must not pay twice",
+   "evidence": "evidence/WBF_final2.json",
+   "forkSlotBefore": 444278345,
+   "forkSlotAfter": 444278348,
+   "txSignature": "EoH7QnL63KwFicGCtxmbUc4ApYKKfG7pYThxoUaGheReQ7FbRRQ1icjyByLTkSgVszXZ9JzvenjYQmC69yUJyrq",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_forced_graduation.json:WB-F01 attacker triggers graduateManual (target NOT met)",
+   "program": "wavebreak",
+   "handler": "attacker triggers graduateManual",
+   "case": "WB-F01 attacker triggers graduateManual (target NOT met)",
+   "note": "attacker signs; destination bound to the curve record",
+   "evidence": "evidence/WBF_forced_graduation.json",
+   "forkSlotBefore": 444222230,
+   "forkSlotAfter": 444222232,
+   "txSignature": "4kwu8eFnodWPVCFSwTY6Ush1gJ4D8CjsGyUpTkrNSohq8jDfR3eYobKX9Fr5mdx7VwvCfrudhvNHAjeGCuVy3Xuu",
+   "instructionError": null,
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_forced_graduation.json:WB-F02 sell AFTER forced graduation",
+   "program": "wavebreak",
+   "handler": "sell AFTER forced graduation",
+   "case": "WB-F02 sell AFTER forced graduation",
+   "note": "post-graduation exit for holders",
+   "evidence": "evidence/WBF_forced_graduation.json",
+   "forkSlotBefore": 444222232,
+   "forkSlotAfter": 444222234,
+   "txSignature": "3Vx238HzjbozH1qpDSygedCpuXRVnRuNCkAtoTp2BxBFxovt2ddWa97e3hCMfZCj4zyLsyyHrPvV1LreK8Xiotxf",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "guard": "denied by: curve not launched / ready to graduate",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_forced_graduation.json:WB-F03 tokenRefund AFTER forced graduation",
+   "program": "wavebreak",
+   "handler": "tokenRefund AFTER forced graduation",
+   "case": "WB-F03 tokenRefund AFTER forced graduation",
+   "note": "post-graduation refund path",
+   "evidence": "evidence/WBF_forced_graduation.json",
+   "forkSlotBefore": 444222234,
+   "forkSlotAfter": 444222236,
+   "txSignature": "cJ8uDqez7AzM486hH4z2RznDnPP6h4JFAM91Lrr7oKYYd7DVs8zY727jpFvPifM3v3cnzpi1YJiB4mpnAT5bK9Z",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_forced_graduation.json:WB-F04 graduateManual AGAIN (repeated payout)",
+   "program": "wavebreak",
+   "handler": "graduateManual AGAIN",
+   "case": "WB-F04 graduateManual AGAIN (repeated payout)",
+   "note": "double-graduation / repeated escrow payout",
+   "evidence": "evidence/WBF_forced_graduation.json",
+   "forkSlotBefore": 444222236,
+   "forkSlotAfter": 444222238,
+   "txSignature": "5L1R9NnycgXovR3EeevvmYZWpoCCKw1Guch2BXKCogCKuf1FZ5E66n6Z2vvfZKUxLaQjs3Q26uPY16anoMqKyuDZ",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_forced_graduation.json:WB-F05 bondingCurveClose by attacker after graduation",
+   "program": "wavebreak",
+   "handler": "bondingCurveClose by attacker after graduation",
+   "case": "WB-F05 bondingCurveClose by attacker after graduation",
+   "note": "rent/refund custody close gate",
+   "evidence": "evidence/WBF_forced_graduation.json",
+   "forkSlotBefore": 444222239,
+   "forkSlotAfter": 444222240,
+   "txSignature": "t3fiSEmZTrWjMct6LyztzU66aK1gnRuQwWr8cAyFG7tGev4NjJwhsyqaFLzRZKWF1t4mRXrHtAWj2NA5s7Kyuoq",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBF_forced_graduation.json:WB-F00 post-graduation state of 7pjREHY (from WB-G10)",
+   "program": "wavebreak",
+   "handler": "post-graduation state of 7pjREHY",
+   "case": "WB-F00 post-graduation state of 7pjREHY (from WB-G10)",
+   "note": "",
+   "evidence": "evidence/WBF_forced_graduation.json",
+   "forkSlotBefore": null,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": null,
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG2_grad_refund.json:WB-G10 graduateManual: attacker signer + CORRECT destination",
+   "program": "wavebreak",
+   "handler": "graduateManual: attacker signer + CORRECT destination",
+   "case": "WB-G10 graduateManual: attacker signer + CORRECT destination",
+   "note": "is any signer allowed to trigger the payout?",
+   "evidence": "evidence/WBG2_grad_refund.json",
+   "forkSlotBefore": 444221917,
+   "forkSlotAfter": 444221918,
+   "txSignature": "3Hvfsh6YEgyooHa9jjxeeYAeUbtHkdjbjc8LmAFYsD2KFVDaXhdaMA5QcYtjdS7iXZu8FHmDfWCxyRvmjwii3Fqv",
+   "instructionError": null,
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "tokenDeltas": {
+     "JASepKf55cMNpvJM4JGn2dhVDUWZjfpbfWUictnhBWAC": -5780324,
+     "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": 5780324,
+     "E3M3sywKEZk1kCRCW1AVbgRBU4PkbnsnBz1c7Bq4h8tj": 57803239
+    },
+    "accountingDeltas": {}
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG2_grad_refund.json:WB-G11 collectFees: attacker signer, real fee-authority ATA",
+   "program": "wavebreak",
+   "handler": "collectFees: attacker signer, real fee-authority ATA",
+   "case": "WB-G11 collectFees: attacker signer, real fee-authority ATA",
+   "note": "fee custody claim gate (attacker receives nothing if gated)",
+   "evidence": "evidence/WBG2_grad_refund.json",
+   "forkSlotBefore": 444221919,
+   "forkSlotAfter": 444221921,
+   "txSignature": "4g9VwgmZypQqkg87oSXcs1RyoqEbfr92Eg6Z8pWb8vZqpYKJEzdtp1Gc2NtLdyTZBTZRGaWp3PmGJPsx4hwqn7gE",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "guard": "denied by: arithmetic error",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "tokenDeltas": {},
+    "accountingDeltas": {}
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG2_grad_refund.json:WB-G12 tokenRefund (expired window curve, funded attacker)",
+   "program": "wavebreak",
+   "handler": "tokenRefund",
+   "case": "WB-G12 tokenRefund (expired window curve, funded attacker)",
+   "note": "refund payout vs accounting",
+   "evidence": "evidence/WBG2_grad_refund.json",
+   "forkSlotBefore": 444221921,
+   "forkSlotAfter": 444221922,
+   "txSignature": "3fTRccgU9ptXDmt62ggwDVb6rTRzL5HYgMgXy1k4TY5puMXvWNML5meMW3NoTkNyBnsdaH7mNqFTvQbZF5xG8NCo",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "tokenDeltas": {},
+    "accountingDeltas": {}
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG2_grad_refund.json:WB-G13 sell on this curve (payout vs accounting)",
+   "program": "wavebreak",
+   "handler": "sell on this curve",
+   "case": "WB-G13 sell on this curve (payout vs accounting)",
+   "note": "does a sell pay more than accounting releases?",
+   "evidence": "evidence/WBG2_grad_refund.json",
+   "forkSlotBefore": 444221922,
+   "forkSlotAfter": 444221923,
+   "txSignature": "57VLk1ygL5t6bEN5Kr37cfBX2yPimxJvGMRSvFaiSL9diW7bLU3Y7rQdV8CAGJSqCGGzbiowtrfa2AFmJDLNkrtp",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "guard": "denied by: curve not launched / ready to graduate",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "tokenDeltas": {},
+    "accountingDeltas": {}
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_gate_gate.json:WBG_gate_gate.json",
+   "program": "wavebreak",
+   "handler": "_gate_gate.json",
+   "case": "WBG_gate_gate.json",
+   "note": "",
+   "evidence": "evidence/WBG_gate_gate.json",
+   "forkSlotBefore": null,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "guard": "denied by: curve not launched / ready to graduate",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_gate_gate.json:WBG_gate_gate.json",
+   "program": "wavebreak",
+   "handler": "_gate_gate.json",
+   "case": "WBG_gate_gate.json",
+   "note": "",
+   "evidence": "evidence/WBG_gate_gate.json",
+   "forkSlotBefore": null,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": null,
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_gate_gate.json:WBG_gate_gate.json",
+   "program": "wavebreak",
+   "handler": "_gate_gate.json",
+   "case": "WBG_gate_gate.json",
+   "note": "",
+   "evidence": "evidence/WBG_gate_gate.json",
+   "forkSlotBefore": null,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "guard": "denied by: curve not launched / ready to graduate",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_gate_gate.json:WBG_gate_gate.json",
+   "program": "wavebreak",
+   "handler": "_gate_gate.json",
+   "case": "WBG_gate_gate.json",
+   "note": "",
+   "evidence": "evidence/WBG_gate_gate.json",
+   "forkSlotBefore": null,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "guard": "denied by: curve not launched / ready to graduate",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_gate_gate.json:WBG_gate_gate.json",
+   "program": "wavebreak",
+   "handler": "_gate_gate.json",
+   "case": "WBG_gate_gate.json",
+   "note": "",
+   "evidence": "evidence/WBG_gate_gate.json",
+   "forkSlotBefore": null,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": null,
+   "guard": "accepted; no state change and no delta (no-op path)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_gate_gate.json:WBG_gate_gate.json",
+   "program": "wavebreak",
+   "handler": "_gate_gate.json",
+   "case": "WBG_gate_gate.json",
+   "note": "",
+   "evidence": "evidence/WBG_gate_gate.json",
+   "forkSlotBefore": null,
+   "forkSlotAfter": null,
+   "txSignature": null,
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "guard": "denied by: curve not launched / ready to graduate",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G01 graduateManual (attacker signer, attacker destination) 7pjREHYMKC",
+   "program": "wavebreak",
+   "handler": "graduateManual",
+   "case": "WB-G01 graduateManual (attacker signer, attacker destination) 7pjREHYMKC",
+   "note": "does a non-creator signer reach the escrow payout?",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221709,
+   "forkSlotAfter": 444221710,
+   "txSignature": "gqvx5mJz67DU9mUDQ58FM1R5JAA8KysmVUXvsDH3h3k3ZyWz7W9iJWypoqGGWSfKs2zaD8BupzRfK6bxub4bDPU",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G02 graduateWhirlpool (wrong instruction for a Manual curve)",
+   "program": "wavebreak",
+   "handler": "graduateWhirlpool",
+   "case": "WB-G02 graduateWhirlpool (wrong instruction for a Manual curve)",
+   "note": "expect 6015 incorrect graduation instruction",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221710,
+   "forkSlotAfter": 444221711,
+   "txSignature": "2CCyDiqQTsVvu4EUSuoRvmR9gaRercAdUHV17n44acTDx1VJEQpRRxzoWLrFUbdQnNTFnrtHa3p6kEVr8VZazGZu",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G03 tokenRefund on this curve",
+   "program": "wavebreak",
+   "handler": "tokenRefund on this curve",
+   "case": "WB-G03 tokenRefund on this curve",
+   "note": "refund path state gate",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221711,
+   "forkSlotAfter": 444221712,
+   "txSignature": "2YYPkohoDkrU3sMgLvwWfCRbqhDZe3BG1j6oRp1e91YHb91HDFjCq4xs7i46n7RYVULw2PztfqopWcgnokkeMdT4",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G04 bondingCurveClose with attacker as authority",
+   "program": "wavebreak",
+   "handler": "bondingCurveClose with attacker as authority",
+   "case": "WB-G04 bondingCurveClose with attacker as authority",
+   "note": "privilege gate",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221712,
+   "forkSlotAfter": 444221713,
+   "txSignature": "4Tge8huATu6kBpFvHMXcUrSbse4ZunSx8YiCToEfk3ewon4R6hcw66jmQBpRgdeafYtKNFf1VRkHmHyMbRaiack3",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G05 bondingCurveCollectFees by attacker",
+   "program": "wavebreak",
+   "handler": "bondingCurveCollectFees by attacker",
+   "case": "WB-G05 bondingCurveCollectFees by attacker",
+   "note": "fee custody claim gate",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221713,
+   "forkSlotAfter": 444221715,
+   "txSignature": "3Ljimb4jmh8J5gQbugNVJzNinHSmLqD1jRW9Fso16yMMQxqqeyVfbV9kapkoEexRjV6mYGUAK8tE6G5tXyfynsHS",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G01 graduateManual (attacker signer, attacker destination) 4U4kEQ4nHn",
+   "program": "wavebreak",
+   "handler": "graduateManual",
+   "case": "WB-G01 graduateManual (attacker signer, attacker destination) 4U4kEQ4nHn",
+   "note": "does a non-creator signer reach the escrow payout?",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221719,
+   "forkSlotAfter": 444221720,
+   "txSignature": "kdKmWRATQo6dZaY7yiYdsRUw6XKTTdcrvwM3nJMkFSHDPA8wftf3M8feSXtKJrihbVTQQdzsezifRtnQ8aT5LQE",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G02 graduateWhirlpool (wrong instruction for a Manual curve)",
+   "program": "wavebreak",
+   "handler": "graduateWhirlpool",
+   "case": "WB-G02 graduateWhirlpool (wrong instruction for a Manual curve)",
+   "note": "expect 6015 incorrect graduation instruction",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221720,
+   "forkSlotAfter": 444221721,
+   "txSignature": "5qWQAAqfFpKFXo8eKe43MyDhkFQW1Tgvuv4rp3srXg9TCvwB1RVt7s31CiHwkS3WzppD1W3QL8LaVrA5usU7Ht7z",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G03 tokenRefund on this curve",
+   "program": "wavebreak",
+   "handler": "tokenRefund on this curve",
+   "case": "WB-G03 tokenRefund on this curve",
+   "note": "refund path state gate",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221721,
+   "forkSlotAfter": 444221723,
+   "txSignature": "gHAsLqcQTAGEbQicqV68WE3CyNKko8Buwb7PYEri6kx4YM3uDheCfioTpA8otWEaKF9yvAb8Z123QjuJESDfRjJ",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G04 bondingCurveClose with attacker as authority",
+   "program": "wavebreak",
+   "handler": "bondingCurveClose with attacker as authority",
+   "case": "WB-G04 bondingCurveClose with attacker as authority",
+   "note": "privilege gate",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221723,
+   "forkSlotAfter": 444221724,
+   "txSignature": "5jbJ1zyWZ5V6W2pnyVxjbyWbnegKAHK5SUZ7ceiaz28FdLw4atvzjHagV3eywwnoBaQczcjViMmJx6G86kQDPWU4",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G05 bondingCurveCollectFees by attacker",
+   "program": "wavebreak",
+   "handler": "bondingCurveCollectFees by attacker",
+   "case": "WB-G05 bondingCurveCollectFees by attacker",
+   "note": "fee custody claim gate",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221724,
+   "forkSlotAfter": 444221725,
+   "txSignature": "3W3bJsNkBD2Ta5zxcCUmGVLSHW9fNCCNPoVHArVKBJwKX539rJggYkbd4iWGNJTaWav8E27itduC8ZUZ2VP7pBQ",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G01 graduateManual (attacker signer, attacker destination) 6WsxKkEXC3",
+   "program": "wavebreak",
+   "handler": "graduateManual",
+   "case": "WB-G01 graduateManual (attacker signer, attacker destination) 6WsxKkEXC3",
+   "note": "does a non-creator signer reach the escrow payout?",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221727,
+   "forkSlotAfter": 444221728,
+   "txSignature": "2tWpxNJUgsRo7TY9MxJdvqcXvaSJXVaT7hHag3q4X6kEP2VN92G44Fd2XZKHefQ3dZB2GeM85xJE8URZbKbJMGE7",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "trigger is unauthenticated BY DESIGN (manual graduation is the required post-expiry step); payout/destination are bound to the curve record, so the caller gains nothing (attacker delta was -5,000 lamports of fee in every executed case)",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G02 graduateWhirlpool (wrong instruction for a Manual curve)",
+   "program": "wavebreak",
+   "handler": "graduateWhirlpool",
+   "case": "WB-G02 graduateWhirlpool (wrong instruction for a Manual curve)",
+   "note": "expect 6015 incorrect graduation instruction",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221728,
+   "forkSlotAfter": 444221729,
+   "txSignature": "52YqqXBV1xz1WB6BBczWiggdyiEWS1ydTRnt4cQkKnYBZQqr4c1PewjW4N3Gv3nrdpYx1z67Xt1bP31zLK6U4maK",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G03 tokenRefund on this curve",
+   "program": "wavebreak",
+   "handler": "tokenRefund on this curve",
+   "case": "WB-G03 tokenRefund on this curve",
+   "note": "refund path state gate",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221729,
+   "forkSlotAfter": 444221731,
+   "txSignature": "xf42yoJMfoZK2eLTRpGfoyFQ6zgtTrt6yKxXFqDNfGsSCipGRWbYBpDYovKDzdoWRfVXYJp3T5g7zY7nRBg9QsG",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G04 bondingCurveClose with attacker as authority",
+   "program": "wavebreak",
+   "handler": "bondingCurveClose with attacker as authority",
+   "case": "WB-G04 bondingCurveClose with attacker as authority",
+   "note": "privilege gate",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221731,
+   "forkSlotAfter": 444221732,
+   "txSignature": "3B2SGkZUZNxDUNiq9zBVJN1DTBkPpoFqXmeTiDPuibYF8XQep3iF2GMyie9vgRyoiarXzLyMSdHE7ygdJMReETxB",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBG_graduation.json:WB-G05 bondingCurveCollectFees by attacker",
+   "program": "wavebreak",
+   "handler": "bondingCurveCollectFees by attacker",
+   "case": "WB-G05 bondingCurveCollectFees by attacker",
+   "note": "fee custody claim gate",
+   "evidence": "evidence/WBG_graduation.json",
+   "forkSlotBefore": 444221732,
+   "forkSlotAfter": 444221733,
+   "txSignature": "2hcbuyb5uxMZQkVX9fwZ56XDzfmJNycKozKwQCdUiP82DhNykioZCSbsahL2UFMUeTBwz9Rs3kvcPN6cJdQXqm3g",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBL_lp.json:WB-L01 lpTransfer signed by a LIVE authority key? (we cannot sign as it -> attacker-signed variant)",
+   "program": "wavebreak",
+   "handler": "lpTransfer signed by a LIVE authority key?",
+   "case": "WB-L01 lpTransfer signed by a LIVE authority key? (we cannot sign as it -> attacker-signed variant)",
+   "note": "attacker as lpAuthority over the live escrow PDA",
+   "evidence": "evidence/WBL_lp.json",
+   "forkSlotBefore": 444279773,
+   "forkSlotAfter": 444279776,
+   "txSignature": "5wq4k5mMmuHiduaT1amEfz5Z4N2EsDwrebtWuBsoKLRwrJaSeDu6f3Tpgp51N8nLgDja12RRB3bTFMMnGdJJuwAF",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBL_lp.json:WB-L02 lpTakeover by attacker (ExecuteLpTakeover privilege holder only)",
+   "program": "wavebreak",
+   "handler": "lpTakeover by attacker",
+   "case": "WB-L02 lpTakeover by attacker (ExecuteLpTakeover privilege holder only)",
+   "note": "does the attacker reach a position move?",
+   "evidence": "evidence/WBL_lp.json",
+   "forkSlotBefore": 444279777,
+   "forkSlotAfter": 444279779,
+   "txSignature": "2jDux3xmUT6fyNZbpNK1bkm53uoM3nx2QuMvaq2SptFR4bpegHS44WS69QCXK7aNn2A1EjiYCLZecqJqMuHbjSbb",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBL_lp.json:WB-L03 lpHarvest by attacker on the live escrow",
+   "program": "wavebreak",
+   "handler": "lpHarvest by attacker on the live escrow",
+   "case": "WB-L03 lpHarvest by attacker on the live escrow",
+   "note": "31-account live shape, attacker as lpAuthority",
+   "evidence": "evidence/WBL_lp.json",
+   "forkSlotBefore": 444279779,
+   "forkSlotAfter": 444279781,
+   "txSignature": "2zAPK8tRDKSy22dz6H52m64ZdGTNMnckuVZbRZ97rCdPdqLExqfg2npFyDW2d8pfvZhiGWpEfdLvbLwthVM4rXsf",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_live_permission_replay.json:WB-RP1 exact replay of a live consume (attacker as consumer)",
+   "program": "wavebreak",
+   "handler": "exact replay of a live consume",
+   "case": "WB-RP1 exact replay of a live consume (attacker as consumer)",
+   "note": "public permission data; expired permission (validUntil slot 441643521 vs now 444223845)",
+   "evidence": "evidence/WBRP_live_permission_replay.json",
+   "forkSlotBefore": 444223845,
+   "forkSlotAfter": 444223847,
+   "txSignature": "5snmGZUDwA6WCt6Rn2dJFUoPQxnf2h688xKkLgx5MkkTna2Dpkf8kLcY6FJyEE9pciU8D2NqWdxYQVbgRXGWkwTV",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "denied by: incorrect account address / subject-consumer binding",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_live_permission_replay.json:WB-RP2 subject swapped to the attacker, original signature kept",
+   "program": "wavebreak",
+   "handler": "subject swapped to the attacker, original signature kept",
+   "case": "WB-RP2 subject swapped to the attacker, original signature kept",
+   "note": "signature must not verify for a mutated message",
+   "evidence": "evidence/WBRP_live_permission_replay.json",
+   "forkSlotBefore": 444223847,
+   "forkSlotAfter": 444223848,
+   "txSignature": "5eqEx7VLn4dRBpnnoxktKAFEPLrP8VZFCkPTfXK3DEHiNJFSkfPpHNY38cPWiqW3nM1yHDETEfLJGFLwrC9CK9zz",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6006
+     }
+    ]
+   },
+   "guard": "denied by: unknown instruction discriminator",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_permission.json:WB-RP1 verbatim replay of a live consume (attacker signs as consumer)",
+   "program": "wavebreak",
+   "handler": "verbatim replay of a live consume",
+   "case": "WB-RP1 verbatim replay of a live consume (attacker signs as consumer)",
+   "note": "must fail: account already exists / consumer-subject binding",
+   "evidence": "evidence/WBRP_permission.json",
+   "forkSlotBefore": 444225855,
+   "forkSlotAfter": 444225857,
+   "txSignature": "4L44u1MLCe1ds8YYSPgY2oD7EVryKGraj37S9N47VTkm9vEM5FxZprStrJKeEQGtnt3BsCMmDoLbtn5NK62Kqe6r",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "denied by: incorrect account address / subject-consumer binding",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_permission.json:WB-RP2 subject replaced by the attacker, original signature kept",
+   "program": "wavebreak",
+   "handler": "subject replaced by the attacker, original signature kep",
+   "case": "WB-RP2 subject replaced by the attacker, original signature kept",
+   "note": "secp256k1 recovery must not match the allowed signer set",
+   "evidence": "evidence/WBRP_permission.json",
+   "forkSlotBefore": 444225857,
+   "forkSlotAfter": 444225859,
+   "txSignature": "3LzhWwEJVjqw9FRUz7T4Q4PWrWZfSTuZDUP7u7PkPuo929kukLQuV7FPuPWbiNFDq56hmq1hoFsAujswN2RwYHN8",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_permission.json:WB-RP3 signer field zeroed, original signature kept",
+   "program": "wavebreak",
+   "handler": "signer field zeroed, original signature kept",
+   "case": "WB-RP3 signer field zeroed, original signature kept",
+   "note": "must fail signature verification",
+   "evidence": "evidence/WBRP_permission.json",
+   "forkSlotBefore": 444225859,
+   "forkSlotAfter": 444225860,
+   "txSignature": "39x2RyhasxcP2CARinVLvLqTPUeFa35HCE3PSpUyXBkpzPzepq4iXSTMznYESxmDG9Cz4Dk2hBRVJvY2LQV4cTNz",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_permission.json:WB-RP4 refund live consumed-permission (past safeToCloseSlot) -> attacker wallet",
+   "program": "wavebreak",
+   "handler": "refund live consumed-permission",
+   "case": "WB-RP4 refund live consumed-permission (past safeToCloseSlot) -> attacker wallet",
+   "note": "stored refundDestination=11111111111111111111111111111111",
+   "evidence": "evidence/WBRP_permission.json",
+   "forkSlotBefore": 444225860,
+   "forkSlotAfter": 444225861,
+   "txSignature": "UbPYbmFKPGMvW8bUdysSSxVjjxvrWbiA35X65ZJtFNciG3cpYNA9x5nZHgmKkJpp5yaBKtqwWhziotMyoUBwt2y",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "denied by: incorrect account address / subject-consumer binding",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_permission.json:WB-RP5 refund live consumed-permission -> attacker WSOL ATA",
+   "program": "wavebreak",
+   "handler": "refund live consumed-permission -> attacker WSOL ATA",
+   "case": "WB-RP5 refund live consumed-permission -> attacker WSOL ATA",
+   "note": "rent-lamport redirect attempt",
+   "evidence": "evidence/WBRP_permission.json",
+   "forkSlotBefore": 444225861,
+   "forkSlotAfter": 444225863,
+   "txSignature": "4QHRcgvMUkeH5SZgMKFEeLoJmMxYA4knacfZu4PUBJ1m3h9Fkxw4Pn91yyZcM78aeznxyHd7wkB1N2m1DxYjpZsT",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "denied by: incorrect account address / subject-consumer binding",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_permission.json:WB-RP6 same refund twice in one tx",
+   "program": "wavebreak",
+   "handler": "same refund twice in one tx",
+   "case": "WB-RP6 same refund twice in one tx",
+   "note": "double refund / close-after-close",
+   "evidence": "evidence/WBRP_permission.json",
+   "forkSlotBefore": 444225863,
+   "forkSlotAfter": 444225864,
+   "txSignature": "2MhfBmLM4DzqDn7LVVCB7HYnyN23ihE8h6RPh3rc3zM8i4hiUqmJR9eCpoJ9hkb7vCAvhLriimbb565VnL4khiKZ",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "denied by: incorrect account address / subject-consumer binding",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_permission.json:WB-RP7 permissionRevoke by attacker on a live consumed-permission",
+   "program": "wavebreak",
+   "handler": "permissionRevoke by attacker on a live consumed-permissi",
+   "case": "WB-RP7 permissionRevoke by attacker on a live consumed-permission",
+   "note": "funder binding: only the original funder may revoke",
+   "evidence": "evidence/WBRP_permission.json",
+   "forkSlotBefore": 444225864,
+   "forkSlotAfter": 444225865,
+   "txSignature": "2eoFEfqqKvCGKHfCw9juvFd6prPJaEaFKmZ5Dznw6HACqa2KPpTyMA8nMo4eXid6CCnHk8hxL5ixbHjAMAKpZcxu",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_permission.json:WB-RP8 permissionConfigUpdate by attacker",
+   "program": "wavebreak",
+   "handler": "permissionConfigUpdate by attacker",
+   "case": "WB-RP8 permissionConfigUpdate by attacker",
+   "note": "privilege gate on the shared permission config",
+   "evidence": "evidence/WBRP_permission.json",
+   "forkSlotBefore": 444225865,
+   "forkSlotAfter": 444225868,
+   "txSignature": "3pHA1vD2btty8p9STi7EwnDYpaK7XSn5BfS3DpiGh5AHqHNu2gd6G2fwaCX1GTLybhQEGgvFMzsCgvWayswDtMQ6",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBRP_permission.json:WB-RP8 permissionConfigClose by attacker",
+   "program": "wavebreak",
+   "handler": "permissionConfigClose by attacker",
+   "case": "WB-RP8 permissionConfigClose by attacker",
+   "note": "privilege gate on the shared permission config",
+   "evidence": "evidence/WBRP_permission.json",
+   "forkSlotBefore": 444225868,
+   "forkSlotAfter": 444225869,
+   "txSignature": "5mMBqJ9HSymxEehHVYcQUngN1MncXb7rHkpsr3RCt3dZ5ZjgHKwwxHn5Ukm3hi8p2jQtfE4CwsC2MkpZgismzsFp",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBR_refund.json:WB-RF refund on 6dY8neNeezK1RPzCQWZeAXMkASYjWtPe3y511VRq2L1n",
+   "program": "wavebreak",
+   "handler": "refund on 6dY8neNeezK1RPzCQWZeAXMkASYjWtPe3y511VRq2L1n",
+   "case": "WB-RF refund on 6dY8neNeezK1RPzCQWZeAXMkASYjWtPe3y511VRq2L1n",
+   "note": "",
+   "evidence": "evidence/WBR_refund.json",
+   "forkSlotBefore": 444221578,
+   "forkSlotAfter": null,
+   "txSignature": "4X9Nu6fpKo9tFG21DcfHrGXCYSWtZjE2kUa2Cu7xFcHVgfFzFn43gcoGGrCCmRW7XM7RNhobxkBRomZJqt5wRCr9",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "curveAfter": {
+     "lamports": 15144960,
+     "quote_amount": 28,
+     "base_amount": 0,
+     "graduation_time": 0,
+     "launch_time": 1765335227
+    },
+    "excessCaptured": 0
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBR_refund.json:WB-RF refund on 6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "program": "wavebreak",
+   "handler": "refund on 6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "case": "WB-RF refund on 6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "note": "",
+   "evidence": "evidence/WBR_refund.json",
+   "forkSlotBefore": 444221581,
+   "forkSlotAfter": null,
+   "txSignature": "3d5aPS5F9e1Z1cPwxMtRPqcD1nHpPEyHcrPdyVVST2UNHS9fpXzG758rfmLbPP5f4cApiTdJHGn8srXxRefxg4qs",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "curveAfter": {
+     "lamports": 15144960,
+     "quote_amount": 1367576266,
+     "base_amount": 46132005731776374,
+     "graduation_time": 0,
+     "launch_time": 1758620895
+    },
+    "excessCaptured": 0
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S01 sell exact-in, tiny amount",
+   "program": "wavebreak",
+   "handler": "sell exact-in, tiny amount",
+   "case": "WB-S01 sell exact-in, tiny amount",
+   "note": "1 token of 100 fixture balance",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221046,
+   "forkSlotAfter": 444221047,
+   "txSignature": "4basGduzoXCc96CKekY5ZdTAL7moqVG58gYvKvP8kRpwEzx2c6AhHE5XG5wKYxUgDJKcfc2AyGpffiuoU7CWA3WW",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S02 sell exact-in, full balance",
+   "program": "wavebreak",
+   "handler": "sell exact-in, full balance",
+   "case": "WB-S02 sell exact-in, full balance",
+   "note": "all fixture tokens",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221047,
+   "forkSlotAfter": 444221048,
+   "txSignature": "2Pa4tPuiSj2Zv9QXRpk9adjdFJdr9wWmXAikMDkAqmg9NNEfKsLVxA2dWzr4sMZdudxbQwfZgvHyqkdeJLjP8c6A",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S03 sell exact-in twice in one tx",
+   "program": "wavebreak",
+   "handler": "sell exact-in twice in one tx",
+   "case": "WB-S03 sell exact-in twice in one tx",
+   "note": "sequence carry-over: two sells, same curve",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221048,
+   "forkSlotAfter": 444221049,
+   "txSignature": "5i9jj2YsCGhHRsy96stwvzNfB6hQYh7ZXzf3BdByWfch3pHerVXSBADqGWeiqDSWJsWXAvXEjV8r16mkH3wmUJVM",
+   "instructionError": {
+    "InstructionError": [
+     2,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S04 sell then buy in one tx",
+   "program": "wavebreak",
+   "handler": "sell then buy in one tx",
+   "case": "WB-S04 sell then buy in one tx",
+   "note": "sell->buy state carry-over (buy should be permission-blocked, sell should not leak)",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221049,
+   "forkSlotAfter": 444221051,
+   "txSignature": "3bkiTsm6ztWrkU1hwADFUUft44VJv93dZpT2gLxvCEC9GTy4dsXZbBuNM7Xy2ogCCuHwgboGuK2HkbTFWH4csmGL",
+   "instructionError": {
+    "InstructionError": [
+     2,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "guard": "denied by: missing permission-consume instruction",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S05 sell with tight price threshold",
+   "program": "wavebreak",
+   "handler": "sell with tight price threshold",
+   "case": "WB-S05 sell with tight price threshold",
+   "note": "minOut above any possible payout",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221051,
+   "forkSlotAfter": 444221052,
+   "txSignature": "RsTWCHyPfpKYbLAGxWUDJcdJdgJFKhR7kmyXGbX5dZYezBzmeMs57ETVPSdKm7KaNGAJsLB7peVbAqN7zsEEo1w",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6011
+     }
+    ]
+   },
+   "guard": "denied by: slippage threshold exceeded",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S06 sell zero amount",
+   "program": "wavebreak",
+   "handler": "sell zero amount",
+   "case": "WB-S06 sell zero amount",
+   "note": "amount 0",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221052,
+   "forkSlotAfter": 444221053,
+   "txSignature": "v46WY7EqFJYJQTpDwLkyyHB3CR181dqx2nVHvxTsnoKoHS1mWfFQjEbabNCNYgCAhbD5ofRVb3ZHAK6Pfu8ZY6X",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S07 sell max u64",
+   "program": "wavebreak",
+   "handler": "sell max u64",
+   "case": "WB-S07 sell max u64",
+   "note": "overflow check",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221053,
+   "forkSlotAfter": 444221054,
+   "txSignature": "63eTD1QdwSrcK6voEKLdNiEpiyE1cwy6YXxV3pduDsD8M4RF5ja7Byn3SuYJCd5kGmMkHx8kGka6m2iRJAGdbCNB",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "guard": "denied by: partial fill disallowed / invalid instruction data",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S08 sell: redirect payout to another wallet's ATA",
+   "program": "wavebreak",
+   "handler": "sell: redirect payout to another wallet's ATA",
+   "case": "WB-S08 sell: redirect payout to another wallet's ATA",
+   "note": "recipient binding (does it have to be the seller's ATA?)",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221054,
+   "forkSlotAfter": 444221055,
+   "txSignature": "36FrxufxDnQADY76K32uwrEptWMr9nSr2ni651H9sPFaqjx7irbY5gukHoGBCk91v8tRiRW8xBxvzxf8LZ1UpKcB",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S09 sell: quote vault = attacker ATA (vault substitution)",
+   "program": "wavebreak",
+   "handler": "sell: quote vault = attacker ATA",
+   "case": "WB-S09 sell: quote vault = attacker ATA (vault substitution)",
+   "note": "control",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221055,
+   "forkSlotAfter": 444221056,
+   "txSignature": "3z1h2yp6sETUuncbRS1rx5uDqJxB4p4PUUxDJEt13KiheKgZiUtNVcGUgvuebRXjHngKVEReF7Qxuygha9orGKXB",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S11 sell: wrong base token program",
+   "program": "wavebreak",
+   "handler": "sell: wrong base token program",
+   "case": "WB-S11 sell: wrong base token program",
+   "note": "pinning",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221062,
+   "forkSlotAfter": 444221063,
+   "txSignature": "4jqMn71pvUdedr4ukEvJoyJDyCqHxcE9iA1G4cZhAYvr7eicorE4ayEtiSxvpJnvR6AmvRvs5moRLhoSko3veyDJ",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6024
+     }
+    ]
+   },
+   "guard": "denied by: account not owned by the right program",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S12 sell: wrong quote token program",
+   "program": "wavebreak",
+   "handler": "sell: wrong quote token program",
+   "case": "WB-S12 sell: wrong quote token program",
+   "note": "pinning",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221063,
+   "forkSlotAfter": 444221065,
+   "txSignature": "2Mb2gvfjwjpf9h9DNLGLja9TgHDjB9pVczwXsujYvJ2GAphzjstfsviuTquUX8qQ2DV78W7YLqSttgTe5PbLwVHH",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6024
+     }
+    ]
+   },
+   "guard": "denied by: account not owned by the right program",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBS_sell.json:WB-S13 sell on the graduated curve",
+   "program": "wavebreak",
+   "handler": "sell on the graduated curve",
+   "case": "WB-S13 sell on the graduated curve",
+   "note": "post-graduation state gate",
+   "evidence": "evidence/WBS_sell.json",
+   "forkSlotBefore": 444221065,
+   "forkSlotAfter": 444221066,
+   "txSignature": "3S4zkw5YhnYC6auvzSnzEhD4QzG96yRKBnP5FmhobTzfEARemh8oxttFepEx9a1JwAv1anmkHAcUkZcUVVoxYTs1",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "guard": "denied by: incorrect account address / subject-consumer binding",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBV_victim_ata.json:WB-V01 attacker signs, baseAta = a real victim's ATA, payout = attacker WSOL ATA",
+   "program": "wavebreak",
+   "handler": "attacker signs, baseAta = a real victim's ATA, payout = ",
+   "case": "WB-V01 attacker signs, baseAta = a real victim's ATA, payout = attacker WSOL ATA",
+   "note": "",
+   "evidence": "evidence/WBV_victim_ata.json",
+   "forkSlotBefore": 444281272,
+   "forkSlotAfter": 444281274,
+   "txSignature": "27bzD88zkPWK5sMPeCeywr4VQvPbtFoXfbgHW1q2nogQsqKbgwk67m2kK66NDshpN5deM7o7NtVDKn61NhYciEbC",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "payoutDelta": 0,
+    "victimDelta": 0,
+    "verdict": "denied - no unauthorized movement"
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBV_victim_ata.json:WB-V02 attacker signs, baseAta = victim ATA, payout = the VICTIM's own WSOL ATA",
+   "program": "wavebreak",
+   "handler": "attacker signs, baseAta = victim ATA, payout = the VICTI",
+   "case": "WB-V02 attacker signs, baseAta = victim ATA, payout = the VICTIM's own WSOL ATA",
+   "note": "",
+   "evidence": "evidence/WBV_victim_ata.json",
+   "forkSlotBefore": 444281274,
+   "forkSlotAfter": 444281276,
+   "txSignature": "jU1KjpjgiJY6ioFbcwNQbPc23AKpb6irt62VhakYUCogBPPryQyB8J3NftBrRPnbLGNeqTsBqbNooVxJEumKNQM",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "guard": "denied by: invalid PDA seeds",
+   "stateChanged": false,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "payoutDelta": 0,
+    "victimDelta": 0,
+    "verdict": "denied - no unauthorized movement"
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBZ_final3.json:WB-FEE1 collectFees by attacker on 6dY8neNeez (vault excess 854,042,768)",
+   "program": "wavebreak",
+   "handler": "collectFees by attacker on 6dY8neNeez",
+   "case": "WB-FEE1 collectFees by attacker on 6dY8neNeez (vault excess 854,042,768)",
+   "note": "fee custody claim gate with every account existing",
+   "evidence": "evidence/WBZ_final3.json",
+   "forkSlotBefore": 444281815,
+   "forkSlotAfter": 444281816,
+   "txSignature": "5J2sRPPCHtVUDw3pvQxsJVGQb8XQY3Gd8m7qVopZ71dQCMoouakwVC57YjcoEJRTrxSTrpD691WwNGTQSTvm7VKv",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBZ_final3.json:WB-FEE2 bondingCurveClose by attacker on 6dY8neNeez",
+   "program": "wavebreak",
+   "handler": "bondingCurveClose by attacker on 6dY8neNeez",
+   "case": "WB-FEE2 bondingCurveClose by attacker on 6dY8neNeez",
+   "note": "close must move curve+vault rent to the fee authority, never the caller",
+   "evidence": "evidence/WBZ_final3.json",
+   "forkSlotBefore": 444281816,
+   "forkSlotAfter": 444281817,
+   "txSignature": "2Z5Hz7DXfco8VwNoRUTL8BzgfBwWpwRgGCUXq2kjWpqVAV8aX7JMVDKbN1stmqEnbayETPSmZdJ1b8KvUh37V275",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBZ_final3.json:WB-FEE1 collectFees by attacker on 6n8MPRJ81G (vault excess 667,048,926)",
+   "program": "wavebreak",
+   "handler": "collectFees by attacker on 6n8MPRJ81G",
+   "case": "WB-FEE1 collectFees by attacker on 6n8MPRJ81G (vault excess 667,048,926)",
+   "note": "fee custody claim gate with every account existing",
+   "evidence": "evidence/WBZ_final3.json",
+   "forkSlotBefore": 444281818,
+   "forkSlotAfter": 444281819,
+   "txSignature": "4GUF9grct8G1HYBE31jTK9uSXMEeEV9ngetEgpf43DSCGQLeiW42fC4d3uZjhGYVJb8fM7nAN7CUce2Vke714Bai",
+   "instructionError": null,
+   "guard": "accepted; state changed; no attacker-positive delta",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBZ_final3.json:WB-FEE2 bondingCurveClose by attacker on 6n8MPRJ81G",
+   "program": "wavebreak",
+   "handler": "bondingCurveClose by attacker on 6n8MPRJ81G",
+   "case": "WB-FEE2 bondingCurveClose by attacker on 6n8MPRJ81G",
+   "note": "close must move curve+vault rent to the fee authority, never the caller",
+   "evidence": "evidence/WBZ_final3.json",
+   "forkSlotBefore": 444281819,
+   "forkSlotAfter": 444281820,
+   "txSignature": "4orqYkYq4e6zS4fsLUDjfmafLcSu51SUHk65ug8rU6yrsqT5BVDzDaxPWxByhg9Xm7aWWfyZiUm1Hnw15M3WjKyv",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "guard": "denied by: missing required privilege",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBZ_final3.json:WB-GW2 graduateWhirlpool by attacker on 3MDUitkWZ6 (quote 23,401,364,161 vs target 85,000,000,000)",
+   "program": "wavebreak",
+   "handler": "graduateWhirlpool by attacker on 3MDUitkWZ6",
+   "case": "WB-GW2 graduateWhirlpool by attacker on 3MDUitkWZ6 (quote 23,401,364,161 vs target 85,000,000,000)",
+   "note": "does graduation need the creator/privilege, and can the LP escrow be pointed at the attacker?",
+   "evidence": "evidence/WBZ_final3.json",
+   "forkSlotBefore": 444281830,
+   "forkSlotAfter": 444281833,
+   "txSignature": "2sUQ52sJ7s31vq3LETNR8bZjLN7KhtZ4rWqPqGgrHayyZhKmF6vfYym2zpq9wN14dhCJNXbNG4RjSe3pinqnrWju",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6022
+     }
+    ]
+   },
+   "guard": "denied by: invalid account data",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBZ_final3.json:WB-GW2 graduateWhirlpool by attacker on 481zbB9eBu (quote 8,041,327,646 vs target 85,000,000,000)",
+   "program": "wavebreak",
+   "handler": "graduateWhirlpool by attacker on 481zbB9eBu",
+   "case": "WB-GW2 graduateWhirlpool by attacker on 481zbB9eBu (quote 8,041,327,646 vs target 85,000,000,000)",
+   "note": "does graduation need the creator/privilege, and can the LP escrow be pointed at the attacker?",
+   "evidence": "evidence/WBZ_final3.json",
+   "forkSlotBefore": 444281843,
+   "forkSlotAfter": 444281847,
+   "txSignature": "XGwLXc3Mkky59S96RgdvZkESsEZ8t99hV8WmxwSLiZgsZ9jxB5D1vMUDiVazQvE8U4ZkGvoPH4qnPfJB2nqgE8e",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6022
+     }
+    ]
+   },
+   "guard": "denied by: invalid account data",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBZ_final3.json:WB-RF1 tokenRefund on B9wBisgXnZ (gradTime=361,293,548, quote 0)",
+   "program": "wavebreak",
+   "handler": "tokenRefund on B9wBisgXnZ",
+   "case": "WB-RF1 tokenRefund on B9wBisgXnZ (gradTime=361,293,548, quote 0)",
+   "note": "refund payout vs accounting on a closed-window curve",
+   "evidence": "evidence/WBZ_final3.json",
+   "forkSlotBefore": 444281852,
+   "forkSlotAfter": 444281853,
+   "txSignature": "63fFZsLemJicH8KyCqyjs7afz2tSMfBugBNP9WSAJE3kbnB5a6MvAANQDmkBboSiJtJASuth3aQPjk1bfVEwavkr",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBZ_final3.json:WB-RF2 sell on B9wBisgXnZ (curve state: quote 0)",
+   "program": "wavebreak",
+   "handler": "sell on B9wBisgXnZ",
+   "case": "WB-RF2 sell on B9wBisgXnZ (curve state: quote 0)",
+   "note": "does a sell on a closed-window curve pay out of the vault beyond accounting?",
+   "evidence": "evidence/WBZ_final3.json",
+   "forkSlotBefore": 444281853,
+   "forkSlotAfter": 444281855,
+   "txSignature": "E4mjTqYcPKrC5wAN1W7CVg1sFMPGde51uDXbxyTdx6yaxpjFagAYtcqQtcQHRS8GMrty5GZhFm5p2yZxDR3c1JL",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "guard": "payout 0 <= accounting release 0 (fee custody retained; input was fork-fixture funded, so caller gain is not protocol value)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "conservation": {
+     "accountingDecrease": 0,
+     "vaultDecrease": 0,
+     "callerGain": 0,
+     "excessCaptured": 0
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBZ_final3.json:WB-RF1 tokenRefund on GPa2k37Asm (gradTime=361,255,804, quote 0)",
+   "program": "wavebreak",
+   "handler": "tokenRefund on GPa2k37Asm",
+   "case": "WB-RF1 tokenRefund on GPa2k37Asm (gradTime=361,255,804, quote 0)",
+   "note": "refund payout vs accounting on a closed-window curve",
+   "evidence": "evidence/WBZ_final3.json",
+   "forkSlotBefore": 444281861,
+   "forkSlotAfter": 444281862,
+   "txSignature": "Lx7BPcgoahdyNRMdLuyGSp8mGJk3kuYMKByvC4UrpocJb7fWdRViXojbeQ6jfurE4UW2ZpH2VWjzhQHfRyh95k2",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "guard": "denied by: bonding curve still active",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {},
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  },
+  {
+   "id": "WBZ_final3.json:WB-RF2 sell on GPa2k37Asm (curve state: quote 0)",
+   "program": "wavebreak",
+   "handler": "sell on GPa2k37Asm",
+   "case": "WB-RF2 sell on GPa2k37Asm (curve state: quote 0)",
+   "note": "does a sell on a closed-window curve pay out of the vault beyond accounting?",
+   "evidence": "evidence/WBZ_final3.json",
+   "forkSlotBefore": 444281862,
+   "forkSlotAfter": 444281863,
+   "txSignature": "491DkBqWouts8zKiM7VFjb81937tjwtcFj3iwKvva6REuZDXkZbhVRLukawqsEr8Ecad2ZFVppdAGLpYkQJDhJ8v",
+   "instructionError": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "guard": "payout 0 <= accounting release 0 (fee custody retained; input was fork-fixture funded, so caller gain is not protocol value)",
+   "stateChanged": true,
+   "attackerDeltaLamports": 0,
+   "measured": {
+    "conservation": {
+     "accountingDecrease": 0,
+     "vaultDecrease": 0,
+     "callerGain": 0,
+     "excessCaptured": 0
+    }
+   },
+   "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH"
+  }
+ ]
+}

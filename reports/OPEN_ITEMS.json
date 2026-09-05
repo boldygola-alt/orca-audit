@@ -1,0 +1,191 @@
+[
+ {
+  "program": "wavebreak",
+  "item": "graduateManual is an unauthenticated trigger (no privilege, no creator signature)",
+  "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH",
+  "detail": "Executed 5x from a fresh attacker key against live curves whose creator is a third party: method[1].graduated 0->1; the curve's remaining quote moved to the destination recorded in the curve (5,780,324 units on 7pjREHYMKCou); residual base supply minted to that destination's ATA (supply +57,803,239). Caller gained nothing (net -5,000 lamports fee per attempt; one attempt also paid 2,039,280 of ATA rent). Repeated calls rejected 6015. The deployed binary carries the design text 'Launch is expired but the token did not meet the graduation conditions. Manual graduation is required to continue trading.', so the trigger is intended and destination-bound. Undecided on live state: whether it can fire while a Manual curve's launch window is still open (all 7 live Manual curves have graduation_time in the past), and the fact that any wallet may pick the finalization moment ahead of the creator.",
+  "cases": [
+   "WB-T4",
+   "WB-T4b",
+   "WB-R3",
+   "WB-R3b",
+   "WB-G10",
+   "WB-F01",
+   "WB-Gate"
+  ],
+  "evidence": [
+   "evidence/WBF_final.json",
+   "evidence/WBF_final2.json",
+   "evidence/WBG2_grad_refund.json",
+   "evidence/WBF_forced_graduation.json",
+   "evidence/WBG_gate_gate.json"
+  ]
+ },
+ {
+  "program": "wavebreak",
+  "item": "GraduateWhirlpool end-to-end (LP escrow and position custody binding)",
+  "status": "INCOMPLETE",
+  "detail": "Not decided. The freshest live GraduateWhirlpool transaction (slot 441,655,843; 35 accounts) has 7 accounts already closed at both fork tips (bondingCurve, quoteVault, lpAuthorityQuoteAta, positionTokenAccount, both token badges, whirlpoolInitAuthority), and no Whirlpool pool exists for the largest pre-graduation WSOL curves, so attacker-submitted variants terminated on 6022/6023 account checks rather than on an authorization decision. Replaying this fixture needs an archival RPC that can serve the exact fork slot; the public endpoints used here return 'Block not available' for those slots.",
+  "cases": [
+   "WB-GW1",
+   "WB-GW2",
+   "WB-G02",
+   "WB-D00(prior run)"
+  ],
+  "evidence": [
+   "recon/wb_graduate_fixture.json",
+   "evidence/WBZ_final3.json",
+   "reports/runtime_WB1_auth.json"
+  ]
+ },
+ {
+  "program": "wavebreak",
+  "item": "LpHarvest / LpTransfer against a funded live escrow",
+  "status": "INCOMPLETE",
+  "detail": "No lp_escrow PDA exists on mainnet (0 token-2022 positions held by any escrow; the escrow PDAs derived for both the live authority and the attacker are absent), so the position-transfer and vault-binding path could not be exercised with funded state. Executed attempts hit the seed check (6023) for a non-existent escrow; LpTakeover did reach its privilege gate (6027, privilege 11).",
+  "cases": [
+   "WB-L01",
+   "WB-L02",
+   "WB-L03"
+  ],
+  "evidence": [
+   "evidence/WBL_lp.json"
+  ]
+ },
+ {
+  "program": "wavebreak",
+  "item": "TokenRefund payout arithmetic on a genuinely expired, non-graduated curve",
+  "status": "INCOMPLETE",
+  "detail": "Every candidate returned 6016 (bonding curve still active), so the refund payout math against the quote vault was never reached. The gate itself is enforced; the accounting is unmeasured.",
+  "cases": [
+   "WB-RF1",
+   "WB-G03",
+   "WB-G12",
+   "WB-A07(prior run)"
+  ],
+  "evidence": [
+   "evidence/WBF_final2.json",
+   "evidence/WBG2_grad_refund.json",
+   "reports/runtime_WB1_auth.json"
+  ]
+ },
+ {
+  "program": "wavebreak",
+  "item": "buy path with a genuine provider-signed permission",
+  "status": "INCOMPLETE",
+  "detail": "All 1,537 live curves set buy_requires_permission=true, so every buy needs a secp256k1 signature from the single configured allowed signer (0359c54abfca..2b29). Without that key the buy-side payout/fee/rounding arithmetic cannot be reached; we deliberately did not forge a consumed-permission account or use cheatcodes to fabricate authority-side state. What we did measure: the gate fires (6018), the subject/consumer and signature bindings reject attacker-crafted and replayed live messages (6001/6004), and substitution of vault/mint/ATA/token program is rejected (6023/6024/6001). Route still open and unchanged by the WS6 pass: replay the cached consume->buy pair verbatim at its pre-state (the fork tip moved on before that harness ran, so the replay is still to be executed). No mutation of that pair was substituted for it.",
+  "cases": [
+   "WB-C01",
+   "WB-P01",
+   "WB-P02",
+   "WB-P05",
+   "WB-P06",
+   "WB-P10",
+   "WB-RP1",
+   "WB-RP2",
+   "WB-RP3",
+   "WB-C05a-d"
+  ],
+  "evidence": [
+   "evidence/WBC_perm_trade.json",
+   "evidence/WBRP_permission.json"
+  ]
+ },
+ {
+  "program": "busybox",
+  "item": "legitimate funded deposit -> swap -> withdraw -> close accounting",
+  "status": "INCOMPLETE",
+  "detail": "Unmeasurable without a market authority key, and no self-owned fixture is possible: MarketInitialize with the correct 10-account shape and an attacker-chosen market id terminates with 'Account <attacker> is not the authority', i.e. market creation itself is authority-gated in the deployed v2.1.1 build. We did not call owner/authority functions or use cheatcodes to obtain that state.",
+  "cases": [
+   "BB-L01",
+   "BB-A01",
+   "BB-A02",
+   "BB-A03",
+   "BB-A04",
+   "BB-T5a/b/c/d"
+  ],
+  "evidence": [
+   "evidence/UBL_lifecycle.json",
+   "evidence/BBA_auth_sweep.json",
+   "reports/BUSYBOX_RIPTIDE_MARKET_REPORT.md"
+  ]
+ },
+ {
+  "program": "busybox",
+  "item": "swap guard completeness: oracle-freshness gate and stale-price exploitation",
+  "status": "NO CONFIRMED PERMISSIONLESS PROFIT PATH",
+  "detail": "DECIDED on the fork with live state only (no oracle, vault, reserve or authority field written for any probe). 139 SwapExactIn probes across all 14 funded markets in both directions at 1/5/25 % of reserves plus composed same-transaction round trips, both legs valued against an external reference captured at the same scan: 15/43 valued executions net-positive, max +11.06 USD (0.39 % of a $2,892 leg), sum of positives 19.01 USD, every round trip negative. The stored market.validUntil IS enforced at swap time, measured by flipping exactly that one u64 on the fork copy and restoring it (evidence/BBS3_expiry_diff.json, ids BBS3-diff-01\u202606; 9PwXMVkFzW: executes while slot <= validUntil, rejected 'Oracle data is invalid' at slot-10, executes again after restore; CzuQmqj4dS, expired by 29.2 M slots with a decoded well-formed 9x9-level book: rejected, and clearing only validUntil moves the failure to ArithmeticOverflow in the quote math, then back on restore). This corrects the previous record in this file and in FINAL_DISPOSITION.md 4.5, which claimed the opposite: that measurement compared the last oracle update slot, not slot > validUntil. Configuration caveat for LPs: the published math::guards error texts are absent from the deployed ELF and the stored guard fields (minSpreadGuardPerM 0 on 18/32, maxA/maxB inventory caps 0 on 31/32, maxInventoryImbalanceGuardPerCent 100 everywhere) produce no guard rejections - the enforced limits are the window, the reserves and the per-fill slippage/partial-fill flags. Not completed: the purely natural confirmation (re-send after the fork clock overtakes an untouched market's validUntil) was scripted (tests/bb_expiry_natural.py) but the sandbox recycled the fork before its clock crossed; it would corroborate, not change, the result.",
+  "cases": [
+   "BBS2-run2-001\u2026065 (authoritative sweep: 53 accepted, 12 denied)",
+   "BBS2-run1-067\u2026140 (superseded repeat of the same probe set)",
+   "BBS3-diff-01\u202606 (single-field validUntil differential)",
+   "BB-RT1",
+   "BB-RT2",
+   "BB-RT5",
+   "BB-P02",
+   "BB-P03",
+   "BB-STALE-01",
+   "BB-A05",
+   "BB-A06",
+   "BB-A07",
+   "BB-A11"
+  ],
+  "evidence": [
+   "evidence/BBS2_stale_sweep.json",
+   "evidence/BBS2_stale_sweep_parsed.json",
+   "evidence/BBS2_net_deltas.json",
+   "evidence/BBS3_expiry_diff.json",
+   "recon/s4_bb_oracle_decode.json",
+   "recon/s4_bb_prices.json",
+   "evidence/funding_s4_sol.json"
+  ],
+  "correctionOf": "FINAL_DISPOSITION.md \u00a74.5 (previous version) and BUSYBOX_DEEP_REVIEW.md \u00a73 table row"
+ },
+ {
+  "program": "family",
+  "item": "legacy AMM per-account custody; authority-event history beyond the public RPC's 230-signature page; programs and multisig behind the root",
+  "status": "INCOMPLETE",
+  "detail": "Three sub-questions, all still open, now bounded precisely. (a) Legacy AMM custody: 1,246,422 owned accounts cannot be enumerated from the public RPC (getProgramAccounts returns 167 accounts / 1,296,458,888 lamports here); the indexer figure of 41,124,583,108,449 lamports from the earlier pass stands unverified. (b) Authority history: getSignaturesForAddress('GwH3Hiv5...') returns exactly one page of 230 signatures (oldest slot 306,473,452) and does not page further on api.mainnet-beta or the publicnode fallback, so the indexer pass's 816-event / 637-untriaged count can be neither reproduced nor refuted from public RPC; paging it requires an archival source. This pass fetched and classified all 230 (tools/authority_walk.py -> recon/s4_auth_walk_GwH3Hiv5.json): 149 BPFLoader/Squads-related instruction events, 734 distinct account-owners touched, and the two Squads program ids SQDS4ep6... (29x) and DttWaMuVvT... (53x); the per-tx jsonParsed account lists for BPFLoader instructions came back empty, so no ProgramData inventory could be built from history either. (c) Programs under the root: getProgramAccounts on BPFLoaderUpgradeable (the only way to list every ProgramData whose upgrade authority is a given key) is refused outright - HTTP 403 on both endpoints - so 'no additional value-moving program under either root' is NOT established. Known now, from reading the accounts directly: all four family programs are still upgradable (ProgramData version 3, authority byte 0x01 present), the shared root GwH3Hiv5... is OFF-CURVE (a PDA, so it cannot be signed for directly) and the legacy AMM root 23zF9Azp... is an on-curve plain key holding 23.891577114 SOL. Squads: scanned all 834 accounts of the Squads program with space 1,318; none derives GwH3Hiv5... (or BWyVTPPR...) via [\"multisig\", addr]; the earlier 3GiPhEnW... candidate holds 0.010064160 SOL, 1,318 bytes and five on-curve 32-byte slots whose owners are unrelated wallets, none of which is a family key - it is excluded as a third party, and the governing multisig behind the root remains unidentified.",
+  "cases": [
+   "WS7 signature-page probe (230 cap)",
+   "ProgramData authority read x4",
+   "Squads space-1318 PDA scan x834"
+  ],
+  "evidence": [
+   "recon/program_identities.json",
+   "recon/authority_events_classes.json",
+   "recon/s4_auth_walk_GwH3Hiv5.json",
+   "recon/s4_program_upgrade_control.json",
+   "recon/s4_squads_and_auth_keys.json",
+   "recon/s4_squads_pda_search.json",
+   "recon/amm_custody.json"
+  ]
+ },
+ {
+  "program": "family",
+  "item": "Whirlpool and legacy AMM handler-level review",
+  "status": "INCOMPLETE",
+  "detail": "Both hold custody that this pass did not review at handler level. For the record the ProgramData balances are rent deposits for the ELF, not user funds: Whirlpool's 10,485,715-byte ELF sits in a 10,485,760-byte ProgramData holding 72,981,780,480 lamports of rent, and the legacy AMM's 691,104-byte ELF in a ProgramData holding 4,811,287,920. Actual custody is the program-owned account set (indexer pass: Whirlpool 1,106,108 accounts / 156,285 pools; legacy AMM ~1.25 M accounts), which public RPC cannot enumerate. Whirlpool is also the counterparty of Wavebreak's graduation CPI, so its account binding matters to WS1. The deployed-ELF inventories now exist for Wavebreak and Busybox (handler enums and rodata messages extracted from elf/wavebreak.bin and elf/busybox.bin, sha256-matched to ProgramData); elf/whirlpool.bin and elf/amm.bin are cached and hashed but not yet walked handler by handler.",
+  "cases": [],
+  "evidence": [
+   "recon/program_identities.json"
+  ]
+ },
+ {
+  "program": "busybox",
+  "item": "penalty selection (arbPenaltyPerM / cuPenaltyMultiplier / jitodFrontPenaltyPerM) and the legitimate funded lifecycle",
+  "status": "INCOMPLETE",
+  "detail": "Whether the three penalty knobs can be *avoided* rather than paid, and deposit->withdraw->close accounting on a market we own, both require either a market updater/authority key or a self-created market; MarketInitialize is gated to the hardcoded initializer in the deployed build and we neither called owner/restricted functions nor impersonated a key. Measured indirectly this pass: every accepted fill's effective price was consistent with the configured arbPenaltyPerM being applied, and cuPenaltyMultiplier = 0 on all 32 markets.",
+  "cases": [
+   "BB-L01",
+   "BB-A01\u2026A04",
+   "BB-T5a/b/c/d",
+   "BBS2-run2 (penalty-consistent pricing)"
+  ],
+  "evidence": [
+   "evidence/UBL_lifecycle.json",
+   "evidence/BBA_auth_sweep.json",
+   "evidence/BBS2_stale_sweep.json"
+  ]
+ }
+]

@@ -1,0 +1,29 @@
+{
+ "address": "DeVsaMequ6CxfhyJgV3EPdt5imnAWW6kSLZ7sdptDjFA",
+ "gates_instruction": 40,
+ "quote_mint": "So11111111111111111111111111111111111111112",
+ "create_requires_permission": true,
+ "create_bitmap": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+ "default_buy_requires": true,
+ "buy_bitmap": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+ "default_sell_requires": false,
+ "sell_bitmap": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+ "creator_reward": 0,
+ "graduation_reward": 100000000,
+ "graduation_target": 85000000000,
+ "max_buy": 10000000000000000,
+ "max_sell": 18446744073709551615,
+ "start_price": "3097735099580089",
+ "end_price": "12157396593351804",
+ "control_points": [
+  4076,
+  3725,
+  6969,
+  6768
+ ],
+ "fees": [
+  100,
+  118,
+  100
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "Permission cannot be closed because it is still active": [
+  "0x16540"
+ ],
+ "Permission already revoked or consumed": [
+  "0x28cb0"
+ ],
+ "Permission has expired": [
+  "0x15f38"
+ ],
+ "Permission is already expired": [
+  "0x28cb0"
+ ],
+ "Permission signature is invalid": [
+  "0x15ff8"
+ ],
+ "Failed to verify signature": [],
+ " does not match permission consumer": [
+  "0x15850"
+ ],
+ "Current instruction is called through a CPI": [
+  "0x14378"
+ ],
+ "Second PermissionConsumeTopLevel instruction found at index ": [
+  "0x14838"
+ ],
+ "Could not find a matching PermissionConsume instruction in transaction": [
+  "0x15040"
+ ],
+ " is not one of the allowed signers": [
+  "0x15c50"
+ ],
+ " does not have required privilege": [],
+ " has wrong seeds": [
+  "0xb668"
+ ],
+ " is not the authority": [],
+ " is not one of the allowed addresses": [
+  "0xb338"
+ ],
+ " has wrong address": [
+  "0xb088"
+ ],
+ " is not writable": [
+  "0xbb90"
+ ],
+ " is not a signer": [
+  "0xbb90"
+ ],
+ "Token has not met graduation conditions": [
+  "0x137f0"
+ ],
+ " instruction is already called": [],
+ "Instruction discriminator is not a create instruction": [
+  "0x33c10"
+ ],
+ "Actual amount in can never exceed the requested amount in": [],
+ "Swap results in an amount above the graduation target": [
+  "0x165f8"
+ ],
+ "Input results in a partial fill which is explicitly disallowed": [
+  "0x168c0"
+ ],
+ "Mint authority is not the bonding curve account": [],
+ "Whirlpool position must be locked": [],
+ "Only one position can be created per fee tier": [],
+ "No protocol fees to collect": [
+  "0x2e910"
+ ],
+ "Base amount is not zero": [
+  "0x2d6b8"
+ ],
+ "Bonding curve has not expired not called": [
+  "0x13be8"
+ ],
+ "Token is not graduated and is still in launch": []
+}

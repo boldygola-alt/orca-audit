@@ -1,0 +1,536 @@
+{
+ "target": {
+  "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+  "baseMint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+  "vault": "FoynQTzgJGaehvTQAYMNkmJZdvSDSMErVRN4q21zZkoL",
+  "acct0": 1367605910,
+  "vault0": 2034654836,
+  "excess0": 667048926
+ },
+ "funding": "FORK-ONLY: attacker's own base ATA + mint supply raised via Surfpool cheatcodes (documented fixture funding, not exploit evidence)",
+ "results": [
+  {
+   "case": "WB-DR exact-in no-partial fund=1000 tokens",
+   "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "mint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+   "amount": 1000000000000,
+   "forkSlot": 444221422,
+   "sig": "3QSwyRZ4y7o4Jz423MUP2cqSdcX1fXUkoVc4CfgsUojuwCXHoWP85Nc7wju8N6rZJd8f4nYeY2kn4u2QHu21mkC",
+   "err": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1322826 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1321373 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1311224 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program data: AjGS0e82S0wsUDaBBGQs8u50+7VIaYqPXzFPBD17KXtWKwOjloEmQjospckrPAD7n4Vnh7e8NZPZfxXQIBaP6rsGm4hX/quBhPtof2NGGMA12sQ53BrrO1WYoPAAAAAAAQAQpdToAAAAo3IAAAAAAACeGBmupUgLAAAAAAAAAAAAnhgZrqVICwAAAAAAAAAAAJYChFEAAAAAyo6DUQAAAAB2RxBrueWjAHY3a5bQ5KMAKQEAAAAAAAA=",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 205363 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success"
+   ],
+   "attackerPayout": 29347,
+   "vaultDecrease": 29347,
+   "accountingDecrease": 29644,
+   "curveBaseIncrease": 1000000000000,
+   "excessCaptured": -297,
+   "curveBefore": {
+    "lamports": 15144960,
+    "hash": "b552293852adc5d3941a2cf97a5b05fcbb87e43ac1f74a463ef9ccecad6d231d",
+    "quote_amount": 1367605910,
+    "base_amount": 46133005731776374
+   },
+   "curveAfter": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "vaultBefore": {
+    "lamports": 2036694116,
+    "amount": 2034654836,
+    "hash": "a9b1cd81d5707c0404958f0ed45526a364c8e3fbe6f1887167f101345392a0c9"
+   },
+   "vaultAfter": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "attackerBefore": {
+    "lamports": 2041324,
+    "amount": 1000000000044,
+    "hash": "8f1474188ae09a93da99ffbf24d68ddbfe3ef3547497e9ec735dcca802766f1b"
+   },
+   "attackerAfter": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   }
+  },
+  {
+   "case": "WB-DR exact-in partial fund=1000 tokens",
+   "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "mint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+   "amount": 1000000000000,
+   "forkSlot": 444221424,
+   "sig": "34aj7sh2Qz4igzwuT5CW69q3MmHkmNtb9h34QmGW5CF9keudbKJtEtYmqprP9miGNcw4jwsMPp1QLsnzXsnvvJnz",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program log: Error: insufficient funds",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 220 of 1322826 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA failed: custom program error: 0x1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 77244 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1"
+   ],
+   "attackerPayout": 0,
+   "vaultDecrease": 0,
+   "accountingDecrease": 0,
+   "curveBaseIncrease": 0,
+   "excessCaptured": 0,
+   "curveBefore": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "curveAfter": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "vaultBefore": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "vaultAfter": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "attackerBefore": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   },
+   "attackerAfter": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   }
+  },
+  {
+   "case": "WB-DR exact-out partial fund=1000 tokens",
+   "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "mint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+   "amount": 100000000000,
+   "forkSlot": 444221425,
+   "sig": "2U68og5x5ps3kCwCga2zA2GEDZAscQtUYCs4S3b1oN7djDcDtyQPvqi478mkQTf29K6Mze5XFrxKTaJryAdtuUhc",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program log: Error: insufficient funds",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 220 of 1322878 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA failed: custom program error: 0x1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 77192 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1"
+   ],
+   "attackerPayout": 0,
+   "vaultDecrease": 0,
+   "accountingDecrease": 0,
+   "curveBaseIncrease": 0,
+   "excessCaptured": 0,
+   "curveBefore": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "curveAfter": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "vaultBefore": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "vaultAfter": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "attackerBefore": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   },
+   "attackerAfter": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   }
+  },
+  {
+   "case": "WB-DR exact-out no-partial fund=1000 tokens",
+   "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "mint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+   "amount": 100000000000,
+   "forkSlot": 444221426,
+   "sig": "3HvzoV16Gq41H729PwcTknJTUhN4gBKHE6Pb89gbLjmWnCV5ahbx24p9GGz1VCcKboKiYQjcnqfhs6z9ReTcbjEg",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactOut",
+    "Program log: Input results in a partial fill which is explicitly disallowed",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 75903 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1789"
+   ],
+   "attackerPayout": 0,
+   "vaultDecrease": 0,
+   "accountingDecrease": 0,
+   "curveBaseIncrease": 0,
+   "excessCaptured": 0,
+   "curveBefore": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "curveAfter": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "vaultBefore": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "vaultAfter": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "attackerBefore": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   },
+   "attackerAfter": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   }
+  },
+  {
+   "case": "WB-DR exact-in no-partial fund=100M tokens",
+   "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "mint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+   "amount": 100000000000000000,
+   "forkSlot": 444221428,
+   "sig": "T5iZsUENHpFcWuvJEdy15J2SYEogkG7M7kcXRAZBYkXur6u6ZHnNpkZEZyXN8qdCh5iuky2Ywtg6wiG9no3ekvC",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Input results in a partial fill which is explicitly disallowed",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 75500 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1789"
+   ],
+   "attackerPayout": 0,
+   "vaultDecrease": 0,
+   "accountingDecrease": 0,
+   "curveBaseIncrease": 0,
+   "excessCaptured": 0,
+   "curveBefore": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "curveAfter": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "vaultBefore": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "vaultAfter": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "attackerBefore": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   },
+   "attackerAfter": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   }
+  },
+  {
+   "case": "WB-DR exact-in partial fund=100M tokens",
+   "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "mint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+   "amount": 100000000000000000,
+   "forkSlot": 444221429,
+   "sig": "XkXTECt6T7yZeVm435ui1rAkbpPA9tu952c5suNSVu5d6VT8av7PMSfBC3TYUpnYyq4opec2bQQGE87RihX3Jvx",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1323280 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1321827 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1311678 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 88351 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1779"
+   ],
+   "attackerPayout": 0,
+   "vaultDecrease": 0,
+   "accountingDecrease": 0,
+   "curveBaseIncrease": 0,
+   "excessCaptured": 0,
+   "curveBefore": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "curveAfter": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "vaultBefore": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "vaultAfter": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "attackerBefore": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   },
+   "attackerAfter": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   }
+  },
+  {
+   "case": "WB-DR exact-out partial fund=100M tokens",
+   "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "mint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+   "amount": 100000000000,
+   "forkSlot": 444221430,
+   "sig": "63s9frHkyXR6ScToHxkUyArFs247v7VXgR7Rk89VhjNSNhF4kFy5bmXgL12qKrEnAaMQBJ54jabj8vDkUYEYBg42",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1322878 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1321425 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1311276 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 88753 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1779"
+   ],
+   "attackerPayout": 0,
+   "vaultDecrease": 0,
+   "accountingDecrease": 0,
+   "curveBaseIncrease": 0,
+   "excessCaptured": 0,
+   "curveBefore": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "curveAfter": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "vaultBefore": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "vaultAfter": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "attackerBefore": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   },
+   "attackerAfter": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   }
+  },
+  {
+   "case": "WB-DR exact-out no-partial fund=100M tokens",
+   "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "mint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+   "amount": 100000000000,
+   "forkSlot": 444221431,
+   "sig": "2ssGLUeF377LkwavjaByKyDnxHxoceHhsLVUiTL6Vhud27aHsL9mx3GPtG6Vn52XBi672hnEjjVoQg8wTQmKHW1D",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactOut",
+    "Program log: Input results in a partial fill which is explicitly disallowed",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 75903 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1789"
+   ],
+   "attackerPayout": 0,
+   "vaultDecrease": 0,
+   "accountingDecrease": 0,
+   "curveBaseIncrease": 0,
+   "excessCaptured": 0,
+   "curveBefore": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "curveAfter": {
+    "lamports": 15144960,
+    "hash": "faa382ac456fffb95a717e37ca162055cb5645741fe9f4ed1e0f2037d3b21e29",
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374
+   },
+   "vaultBefore": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "vaultAfter": {
+    "lamports": 2036664769,
+    "amount": 2034625489,
+    "hash": "646b2a77aded980a7730b2b54e0035d5c424c1ab319bbf9220d70da0099aef3e"
+   },
+   "attackerBefore": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   },
+   "attackerAfter": {
+    "lamports": 2070671,
+    "amount": 1000000029391,
+    "hash": "8afc1480c031b7bff0c80a0385763edbfc7cb2c2d933cef373e0d4c6e4870fe6"
+   }
+  }
+ ]
+}

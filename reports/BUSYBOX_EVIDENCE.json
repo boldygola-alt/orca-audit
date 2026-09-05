@@ -1,0 +1,287 @@
+
+{
+ "program": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j (Busybox / Riptide AMM market module v2.1.1)",
+ "identity": {
+  "progSha": "005b1e4410c5e991",
+  "pd": "4RhNxb6VAhj9EMsnmyxz8giXsuaMcnjCUKxPtUvhBeRu",
+  "pdSha256": "b1caa5cb664c11c05edbcba147893f5f92aba90399512a5fd153c60d6f3bebce",
+  "elfLen": 258992,
+  "elfSha256": "32a8a8f75662cfdc8d29abe4bf6826c9c027a4b9222d544f46285762c661ab86",
+  "elfByteIdenticalToPD": true,
+  "writeSlot": 440010891,
+  "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV"
+ },
+ "fork": {
+  "endpoint": "http://127.0.0.1:8899",
+  "genesis": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdpKuc147dw2N9d",
+  "slots": "444,032,xxx-444,164,xxx",
+  "attacker": "DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2",
+  "attackerPreBalLamports": "49999889773600",
+  "execution": "sendTransaction (surfnet 1.5.0 rename of sendRawTransaction; persists); simulateTransaction for config probes (does NOT persist)"
+ },
+ "dispatchObserved": {
+  "00": "ProgramVersion",
+  "01": "OracleUpdate [market R, oracle EOA signer]",
+  "02": "SwapExactIn RESERVED (InvalidAccountData @9CU)",
+  "03": "SwapExactOut RESERVED",
+  "04-07": "ReservedSwapX/Y/Z/A RESERVED",
+  "08": "MarketInitialize (5B: tag + u32 id)",
+  "09": "MarketUpdate (34B: tag+mode01+32B oracle pubkey | 6B: tag+mode04+u32)",
+  "0a": "MarketDeposit (17B: tag+u64 amtA+u64 amtB)",
+  "0b": "MarketWithdraw (17B: tag+u64 amtA+u64 amtB)",
+  "0c": "MarketClose (12+ accts)",
+  "0d-0f": "ReservedMarketX/Y/Z RESERVED",
+  "10+": "invalid"
+ },
+ "tests": [
+  {
+   "id": "T1",
+   "handler": "MarketWithdraw",
+   "targetMarket": "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW",
+   "acctOrder": [
+    "0 attacker SW",
+    "1 market -R",
+    "2 mintA J1toso1u",
+    "3 mintB So111111",
+    "4 recvA attacker ATA",
+    "5 recvB attacker ATA",
+    "6 vaultA FSU8",
+    "7 vaultB 7Uqwc",
+    "8 Tokenkeg W",
+    "9 Tokenkeg W",
+    "10 Memo W"
+   ],
+   "data": "0b0000000000000000010000000000000001",
+   "result": "DENIED",
+   "err": "Incorrect authority provided",
+   "logs": [
+    "Program log: Instruction: MarketWithdraw",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 is not the authority"
+   ],
+   "stage": "authorization pre-CPI (2729 CU)",
+   "state": "market hash UNCHANGED f627918c..; reserves 10900000000/500000000 unchanged"
+  },
+  {
+   "id": "T2",
+   "handler": "MarketDeposit",
+   "acctOrder": [
+    "0 attacker SW",
+    "1 market -W",
+    "2 mintA",
+    "3 mintB",
+    "4 feeA 6yMJ",
+    "5 feeB mFQd(NULL)",
+    "6 vaultA",
+    "7 vaultB",
+    "8 Tokenkeg W",
+    "9 Tokenkeg W",
+    "10 Memo W"
+   ],
+   "data": "0a0000000000000000000000000000000000",
+   "result": "DENIED",
+   "err": "Incorrect authority provided",
+   "logs": [
+    "Instruction: MarketDeposit",
+    "Account DP43P9K... is not the authority"
+   ],
+   "stage": "authorization (2736 CU)",
+   "state": "unchanged"
+  },
+  {
+   "id": "T3b",
+   "handler": "MarketUpdate",
+   "data": "09019a401666a170163e2d01bf2e71a126434959a8836ad64d5be0b189607fb6669f",
+   "accts": [
+    "0 attacker SW",
+    "1 market W",
+    "2 111111 W"
+   ],
+   "result": "DENIED",
+   "err": "Incorrect authority provided",
+   "logs": [
+    "Instruction: MarketUpdate",
+    "Account DP43P9K... is not the authority"
+   ],
+   "stage": "authorization (2520 CU)",
+   "state": "unchanged (0x298/0x2a0/0x2e0/0x2e8 identical)"
+  },
+  {
+   "id": "T4pp",
+   "handler": "OracleUpdate",
+   "acctOrder": [
+    "0 market R",
+    "1 attacker SW"
+   ],
+   "dataLen": 529,
+   "result": "DENIED",
+   "err": "Incorrect authority provided",
+   "stage": "authorization (15 CU)",
+   "note": "live shape [market, oracleEOA-signer]; signer must equal market[0x28]"
+  },
+  {
+   "id": "T5d",
+   "handler": "MarketClose",
+   "accts": 12,
+   "result": "DENIED",
+   "err": "Incorrect authority provided",
+   "logs": [
+    "Instruction: MarketClose",
+    "Account DP43P9K... is not the authority"
+   ],
+   "stage": "authorization (2739 CU)",
+   "note": "12-account shape reconstructed (index 11 needed)"
+  },
+  {
+   "id": "T8a",
+   "handler": "MarketInitialize",
+   "data": "0898b06dd4",
+   "accts": [
+    "0 attacker SW",
+    "1 existing market 5aU1HM W",
+    "2 mintA pumpCmX",
+    "3 mintB EPjF",
+    "4 EH4f W",
+    "5 Gd6c W",
+    "6 111111",
+    "7 AToken",
+    "8 TokenzQd W",
+    "9 Tokenkeg W"
+   ],
+   "result": "DENIED",
+   "err": "Incorrect authority provided",
+   "logs": [
+    "Instruction: MarketInitialize",
+    "Account DP43P9K... is not the authority"
+   ],
+   "stage": "authorization (2541 CU)",
+   "state": "market hash UNCHANGED 1552a50b..",
+   "note": "re-init/takeover of an existing market blocked; init authority seeded from market[0x08]"
+  },
+  {
+   "id": "T11",
+   "handler": "MarketWithdraw recipient substitution",
+   "detail": "recv = attacker ATA while signer flags = real authority CGYA (non-persistent sim, sigVerify:false)",
+   "result": "DENIED",
+   "err": "InvalidAccountData",
+   "logs": [
+    "Instruction: MarketWithdraw",
+    "Token account AvpZSf1h5xtqSfLGkxurTUaASt6phKpvXQFCEpFgrxXY has wrong owner"
+   ],
+   "stage": "account validation (10764 CU) pre-CPI",
+   "note": "recipient TA owner binding enforced -> substitution blocked even with authority"
+  },
+  {
+   "id": "T9",
+   "handler": "reserved tags",
+   "tags": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "0d",
+    "0e",
+    "0f",
+    "10"
+   ],
+   "result": "DENIED InvalidAccountData @9 CU",
+   "note": "SwapExactIn/Out + ReservedSwap*/ReservedMarket* not implemented"
+  }
+ ],
+ "inventory": {
+  "markets": 32,
+  "totalMarketLamports": 256747447,
+  "fundedMarkets": 11,
+  "topFunded": [
+   [
+    "FefUJfaS2Vpk",
+    237374343630,
+    1510073,
+    "CGYAxnDF",
+    "pSo1f9nQ",
+    "So111111"
+   ],
+   [
+    "9PwXMVkFzWk5",
+    74237518317,
+    51307034173,
+    "2C7K3BN6",
+    "XsueG8Bt",
+    "EPjFWdd5"
+   ],
+   [
+    "4AFfguVTj7sq",
+    48280765628,
+    5384659508,
+    "CYkPyQ2c",
+    "So111111",
+    "EPjFWdd5"
+   ],
+   [
+    "6Vzx4ASRjUPW",
+    24936661049,
+    25156674246,
+    "CGYAxnDF",
+    "Es9vMFrz",
+    "EPjFWdd5"
+   ],
+   [
+    "GxGxQBvMQ7vU",
+    23267353908,
+    49221304786,
+    "2C7K3BN6",
+    "Xsc9qvGR",
+    "EPjFWdd5"
+   ],
+   [
+    "CNp3etjEmWP4",
+    17888001000,
+    28218756523,
+    "2C7K3BN6",
+    "XsP7xzNP",
+    "EPjFWdd5"
+   ],
+   [
+    "HxNaPy1oYA8x",
+    17544823523,
+    46280202803,
+    "2C7K3BN6",
+    "XsDoVfqe",
+    "EPjFWdd5"
+   ],
+   [
+    "CzuQmqj4dSda",
+    10900000000,
+    500000000,
+    "CGYAxnDF",
+    "J1toso1u(jitoSOL)",
+    "So111111(WSOL)"
+   ]
+  ],
+  "marketAuthorities": [
+   "CGYAxnDF1b (majority)",
+   "2C7K3BN6",
+   "CYkPyQ2c",
+   "BWyVTPPR (4 draft markets)"
+  ],
+  "marketOracles": [
+   "BP8TxUro (shared; EOA, 9.15 SOL, len 0)",
+   "6CXqCWby",
+   "CGYAxnDF (self)",
+   "CyGuKwQp",
+   "FcHP5RLh",
+   "45yY6sGk",
+   "J6KmdC1c",
+   "8gxR627C",
+   "GbbYSJ6Z",
+   "BCFLstzJ"
+  ],
+  "vaultModel": "vaults = ATA(market, mint) owned by the market (verified FSU8/7Uqwc/2iZ3v/fNKZa); withdraw CPI authority = market (program-signed) => market must be a program PDA; common-string seed brute force DID NOT match market addresses"
+ },
+ "note": "market layout: 0x00 version/flags, 0x04 u32 id, 0x08 authority, 0x28 oracle, 0x48 mintA, 0x68 mintB, 0x88 u64 (update counters), 0x90 u64 lastOracleSlot, 0x98..0x298 512B oracle data, 0x298 u64 priceQ32-ish (init 300<<32), 0x2a0=100 (bps), 0x2c0/0x2c8 u64::MAX, 0x2e0/0x2e8 reservesA/B",
+ "uncovered": {
+  "legitFunding": "canonical funded deposit/withdraw/close composition not executable (requires authority private key CGYA/2C7K3BN6/CYkPyQ2c \u2014 not held; real keys forbidden) -> INCOMPLETE for legit-accounting, code-review only",
+  "swapLedgerRouter": "no Whirlpool/AMM/token-ledger CPI in ELF (only system/spl-token/t2022/rent/clock/AToken/Memo/IxSysvar IDs) -> mandate router/TokenLedger classes N/A in this build"
+ }
+}

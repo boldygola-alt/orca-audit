@@ -1,0 +1,21 @@
+{
+ "GwH3Hiv5": {
+  "records": 102,
+  "classes": {
+   "program-upgrade-or-authority": 10,
+   "plain-transfer": 76,
+   "squads-multisig-op": 11,
+   "other": 3,
+   "bubblegum(cNFT)": 2
+  }
+ },
+ "23zF9Azp": {
+  "records": 71,
+  "classes": {
+   "bubblegum(cNFT)": 4,
+   "plain-transfer": 63,
+   "program-upgrade-or-authority": 1,
+   "other": 3
+  }
+ }
+}

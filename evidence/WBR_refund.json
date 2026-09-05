@@ -1,0 +1,126 @@
+{
+ "nowUnix": 1788518821,
+ "funding": "FORK-ONLY attacker base funding via Surfpool cheatcodes (documented)",
+ "results": [
+  {
+   "case": "WB-RF refund on 6dY8neNeezK1RPzCQWZeAXMkASYjWtPe3y511VRq2L1n",
+   "curve": "6dY8neNeezK1RPzCQWZeAXMkASYjWtPe3y511VRq2L1n",
+   "baseMint": "ArJsU2gw62tNf1NtgKsJSdUj1AEDHr422t5BfuKcwave",
+   "vault": "Hxjq3SaNE1eYseEYDaFGk4Z1yErado41ARWvm8EByf9k",
+   "forkSlot": 444221578,
+   "sig": "4X9Nu6fpKo9tFG21DcfHrGXCYSWtZjE2kUa2Cu7xFcHVgfFzFn43gcoGGrCCmRW7XM7RNhobxkBRomZJqt5wRCr9",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenRefund",
+    "Program log: Bonding curve has not expired",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 22558 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1780"
+   ],
+   "attackerPayout": 0,
+   "vaultDecrease": 0,
+   "accountingDecrease": 0,
+   "curveBefore": {
+    "lamports": 15144960,
+    "quote_amount": 28,
+    "base_amount": 0,
+    "graduation_time": 0,
+    "launch_time": 1765335227
+   },
+   "curveAfter": {
+    "lamports": 15144960,
+    "quote_amount": 28,
+    "base_amount": 0,
+    "graduation_time": 0,
+    "launch_time": 1765335227
+   },
+   "vaultBefore": {
+    "lamports": 856082076,
+    "amount": 854042796
+   },
+   "vaultAfter": {
+    "lamports": 856082076,
+    "amount": 854042796
+   },
+   "attackerBefore": {
+    "lamports": 2070671,
+    "amount": 1000000029391
+   },
+   "attackerAfter": {
+    "lamports": 2070671,
+    "amount": 1000000029391
+   },
+   "fundedBase": 1000000000000,
+   "excessCaptured": 0
+  },
+  {
+   "case": "WB-RF refund on 6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "baseMint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+   "vault": "FoynQTzgJGaehvTQAYMNkmJZdvSDSMErVRN4q21zZkoL",
+   "forkSlot": 444221581,
+   "sig": "3d5aPS5F9e1Z1cPwxMtRPqcD1nHpPEyHcrPdyVVST2UNHS9fpXzG758rfmLbPP5f4cApiTdJHGn8srXxRefxg4qs",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenRefund",
+    "Program log: Bonding curve has not expired",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 13558 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1780"
+   ],
+   "attackerPayout": 0,
+   "vaultDecrease": 0,
+   "accountingDecrease": 0,
+   "curveBefore": {
+    "lamports": 15144960,
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374,
+    "graduation_time": 0,
+    "launch_time": 1758620895
+   },
+   "curveAfter": {
+    "lamports": 15144960,
+    "quote_amount": 1367576266,
+    "base_amount": 46132005731776374,
+    "graduation_time": 0,
+    "launch_time": 1758620895
+   },
+   "vaultBefore": {
+    "lamports": 2036664769,
+    "amount": 2034625489
+   },
+   "vaultAfter": {
+    "lamports": 2036664769,
+    "amount": 2034625489
+   },
+   "attackerBefore": {
+    "lamports": 2070671,
+    "amount": 1000000029391
+   },
+   "attackerAfter": {
+    "lamports": 2070671,
+    "amount": 1000000029391
+   },
+   "fundedBase": 1000000000000,
+   "excessCaptured": 0
+  }
+ ]
+}

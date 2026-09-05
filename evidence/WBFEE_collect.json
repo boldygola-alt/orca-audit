@@ -1,0 +1,87 @@
+{
+ "results": [
+  {
+   "case": "WB-FEE3 collectFees with privilege-1 fee authority (8AbiHetk\u2026)",
+   "curve": "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7",
+   "sig": "RbqaDfntCZ9DenU4puB7CT2jFjoUmC3H5BeCVYfeuMZsAyLh6WRpcip84wq2DhiXso5E9TZaQDD2YjPqESBD8S4",
+   "err": null,
+   "slot": 444282193,
+   "logs": [
+    "Program log: Instruction: BondingCurveCollectFees",
+    "Program log: CreateIdempotent"
+   ],
+   "changed": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": [
+     4999974653840,
+     4999974648840
+    ],
+    "5HffnQjEsMMMJLnp8oGS1pFBrndEL3mLd9LSKMU91hmU": [
+     1379699462,
+     859107599
+    ],
+    "2SDVckjAEx7gimJSQergqZLg2epsinsqMbvVpdqk38S1": [
+     1533555383,
+     2054147246
+    ]
+   },
+   "feeAta": "2SDVckjAEx7gimJSQergqZLg2epsinsqMbvVpdqk38S1",
+   "attackerLamports": 4999974648840
+  },
+  {
+   "case": "WB-FEE3 collectFees with ATTACKER as feeAuthority (no privilege)",
+   "curve": "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7",
+   "sig": "3DY9zoGft2Q5e5fSX7McZQ4cp3nTWZA7qWiBmkXb3otXsv7mR3do57VoxQFjbuahoqdpeEAEUnmSafbvLFGkfQfv",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "slot": 444282194,
+   "logs": [
+    "Program log: Instruction: BondingCurveCollectFees",
+    "Program log: Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f does not have required privilege 1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "changed": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": [
+     4999974648840,
+     4999974643840
+    ]
+   },
+   "feeAta": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+   "attackerLamports": 4999974643840
+  },
+  {
+   "case": "WB-FEE3 collectFees with random EOA as feeAuthority",
+   "curve": "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7",
+   "sig": "3MrUjQp7BxZxJ2HHeM91g8ZnChjH7UGWf7v7SdSSDQobULe5VmWTbKGHCJVsuUBJH78WmtmcBJhet96R5ZypanGr",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "slot": 444282197,
+   "logs": [
+    "Program log: Instruction: BondingCurveCollectFees",
+    "Program log: Account 9gmP91zD3DP5NGJzuZqKAXqY4PpQq3pBQqJ3MhJcE1oq does not have required privilege 1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "changed": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": [
+     4999974643840,
+     4999974638840
+    ]
+   },
+   "feeAta": "ewYMzr5Evc445Kb7w6Sr6qZBmu2KDik3iFdScjXNFx2",
+   "attackerLamports": 4999974638840
+  }
+ ],
+ "curve": "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7",
+ "vault": "5HffnQjEsMMMJLnp8oGS1pFBrndEL3mLd9LSKMU91hmU"
+}

@@ -1,0 +1,50 @@
+{
+ "wavebreak": {
+  "program": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+  "programdata": "nEuknUvGZK5UVyq3Tf18tcpNtC7dmjPMirrry66SkAs",
+  "state": 3,
+  "upgradeSlot": 365746180,
+  "locked": 1,
+  "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+  "elfBytes": 500448,
+  "pdLamports": 3484322160,
+  "programLamports": 1141440,
+  "elfSha256": "8cd60d772f1d8a97a6f879c545e2827914c1d285c0edca22148ac231f21e9742"
+ },
+ "busybox": {
+  "program": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+  "programdata": "4RhNxb6VAhj9EMsnmyxz8giXsuaMcnjCUKxPtUvhBeRu",
+  "state": 3,
+  "upgradeSlot": 440010891,
+  "locked": 1,
+  "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+  "elfBytes": 258992,
+  "pdLamports": 1803788400,
+  "programLamports": 1360441,
+  "elfSha256": "32a8a8f75662cfdc8d29abe4bf6826c9c027a4b9222d544f46285762c661ab86"
+ },
+ "whirlpool": {
+  "program": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+  "programdata": "CtXfPzz36dH5Ws4UYKZvrQ1Xqzn42ecDW6y8NKuiN8nD",
+  "state": 3,
+  "upgradeSlot": 440170207,
+  "locked": 1,
+  "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+  "elfBytes": 10485715,
+  "pdLamports": 72981780480,
+  "programLamports": 31850581,
+  "elfSha256": "610b1e394973bd1b86de8afc983524bd21dea177e87bfae75ec289d4c350f9ae"
+ },
+ "amm": {
+  "program": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
+  "programdata": "DrrJDyBzyuyYAzkkjd6Vu9ZzaDLsKRf4RPXyRE7Uk2A8",
+  "state": 3,
+  "upgradeSlot": 161177892,
+  "locked": 1,
+  "upgradeAuthority": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+  "elfBytes": 691104,
+  "pdLamports": 4811287920,
+  "programLamports": 2441443,
+  "elfSha256": "930a47e23fe7f8185557c1b5acabf658f97ca0f4c6cdd1f0d0510a897a9322e6"
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "note": "FORK-ONLY fixture funding of the ATTACKER'S OWN base ATA (+ mint supply so the burn is legal). Purpose: make the payout measurable. Not exploit evidence by itself.",
+ "curve": "6dY8neNeezK1RPzCQWZeAXMkASYjWtPe3y511VRq2L1n",
+ "mint": "ArJsU2gw62tNf1NtgKsJSdUj1AEDHr422t5BfuKcwave",
+ "ata": "2ffUBX4Fepgqzdny2zNrrK38tec8qLhThMURF45aHE2k",
+ "decimals": 9,
+ "funded": 1000000000000000,
+ "supplyBefore": 0,
+ "forkSlot": 444221217
+}

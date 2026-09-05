@@ -1,0 +1,198 @@
+[
+ {
+  "case": "take entire reservesB (deficit probe)",
+  "market": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+  "slot": 444225347,
+  "err": {
+   "InstructionError": [
+    1,
+    {
+     "Custom": 6099
+    }
+   ]
+  },
+  "logs": [
+   "Program log: Instruction: SwapExactOut",
+   "Program log: Partial fill is not allowed",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 46843 of 1399850 compute units",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0x17d3"
+  ],
+  "attackerA": null,
+  "attackerAAfter": 0,
+  "attackerB": 1000000000000,
+  "attackerBAfter": 1000000000000,
+  "reservesBefore": [
+   24831578339,
+   45619575426
+  ],
+  "reservesAfter": [
+   24831578339,
+   45619575426
+  ],
+  "excessBefore": [
+   530476181,
+   -1229000000
+  ]
+ },
+ {
+  "case": "take entire reservesB, partial allowed",
+  "market": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+  "slot": 444225349,
+  "err": {
+   "InstructionError": [
+    1,
+    {
+     "Custom": 1
+    }
+   ]
+  },
+  "logs": [
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb consumed 1551 of 1351949 compute units",
+   "Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb failed: custom program error: 0x1",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 49452 of 1399850 compute units",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0x1"
+  ],
+  "attackerA": null,
+  "attackerAAfter": 0,
+  "attackerB": 1000000000000,
+  "attackerBAfter": 1000000000000,
+  "reservesBefore": [
+   24831578339,
+   45619575426
+  ],
+  "reservesAfter": [
+   24831578339,
+   45619575426
+  ],
+  "excessBefore": [
+   530476181,
+   -1229000000
+  ]
+ },
+ {
+  "case": "sell huge A into the market",
+  "market": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+  "slot": 444225350,
+  "err": null,
+  "logs": [
+   "Program data: AO0ISflgZHqutXmo6GLx/x1DYO7qr1GNMt9qnPxHu/EnQ1uYaw0AAAAGUXzHBQAAAMb6evO+2606PWXzaqvJdDGxu+TC0vbg5HymAgNFL11hB+ilDhQP2leR9FZqlX/Trj+HPmo0Zv/BPXkRnfqatQoAoL365GvGUAIAAAAAAAAA1/L6ZBmS5lACAAAAAAAAAA==",
+   "Program log: Lobster trap \ud83e\udd9e",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 99465 of 1399850 compute units",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j success"
+  ],
+  "attackerA": null,
+  "attackerAAfter": 24821649670,
+  "attackerB": 1000000000000,
+  "attackerBAfter": 942360278205,
+  "reservesBefore": [
+   24831578339,
+   45619575426
+  ],
+  "reservesAfter": [
+   9928669,
+   103259297221
+  ],
+  "excessBefore": [
+   530476181,
+   -1229000000
+  ]
+ },
+ {
+  "case": "take entire reservesB (deficit probe)",
+  "market": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+  "slot": 444225354,
+  "err": {
+   "InstructionError": [
+    1,
+    {
+     "Custom": 6099
+    }
+   ]
+  },
+  "logs": [
+   "Program log: Instruction: SwapExactOut",
+   "Program log: Partial fill is not allowed",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 38772 of 1399850 compute units",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0x17d3"
+  ],
+  "attackerA": 0,
+  "attackerAAfter": 0,
+  "attackerB": 1000000000000,
+  "attackerBAfter": 1000000000000,
+  "reservesBefore": [
+   1171028551,
+   7358228891
+  ],
+  "reservesAfter": [
+   1171028551,
+   7358228891
+  ],
+  "excessBefore": [
+   1044921,
+   -2504759
+  ]
+ },
+ {
+  "case": "take entire reservesB, partial allowed",
+  "market": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+  "slot": 444225355,
+  "err": {
+   "InstructionError": [
+    1,
+    {
+     "Custom": 1
+    }
+   ]
+  },
+  "logs": [
+   "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 193 of 1360022 compute units",
+   "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA failed: custom program error: 0x1",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 40021 of 1399850 compute units",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: custom program error: 0x1"
+  ],
+  "attackerA": 0,
+  "attackerAAfter": 0,
+  "attackerB": 1000000000000,
+  "attackerBAfter": 1000000000000,
+  "reservesBefore": [
+   1171028551,
+   7358228891
+  ],
+  "reservesAfter": [
+   1171028551,
+   7358228891
+  ],
+  "excessBefore": [
+   1044921,
+   -2504759
+  ]
+ },
+ {
+  "case": "sell huge A into the market",
+  "market": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+  "slot": 444225356,
+  "err": null,
+  "logs": [
+   "Program data: APnW7F2QMMDob69axQmGeBvCIJurZuKc727S5QGM+xHdr4gNqAAAAABFVcVFAAAAAMb6evO+2606PWXzaqvJdDGxu+TC0vbg5HymAgNFL11hVlt4uuxb1v8GYzMY6iDn9jmNLzKA6Pf4w4BOKI54p40AIM9WFGUlZQIAAAAAAAAA6nb1N4U1S2YCAAAAAAAAAA==",
+   "Program log: Making a splash \ud83d\udca6",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 88301 of 1399850 compute units",
+   "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j success"
+  ],
+  "attackerA": 0,
+  "attackerAAfter": 1170560325,
+  "attackerB": 1000000000000,
+  "attackerBAfter": 997180540753,
+  "reservesBefore": [
+   1171028551,
+   7358228891
+  ],
+  "reservesAfter": [
+   468226,
+   10177688138
+  ],
+  "excessBefore": [
+   1044921,
+   -2504759
+  ]
+ }
+]

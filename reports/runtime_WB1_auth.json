@@ -1,0 +1,1287 @@
+
+{
+ "slot": 444151661,
+ "prog": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+ "fixtures": {
+  "DeVsaMeq": 2048,
+  "permCfg": 256,
+  "authCfg": 4097,
+  "consumedLive": "ABSENT",
+  "stdRecord": 2048,
+  "nearRecord": 2048,
+  "bigRecord": 2048,
+  "gradRecord": 2048,
+  "stdVault": 165,
+  "nearVault": 165,
+  "bigVault": 165,
+  "gradVault": 165,
+  "stdBaseMint": 82,
+  "nearBaseMint": 82,
+  "bigBaseMint": 82,
+  "gradBaseMint": 82
+ },
+ "results": [
+  {
+   "id": "WB-A01",
+   "name": "sell std (permissionless) attacker empty baseAta",
+   "expect": "denied or non-moving (no base balance)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 1,
+   "err": "{\"InstructionError\":[0,{\"Custom\":1}]}",
+   "logs": [
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program log: Error: insufficient funds",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 220 of 107667 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA failed: custom program error: 0x1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 92553 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A02",
+   "name": "sell graduated launch attacker empty baseAta",
+   "expect": "denied (state)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6023,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6023}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Account Gd1t1vYGUrABaFKRFqDQQzTVzZKMnwaw9LSuSKBnBwHj has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 32384 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "970949549",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "0b8f46f84130a74bf5afbde96fe4e94a39391b08675e63255c9e00ae96f901a5"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "63218a1315a451a3af3b77130503eb3e99b24eb4606fa03a6106b5279f9f0400"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "970949549",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "0b8f46f84130a74bf5afbde96fe4e94a39391b08675e63255c9e00ae96f901a5"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "63218a1315a451a3af3b77130503eb3e99b24eb4606fa03a6106b5279f9f0400"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A03",
+   "name": "collectFees std: attacker signer+feeAuthority, attacker WSOL ata",
+   "expect": "denied (feeAuthority binding)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: BondingCurveCollectFees",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25856 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A04",
+   "name": "collectFees graduated: attacker signer+feeAuthority",
+   "expect": "denied (feeAuthority binding)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: BondingCurveCollectFees",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25856 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "970949549",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "0b8f46f84130a74bf5afbde96fe4e94a39391b08675e63255c9e00ae96f901a5"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "63218a1315a451a3af3b77130503eb3e99b24eb4606fa03a6106b5279f9f0400"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "970949549",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "0b8f46f84130a74bf5afbde96fe4e94a39391b08675e63255c9e00ae96f901a5"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "63218a1315a451a3af3b77130503eb3e99b24eb4606fa03a6106b5279f9f0400"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A05",
+   "name": "collectFees bigEscrow: attacker signer+feeAuthority",
+   "expect": "denied (feeAuthority binding)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: BondingCurveCollectFees",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25856 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "281663128",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b02a0c8b1bc91fb938176144808012c2411632aa4563e134fd56bb86e37f0bfa"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "4475ae81167e9fed263156940f0227b17193e6c19bdd0e7e31f6dda726868973"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "281663128",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b02a0c8b1bc91fb938176144808012c2411632aa4563e134fd56bb86e37f0bfa"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "4475ae81167e9fed263156940f0227b17193e6c19bdd0e7e31f6dda726868973"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A06",
+   "name": "collectFees std: attacker signer with REAL creator as feeAuthority",
+   "expect": "denied (signer must equal feeAuthority)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: BondingCurveCollectFees",
+    "Program log: Account pLuToFgPYpEwNkVwMzjXxc3eAJJeLgKykUFpcpBePHD does not have required privilege 1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25281 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A07",
+   "name": "tokenRefund std attacker",
+   "expect": "denied or no-op (no refundable amount)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6016,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6016}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenRefund",
+    "Program log: Bonding curve has not expired",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 18058 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1780"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A08",
+   "name": "tokenRefund graduated attacker",
+   "expect": "denied (state)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6023,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6023}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenRefund",
+    "Program log: Account Gd1t1vYGUrABaFKRFqDQQzTVzZKMnwaw9LSuSKBnBwHj has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 28849 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "970949549",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "0b8f46f84130a74bf5afbde96fe4e94a39391b08675e63255c9e00ae96f901a5"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "63218a1315a451a3af3b77130503eb3e99b24eb4606fa03a6106b5279f9f0400"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "970949549",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "0b8f46f84130a74bf5afbde96fe4e94a39391b08675e63255c9e00ae96f901a5"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "63218a1315a451a3af3b77130503eb3e99b24eb4606fa03a6106b5279f9f0400"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A09",
+   "name": "graduate std w/o consume (6018 expected live behavior)",
+   "expect": "6018 MissingPermissionConsumeInstruction",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: BondingCurveGraduate",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 29393 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A10",
+   "name": "graduate nearGrad w/o consume",
+   "expect": "6018/permission gate",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: BondingCurveGraduate",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 27893 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "104855083",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "f4fabbfe383b4f3ea7d0d18443b02eac46abd524bc4d587a16c8b0a7ad61c747"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "527fa41a109a462c1c848a31df056bcc69efb5c4bd7370f48280e31e04c9fe3f"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "104855083",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "f4fabbfe383b4f3ea7d0d18443b02eac46abd524bc4d587a16c8b0a7ad61c747"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "527fa41a109a462c1c848a31df056bcc69efb5c4bd7370f48280e31e04c9fe3f"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A11",
+   "name": "graduate bigEscrow w/o consume",
+   "expect": "6018/permission gate",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: BondingCurveGraduate",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 29393 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "281663128",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b02a0c8b1bc91fb938176144808012c2411632aa4563e134fd56bb86e37f0bfa"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "4475ae81167e9fed263156940f0227b17193e6c19bdd0e7e31f6dda726868973"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "281663128",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b02a0c8b1bc91fb938176144808012c2411632aa4563e134fd56bb86e37f0bfa"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "4475ae81167e9fed263156940f0227b17193e6c19bdd0e7e31f6dda726868973"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A12",
+   "name": "graduateManual std: attacker signer, dest=attacker",
+   "expect": "denied (method not configured/state)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6015,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6015}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program log: Bonding curve does not have a Manual instruction or Manual instruction is already called",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 5389 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x177f"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A13",
+   "name": "bondingCurveClose std: attacker as authority",
+   "expect": "denied (authority != stored)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: BondingCurveClose",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 10",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 29210 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-A14",
+   "name": "bondingCurveClose nearGrad: attacker as authority",
+   "expect": "denied (authority != stored)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: BondingCurveClose",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 10",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 27710 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "104855083",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "f4fabbfe383b4f3ea7d0d18443b02eac46abd524bc4d587a16c8b0a7ad61c747"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "527fa41a109a462c1c848a31df056bcc69efb5c4bd7370f48280e31e04c9fe3f"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "104855083",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "f4fabbfe383b4f3ea7d0d18443b02eac46abd524bc4d587a16c8b0a7ad61c747"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "527fa41a109a462c1c848a31df056bcc69efb5c4bd7370f48280e31e04c9fe3f"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-B01",
+   "name": "buy std w/o consume instruction",
+   "expect": "6018 MissingPermissionConsumeInstruction",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6018,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6018}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Could not find a matching PermissionConsume instruction in transaction",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 18350 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1782"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-B02",
+   "name": "buy std w/ consent ix: attacker signer (not allowed) + valid-shaped sig",
+   "expect": "6004 InvalidSignature (signer not in config)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6023,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6023}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Account 8hx949Tvu6qQkRM6tC1ifN4syJEahTZD96fCrX5ao3iE has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 30068 of 400000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-B03",
+   "name": "buy std w/ consume: claimed allowed signer, attacker sig => mismatch",
+   "expect": "6004 InvalidSignature",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6023,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6023}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Account DKEzY9D8pyZcXPyBGUCwGAtetZcVtRUJoqneApXyaRvr has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25668 of 400000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ]
+  },
+  {
+   "id": "WB-B04",
+   "name": "consume REPLAY: real live sig+msg on already-consumed 2fbqsoev",
+   "expect": "replay denied (consumed marker)",
+   "forkSlot": 444151661,
+   "outcome": "INCOMPLETE",
+   "detail": "consumedPermission account absent on fork"
+  },
+  {
+   "id": "WB-B05",
+   "name": "consume w/ real msg+sig but attacker as consumer (subject binding)",
+   "expect": "denied (subject == consumer binding) or replay marker",
+   "forkSlot": 444151661,
+   "outcome": "INCOMPLETE",
+   "detail": "consumed account absent"
+  },
+  {
+   "id": "WB-B06",
+   "name": "consume w/ expired permission message (validUntil < now)",
+   "expect": "6003 Expired",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6023,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6023}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Account toVZeSj7ovaibiWPMB46DmB8bz1c4LXuUGqgT7R9naJ has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25119 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ]
+  },
+  {
+   "id": "WB-B07",
+   "name": "permissionRefund live consumed 2fbqsoev -> attacker dest",
+   "expect": "denied (refund destination == subject)",
+   "forkSlot": 444151661,
+   "outcome": "INCOMPLETE",
+   "detail": "consumed account absent on fork"
+  },
+  {
+   "id": "WB-B08",
+   "name": "permissionRefund another live consumed -> attacker WSOL dest",
+   "expect": "denied (destination binding / not refundable)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6001,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6001}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionRefund",
+    "Program log: Account Gd1t1vYGUrABaFKRFqDQQzTVzZKMnwaw9LSuSKBnBwHj has wrong address",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 21753 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1771"
+   ],
+   "consumed": "2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG"
+  },
+  {
+   "id": "WB-B09",
+   "name": "buy exactOut std w/o consume",
+   "expect": "6018",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6018,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6018}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactOut",
+    "Program log: Could not find a matching PermissionConsume instruction in transaction",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 18248 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1782"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-B10",
+   "name": "sell exactOut std attacker",
+   "expect": "denied or non-moving",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 1,
+   "err": "{\"InstructionError\":[0,{\"Custom\":1}]}",
+   "logs": [
+    "Program log: Error: insufficient funds",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 220 of 105019 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA failed: custom program error: 0x1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 95201 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1"
+   ],
+   "before": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   },
+   "after": {
+    "attackerSol": 49999989778600,
+    "attackerWsol": "0",
+    "vault": "23475383070",
+    "curve": {
+     "lamports": 15144960,
+     "len": 2048,
+     "hash": "b7e446cdb702cfecebf41e0551dee8c49645b373a83c02eb02d12f47b871d36c"
+    },
+    "baseMint": {
+     "lamports": 1461600,
+     "len": 82,
+     "hash": "d536ed53ed84056dedafdea83cf1d714ede28f6fc459a48fdd94c0c315f92745"
+    },
+    "wsolMint": {
+     "lamports": 1807659090159,
+     "len": 82,
+     "hash": "b0f919425a529f4971ef8dabd535aec34947d5c8c4885df80dae91635b98c5f3"
+    }
+   }
+  },
+  {
+   "id": "WB-C01",
+   "name": "mintConfigUpdate DeVsaMeq as attacker",
+   "expect": "denied (privilege)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: MintConfigUpdate",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 3",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25760 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "lamports": 15144960,
+    "len": 2048,
+    "hash": "d33018d9ae648c40a9c1f43921f933097c1a90090cbfa66027dbdfb619e5c16b"
+   },
+   "after": {
+    "lamports": 15144960,
+    "len": 2048,
+    "hash": "d33018d9ae648c40a9c1f43921f933097c1a90090cbfa66027dbdfb619e5c16b"
+   }
+  },
+  {
+   "id": "WB-C02",
+   "name": "mintConfigClose DeVsaMeq as attacker",
+   "expect": "denied (privilege)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: MintConfigClose",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 4",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25801 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "lamports": 15144960,
+    "len": 2048,
+    "hash": "d33018d9ae648c40a9c1f43921f933097c1a90090cbfa66027dbdfb619e5c16b"
+   },
+   "after": {
+    "lamports": 15144960,
+    "len": 2048,
+    "hash": "d33018d9ae648c40a9c1f43921f933097c1a90090cbfa66027dbdfb619e5c16b"
+   }
+  },
+  {
+   "id": "WB-C03",
+   "name": "permissionConfigUpdate 8Sz6ihaN as attacker",
+   "expect": "denied (privilege)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConfigUpdate",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 6",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25864 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "lamports": 2672640,
+    "len": 256,
+    "hash": "6cea66d8a02c5ad76a728de434a91364ac2c1a5c51830d885b382530d6a6b4be"
+   },
+   "after": {
+    "lamports": 2672640,
+    "len": 256,
+    "hash": "6cea66d8a02c5ad76a728de434a91364ac2c1a5c51830d885b382530d6a6b4be"
+   }
+  },
+  {
+   "id": "WB-C04",
+   "name": "permissionConfigClose 8Sz6ihaN as attacker",
+   "expect": "denied (privilege)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConfigClose",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 7",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25783 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "lamports": 2672640,
+    "len": 256,
+    "hash": "6cea66d8a02c5ad76a728de434a91364ac2c1a5c51830d885b382530d6a6b4be"
+   },
+   "after": {
+    "lamports": 2672640,
+    "len": 256,
+    "hash": "6cea66d8a02c5ad76a728de434a91364ac2c1a5c51830d885b382530d6a6b4be"
+   }
+  },
+  {
+   "id": "WB-C05",
+   "name": "authorityConfigGrant 5yXDawwQ as attacker",
+   "expect": "denied (privilege/authority)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: AuthorityConfigGrant",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 0",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25744 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "lamports": 29406000,
+    "len": 4097,
+    "hash": "cb23e1040fe62066fcd3ca59cabcf216399ea40bab837fc60ea67a46510eb7f4"
+   },
+   "after": {
+    "lamports": 29406000,
+    "len": 4097,
+    "hash": "cb23e1040fe62066fcd3ca59cabcf216399ea40bab837fc60ea67a46510eb7f4"
+   }
+  },
+  {
+   "id": "WB-C06",
+   "name": "authorityConfigRevoke 5yXDawwQ as attacker",
+   "expect": "denied (privilege/authority)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6027,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6027}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: AuthorityConfigRevoke",
+    "Program log: Account DP43P9KohxW4uHXGL43hpYvsdujRFf9aHqQBZ6ENwur2 does not have required privilege 0",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25762 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "before": {
+    "lamports": 29406000,
+    "len": 4097,
+    "hash": "cb23e1040fe62066fcd3ca59cabcf216399ea40bab837fc60ea67a46510eb7f4"
+   },
+   "after": {
+    "lamports": 29406000,
+    "len": 4097,
+    "hash": "cb23e1040fe62066fcd3ca59cabcf216399ea40bab837fc60ea67a46510eb7f4"
+   }
+  },
+  {
+   "id": "WB-C07",
+   "name": "permissionConfigInitialize at existing PDA (fresh init attempt)",
+   "expect": "denied (already initialized / account check)",
+   "forkSlot": 444151661,
+   "outcome": "denied",
+   "errCode": 6024,
+   "err": "{\"InstructionError\":[0,{\"Custom\":6024}]}",
+   "logs": [
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConfigInitialize",
+    "Program log: Account 8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi is not owned by 11111111111111111111111111111111",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 22761 of 200000 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1788"
+   ]
+  },
+  {
+   "id": "WB-D00",
+   "name": "GraduateWhirlpool fixture presence",
+   "expect": "INCOMPLETE if any graduate-ix account absent",
+   "forkSlot": 444151661,
+   "outcome": "INCOMPLETE",
+   "detail": "absent=8:8XmEZz,14:EwxjJF,17:H7WqrR,24:7T3G14,25:86Da12,26:EeMYWd,28:DnaQwq,29:9gLnNm,30:1111r8,31:111111,32:B3HPRV,33:38aSZP,34:AbCRbe,35:AVFDek"
+  }
+ ]
+}

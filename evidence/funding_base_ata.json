@@ -1,0 +1,21 @@
+{
+ "note": "FORK-ONLY fixture funding of the attacker's own base ATA (Surfpool cheatcodes) so sell/refund tests reach program guards; not exploit evidence.",
+ "curve": "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA",
+ "mint": "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave",
+ "ata": "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo",
+ "decimals": 9,
+ "funded": 100000000000,
+ "supplyBefore": 224549797061264655,
+ "setAccount": {
+  "context": {
+   "slot": 444221046,
+   "apiVersion": "4.1.2"
+  },
+  "value": null
+ },
+ "setSupply": {
+  "code": -32602,
+  "message": "Invalid params: invalid type: string \"J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave\", expected struct SupplyUpdate."
+ },
+ "forkSlot": 444221046
+}

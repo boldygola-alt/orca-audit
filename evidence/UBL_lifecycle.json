@@ -1,0 +1,47 @@
+{
+ "log": [
+  {
+   "step": "setup: create attacker USDC ATA",
+   "note": "",
+   "forkSlot": 444226462,
+   "sig": "2kzEKhAAQyoQTNdxtpZpJZ4yboiXTXgrjG6tdHvm7Bg6j54ETKSHRJiCDb72aFMbNwSwGjpKJGxoCC9LicJG6eF9",
+   "err": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4338 of 1399850 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success"
+   ],
+   "computeUnits": null
+  },
+  {
+   "step": "fixture funding",
+   "note": "attacker's own WSOL/USDC balances set via fork cheatcode so the lifecycle has real inventory to move; not exploit evidence"
+  },
+  {
+   "step": "BB-L01 marketInitialize (attacker = authority & updater)",
+   "note": "permissionless market creation; market PDA = ['market', u32 id]",
+   "forkSlot": 444226463,
+   "sig": "5rau5yGfhBopG7gXC8DF8snjt8btnYRmRRZir6czAewTXRDXUgBugq2eACGMERcVj4AsgrKqtK6q5barcH2cL9Rp",
+   "err": {
+    "InstructionError": [
+     1,
+     "IncorrectAuthority"
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j invoke [1]",
+    "Program log: Instruction: MarketInitialize",
+    "Program log: Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f is not the authority",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j consumed 2544 of 1399850 compute units",
+    "Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: Incorrect authority provided"
+   ],
+   "computeUnits": null
+  }
+ ],
+ "fatal": "market not created"
+}

@@ -1,0 +1,54 @@
+{
+ "Whirlpool": {
+  "program": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+  "programData": "CtXfPzz36dH5Ws4UYKZvrQ1Xqzn42ecDW6y8NKuiN8nD",
+  "dataLen": 10485760,
+  "version": 3,
+  "upgradeSlot": 440170207,
+  "authorityPresent": true,
+  "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+  "elfStart": "7f454c4602010100",
+  "programLamports": 31850581,
+  "programOwner": "BPFLoaderUpgradeab1e11111111111111111111111",
+  "executable": true
+ },
+ "Wavebreak": {
+  "program": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+  "programData": "nEuknUvGZK5UVyq3Tf18tcpNtC7dmjPMirrry66SkAs",
+  "dataLen": 500493,
+  "version": 3,
+  "upgradeSlot": 365746180,
+  "authorityPresent": true,
+  "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+  "elfStart": "7f454c4602010100",
+  "programLamports": 1141440,
+  "programOwner": "BPFLoaderUpgradeab1e11111111111111111111111",
+  "executable": true
+ },
+ "Busybox/Riptide": {
+  "program": "riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j",
+  "programData": "4RhNxb6VAhj9EMsnmyxz8giXsuaMcnjCUKxPtUvhBeRu",
+  "dataLen": 259037,
+  "version": 3,
+  "upgradeSlot": 440010891,
+  "authorityPresent": true,
+  "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+  "elfStart": "7f454c4602010100",
+  "programLamports": 1360441,
+  "programOwner": "BPFLoaderUpgradeab1e11111111111111111111111",
+  "executable": true
+ },
+ "LegacyAMM": {
+  "program": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
+  "programData": "DrrJDyBzyuyYAzkkjd6Vu9ZzaDLsKRf4RPXyRE7Uk2A8",
+  "dataLen": 691149,
+  "version": 3,
+  "upgradeSlot": 161177892,
+  "authorityPresent": true,
+  "upgradeAuthority": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+  "elfStart": "7f454c4602010100",
+  "programLamports": 2441443,
+  "programOwner": "BPFLoaderUpgradeab1e11111111111111111111111",
+  "executable": true
+ }
+}

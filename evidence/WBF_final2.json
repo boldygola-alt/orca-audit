@@ -1,0 +1,2531 @@
+{
+ "results": [
+  {
+   "case": "WB-R1 exact-OUT the whole WSOL vault (2,005,277,092) on 6n8MPRJ81G [excess 667,048,926]",
+   "note": "funded=1,000,000,000,000,000,000; allow_partial_fill=1",
+   "forkSlotBefore": 444278298,
+   "forkSlotAfter": 444278299,
+   "sig": "59ws36XArJErCpN4DCTaHs2E3DspiPfdkL8geo3G6JbshVbGJYkRcCygEVirYTmeyCaBKDJqjpsWhkyuPrZfJ7yq",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1322878 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1321425 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1311276 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 88753 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1779"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985625040,
+      4999985620040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985625040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 63765735,
+     "space": 165,
+     "hash": "2baa56d41867342b80edc8ded37b5d470d1c87ac1f0e0362b145ef916575c2a0",
+     "amount": 61726455
+    },
+    "6TL94GmMVdjvJgcYri3yRN7xFG6po9CVDJycJSHvd3SK": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "f87331a9add1cdd95cedd341011a0eeaa20e572bfab46960fe65524aebf721db",
+     "amount": 1000000000000000000
+    },
+    "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "842d81ec665084667517e42616722bd6e6bb4fed3a47032821f6df285bb32acc",
+     "quoteAmount": 1337931420,
+     "baseAmount": 45132005731776374,
+     "m1graduated": 0
+    },
+    "FoynQTzgJGaehvTQAYMNkmJZdvSDSMErVRN4q21zZkoL": {
+     "lamports": 2007316372,
+     "space": 165,
+     "hash": "ad5d3007132530fac8d84116c45808fc4fae15fba57809bb6cefbca0e8c35c88",
+     "amount": 2005277092
+    },
+    "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "321d21af00067f88eddcc75ab118dd8f58c2d9e46f8330bb7489a689b966f553",
+     "supply": 44350574239818666,
+     "decimals": 9
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985620040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 63765735,
+     "space": 165,
+     "hash": "2baa56d41867342b80edc8ded37b5d470d1c87ac1f0e0362b145ef916575c2a0",
+     "amount": 61726455
+    },
+    "6TL94GmMVdjvJgcYri3yRN7xFG6po9CVDJycJSHvd3SK": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "f87331a9add1cdd95cedd341011a0eeaa20e572bfab46960fe65524aebf721db",
+     "amount": 1000000000000000000
+    },
+    "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "842d81ec665084667517e42616722bd6e6bb4fed3a47032821f6df285bb32acc",
+     "quoteAmount": 1337931420,
+     "baseAmount": 45132005731776374,
+     "m1graduated": 0
+    },
+    "FoynQTzgJGaehvTQAYMNkmJZdvSDSMErVRN4q21zZkoL": {
+     "lamports": 2007316372,
+     "space": 165,
+     "hash": "ad5d3007132530fac8d84116c45808fc4fae15fba57809bb6cefbca0e8c35c88",
+     "amount": 2005277092
+    },
+    "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "321d21af00067f88eddcc75ab118dd8f58c2d9e46f8330bb7489a689b966f553",
+     "supply": 44350574239818666,
+     "decimals": 9
+    }
+   }
+  },
+  {
+   "case": "WB-R1b exact-OUT half the vault on 6n8MPRJ81G",
+   "note": "bounded by reserves?",
+   "forkSlotBefore": 444278299,
+   "forkSlotAfter": 444278301,
+   "sig": "64V5awPA5td8E7esxi4TfqU3AoX69FcJuu7Fi9nacaVNBwpZE5FDrPuuseGGtuLApqi83zaPBhhgzzp1gc7qTeDF",
+   "err": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1320089 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1318636 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1308487 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program data: AjGS0e82S0wsUDaBBGQs8u50+7VIaYqPXzFPBD17KXtWKwOjloEmQjospckrPAD7n4Vnh7e8NZPZfxXQIBaP6rsGm4hX/quBhPtof2NGGMA12sQ53BrrO1WYoPAAAAAAAUduw15aX3kA0gzDOwAAAACeGBmupUgLAAAAAAAAAAAAnhgZrqVICwAAAAAAAAAAAJw2v08AAAAAm6BhEwAAAAB2t6TxUVegAC9J4ZL39yYAL4maAAAAAAA=",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 208100 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985620040,
+      4999985615040,
+      -5000
+     ]
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": [
+      63765735,
+      1066404281,
+      1002638546
+     ],
+     "amount": [
+      61726455,
+      1064365001,
+      1002638546
+     ]
+    },
+    "6TL94GmMVdjvJgcYri3yRN7xFG6po9CVDJycJSHvd3SK": {
+     "amount": [
+      1000000000000000000,
+      965836686076449209,
+      -34163313923550791
+     ]
+    },
+    "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd": {
+     "quoteAmount": [
+      1337931420,
+      325165211,
+      -1012766209
+     ],
+     "baseAmount": [
+      45132005731776374,
+      10968691808225583,
+      -34163313923550791
+     ]
+    },
+    "FoynQTzgJGaehvTQAYMNkmJZdvSDSMErVRN4q21zZkoL": {
+     "lamports": [
+      2007316372,
+      1004677826,
+      -1002638546
+     ],
+     "amount": [
+      2005277092,
+      1002638546,
+      -1002638546
+     ]
+    },
+    "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave": {
+     "supply": [
+      44350574239818666,
+      10187260316267875,
+      -34163313923550791
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985620040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 63765735,
+     "space": 165,
+     "hash": "2baa56d41867342b80edc8ded37b5d470d1c87ac1f0e0362b145ef916575c2a0",
+     "amount": 61726455
+    },
+    "6TL94GmMVdjvJgcYri3yRN7xFG6po9CVDJycJSHvd3SK": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "f87331a9add1cdd95cedd341011a0eeaa20e572bfab46960fe65524aebf721db",
+     "amount": 1000000000000000000
+    },
+    "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "842d81ec665084667517e42616722bd6e6bb4fed3a47032821f6df285bb32acc",
+     "quoteAmount": 1337931420,
+     "baseAmount": 45132005731776374,
+     "m1graduated": 0
+    },
+    "FoynQTzgJGaehvTQAYMNkmJZdvSDSMErVRN4q21zZkoL": {
+     "lamports": 2007316372,
+     "space": 165,
+     "hash": "ad5d3007132530fac8d84116c45808fc4fae15fba57809bb6cefbca0e8c35c88",
+     "amount": 2005277092
+    },
+    "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "321d21af00067f88eddcc75ab118dd8f58c2d9e46f8330bb7489a689b966f553",
+     "supply": 44350574239818666,
+     "decimals": 9
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985615040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 1066404281,
+     "space": 165,
+     "hash": "e1348e32e99dba194160e5fc84805cdc5783843a015e1ce52d1c0bb020fc0c8d",
+     "amount": 1064365001
+    },
+    "6TL94GmMVdjvJgcYri3yRN7xFG6po9CVDJycJSHvd3SK": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "88b3f4fd7dbeb59f7d6a833755cff5f6e7b9fcb30ab3cdc0c25ff7078141c584",
+     "amount": 965836686076449209
+    },
+    "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "f3a4c3be839344a22be97c2c0843caacc081fbd7b80f606c54042ddf3c26cdb8",
+     "quoteAmount": 325165211,
+     "baseAmount": 10968691808225583,
+     "m1graduated": 0
+    },
+    "FoynQTzgJGaehvTQAYMNkmJZdvSDSMErVRN4q21zZkoL": {
+     "lamports": 1004677826,
+     "space": 165,
+     "hash": "669e0ef2fc478f48e27fd8b996788ca7efa15965dc8097f42a096ff8279128a1",
+     "amount": 1002638546
+    },
+    "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "2a62d2abd55666a5a058dc0657638955c01eb6076e2b0443cf5326c1653c487f",
+     "supply": 10187260316267875,
+     "decimals": 9
+    }
+   }
+  },
+  {
+   "case": "WB-R4 exact-IN max-u64 with partial fill on 6n8MPRJ81G",
+   "note": "largest possible input; check payout cap",
+   "forkSlotBefore": 444278301,
+   "forkSlotAfter": 444278302,
+   "sig": "Gg5T6bwgtkyz9ZqWx13TESH3SvzjTBHk26S8pnNijYscR2Wizbdjj7M86e5rdVGMJdmSdusksK5wzUYLvqNGBUY",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1323283 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1321830 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1311681 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 88348 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1779"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985615040,
+      4999985610040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985615040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 1066404281,
+     "space": 165,
+     "hash": "e1348e32e99dba194160e5fc84805cdc5783843a015e1ce52d1c0bb020fc0c8d",
+     "amount": 1064365001
+    },
+    "6TL94GmMVdjvJgcYri3yRN7xFG6po9CVDJycJSHvd3SK": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "88b3f4fd7dbeb59f7d6a833755cff5f6e7b9fcb30ab3cdc0c25ff7078141c584",
+     "amount": 965836686076449209
+    },
+    "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "f3a4c3be839344a22be97c2c0843caacc081fbd7b80f606c54042ddf3c26cdb8",
+     "quoteAmount": 325165211,
+     "baseAmount": 10968691808225583,
+     "m1graduated": 0
+    },
+    "FoynQTzgJGaehvTQAYMNkmJZdvSDSMErVRN4q21zZkoL": {
+     "lamports": 1004677826,
+     "space": 165,
+     "hash": "669e0ef2fc478f48e27fd8b996788ca7efa15965dc8097f42a096ff8279128a1",
+     "amount": 1002638546
+    },
+    "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "2a62d2abd55666a5a058dc0657638955c01eb6076e2b0443cf5326c1653c487f",
+     "supply": 10187260316267875,
+     "decimals": 9
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985610040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 1066404281,
+     "space": 165,
+     "hash": "e1348e32e99dba194160e5fc84805cdc5783843a015e1ce52d1c0bb020fc0c8d",
+     "amount": 1064365001
+    },
+    "6TL94GmMVdjvJgcYri3yRN7xFG6po9CVDJycJSHvd3SK": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "88b3f4fd7dbeb59f7d6a833755cff5f6e7b9fcb30ab3cdc0c25ff7078141c584",
+     "amount": 965836686076449209
+    },
+    "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "f3a4c3be839344a22be97c2c0843caacc081fbd7b80f606c54042ddf3c26cdb8",
+     "quoteAmount": 325165211,
+     "baseAmount": 10968691808225583,
+     "m1graduated": 0
+    },
+    "FoynQTzgJGaehvTQAYMNkmJZdvSDSMErVRN4q21zZkoL": {
+     "lamports": 1004677826,
+     "space": 165,
+     "hash": "669e0ef2fc478f48e27fd8b996788ca7efa15965dc8097f42a096ff8279128a1",
+     "amount": 1002638546
+    },
+    "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "2a62d2abd55666a5a058dc0657638955c01eb6076e2b0443cf5326c1653c487f",
+     "supply": 10187260316267875,
+     "decimals": 9
+    }
+   }
+  },
+  {
+   "case": "WB-R1 exact-OUT the whole WSOL vault (2,755,320,363) on DbRKfbUmxd [excess 506,349,347]",
+   "note": "funded=1,000,000,000,000,000,000; allow_partial_fill=1",
+   "forkSlotBefore": 444278303,
+   "forkSlotAfter": 444278304,
+   "sig": "5PTvuB6m93Hw1X8Z21B4Xwfsu5exm85TL8itGfk2NXnsHedJLQuiQX3DgtYGN3jtXYJSfNvKutyD4x4SMBeeJt2G",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1313104 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1311651 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1301502 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 98527 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1779"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985605040,
+      4999985600040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985605040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 1066404281,
+     "space": 165,
+     "hash": "e1348e32e99dba194160e5fc84805cdc5783843a015e1ce52d1c0bb020fc0c8d",
+     "amount": 1064365001
+    },
+    "A4fzP9oH6X8i611Hu5e5Xenm5pRocK17Gt4aySEEeUZp": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "ac89a0681e6faec875828545a539f1d64a09650c602d7380bcad31df3ed2c879",
+     "amount": 1000000000000000000
+    },
+    "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "27993412d904266a73a84926dd3399c5e62ae3f0fd2920cb8bcec72a284d9afc",
+     "quoteAmount": 2248644260,
+     "baseAmount": 73863377262448904,
+     "m1graduated": 0
+    },
+    "5HffnQjEsMMMJLnp8oGS1pFBrndEL3mLd9LSKMU91hmU": {
+     "lamports": 2757359643,
+     "space": 165,
+     "hash": "9f45fae2fbae262532430a4dfbbb3ff8d9e991c5787d4d5c29242983aaa6c07e",
+     "amount": 2755320363
+    },
+    "3wg8xCwyTLPbwj1en26VDDbznz57Fz2E6kEamnT2wave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "84b400ffd7f385c2e3ba56b3394eaa1010ecbea3048f4b5fee2f029a1c825542",
+     "supply": 68122886738876133,
+     "decimals": 9
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985600040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 1066404281,
+     "space": 165,
+     "hash": "e1348e32e99dba194160e5fc84805cdc5783843a015e1ce52d1c0bb020fc0c8d",
+     "amount": 1064365001
+    },
+    "A4fzP9oH6X8i611Hu5e5Xenm5pRocK17Gt4aySEEeUZp": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "ac89a0681e6faec875828545a539f1d64a09650c602d7380bcad31df3ed2c879",
+     "amount": 1000000000000000000
+    },
+    "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "27993412d904266a73a84926dd3399c5e62ae3f0fd2920cb8bcec72a284d9afc",
+     "quoteAmount": 2248644260,
+     "baseAmount": 73863377262448904,
+     "m1graduated": 0
+    },
+    "5HffnQjEsMMMJLnp8oGS1pFBrndEL3mLd9LSKMU91hmU": {
+     "lamports": 2757359643,
+     "space": 165,
+     "hash": "9f45fae2fbae262532430a4dfbbb3ff8d9e991c5787d4d5c29242983aaa6c07e",
+     "amount": 2755320363
+    },
+    "3wg8xCwyTLPbwj1en26VDDbznz57Fz2E6kEamnT2wave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "84b400ffd7f385c2e3ba56b3394eaa1010ecbea3048f4b5fee2f029a1c825542",
+     "supply": 68122886738876133,
+     "decimals": 9
+    }
+   }
+  },
+  {
+   "case": "WB-R1b exact-OUT half the vault on DbRKfbUmxd",
+   "note": "bounded by reserves?",
+   "forkSlotBefore": 444278304,
+   "forkSlotAfter": 444278305,
+   "sig": "63CffW4B8zdQSvP3cqmzoWwWMo8HoeSzEtsYqYgobsorXVwzFtoURW7ad5J5HAoeebWVmvBsZH1oinTmvP279g2J",
+   "err": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactOut",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1310311 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1308858 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1298709 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program data: AjGS0e82S0wsUDaBBGQs8u50+7VIaYqPXzFPBD17KXtWK7j9cNvsbrczMKgjgxwqcRSAUR49LY+pja+Q+LAkn8sGm4hX/quBhPtof2NGGMA12sQ53BrrO1WYoPAAAAAAATBYxbrCs58AFW0dUgAAAABoTNu5MdcLAAAAAAAAAAAAnhgZrqVICwAAAAAAAAAAAKSWB4YAAAAAH9MVMwAAAAAIkaOrWWoGAdg43vCWtmYAcFbUAAAAAAA=",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 218579 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985600040,
+      4999985595040,
+      -5000
+     ]
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": [
+      1066404281,
+      2444064462,
+      1377660181
+     ],
+     "amount": [
+      1064365001,
+      2442025182,
+      1377660181
+     ]
+    },
+    "A4fzP9oH6X8i611Hu5e5Xenm5pRocK17Gt4aySEEeUZp": {
+     "amount": [
+      1000000000000000000,
+      955047829764483024,
+      -44952170235516976
+     ]
+    },
+    "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7": {
+     "quoteAmount": [
+      2248644260,
+      857068319,
+      -1391575941
+     ],
+     "baseAmount": [
+      73863377262448904,
+      28911207026931928,
+      -44952170235516976
+     ]
+    },
+    "5HffnQjEsMMMJLnp8oGS1pFBrndEL3mLd9LSKMU91hmU": {
+     "lamports": [
+      2757359643,
+      1379699462,
+      -1377660181
+     ],
+     "amount": [
+      2755320363,
+      1377660182,
+      -1377660181
+     ]
+    },
+    "3wg8xCwyTLPbwj1en26VDDbznz57Fz2E6kEamnT2wave": {
+     "supply": [
+      68122886738876133,
+      23170716503359157,
+      -44952170235516976
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985600040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 1066404281,
+     "space": 165,
+     "hash": "e1348e32e99dba194160e5fc84805cdc5783843a015e1ce52d1c0bb020fc0c8d",
+     "amount": 1064365001
+    },
+    "A4fzP9oH6X8i611Hu5e5Xenm5pRocK17Gt4aySEEeUZp": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "ac89a0681e6faec875828545a539f1d64a09650c602d7380bcad31df3ed2c879",
+     "amount": 1000000000000000000
+    },
+    "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "27993412d904266a73a84926dd3399c5e62ae3f0fd2920cb8bcec72a284d9afc",
+     "quoteAmount": 2248644260,
+     "baseAmount": 73863377262448904,
+     "m1graduated": 0
+    },
+    "5HffnQjEsMMMJLnp8oGS1pFBrndEL3mLd9LSKMU91hmU": {
+     "lamports": 2757359643,
+     "space": 165,
+     "hash": "9f45fae2fbae262532430a4dfbbb3ff8d9e991c5787d4d5c29242983aaa6c07e",
+     "amount": 2755320363
+    },
+    "3wg8xCwyTLPbwj1en26VDDbznz57Fz2E6kEamnT2wave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "84b400ffd7f385c2e3ba56b3394eaa1010ecbea3048f4b5fee2f029a1c825542",
+     "supply": 68122886738876133,
+     "decimals": 9
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985595040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "space": 165,
+     "hash": "9627cfc6291b0e6d8bb7393cb8beffe761618eb2dd3df61f482666659d32c0a8",
+     "amount": 2442025182
+    },
+    "A4fzP9oH6X8i611Hu5e5Xenm5pRocK17Gt4aySEEeUZp": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b7a71c0f75745b2a80a8efd7d162ba3ea7e94881d826588b2afe9e719b034186",
+     "amount": 955047829764483024
+    },
+    "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "6ba4c96bb72c4e005b13ac797f2fa7910eedeaf52b65d582c8596a45f47830bf",
+     "quoteAmount": 857068319,
+     "baseAmount": 28911207026931928,
+     "m1graduated": 0
+    },
+    "5HffnQjEsMMMJLnp8oGS1pFBrndEL3mLd9LSKMU91hmU": {
+     "lamports": 1379699462,
+     "space": 165,
+     "hash": "a29c1e430d026ae7fbf32db86d03d1c5a2794476785f96a895723b623634dbb0",
+     "amount": 1377660182
+    },
+    "3wg8xCwyTLPbwj1en26VDDbznz57Fz2E6kEamnT2wave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "f36b00e858eda211b5a142dcb4c6e1a1d400a763e6a1cc550e5625d0d9b88d84",
+     "supply": 23170716503359157,
+     "decimals": 9
+    }
+   }
+  },
+  {
+   "case": "WB-R4 exact-IN max-u64 with partial fill on DbRKfbUmxd",
+   "note": "largest possible input; check payout cap",
+   "forkSlotBefore": 444278305,
+   "forkSlotAfter": 444278306,
+   "sig": "4qRzTKE9NLEUNobhdJ3D1G7LLsK8yshJfdkBLUcS9ttZcD9uULMfp6bJFjuUgoaEehJDBtxv8FJYKT4GRCkMGPyB",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6009
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1318779 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1317326 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1307177 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 92852 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1779"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985595040,
+      4999985590040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985595040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "space": 165,
+     "hash": "9627cfc6291b0e6d8bb7393cb8beffe761618eb2dd3df61f482666659d32c0a8",
+     "amount": 2442025182
+    },
+    "A4fzP9oH6X8i611Hu5e5Xenm5pRocK17Gt4aySEEeUZp": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b7a71c0f75745b2a80a8efd7d162ba3ea7e94881d826588b2afe9e719b034186",
+     "amount": 955047829764483024
+    },
+    "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "6ba4c96bb72c4e005b13ac797f2fa7910eedeaf52b65d582c8596a45f47830bf",
+     "quoteAmount": 857068319,
+     "baseAmount": 28911207026931928,
+     "m1graduated": 0
+    },
+    "5HffnQjEsMMMJLnp8oGS1pFBrndEL3mLd9LSKMU91hmU": {
+     "lamports": 1379699462,
+     "space": 165,
+     "hash": "a29c1e430d026ae7fbf32db86d03d1c5a2794476785f96a895723b623634dbb0",
+     "amount": 1377660182
+    },
+    "3wg8xCwyTLPbwj1en26VDDbznz57Fz2E6kEamnT2wave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "f36b00e858eda211b5a142dcb4c6e1a1d400a763e6a1cc550e5625d0d9b88d84",
+     "supply": 23170716503359157,
+     "decimals": 9
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985590040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2444064462,
+     "space": 165,
+     "hash": "9627cfc6291b0e6d8bb7393cb8beffe761618eb2dd3df61f482666659d32c0a8",
+     "amount": 2442025182
+    },
+    "A4fzP9oH6X8i611Hu5e5Xenm5pRocK17Gt4aySEEeUZp": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b7a71c0f75745b2a80a8efd7d162ba3ea7e94881d826588b2afe9e719b034186",
+     "amount": 955047829764483024
+    },
+    "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "6ba4c96bb72c4e005b13ac797f2fa7910eedeaf52b65d582c8596a45f47830bf",
+     "quoteAmount": 857068319,
+     "baseAmount": 28911207026931928,
+     "m1graduated": 0
+    },
+    "5HffnQjEsMMMJLnp8oGS1pFBrndEL3mLd9LSKMU91hmU": {
+     "lamports": 1379699462,
+     "space": 165,
+     "hash": "a29c1e430d026ae7fbf32db86d03d1c5a2794476785f96a895723b623634dbb0",
+     "amount": 1377660182
+    },
+    "3wg8xCwyTLPbwj1en26VDDbznz57Fz2E6kEamnT2wave": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "f36b00e858eda211b5a142dcb4c6e1a1d400a763e6a1cc550e5625d0d9b88d84",
+     "supply": 23170716503359157,
+     "decimals": 9
+    }
+   }
+  },
+  {
+   "case": "WB-R2 holder sell after forced graduation, curve 7pjREHYMKC (USDC quote, curve state 1)",
+   "note": "graduated curve: exits still honoured? payout vs accounting",
+   "forkSlotBefore": 444278308,
+   "forkSlotAfter": 444278309,
+   "sig": "4AYUhwW1tY5UsLE8Yo3FqtTyLHp3ZExCFzMdeUqU5CMLRT4JQdQjBFDzg1p2jpgfHRMddVCmpJfa5DeSgZnKvCZw",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Token has met graduation conditions and is ready to be graduated",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 18077 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1783"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985580040,
+      4999985575040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985580040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "FcwmTcWjWQx21kBoy78d5VsPeVi2WJhdeTiVSRAYthpL": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "39424be0229e9f75d95e2910c5d8c551f12c648d2cb51b2add3bda84d0403f68",
+     "amount": 1000000000
+    },
+    "7pjREHYMKCouqnCTq3wNnEiAFnTVyncuq7jBfp7t7N9d": {
+     "lamports": 15144961,
+     "space": 2048,
+     "hash": "eab3d00b2f16ec5718da120df91f6391e0f74dbc22590a18a6c24289424fcb0e",
+     "quoteAmount": 11560648,
+     "baseAmount": 287538580,
+     "m1graduated": 1
+    },
+    "JASepKf55cMNpvJM4JGn2dhVDUWZjfpbfWUictnhBWAC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a0a7e79cba7ab43d6a24e5c61a713a40893d2798ec3406f1871c842d2f2ed4c7",
+     "amount": 6080030
+    },
+    "FRxED9kiegrioJax6mCAFYKYGKSzBa3dTWXqwGSRx6w3": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "93549454f8ab3c75bfbbda5deeff3af48b4ef91fa044c196a2c800a7bade8309",
+     "supply": 800000138810096,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985575040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "FcwmTcWjWQx21kBoy78d5VsPeVi2WJhdeTiVSRAYthpL": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "39424be0229e9f75d95e2910c5d8c551f12c648d2cb51b2add3bda84d0403f68",
+     "amount": 1000000000
+    },
+    "7pjREHYMKCouqnCTq3wNnEiAFnTVyncuq7jBfp7t7N9d": {
+     "lamports": 15144961,
+     "space": 2048,
+     "hash": "eab3d00b2f16ec5718da120df91f6391e0f74dbc22590a18a6c24289424fcb0e",
+     "quoteAmount": 11560648,
+     "baseAmount": 287538580,
+     "m1graduated": 1
+    },
+    "JASepKf55cMNpvJM4JGn2dhVDUWZjfpbfWUictnhBWAC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a0a7e79cba7ab43d6a24e5c61a713a40893d2798ec3406f1871c842d2f2ed4c7",
+     "amount": 6080030
+    },
+    "FRxED9kiegrioJax6mCAFYKYGKSzBa3dTWXqwGSRx6w3": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "93549454f8ab3c75bfbbda5deeff3af48b4ef91fa044c196a2c800a7bade8309",
+     "supply": 800000138810096,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R2b holder tokenRefund after forced graduation, curve 7pjREHYMKC",
+   "note": "refund path after graduation",
+   "forkSlotBefore": 444278309,
+   "forkSlotAfter": 444278310,
+   "sig": "QSmJUo4JWKuuGza3zBQ1QkzWNdV3yVr7kgH8zhL93P2SgeukitZJtcD8AZEJHMJTkVDSVybnEygPLrzazHQSFgc",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenRefund",
+    "Program log: Bonding curve has not expired",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 18281 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1780"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985575040,
+      4999985570040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985575040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "FcwmTcWjWQx21kBoy78d5VsPeVi2WJhdeTiVSRAYthpL": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "39424be0229e9f75d95e2910c5d8c551f12c648d2cb51b2add3bda84d0403f68",
+     "amount": 1000000000
+    },
+    "7pjREHYMKCouqnCTq3wNnEiAFnTVyncuq7jBfp7t7N9d": {
+     "lamports": 15144961,
+     "space": 2048,
+     "hash": "eab3d00b2f16ec5718da120df91f6391e0f74dbc22590a18a6c24289424fcb0e",
+     "quoteAmount": 11560648,
+     "baseAmount": 287538580,
+     "m1graduated": 1
+    },
+    "JASepKf55cMNpvJM4JGn2dhVDUWZjfpbfWUictnhBWAC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a0a7e79cba7ab43d6a24e5c61a713a40893d2798ec3406f1871c842d2f2ed4c7",
+     "amount": 6080030
+    },
+    "FRxED9kiegrioJax6mCAFYKYGKSzBa3dTWXqwGSRx6w3": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "93549454f8ab3c75bfbbda5deeff3af48b4ef91fa044c196a2c800a7bade8309",
+     "supply": 800000138810096,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985570040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "FcwmTcWjWQx21kBoy78d5VsPeVi2WJhdeTiVSRAYthpL": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "39424be0229e9f75d95e2910c5d8c551f12c648d2cb51b2add3bda84d0403f68",
+     "amount": 1000000000
+    },
+    "7pjREHYMKCouqnCTq3wNnEiAFnTVyncuq7jBfp7t7N9d": {
+     "lamports": 15144961,
+     "space": 2048,
+     "hash": "eab3d00b2f16ec5718da120df91f6391e0f74dbc22590a18a6c24289424fcb0e",
+     "quoteAmount": 11560648,
+     "baseAmount": 287538580,
+     "m1graduated": 1
+    },
+    "JASepKf55cMNpvJM4JGn2dhVDUWZjfpbfWUictnhBWAC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a0a7e79cba7ab43d6a24e5c61a713a40893d2798ec3406f1871c842d2f2ed4c7",
+     "amount": 6080030
+    },
+    "FRxED9kiegrioJax6mCAFYKYGKSzBa3dTWXqwGSRx6w3": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "93549454f8ab3c75bfbbda5deeff3af48b4ef91fa044c196a2c800a7bade8309",
+     "supply": 800000138810096,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R2 holder sell after forced graduation, curve 4U4kEQ4nHn (USDC quote, curve state 1)",
+   "note": "graduated curve: exits still honoured? payout vs accounting",
+   "forkSlotBefore": 444278312,
+   "forkSlotAfter": 444278314,
+   "sig": "J7dggdqW9XhH57mA1KEoGsiTrr2Dbbu7Hao3RJdNuf5B8piXdYTSXKYPHBTXGjZoYxRZt48G5S1KEMaYUSsuHWU",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6019
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Token has met graduation conditions and is ready to be graduated",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 10577 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1783"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985560040,
+      4999985555040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985560040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "AodD9Lq4gYX434iJYn8nPHZJaaXtWx1immyQtbGvACGB": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b87bf8cacd97414a817ee827308512fa4fe3813c2ec7225b9fe404bc29a4d25d",
+     "amount": 1000000000
+    },
+    "4U4kEQ4nHnF8PuXcCWq9FsTyHyZiCCbHMeMUjGStFj68": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "56ff8032bed56a990080b9d59bfb07ffc112cbc6cf5f70b435cfc2eb9b4e3352",
+     "quoteAmount": 995,
+     "baseAmount": 24742847,
+     "m1graduated": 1
+    },
+    "G5zcT2QgWpoq4ToV9xC9awtCvmj655W69kx77cQHPAwq": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "6a4055f78612a0b7107846a3984ababa4a2cc53daf801c5f34fbe5e5a5ee257a",
+     "amount": 503
+    },
+    "2thCwsk3yxjEB54g8xYUDNeaUFdC8gjWKNfXeJvMT3Mt": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "cabc8bb0313ede88ece8502b3a213d3ed94a8cf0136cb13c2bde705ac21ee974",
+     "supply": 24742847,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985555040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "AodD9Lq4gYX434iJYn8nPHZJaaXtWx1immyQtbGvACGB": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b87bf8cacd97414a817ee827308512fa4fe3813c2ec7225b9fe404bc29a4d25d",
+     "amount": 1000000000
+    },
+    "4U4kEQ4nHnF8PuXcCWq9FsTyHyZiCCbHMeMUjGStFj68": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "56ff8032bed56a990080b9d59bfb07ffc112cbc6cf5f70b435cfc2eb9b4e3352",
+     "quoteAmount": 995,
+     "baseAmount": 24742847,
+     "m1graduated": 1
+    },
+    "G5zcT2QgWpoq4ToV9xC9awtCvmj655W69kx77cQHPAwq": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "6a4055f78612a0b7107846a3984ababa4a2cc53daf801c5f34fbe5e5a5ee257a",
+     "amount": 503
+    },
+    "2thCwsk3yxjEB54g8xYUDNeaUFdC8gjWKNfXeJvMT3Mt": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "cabc8bb0313ede88ece8502b3a213d3ed94a8cf0136cb13c2bde705ac21ee974",
+     "supply": 24742847,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R2b holder tokenRefund after forced graduation, curve 4U4kEQ4nHn",
+   "note": "refund path after graduation",
+   "forkSlotBefore": 444278314,
+   "forkSlotAfter": 444278315,
+   "sig": "3prV6bJBZVHZx77JiEz6XFYHuE5NkbrfZqS4vG4Wk55ux6bJsXXLX97xnb98mgV3NviksjmaaZkDTxJz1dmbjKwH",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6016
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenRefund",
+    "Program log: Bonding curve has not expired",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 10781 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1780"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985555040,
+      4999985550040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985555040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "AodD9Lq4gYX434iJYn8nPHZJaaXtWx1immyQtbGvACGB": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b87bf8cacd97414a817ee827308512fa4fe3813c2ec7225b9fe404bc29a4d25d",
+     "amount": 1000000000
+    },
+    "4U4kEQ4nHnF8PuXcCWq9FsTyHyZiCCbHMeMUjGStFj68": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "56ff8032bed56a990080b9d59bfb07ffc112cbc6cf5f70b435cfc2eb9b4e3352",
+     "quoteAmount": 995,
+     "baseAmount": 24742847,
+     "m1graduated": 1
+    },
+    "G5zcT2QgWpoq4ToV9xC9awtCvmj655W69kx77cQHPAwq": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "6a4055f78612a0b7107846a3984ababa4a2cc53daf801c5f34fbe5e5a5ee257a",
+     "amount": 503
+    },
+    "2thCwsk3yxjEB54g8xYUDNeaUFdC8gjWKNfXeJvMT3Mt": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "cabc8bb0313ede88ece8502b3a213d3ed94a8cf0136cb13c2bde705ac21ee974",
+     "supply": 24742847,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985550040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "AodD9Lq4gYX434iJYn8nPHZJaaXtWx1immyQtbGvACGB": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b87bf8cacd97414a817ee827308512fa4fe3813c2ec7225b9fe404bc29a4d25d",
+     "amount": 1000000000
+    },
+    "4U4kEQ4nHnF8PuXcCWq9FsTyHyZiCCbHMeMUjGStFj68": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "56ff8032bed56a990080b9d59bfb07ffc112cbc6cf5f70b435cfc2eb9b4e3352",
+     "quoteAmount": 995,
+     "baseAmount": 24742847,
+     "m1graduated": 1
+    },
+    "G5zcT2QgWpoq4ToV9xC9awtCvmj655W69kx77cQHPAwq": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "6a4055f78612a0b7107846a3984ababa4a2cc53daf801c5f34fbe5e5a5ee257a",
+     "amount": 503
+    },
+    "2thCwsk3yxjEB54g8xYUDNeaUFdC8gjWKNfXeJvMT3Mt": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "cabc8bb0313ede88ece8502b3a213d3ed94a8cf0136cb13c2bde705ac21ee974",
+     "supply": 24742847,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R3 forced graduateManual on 4U4kEQ4nHn (quote 995 vs target 10,000,000)",
+   "note": "unprivileged third party finalizes a live launch",
+   "forkSlotBefore": 444278315,
+   "forkSlotAfter": 444278316,
+   "sig": "tJahwvHp3jmWHJxYK2J2hY7Yn6r6WJAysYEqTwxX1FnW8fgYGa5Fu5JRe2w836rtRZvX5kFNEAXoNmLNkoREYr6",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program log: Bonding curve does not have a Manual instruction or Manual instruction is already called",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 5389 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x177f"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985550040,
+      4999985545040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985550040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "AodD9Lq4gYX434iJYn8nPHZJaaXtWx1immyQtbGvACGB": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b87bf8cacd97414a817ee827308512fa4fe3813c2ec7225b9fe404bc29a4d25d",
+     "amount": 1000000000
+    },
+    "4U4kEQ4nHnF8PuXcCWq9FsTyHyZiCCbHMeMUjGStFj68": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "56ff8032bed56a990080b9d59bfb07ffc112cbc6cf5f70b435cfc2eb9b4e3352",
+     "quoteAmount": 995,
+     "baseAmount": 24742847,
+     "m1graduated": 1
+    },
+    "G5zcT2QgWpoq4ToV9xC9awtCvmj655W69kx77cQHPAwq": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "6a4055f78612a0b7107846a3984ababa4a2cc53daf801c5f34fbe5e5a5ee257a",
+     "amount": 503
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "BnEzz2mkSsNcfEVmderfzB64azEhHhRgH96q15dnRPP1": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a2b6e23e9ba404c2411240538a87683de4d2e8a5e44fb70428fe83ef06352385",
+     "amount": 4969999
+    },
+    "2thCwsk3yxjEB54g8xYUDNeaUFdC8gjWKNfXeJvMT3Mt": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "cabc8bb0313ede88ece8502b3a213d3ed94a8cf0136cb13c2bde705ac21ee974",
+     "supply": 24742847,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985545040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "AodD9Lq4gYX434iJYn8nPHZJaaXtWx1immyQtbGvACGB": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b87bf8cacd97414a817ee827308512fa4fe3813c2ec7225b9fe404bc29a4d25d",
+     "amount": 1000000000
+    },
+    "4U4kEQ4nHnF8PuXcCWq9FsTyHyZiCCbHMeMUjGStFj68": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "56ff8032bed56a990080b9d59bfb07ffc112cbc6cf5f70b435cfc2eb9b4e3352",
+     "quoteAmount": 995,
+     "baseAmount": 24742847,
+     "m1graduated": 1
+    },
+    "G5zcT2QgWpoq4ToV9xC9awtCvmj655W69kx77cQHPAwq": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "6a4055f78612a0b7107846a3984ababa4a2cc53daf801c5f34fbe5e5a5ee257a",
+     "amount": 503
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "BnEzz2mkSsNcfEVmderfzB64azEhHhRgH96q15dnRPP1": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a2b6e23e9ba404c2411240538a87683de4d2e8a5e44fb70428fe83ef06352385",
+     "amount": 4969999
+    },
+    "2thCwsk3yxjEB54g8xYUDNeaUFdC8gjWKNfXeJvMT3Mt": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "cabc8bb0313ede88ece8502b3a213d3ed94a8cf0136cb13c2bde705ac21ee974",
+     "supply": 24742847,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R3b repeat graduateManual on 4U4kEQ4nHn",
+   "note": "must not pay twice",
+   "forkSlotBefore": 444278316,
+   "forkSlotAfter": 444278318,
+   "sig": "8poHhfmmxaF3q9Wd8MQzVuCpwvrsa7PxwzVK21mqsKE3CQYfCKukeqpXDt7tZ9bSSTtWw8yakpWP9xJiJa82QSk",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program log: Bonding curve does not have a Manual instruction or Manual instruction is already called",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 5389 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x177f"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985545040,
+      4999985540040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985545040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "AodD9Lq4gYX434iJYn8nPHZJaaXtWx1immyQtbGvACGB": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b87bf8cacd97414a817ee827308512fa4fe3813c2ec7225b9fe404bc29a4d25d",
+     "amount": 1000000000
+    },
+    "4U4kEQ4nHnF8PuXcCWq9FsTyHyZiCCbHMeMUjGStFj68": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "56ff8032bed56a990080b9d59bfb07ffc112cbc6cf5f70b435cfc2eb9b4e3352",
+     "quoteAmount": 995,
+     "baseAmount": 24742847,
+     "m1graduated": 1
+    },
+    "G5zcT2QgWpoq4ToV9xC9awtCvmj655W69kx77cQHPAwq": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "6a4055f78612a0b7107846a3984ababa4a2cc53daf801c5f34fbe5e5a5ee257a",
+     "amount": 503
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "BnEzz2mkSsNcfEVmderfzB64azEhHhRgH96q15dnRPP1": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a2b6e23e9ba404c2411240538a87683de4d2e8a5e44fb70428fe83ef06352385",
+     "amount": 4969999
+    },
+    "2thCwsk3yxjEB54g8xYUDNeaUFdC8gjWKNfXeJvMT3Mt": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "cabc8bb0313ede88ece8502b3a213d3ed94a8cf0136cb13c2bde705ac21ee974",
+     "supply": 24742847,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985540040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "AodD9Lq4gYX434iJYn8nPHZJaaXtWx1immyQtbGvACGB": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "b87bf8cacd97414a817ee827308512fa4fe3813c2ec7225b9fe404bc29a4d25d",
+     "amount": 1000000000
+    },
+    "4U4kEQ4nHnF8PuXcCWq9FsTyHyZiCCbHMeMUjGStFj68": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "56ff8032bed56a990080b9d59bfb07ffc112cbc6cf5f70b435cfc2eb9b4e3352",
+     "quoteAmount": 995,
+     "baseAmount": 24742847,
+     "m1graduated": 1
+    },
+    "G5zcT2QgWpoq4ToV9xC9awtCvmj655W69kx77cQHPAwq": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "6a4055f78612a0b7107846a3984ababa4a2cc53daf801c5f34fbe5e5a5ee257a",
+     "amount": 503
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "BnEzz2mkSsNcfEVmderfzB64azEhHhRgH96q15dnRPP1": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a2b6e23e9ba404c2411240538a87683de4d2e8a5e44fb70428fe83ef06352385",
+     "amount": 4969999
+    },
+    "2thCwsk3yxjEB54g8xYUDNeaUFdC8gjWKNfXeJvMT3Mt": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "cabc8bb0313ede88ece8502b3a213d3ed94a8cf0136cb13c2bde705ac21ee974",
+     "supply": 24742847,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R3 forced graduateManual on 6WsxKkEXC3 (quote 0 vs target 8,284,308,600,000)",
+   "note": "unprivileged third party finalizes a live launch",
+   "forkSlotBefore": 444278321,
+   "forkSlotAfter": 444278323,
+   "sig": "3pCva37vKNy72dDc3M35gSL8r3cPHZGbge4fMiXkzqZ6FsFVXoXAiDAuUjejKAAXmwq23ePMgDgPUECFY714iXPz",
+   "err": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 22480 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985540040,
+      4999985535040,
+      -5000
+     ]
+    },
+    "6WsxKkEXC3FcZGFU1UmcrWDpXVwivBfWFjQLyk6bLraM": {
+     "m1graduated": [
+      0,
+      1,
+      1
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985540040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "HvukxYvjtXgajQotQPxhkvPdXxsYR9YsxDziXXvbrU5T": null,
+    "6WsxKkEXC3FcZGFU1UmcrWDpXVwivBfWFjQLyk6bLraM": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "b288513658faa9bfc5796e137287a9df0e93ff02e79c67fad43ec8201b26a3e5",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 0
+    },
+    "EQUgVTijMCRcN18m7zYuXNA9d9g4WNCdGwD8MKDXCEAf": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "2d2dffce3f3d928fcb62972fb5de572a2aa1b05408902ed79b23de680cc6d76d",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "AM9X7St6aJ4tgUVTP4QPTe1TjdnG8dvV3kjeKspEiYaA": null,
+    "8FMwV2XjSovZpLxGffUaj5d2pLguE9tuR5aq7UD7L11F": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "32158f4ad7e93d91985c7be19a0f1b7eb5d5c7fdd3425fc88072db1c60bb086d",
+     "supply": 0,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985535040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "HvukxYvjtXgajQotQPxhkvPdXxsYR9YsxDziXXvbrU5T": null,
+    "6WsxKkEXC3FcZGFU1UmcrWDpXVwivBfWFjQLyk6bLraM": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "398aad298657f227cba2538c430271395668e9a37a4ab67597cd9d0dd571db37",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 1
+    },
+    "EQUgVTijMCRcN18m7zYuXNA9d9g4WNCdGwD8MKDXCEAf": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "2d2dffce3f3d928fcb62972fb5de572a2aa1b05408902ed79b23de680cc6d76d",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "AM9X7St6aJ4tgUVTP4QPTe1TjdnG8dvV3kjeKspEiYaA": null,
+    "8FMwV2XjSovZpLxGffUaj5d2pLguE9tuR5aq7UD7L11F": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "32158f4ad7e93d91985c7be19a0f1b7eb5d5c7fdd3425fc88072db1c60bb086d",
+     "supply": 0,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R3b repeat graduateManual on 6WsxKkEXC3",
+   "note": "must not pay twice",
+   "forkSlotBefore": 444278324,
+   "forkSlotAfter": 444278327,
+   "sig": "2GxCYWVrBqAML5E87vBdCEutigfF2JWd8ztqMQamRnLy3CHgme4CnriAbRTSzzxBNbLVVRMViuZxCxKS5nqqoRvs",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program log: Bonding curve does not have a Manual instruction or Manual instruction is already called",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 5389 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x177f"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985535040,
+      4999985530040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985535040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "HvukxYvjtXgajQotQPxhkvPdXxsYR9YsxDziXXvbrU5T": null,
+    "6WsxKkEXC3FcZGFU1UmcrWDpXVwivBfWFjQLyk6bLraM": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "398aad298657f227cba2538c430271395668e9a37a4ab67597cd9d0dd571db37",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 1
+    },
+    "EQUgVTijMCRcN18m7zYuXNA9d9g4WNCdGwD8MKDXCEAf": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "2d2dffce3f3d928fcb62972fb5de572a2aa1b05408902ed79b23de680cc6d76d",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "AM9X7St6aJ4tgUVTP4QPTe1TjdnG8dvV3kjeKspEiYaA": null,
+    "8FMwV2XjSovZpLxGffUaj5d2pLguE9tuR5aq7UD7L11F": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "32158f4ad7e93d91985c7be19a0f1b7eb5d5c7fdd3425fc88072db1c60bb086d",
+     "supply": 0,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985530040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "HvukxYvjtXgajQotQPxhkvPdXxsYR9YsxDziXXvbrU5T": null,
+    "6WsxKkEXC3FcZGFU1UmcrWDpXVwivBfWFjQLyk6bLraM": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "398aad298657f227cba2538c430271395668e9a37a4ab67597cd9d0dd571db37",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 1
+    },
+    "EQUgVTijMCRcN18m7zYuXNA9d9g4WNCdGwD8MKDXCEAf": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "2d2dffce3f3d928fcb62972fb5de572a2aa1b05408902ed79b23de680cc6d76d",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "AM9X7St6aJ4tgUVTP4QPTe1TjdnG8dvV3kjeKspEiYaA": null,
+    "8FMwV2XjSovZpLxGffUaj5d2pLguE9tuR5aq7UD7L11F": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "32158f4ad7e93d91985c7be19a0f1b7eb5d5c7fdd3425fc88072db1c60bb086d",
+     "supply": 0,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R3 forced graduateManual on 6tferVP2Sj (quote 0 vs target 8,284,308,600,000)",
+   "note": "unprivileged third party finalizes a live launch",
+   "forkSlotBefore": 444278330,
+   "forkSlotAfter": 444278333,
+   "sig": "64Z2tJDQaqB1YJxMYcGhnRRxKouAkgW1qnDZoUqVhK7xYRQwvBMyjSyPyCLPE9EGxGRiUzr7LybWdj8BKksgvTWW",
+   "err": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 16495 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985530040,
+      4999985525040,
+      -5000
+     ]
+    },
+    "6tferVP2Sji64AwUNfoHdAMfvPntzysZMYBbDwD94Yxv": {
+     "m1graduated": [
+      0,
+      1,
+      1
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985530040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "9bDPQdq5bswYYBCAmxyc57WZqHK77Jsvs8MmCZFuPJo3": null,
+    "6tferVP2Sji64AwUNfoHdAMfvPntzysZMYBbDwD94Yxv": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "222470e1d8e8cc2a5511795ffac9de7ed2b2d826bbf4b6d1c8900b28d3033d94",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 0
+    },
+    "44MK4b7CVVNeijP9huHvFgSVS8Rb7wCen5FfbjzcMwbC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "0969981c0c7e6b3077d032f5e3e90afd0df39834c895ee805cc8a20269365540",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "14WQbap7QdQDitgAkRJ4CMdna1aQyMGpnqPjk2gVzWgP": {
+     "lamports": 2074080,
+     "space": 170,
+     "hash": "f8d0eb87b44c4723b425ebde86c6f6daf6c682d59183f767e473c8cfe5a33a28"
+    },
+    "HUo1xEZGRzr7ug3bQdKLmkQyrqg6h8tgfcv9HHfPBvK": {
+     "lamports": 4085520,
+     "space": 459,
+     "hash": "a1d83cebc9ba6cf3166d37fdb8b140b201de2f1207da0869ff9319b1982f3537"
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985525040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "9bDPQdq5bswYYBCAmxyc57WZqHK77Jsvs8MmCZFuPJo3": null,
+    "6tferVP2Sji64AwUNfoHdAMfvPntzysZMYBbDwD94Yxv": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "36cb7924b41c3118c171d2f190390459f522af25f2ed1a1f46020023f9c5dc3b",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 1
+    },
+    "44MK4b7CVVNeijP9huHvFgSVS8Rb7wCen5FfbjzcMwbC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "0969981c0c7e6b3077d032f5e3e90afd0df39834c895ee805cc8a20269365540",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "14WQbap7QdQDitgAkRJ4CMdna1aQyMGpnqPjk2gVzWgP": {
+     "lamports": 2074080,
+     "space": 170,
+     "hash": "f8d0eb87b44c4723b425ebde86c6f6daf6c682d59183f767e473c8cfe5a33a28"
+    },
+    "HUo1xEZGRzr7ug3bQdKLmkQyrqg6h8tgfcv9HHfPBvK": {
+     "lamports": 4085520,
+     "space": 459,
+     "hash": "a1d83cebc9ba6cf3166d37fdb8b140b201de2f1207da0869ff9319b1982f3537"
+    }
+   }
+  },
+  {
+   "case": "WB-R3b repeat graduateManual on 6tferVP2Sj",
+   "note": "must not pay twice",
+   "forkSlotBefore": 444278334,
+   "forkSlotAfter": 444278335,
+   "sig": "Lo5o7Jcm6wbQH9nUkUwnWzgTuC1kfkHorwpnUonAtRwazDRfAbPQDM79j42neUcZaJYJEeL9NyoU9H84WxXBvJn",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program log: Bonding curve does not have a Manual instruction or Manual instruction is already called",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 3888 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x177f"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985525040,
+      4999985520040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985525040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "9bDPQdq5bswYYBCAmxyc57WZqHK77Jsvs8MmCZFuPJo3": null,
+    "6tferVP2Sji64AwUNfoHdAMfvPntzysZMYBbDwD94Yxv": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "36cb7924b41c3118c171d2f190390459f522af25f2ed1a1f46020023f9c5dc3b",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 1
+    },
+    "44MK4b7CVVNeijP9huHvFgSVS8Rb7wCen5FfbjzcMwbC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "0969981c0c7e6b3077d032f5e3e90afd0df39834c895ee805cc8a20269365540",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "14WQbap7QdQDitgAkRJ4CMdna1aQyMGpnqPjk2gVzWgP": {
+     "lamports": 2074080,
+     "space": 170,
+     "hash": "f8d0eb87b44c4723b425ebde86c6f6daf6c682d59183f767e473c8cfe5a33a28"
+    },
+    "HUo1xEZGRzr7ug3bQdKLmkQyrqg6h8tgfcv9HHfPBvK": {
+     "lamports": 4085520,
+     "space": 459,
+     "hash": "a1d83cebc9ba6cf3166d37fdb8b140b201de2f1207da0869ff9319b1982f3537"
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985520040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "9bDPQdq5bswYYBCAmxyc57WZqHK77Jsvs8MmCZFuPJo3": null,
+    "6tferVP2Sji64AwUNfoHdAMfvPntzysZMYBbDwD94Yxv": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "36cb7924b41c3118c171d2f190390459f522af25f2ed1a1f46020023f9c5dc3b",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 1
+    },
+    "44MK4b7CVVNeijP9huHvFgSVS8Rb7wCen5FfbjzcMwbC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "0969981c0c7e6b3077d032f5e3e90afd0df39834c895ee805cc8a20269365540",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "14WQbap7QdQDitgAkRJ4CMdna1aQyMGpnqPjk2gVzWgP": {
+     "lamports": 2074080,
+     "space": 170,
+     "hash": "f8d0eb87b44c4723b425ebde86c6f6daf6c682d59183f767e473c8cfe5a33a28"
+    },
+    "HUo1xEZGRzr7ug3bQdKLmkQyrqg6h8tgfcv9HHfPBvK": {
+     "lamports": 4085520,
+     "space": 459,
+     "hash": "a1d83cebc9ba6cf3166d37fdb8b140b201de2f1207da0869ff9319b1982f3537"
+    }
+   }
+  },
+  {
+   "case": "WB-R3 forced graduateManual on 7pjREHYMKC (quote 11,560,648 vs target 1,677,572,460,000)",
+   "note": "unprivileged third party finalizes a live launch",
+   "forkSlotBefore": 444278335,
+   "forkSlotAfter": 444278337,
+   "sig": "4AQaBSMT9AovNqWcRQjoa47TH4jEn6KeTk8rrrzvEAYqs66xv8QEBkN6LUAFqnB8KmUJZP4DLQRtpShCsjLjsYbj",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program log: Bonding curve does not have a Manual instruction or Manual instruction is already called",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 8389 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x177f"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985520040,
+      4999985515040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985520040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "FcwmTcWjWQx21kBoy78d5VsPeVi2WJhdeTiVSRAYthpL": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "39424be0229e9f75d95e2910c5d8c551f12c648d2cb51b2add3bda84d0403f68",
+     "amount": 1000000000
+    },
+    "7pjREHYMKCouqnCTq3wNnEiAFnTVyncuq7jBfp7t7N9d": {
+     "lamports": 15144961,
+     "space": 2048,
+     "hash": "eab3d00b2f16ec5718da120df91f6391e0f74dbc22590a18a6c24289424fcb0e",
+     "quoteAmount": 11560648,
+     "baseAmount": 287538580,
+     "m1graduated": 1
+    },
+    "JASepKf55cMNpvJM4JGn2dhVDUWZjfpbfWUictnhBWAC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a0a7e79cba7ab43d6a24e5c61a713a40893d2798ec3406f1871c842d2f2ed4c7",
+     "amount": 6080030
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "E3M3sywKEZk1kCRCW1AVbgRBU4PkbnsnBz1c7Bq4h8tj": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "ae5d5f16ac69c773d47c78c6954b05953eec403f657fa210d98c07039429928e",
+     "amount": 800000061757807
+    },
+    "FRxED9kiegrioJax6mCAFYKYGKSzBa3dTWXqwGSRx6w3": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "93549454f8ab3c75bfbbda5deeff3af48b4ef91fa044c196a2c800a7bade8309",
+     "supply": 800000138810096,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985515040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "FcwmTcWjWQx21kBoy78d5VsPeVi2WJhdeTiVSRAYthpL": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "39424be0229e9f75d95e2910c5d8c551f12c648d2cb51b2add3bda84d0403f68",
+     "amount": 1000000000
+    },
+    "7pjREHYMKCouqnCTq3wNnEiAFnTVyncuq7jBfp7t7N9d": {
+     "lamports": 15144961,
+     "space": 2048,
+     "hash": "eab3d00b2f16ec5718da120df91f6391e0f74dbc22590a18a6c24289424fcb0e",
+     "quoteAmount": 11560648,
+     "baseAmount": 287538580,
+     "m1graduated": 1
+    },
+    "JASepKf55cMNpvJM4JGn2dhVDUWZjfpbfWUictnhBWAC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a0a7e79cba7ab43d6a24e5c61a713a40893d2798ec3406f1871c842d2f2ed4c7",
+     "amount": 6080030
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "E3M3sywKEZk1kCRCW1AVbgRBU4PkbnsnBz1c7Bq4h8tj": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "ae5d5f16ac69c773d47c78c6954b05953eec403f657fa210d98c07039429928e",
+     "amount": 800000061757807
+    },
+    "FRxED9kiegrioJax6mCAFYKYGKSzBa3dTWXqwGSRx6w3": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "93549454f8ab3c75bfbbda5deeff3af48b4ef91fa044c196a2c800a7bade8309",
+     "supply": 800000138810096,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R3b repeat graduateManual on 7pjREHYMKC",
+   "note": "must not pay twice",
+   "forkSlotBefore": 444278337,
+   "forkSlotAfter": 444278338,
+   "sig": "4aBEzZa2aXv7BErZGs2niFehhHw5p7U94Z3ez8Hoe6u2mxD613Aj95LxgKn1jXDqCaNhzyYuWXsf25dqZmV5ZMx1",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program log: Bonding curve does not have a Manual instruction or Manual instruction is already called",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 8389 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x177f"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985515040,
+      4999985510040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985515040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "FcwmTcWjWQx21kBoy78d5VsPeVi2WJhdeTiVSRAYthpL": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "39424be0229e9f75d95e2910c5d8c551f12c648d2cb51b2add3bda84d0403f68",
+     "amount": 1000000000
+    },
+    "7pjREHYMKCouqnCTq3wNnEiAFnTVyncuq7jBfp7t7N9d": {
+     "lamports": 15144961,
+     "space": 2048,
+     "hash": "eab3d00b2f16ec5718da120df91f6391e0f74dbc22590a18a6c24289424fcb0e",
+     "quoteAmount": 11560648,
+     "baseAmount": 287538580,
+     "m1graduated": 1
+    },
+    "JASepKf55cMNpvJM4JGn2dhVDUWZjfpbfWUictnhBWAC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a0a7e79cba7ab43d6a24e5c61a713a40893d2798ec3406f1871c842d2f2ed4c7",
+     "amount": 6080030
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "E3M3sywKEZk1kCRCW1AVbgRBU4PkbnsnBz1c7Bq4h8tj": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "ae5d5f16ac69c773d47c78c6954b05953eec403f657fa210d98c07039429928e",
+     "amount": 800000061757807
+    },
+    "FRxED9kiegrioJax6mCAFYKYGKSzBa3dTWXqwGSRx6w3": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "93549454f8ab3c75bfbbda5deeff3af48b4ef91fa044c196a2c800a7bade8309",
+     "supply": 800000138810096,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985510040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "FcwmTcWjWQx21kBoy78d5VsPeVi2WJhdeTiVSRAYthpL": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "39424be0229e9f75d95e2910c5d8c551f12c648d2cb51b2add3bda84d0403f68",
+     "amount": 1000000000
+    },
+    "7pjREHYMKCouqnCTq3wNnEiAFnTVyncuq7jBfp7t7N9d": {
+     "lamports": 15144961,
+     "space": 2048,
+     "hash": "eab3d00b2f16ec5718da120df91f6391e0f74dbc22590a18a6c24289424fcb0e",
+     "quoteAmount": 11560648,
+     "baseAmount": 287538580,
+     "m1graduated": 1
+    },
+    "JASepKf55cMNpvJM4JGn2dhVDUWZjfpbfWUictnhBWAC": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "a0a7e79cba7ab43d6a24e5c61a713a40893d2798ec3406f1871c842d2f2ed4c7",
+     "amount": 6080030
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "E3M3sywKEZk1kCRCW1AVbgRBU4PkbnsnBz1c7Bq4h8tj": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "ae5d5f16ac69c773d47c78c6954b05953eec403f657fa210d98c07039429928e",
+     "amount": 800000061757807
+    },
+    "FRxED9kiegrioJax6mCAFYKYGKSzBa3dTWXqwGSRx6w3": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "93549454f8ab3c75bfbbda5deeff3af48b4ef91fa044c196a2c800a7bade8309",
+     "supply": 800000138810096,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R3 forced graduateManual on AyQiXYUjtW (quote 0 vs target 10,000,000)",
+   "note": "unprivileged third party finalizes a live launch",
+   "forkSlotBefore": 444278341,
+   "forkSlotAfter": 444278344,
+   "sig": "2bLNSkk5RXR1bxDvE8Kx3xuYB3sC6kGbD8GXarYjz2MMvuZvvkQhv6pWGWxda6D1XUaJPG9fnkjhnt9emezqFujg",
+   "err": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 14980 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985510040,
+      4999985505040,
+      -5000
+     ]
+    },
+    "AyQiXYUjtW2uXBzhHq9YYB7GofBV9zmq5PAjJsJfbVhc": {
+     "m1graduated": [
+      0,
+      1,
+      1
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985510040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "DfuFehBa9j6vYvbJyGdCs8wdofzFajhYjY3mLNrBGdPp": null,
+    "AyQiXYUjtW2uXBzhHq9YYB7GofBV9zmq5PAjJsJfbVhc": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "4d39d2b228abefa8277d3f35e34ce4d99a5a4472f6b02783feca74d226b44ac9",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 0
+    },
+    "9qYChGfNwtsAaw4guj3gNB87fzMxijEfRJ1ZNzjrMik2": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "06d60835da8ff72342d9589058738427ded33429ac37955dd3a6ae1d17825499",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "5feA6RMsg5F6huVvDeS7T7aqPnmMmtsJan5F52axhYtk": null,
+    "F3kZdrK2PkLARj8ioc11Vxek2kmqLnfvKCFjDm3SaYkx": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "696392138bf77500d095b1f3c01912375c9bb6b2dbcfe16a5bdfcd6e2847ead2",
+     "supply": 0,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985505040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "DfuFehBa9j6vYvbJyGdCs8wdofzFajhYjY3mLNrBGdPp": null,
+    "AyQiXYUjtW2uXBzhHq9YYB7GofBV9zmq5PAjJsJfbVhc": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "3a28574ccae883e9659987961da31ee3a6f2721d174e97c5efcb26b857fd8224",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 1
+    },
+    "9qYChGfNwtsAaw4guj3gNB87fzMxijEfRJ1ZNzjrMik2": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "06d60835da8ff72342d9589058738427ded33429ac37955dd3a6ae1d17825499",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "5feA6RMsg5F6huVvDeS7T7aqPnmMmtsJan5F52axhYtk": null,
+    "F3kZdrK2PkLARj8ioc11Vxek2kmqLnfvKCFjDm3SaYkx": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "696392138bf77500d095b1f3c01912375c9bb6b2dbcfe16a5bdfcd6e2847ead2",
+     "supply": 0,
+     "decimals": 6
+    }
+   }
+  },
+  {
+   "case": "WB-R3b repeat graduateManual on AyQiXYUjtW",
+   "note": "must not pay twice",
+   "forkSlotBefore": 444278345,
+   "forkSlotAfter": 444278348,
+   "sig": "EoH7QnL63KwFicGCtxmbUc4ApYKKfG7pYThxoUaGheReQ7FbRRQ1icjyByLTkSgVszXZ9JzvenjYQmC69yUJyrq",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6015
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: GraduateManual",
+    "Program log: Bonding curve does not have a Manual instruction or Manual instruction is already called",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 3889 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x177f"
+   ],
+   "deltas": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": [
+      4999985505040,
+      4999985500040,
+      -5000
+     ]
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985505040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "DfuFehBa9j6vYvbJyGdCs8wdofzFajhYjY3mLNrBGdPp": null,
+    "AyQiXYUjtW2uXBzhHq9YYB7GofBV9zmq5PAjJsJfbVhc": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "3a28574ccae883e9659987961da31ee3a6f2721d174e97c5efcb26b857fd8224",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 1
+    },
+    "9qYChGfNwtsAaw4guj3gNB87fzMxijEfRJ1ZNzjrMik2": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "06d60835da8ff72342d9589058738427ded33429ac37955dd3a6ae1d17825499",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "5feA6RMsg5F6huVvDeS7T7aqPnmMmtsJan5F52axhYtk": null,
+    "F3kZdrK2PkLARj8ioc11Vxek2kmqLnfvKCFjDm3SaYkx": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "696392138bf77500d095b1f3c01912375c9bb6b2dbcfe16a5bdfcd6e2847ead2",
+     "supply": 0,
+     "decimals": 6
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4999985500040,
+     "space": 0,
+     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "4VtA96mWBAoAPb6dAoPcne7kjiwxXPZF1spCjAJYHpDb": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "212e3d31b88353952a28d2f7a680663665174f8db41f8148c3f2b88ec9888cf1",
+     "amount": 0
+    },
+    "DfuFehBa9j6vYvbJyGdCs8wdofzFajhYjY3mLNrBGdPp": null,
+    "AyQiXYUjtW2uXBzhHq9YYB7GofBV9zmq5PAjJsJfbVhc": {
+     "lamports": 15144960,
+     "space": 2048,
+     "hash": "3a28574ccae883e9659987961da31ee3a6f2721d174e97c5efcb26b857fd8224",
+     "quoteAmount": 0,
+     "baseAmount": 0,
+     "m1graduated": 1
+    },
+    "9qYChGfNwtsAaw4guj3gNB87fzMxijEfRJ1ZNzjrMik2": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "06d60835da8ff72342d9589058738427ded33429ac37955dd3a6ae1d17825499",
+     "amount": 0
+    },
+    "6QeH5TQT6jTSd22Ggs27nxBedHEByfTvGgZEuVbaMuab": {
+     "lamports": 2039280,
+     "space": 165,
+     "hash": "667931cf30173af09670f8c015397065114de955070e53f9394d79224f07f4a5",
+     "amount": 106116200
+    },
+    "5feA6RMsg5F6huVvDeS7T7aqPnmMmtsJan5F52axhYtk": null,
+    "F3kZdrK2PkLARj8ioc11Vxek2kmqLnfvKCFjDm3SaYkx": {
+     "lamports": 1461600,
+     "space": 82,
+     "hash": "696392138bf77500d095b1f3c01912375c9bb6b2dbcfe16a5bdfcd6e2847ead2",
+     "supply": 0,
+     "decimals": 6
+    }
+   }
+  }
+ ]
+}

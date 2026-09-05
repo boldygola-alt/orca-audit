@@ -1,0 +1,1327 @@
+{
+ "funding": {
+  "note": "FORK-ONLY fixture funding of the attacker's own base ATA (Surfpool cheatcodes) so sell/refund tests reach program guards; not exploit evidence.",
+  "curve": "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA",
+  "mint": "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave",
+  "ata": "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo",
+  "decimals": 9,
+  "funded": 100000000000,
+  "supplyBefore": 224549797061264655,
+  "setAccount": {
+   "context": {
+    "slot": 444221046,
+    "apiVersion": "4.1.2"
+   },
+   "value": null
+  },
+  "setSupply": {
+   "code": -32602,
+   "message": "Invalid params: invalid type: string \"J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave\", expected struct SupplyUpdate."
+  },
+  "forkSlot": 444221046
+ },
+ "results": [
+  {
+   "case": "WB-S01 sell exact-in, tiny amount",
+   "note": "1 token of 100 fixture balance",
+   "forkSlotBefore": 444221046,
+   "forkSlotAfter": 444221047,
+   "sig": "4basGduzoXCc96CKekY5ZdTAL7moqVG58gYvKvP8kRpwEzx2c6AhHE5XG5wKYxUgDJKcfc2AyGpffiuoU7CWA3WW",
+   "txErr": null,
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1309624 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1308171 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1298022 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program data: AjGS0e82S0wsUDaBBGQs8u50+7VIaYqPXzFPBD17KXtW/bSMadzgKEEBl1wJ6COmJp7xzJhbn2ZKJOUUb9wFKJsGm4hX/quBhPtof2NGGMA12sQ53BrrO1WYoPAAAAAAAQDKmjsAAAAALAAAAAAAAACLgltanQsOAAAAAAAAAAAAi4JbWp0LDgAAAAAAAAAAAB7sTN8BAAAA8etM3wEAAAA64i/IugsnAzoYlYy6CycDAQAAAAAAAAA=",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 225559 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamportsDelta": 44,
+     "dataChanged": true,
+     "tokenAmountDelta": 44
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "dataChanged": true,
+     "tokenAmountDelta": -1000000000
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "dataChanged": true
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamportsDelta": -44,
+     "dataChanged": true,
+     "tokenAmountDelta": -44
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "dataChanged": true,
+     "supplyDelta": -1000000000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995644440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041280,
+     "hash": "7b6a67394e33",
+     "token": 1000000000000,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "f18a44a11597",
+     "token": 100000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "f80322a5b812",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484990,
+     "hash": "144b07db98d4",
+     "token": 8140445710,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "f7422e5ff700",
+     "token": null,
+     "supply": 224549797061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995639440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S02 sell exact-in, full balance",
+   "note": "all fixture tokens",
+   "forkSlotBefore": 444221047,
+   "forkSlotAfter": 444221048,
+   "sig": "2Pa4tPuiSj2Zv9QXRpk9adjdFJdr9wWmXAikMDkAqmg9NNEfKsLVxA2dWzr4sMZdudxbQwfZgvHyqkdeJLjP8c6A",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program log: Error: insufficient funds",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 220 of 1309621 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA failed: custom program error: 0x1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 90449 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995639440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995634440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S03 sell exact-in twice in one tx",
+   "note": "sequence carry-over: two sells, same curve",
+   "forkSlotBefore": 444221048,
+   "forkSlotAfter": 444221049,
+   "sig": "5i9jj2YsCGhHRsy96stwvzNfB6hQYh7ZXzf3BdByWfch3pHerVXSBADqGWeiqDSWJsWXAvXEjV8r16mkH3wmUJVM",
+   "txErr": {
+    "InstructionError": [
+     2,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1309620 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1308167 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1298018 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program data: AjGS0e82S0wsUDaBBGQs8u50+7VIaYqPXzFPBD17KXtW/bSMadzgKEEBl1wJ6COmJp7xzJhbn2ZKJOUUb9wFKJsGm4hX/quBhPtof2NGGMA12sQ53BrrO1WYoPAAAAAAAQB0O6QLAAAA4QgAAAAAAACLgltanQsOAAAAAAAAAAAAi4JbWp0LDgAAAAAAAAAAAPHrTN8BAAAA+eJM3wEAAAA6GJWMugsnAzqkWeiuCycDFwAAAAAAAAA=",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 225563 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program log: Error: insufficient funds",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 220 of 1084057 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA failed: custom program error: 0x1",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 90450 of 1174287 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995634440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995629440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S04 sell then buy in one tx",
+   "note": "sell->buy state carry-over (buy should be permission-blocked, sell should not leak)",
+   "forkSlotBefore": 444221049,
+   "forkSlotAfter": 444221051,
+   "sig": "3bkiTsm6ztWrkU1hwADFUUft44VJv93dZpT2gLxvCEC9GTy4dsXZbBuNM7Xy2ogCCuHwgboGuK2HkbTFWH4csmGL",
+   "txErr": {
+    "InstructionError": [
+     2,
+     {
+      "Custom": 6018
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 126 of 1309621 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1308168 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 112 of 1298019 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program data: AjGS0e82S0wsUDaBBGQs8u50+7VIaYqPXzFPBD17KXtW/bSMadzgKEEBl1wJ6COmJp7xzJhbn2ZKJOUUb9wFKJsGm4hX/quBhPtof2NGGMA12sQ53BrrO1WYoPAAAAAAAQC6HdIFAAAAcAQAAAAAAACLgltanQsOAAAAAAAAAAAAi4JbWp0LDgAAAAAAAAAAAPHrTN8BAAAAdedM3wEAAAA6GJWMugsnAzped7q0CycDDAAAAAAAAAA=",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 225562 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenBuyExactIn",
+    "Program log: Could not find a matching PermissionConsume instruction in transaction",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 24630 of 1174288 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1782"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995629440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995624440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S05 sell with tight price threshold",
+   "note": "minOut above any possible payout",
+   "forkSlotBefore": 444221051,
+   "forkSlotAfter": 444221052,
+   "sig": "RsTWCHyPfpKYbLAGxWUDJcdJdgJFKhR7kmyXGbX5dZYezBzmeMs57ETVPSdKm7KaNGAJsLB7peVbAqN7zsEEo1w",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6011
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Slippage threshold exceeded",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 89326 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x177b"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995624440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995619440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S06 sell zero amount",
+   "note": "amount 0",
+   "forkSlotBefore": 444221052,
+   "forkSlotAfter": 444221053,
+   "sig": "v46WY7EqFJYJQTpDwLkyyHB3CR181dqx2nVHvxTsnoKoHS1mWfFQjEbabNCNYgCAhbD5ofRVb3ZHAK6Pfu8ZY6X",
+   "txErr": null,
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 147 of 1319583 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1318109 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 122 of 1307960 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program data: AjGS0e82S0wsUDaBBGQs8u50+7VIaYqPXzFPBD17KXtW/bSMadzgKEEBl1wJ6COmJp7xzJhbn2ZKJOUUb9wFKJsGm4hX/quBhPtof2NGGMA12sQ53BrrO1WYoPAAAAAAAQAAAAAAAAAAAAAAAAAAAACLgltanQsOAAAAAAAAAAAAi4JbWp0LDgAAAAAAAAAAAPHrTN8BAAAA8etM3wEAAAA6GJWMugsnAzoYlYy6CycDAAAAAAAAAAA=",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 215631 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995619440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995614440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S07 sell max u64",
+   "note": "overflow check",
+   "forkSlotBefore": 444221053,
+   "forkSlotAfter": 444221054,
+   "sig": "63eTD1QdwSrcK6voEKLdNiEpiyE1cwy6YXxV3pduDsD8M4RF5ja7Byn3SuYJCd5kGmMkHx8kGka6m2iRJAGdbCNB",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6025
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Input results in a partial fill which is explicitly disallowed",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 110859 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1789"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995614440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995609440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S08 sell: redirect payout to another wallet's ATA",
+   "note": "recipient binding (does it have to be the seller's ATA?)",
+   "forkSlotBefore": 444221054,
+   "forkSlotAfter": 444221055,
+   "sig": "36FrxufxDnQADY76K32uwrEptWMr9nSr2ni651H9sPFaqjx7irbY5gukHoGBCk91v8tRiRW8xBxvzxf8LZ1UpKcB",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Account ewYMzr5Evc445Kb7w6Sr6qZBmu2KDik3iFdScjXNFx2 has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 42225 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995609440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995604440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S09 sell: quote vault = attacker ATA (vault substitution)",
+   "note": "control",
+   "forkSlotBefore": 444221055,
+   "forkSlotAfter": 444221056,
+   "sig": "3z1h2yp6sETUuncbRS1rx5uDqJxB4p4PUUxDJEt13KiheKgZiUtNVcGUgvuebRXjHngKVEReF7Qxuygha9orGKXB",
+   "txErr": null,
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 147 of 1319583 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]",
+    "Program log: CreateIdempotent",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 8839 of 1318109 compute units",
+    "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 122 of 1307960 compute units",
+    "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+    "Program data: AjGS0e82S0wsUDaBBGQs8u50+7VIaYqPXzFPBD17KXtW/bSMadzgKEEBl1wJ6COmJp7xzJhbn2ZKJOUUb9wFKJsGm4hX/quBhPtof2NGGMA12sQ53BrrO1WYoPAAAAAAAQAAAAAAAAAAAAAAAAAAAACLgltanQsOAAAAAAAAAAAAi4JbWp0LDgAAAAAAAAAAAPHrTN8BAAAA8etM3wEAAAA6GJWMugsnAzoYlYy6CycDAAAAAAAAAAA=",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 215631 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF success"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995604440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995599440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S11 sell: wrong base token program",
+   "note": "pinning",
+   "forkSlotBefore": 444221062,
+   "forkSlotAfter": 444221063,
+   "sig": "4jqMn71pvUdedr4ukEvJoyJDyCqHxcE9iA1G4cZhAYvr7eicorE4ayEtiSxvpJnvR6AmvRvs5moRLhoSko3veyDJ",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6024
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Account J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave is not owned by TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 45316 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1788"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995599440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995594440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S12 sell: wrong quote token program",
+   "note": "pinning",
+   "forkSlotBefore": 444221063,
+   "forkSlotAfter": 444221065,
+   "sig": "2Mb2gvfjwjpf9h9DNLGLja9TgHDjB9pVczwXsujYvJ2GAphzjstfsviuTquUX8qQ2DV78W7YLqSttgTe5PbLwVHH",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6024
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Account So11111111111111111111111111111111111111112 is not owned by TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 44835 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1788"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995594440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995589440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "84wB9tiXz1XKDymf6givrK7JKfi9wYpY3fPvgjDaRhAo": {
+     "lamports": 2039280,
+     "hash": "3f88656b1d79",
+     "token": 99000000000,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    },
+    "2SzzSsarpcXVxNUbR3t5TMa8pHsMCMHd2J6U4cUL7rMy": {
+     "lamports": 8142484946,
+     "hash": "484248efbbce",
+     "token": 8140445666,
+     "supply": 3478592807132107652
+    },
+    "J5Mpt6Y37qpih1FTz6jNgBw9PUAMn3JXuEEtZ5iVwave": {
+     "lamports": 1461600,
+     "hash": "25082090d013",
+     "token": null,
+     "supply": 224549796061264655
+    }
+   }
+  },
+  {
+   "case": "WB-S13 sell on the graduated curve",
+   "note": "post-graduation state gate",
+   "forkSlotBefore": 444221065,
+   "forkSlotAfter": 444221066,
+   "sig": "3S4zkw5YhnYC6auvzSnzEhD4QzG96yRKBnP5FmhobTzfEARemh8oxttFepEx9a1JwAv1anmkHAcUkZcUVVoxYTs1",
+   "txErr": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "sendError": null,
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Account So11111111111111111111111111111111111111112 has wrong address",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 23396 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1771"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995589440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994995584440,
+     "hash": "e3b0c44298fc",
+     "token": null,
+     "supply": null
+    },
+    "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh": {
+     "lamports": 2041324,
+     "hash": "8f1474188ae0",
+     "token": 1000000000044,
+     "supply": 324600366115867446
+    },
+    "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA": {
+     "lamports": 15144960,
+     "hash": "ba95cfe93009",
+     "token": 16178060802148362497,
+     "supply": 9180864386924543575
+    }
+   }
+  }
+ ]
+}

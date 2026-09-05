@@ -1,0 +1,130 @@
+{
+ "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV": {
+  "role": "WB+Whirlpool+BB upgrade authority",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 4875689434,
+  "space": 0,
+  "executable": false,
+  "onCurve": false,
+  "head": ""
+ },
+ "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG": {
+  "role": "legacy AMM upgrade authority",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 23891577114,
+  "space": 0,
+  "executable": false,
+  "onCurve": true,
+  "head": ""
+ },
+ "BWyVTPPRW7d5STtVfEPTbUC5c2r9PvGnBqkbzGnn6d8N": {
+  "role": "live ops key",
+  "exists": false
+ },
+ "8xtBvp5VS4vyZYfGnykooVyWVsPNSA4A9z62s7RwCX46": {
+  "role": "setAuthority target (past)",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 12245973596,
+  "space": 0,
+  "executable": false,
+  "onCurve": true,
+  "head": ""
+ },
+ "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C": {
+  "role": "setAuthority target (past, variant)",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 586636420,
+  "space": 0,
+  "executable": false,
+  "onCurve": true,
+  "head": ""
+ },
+ "r21Gamwd9DtyjHeGywsneoQYR39C1VDwrw7tWxHAwh6": {
+  "role": "setAuthority target (past)",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 594580062,
+  "space": 0,
+  "executable": false,
+  "onCurve": true,
+  "head": ""
+ },
+ "94kZD71sbTKhqhcvY9D9Ra5BsLzKRZgznbBbQpBWmKrT": {
+  "role": "setAuthority target (past)",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 941990137,
+  "space": 0,
+  "executable": false,
+  "onCurve": true,
+  "head": ""
+ },
+ "2NfC7wE7zwZSeBWqdB5wKJUxgSSNXDxfZAjamVhh7gXb": {
+  "role": "candidate squads owner 1",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 18895441,
+  "space": 0,
+  "executable": false,
+  "onCurve": true,
+  "head": ""
+ },
+ "8xqdLe2KW5YiYbAGNEdeH2KqP4WvXVfFgt1QbKNSEVvt": {
+  "role": "candidate squads owner 2",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 99784779,
+  "space": 0,
+  "executable": false,
+  "onCurve": true,
+  "head": ""
+ },
+ "BgV5ocPwmVjVgD999RBVDLUAQQxwPm3fRedhQxxBAjyp": {
+  "role": "candidate squads owner 3",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 890880,
+  "space": 0,
+  "executable": false,
+  "onCurve": true,
+  "head": ""
+ },
+ "F1FSHAbRu3YfEjKzyYNHoNGbzPuaoXcmJkEgGyG3gDN9": {
+  "role": "candidate squads owner 4",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 99784949,
+  "space": 0,
+  "executable": false,
+  "onCurve": true,
+  "head": ""
+ },
+ "HNeMErwpEJFTMSNoK9fjhsedwvHQ7LMKxccDW9r2gumk": {
+  "role": "candidate squads owner 5",
+  "exists": true,
+  "owner": "11111111111111111111111111111111",
+  "lamports": 99784948,
+  "space": 0,
+  "executable": false,
+  "onCurve": true,
+  "head": ""
+ },
+ "3GiPhEnWforYgzGtnaAJ2G7MQMs5SNAyYwVN84VaQaHV": {
+  "role": "squads candidate account",
+  "exists": true,
+  "owner": "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf",
+  "lamports": 10064160,
+  "space": 1318,
+  "executable": false,
+  "onCurve": false,
+  "head": "1a5ebdbb748835219ab201ca13c470c6"
+ },
+ "2mwPbukDgYzozRovnVTyZMczjqbjVjdwxQfa6wYTdpdx": {
+  "role": "offset-0 pubkey in that account",
+  "exists": false
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+ "baseMint": "3tukTsYrj3ptcQDs2NmwHXDQr7wAotrBq8cuh2yMwave",
+ "vault": "FoynQTzgJGaehvTQAYMNkmJZdvSDSMErVRN4q21zZkoL",
+ "results": [
+  {
+   "case": "WB-V01 attacker signs, baseAta = a real victim's ATA, payout = attacker WSOL ATA",
+   "victimAta": "3AYhCmfv3xgNhdGh9E6nyYu8u5m9yv9sJMejCX2PYxDp",
+   "victimOwner": "GijFWw4oNyh9ko3FaZforNsi3jk6wDovARpkKahPD4o5",
+   "victimBefore": 18938384669961507,
+   "victimAfter": 18938384669961507,
+   "payoutAta": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+   "payoutOwner": "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f",
+   "payoutBefore": 2442025182,
+   "payoutAfter": 2442025182,
+   "vaultBefore": 1002638546,
+   "vaultAfter": 1002638546,
+   "curveQuoteBefore": 325165211,
+   "curveQuoteAfter": 325165211,
+   "forkSlotBefore": 444281272,
+   "forkSlotAfter": 444281274,
+   "sig": "27bzD88zkPWK5sMPeCeywr4VQvPbtFoXfbgHW1q2nogQsqKbgwk67m2kK66NDshpN5deM7o7NtVDKn61NhYciEbC",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "logs": [
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Account 3AYhCmfv3xgNhdGh9E6nyYu8u5m9yv9sJMejCX2PYxDp has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "payoutDelta": 0,
+   "victimDelta": 0,
+   "verdict": "denied - no unauthorized movement"
+  },
+  {
+   "case": "WB-V02 attacker signs, baseAta = victim ATA, payout = the VICTIM's own WSOL ATA",
+   "victimAta": "3AYhCmfv3xgNhdGh9E6nyYu8u5m9yv9sJMejCX2PYxDp",
+   "victimOwner": "GijFWw4oNyh9ko3FaZforNsi3jk6wDovARpkKahPD4o5",
+   "victimBefore": 18938384669961507,
+   "victimAfter": 18938384669961507,
+   "payoutAta": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+   "payoutOwner": "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f",
+   "payoutBefore": 2442025182,
+   "payoutAfter": 2442025182,
+   "vaultBefore": 1002638546,
+   "vaultAfter": 1002638546,
+   "curveQuoteBefore": 325165211,
+   "curveQuoteAfter": 325165211,
+   "forkSlotBefore": 444281274,
+   "forkSlotAfter": 444281276,
+   "sig": "jU1KjpjgiJY6ioFbcwNQbPc23AKpb6irt62VhakYUCogBPPryQyB8J3NftBrRPnbLGNeqTsBqbNooVxJEumKNQM",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "logs": [
+    "Program log: Instruction: TokenSellExactIn",
+    "Program log: Account 3AYhCmfv3xgNhdGh9E6nyYu8u5m9yv9sJMejCX2PYxDp has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "payoutDelta": 0,
+   "victimDelta": 0,
+   "verdict": "denied - no unauthorized movement"
+  }
+ ]
+}

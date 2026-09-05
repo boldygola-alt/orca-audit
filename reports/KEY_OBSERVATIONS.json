@@ -1,0 +1,37 @@
+{
+ "feeCustodyReconciliation": {
+  "program": "wavebreak",
+  "claim": "685 of 1537 live curves hold more in their WSOL quote vault than the curve's quoteAmount accounting (total +6.784577154 SOL)",
+  "measurement": "attacker-signer BondingCurveCollectFees on DbRKfbUmxd... moved 520,591,863 units to the privilege-1 fee authority's ATA and drove vault-vs-accounting divergence to exactly 0",
+  "conclusion": "the excess is unclaimed protocol/creator fee custody, not a leak; it is not extractable by selling (payout measured 29,347 vs accounting release 29,644 and 1,002,638,546 vs 1,012,766,209 - i.e. always less), and collectFees credits only the bound fee authority",
+  "evidence": [
+   "recon/wb_custody_full.json",
+   "recon/wb_fee_reconciliation.json",
+   "evidence/WBZ_final3.json",
+   "evidence/WBD_fee_drain2.json"
+  ]
+ },
+ "stuckRefundDestinations": {
+  "program": "wavebreak",
+  "claim": "31 live consumed_permission accounts (41,420,920 lamports) have refund_destination = Pubkey::default() and safe_to_close_slot in the past",
+  "measurement": "PermissionRefund with the attacker wallet -> 6001 'has wrong address'; with the stored (zero) destination -> 6000 'is not writable'; twice in one tx -> 6001",
+  "conclusion": "no attacker gain, but the rent of those accounts is unrecoverable by anyone; an unset destination should fall back to the consumer",
+  "evidence": [
+   "recon/wb_consumed_permissions.json",
+   "evidence/WBR_refund_revoke.json",
+   "evidence/WBRP_permission.json"
+  ]
+ },
+ "swapHandlersAreLive": {
+  "program": "busybox",
+  "claim": "correction of the earlier conclusion that SwapExactIn/SwapExactOut were unimplemented",
+  "measurement": "with the correct 12-account shape the deployed riptK81h v2.1.1 ELF logs 'Instruction: SwapExactIn'/'SwapExactOut' and executes trades against live reserves (attacker round trip on GtBJeuFzSC moved 10,000,000 in / 9,984,965 out and updated reserves accordingly); tags 4-7 and 13-15 answer with their reserved names and InvalidInstructionData",
+  "conclusion": "permissionless swaps are live and priced off the stored oracle with bounded reserves; every measured trade was value-negative for the swapper",
+  "evidence": [
+   "evidence/BB_tagsweep.json",
+   "evidence/BBR_roundtrip.json",
+   "evidence/BBP_swap_profit.json",
+   "recon/busybox_oracle_states.json"
+  ]
+ }
+}

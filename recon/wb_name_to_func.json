@@ -1,0 +1,245 @@
+{
+ "PermissionConsumeTopLevel": {
+  "rodata_offs": [
+   "0x6b150",
+   "0x6ba24"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "PermissionConsumeCpi": {
+  "rodata_offs": [
+   "0x6ba3d"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "PermissionConfigInitialize": {
+  "rodata_offs": [
+   "0x6ba51"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "PermissionConfigUpdate": {
+  "rodata_offs": [
+   "0x6ba6b"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "PermissionConfigClose": {
+  "rodata_offs": [
+   "0x6ba81"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "PermissionRefund": {
+  "rodata_offs": [
+   "0x6aa78"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "TokenBuyExactIn": {
+  "rodata_offs": [
+   "0x6baa9"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "TokenBuyExactOut": {
+  "rodata_offs": [
+   "0x6aa68"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "TokenSellExactIn": {
+  "rodata_offs": [
+   "0x6aa38"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "TokenSellExactOut": {
+  "rodata_offs": [
+   "0x6bab8"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "TokenRefund": {
+  "rodata_offs": [
+   "0x6bac9"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "AuthorityConfigInitialize": {
+  "rodata_offs": [
+   "0x6bafe"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "AuthorityConfigGrant": {
+  "rodata_offs": [
+   "0x6bb17"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "AuthorityConfigRevoke": {
+  "rodata_offs": [
+   "0x6bb2b"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "AuthorityConfigUpdate": {
+  "rodata_offs": [
+   "0x6b4a7"
+  ],
+  "funcs": []
+ },
+ "MintConfigInitialize": {
+  "rodata_offs": [
+   "0x6bbb8"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "MintConfigUpdate": {
+  "rodata_offs": [
+   "0x6aae8"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "MintConfigClose": {
+  "rodata_offs": [
+   "0x6bbcc"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "GraduateWhirlpool": {
+  "rodata_offs": [
+   "0x6bc3a"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "GraduateManual": {
+  "rodata_offs": [
+   "0x6bc4b"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "CreateLockedlaunch": {
+  "rodata_offs": [
+   "0x6bcbf"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "CreateLaunch": {
+  "rodata_offs": [
+   "0x6bcd1"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "CreatePresale": {
+  "rodata_offs": [
+   "0x6bcdd"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "BondingCurveInitialize": {
+  "rodata_offs": [
+   "0x6bd35"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "BondingCurveCollectFees": {
+  "rodata_offs": [
+   "0x6bd4b"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "BondingCurveGraduate": {
+  "rodata_offs": [
+   "0x6bd62"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "BondingCurveClose": {
+  "rodata_offs": [
+   "0x6bd76"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "LpHarvest": {
+  "rodata_offs": [
+   "0x6bddb"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "LpTransfer": {
+  "rodata_offs": [
+   "0x6bde4"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "LpTakeover": {
+  "rodata_offs": [
+   "0x6bdee"
+  ],
+  "funcs": [
+   "0x53178"
+  ]
+ },
+ "ProgramVersion": {
+  "rodata_offs": [],
+  "funcs": []
+ }
+}

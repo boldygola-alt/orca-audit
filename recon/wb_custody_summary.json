@@ -1,0 +1,176 @@
+{
+ "totalExcess": 6784577154,
+ "positiveCount": 685,
+ "negativeTotal": -49029050451,
+ "negativeCount": 1,
+ "totalVault": 241206239109,
+ "totalAccounting": 283450712406,
+ "graduated": [
+  {
+   "curve": "Ec5jrDHtT1iFnjzBqQTCfiGMmiGfEQVGdm42aM8Doo2N",
+   "quoteMint": "7M6UCJXpxkdr9eZBMcUwrvd66QzscbQVL6f6c98iEPxT",
+   "baseMint": "F2FbvxXLxo4h1fJBTVuggHF4Ev2c3ZEyxZTSrAJvwave",
+   "creator": "FEDMRB62snymMLV75sdBCCeEfDM4EVdp3xBXrMSTA2FS",
+   "acctQuote": 50000000000,
+   "vaultQuote": 970949549,
+   "divQuote": -49029050451,
+   "acctBase": 990040170780015757,
+   "vaultBase": 0,
+   "divBase": -990040170780015757,
+   "hasVault": true,
+   "graduated": true
+  }
+ ],
+ "top": [
+  {
+   "curve": "6dY8neNeezK1RPzCQWZeAXMkASYjWtPe3y511VRq2L1n",
+   "div": 854042768,
+   "vault": 854042796,
+   "acct": 28
+  },
+  {
+   "curve": "6n8MPRJ81GjYexNHtZLSkq4VLRygiRyh9Ht2yRXDUsPd",
+   "div": 667048926,
+   "vault": 2034654836,
+   "acct": 1367605910
+  },
+  {
+   "curve": "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7",
+   "div": 506349347,
+   "vault": 2787669074,
+   "acct": 2281319727
+  },
+  {
+   "curve": "7unTJYvQpEDEcx6a1ygwmvdJHecG1SSYPf3z2kmX3N2V",
+   "div": 307099092,
+   "vault": 986473712,
+   "acct": 679374620
+  },
+  {
+   "curve": "3kw8XG9ZQnkqnxs74yWsV4VivVrkaKzEcLM2Mopvqurv",
+   "div": 234392451,
+   "vault": 2587065993,
+   "acct": 2352673542
+  },
+  {
+   "curve": "CpnzEm73JnjZJwJ68ujqjt8kAijP8jffUZ5rX2GmCTtJ",
+   "div": 139697702,
+   "vault": 218875804,
+   "acct": 79178102
+  },
+  {
+   "curve": "DS9ABdtbtegGmgrRFA1bLAQoEj5Xw2AQmxdCa1MA55Vh",
+   "div": 113652505,
+   "vault": 164397518,
+   "acct": 50745013
+  },
+  {
+   "curve": "J3qweYT1uGu42GSfYrB1mK37JZzD5ben2t8mWmtKoy2t",
+   "div": 112148404,
+   "vault": 112148412,
+   "acct": 8
+  },
+  {
+   "curve": "F9cdee75CcUpsfpTsVYahowFUGp5Czn3GuU2kfnNTRYy",
+   "div": 111603988,
+   "vault": 111603996,
+   "acct": 8
+  },
+  {
+   "curve": "CqyrQXdxStZAq9A3qtGbgDYeG66NjnyTRbZ3VyPrGVrw",
+   "div": 108960482,
+   "vault": 110054991,
+   "acct": 1094509
+  },
+  {
+   "curve": "2j4p6qMnrvnM9MJmgLZXL7aLZajXSgmsQRAqgBgk7Qem",
+   "div": 105960120,
+   "vault": 516022303,
+   "acct": 410062183
+  },
+  {
+   "curve": "7tUY6SCgR3qiXYCVhTwWXhoo2UEPonjHawGg5gqRXgNz",
+   "div": 104510108,
+   "vault": 104510114,
+   "acct": 6
+  },
+  {
+   "curve": "481zbB9eBuMguJuTViCED17Myp2M65aQGbB2GY5CJdWA",
+   "div": 99118064,
+   "vault": 8140445710,
+   "acct": 8041327646
+  },
+  {
+   "curve": "5vSA5QhtNoxC9wgiP2Jb6gJU3kFme663iWfBvumP7Ctt",
+   "div": 93526678,
+   "vault": 100904011,
+   "acct": 7377333
+  },
+  {
+   "curve": "38mXiFR5KWBxLWgvVGiYJcCHQit7fzzn2KfxLBjAroZy",
+   "div": 88037252,
+   "vault": 88037256,
+   "acct": 4
+  },
+  {
+   "curve": "8kfHKvHGhtdmfafmx557Ni5S5sFWBLm1tbYBeNoj48ib",
+   "div": 79779515,
+   "vault": 229983754,
+   "acct": 150204239
+  },
+  {
+   "curve": "3MDUitkWZ6Nv2jVDfqdsqJmakSR5U7Ay1NTGt1M9eoyM",
+   "div": 74018909,
+   "vault": 23475383070,
+   "acct": 23401364161
+  },
+  {
+   "curve": "5Zv6BV34pbfLjxGoG8BC7yLFoSNDUkj18t2j4NvvZy4M",
+   "div": 51907218,
+   "vault": 2174439919,
+   "acct": 2122532701
+  },
+  {
+   "curve": "HmdHyqTsvBusjZK1XG2b9qiYWXVGkrH2uphpTJ3qHM3c",
+   "div": 50361366,
+   "vault": 50361373,
+   "acct": 7
+  },
+  {
+   "curve": "AsE5V1Rc5syaHnmgqUrnTkf2abn3TSXPZAikvSRNnKqR",
+   "div": 47455849,
+   "vault": 137363507,
+   "acct": 89907658
+  },
+  {
+   "curve": "J7qVCykstxrAcy1Fdi3MEo1wFUhWGx1uRE2bk8rSKHkZ",
+   "div": 46510669,
+   "vault": 46520576,
+   "acct": 9907
+  },
+  {
+   "curve": "79j62hGqJQFLyuHtV9shTqk7iMK235oYeBr9aYjW5pvA",
+   "div": 44509245,
+   "vault": 2848954965,
+   "acct": 2804445720
+  },
+  {
+   "curve": "HpiGJXUKYSNmNFgNVpoEJMnn6HSa8fWNQYTBfbRBZe4z",
+   "div": 44466691,
+   "vault": 59258585,
+   "acct": 14791894
+  },
+  {
+   "curve": "7oV7VZoXstpahr3i8mSHfQUDUSLjCPVwhSo2styV3FE9",
+   "div": 41382707,
+   "vault": 156716942,
+   "acct": 115334235
+  },
+  {
+   "curve": "EWda7X1sT3emmk8zqaPKmJNep1EVVVwmNHMiCHchBwyV",
+   "div": 40571438,
+   "vault": 3157304673,
+   "acct": 3116733235
+  }
+ ]
+}

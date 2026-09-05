@@ -1,0 +1,141 @@
+{
+ "0": {
+  "err": null,
+  "log": "Instruction: ProgramVersion"
+ },
+ "1": {
+  "err": {
+   "InstructionError": [
+    1,
+    "InvalidInstructionData"
+   ]
+  },
+  "log": "Instruction: OracleUpdate | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid instruction da"
+ },
+ "2": {
+  "err": {
+   "InstructionError": [
+    1,
+    "IllegalOwner"
+   ]
+  },
+  "log": "Instruction: SwapExactIn | Account 7C8sCS8kv3zeJLB21GKPNGqcrpjbEr4va4UA5CiPpvv1 is not owned by TokenzQdBNbLqP"
+ },
+ "3": {
+  "err": {
+   "InstructionError": [
+    1,
+    "IllegalOwner"
+   ]
+  },
+  "log": "Instruction: SwapExactOut | Account 7C8sCS8kv3zeJLB21GKPNGqcrpjbEr4va4UA5CiPpvv1 is not owned by TokenzQdBNbLq"
+ },
+ "4": {
+  "err": {
+   "InstructionError": [
+    1,
+    "InvalidInstructionData"
+   ]
+  },
+  "log": "Instruction: ReservedSwapX | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid instruction d"
+ },
+ "5": {
+  "err": {
+   "InstructionError": [
+    1,
+    "InvalidInstructionData"
+   ]
+  },
+  "log": "Instruction: ReservedSwapY | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid instruction d"
+ },
+ "6": {
+  "err": {
+   "InstructionError": [
+    1,
+    "InvalidInstructionData"
+   ]
+  },
+  "log": "Instruction: ReservedSwapZ | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid instruction d"
+ },
+ "7": {
+  "err": {
+   "InstructionError": [
+    1,
+    "InvalidInstructionData"
+   ]
+  },
+  "log": "Instruction: ReservedSwapA | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid instruction d"
+ },
+ "8": {
+  "err": {
+   "InstructionError": [
+    1,
+    "NotEnoughAccountKeys"
+   ]
+  },
+  "log": "Instruction: MarketInitialize | Attempt to get account info at index 6 but there are only 6 accounts | Program"
+ },
+ "9": {
+  "err": {
+   "InstructionError": [
+    1,
+    "IncorrectAuthority"
+   ]
+  },
+  "log": "Instruction: MarketUpdate | Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f is not the authority | Progra"
+ },
+ "10": {
+  "err": {
+   "InstructionError": [
+    1,
+    "IncorrectAuthority"
+   ]
+  },
+  "log": "Instruction: MarketDeposit | Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f is not the authority | Progr"
+ },
+ "11": {
+  "err": {
+   "InstructionError": [
+    1,
+    "IncorrectAuthority"
+   ]
+  },
+  "log": "Instruction: MarketWithdraw | Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f is not the authority | Prog"
+ },
+ "12": {
+  "err": {
+   "InstructionError": [
+    1,
+    "IncorrectAuthority"
+   ]
+  },
+  "log": "Instruction: MarketClose | Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f is not the authority | Program"
+ },
+ "13": {
+  "err": {
+   "InstructionError": [
+    1,
+    "InvalidInstructionData"
+   ]
+  },
+  "log": "Instruction: ReservedMarketX | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid instruction"
+ },
+ "14": {
+  "err": {
+   "InstructionError": [
+    1,
+    "InvalidInstructionData"
+   ]
+  },
+  "log": "Instruction: ReservedMarketY | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid instruction"
+ },
+ "15": {
+  "err": {
+   "InstructionError": [
+    1,
+    "InvalidInstructionData"
+   ]
+  },
+  "log": "Instruction: ReservedMarketZ | Program riptK81hDxhe5pW5jSzSM9iRA8azgEgLJ4dXkPtBS7j failed: invalid instruction"
+ }
+}

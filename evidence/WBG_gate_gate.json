@@ -1,0 +1,144 @@
+[
+ {
+  "curve": "B9wBisgXnZGzFdb9KLTuZnwmtg6t3V6pTsz6VoKP3P5p",
+  "phase": "BEFORE graduation",
+  "err": {
+   "InstructionError": [
+    1,
+    {
+     "Custom": 6019
+    }
+   ]
+  },
+  "logs": [
+   "Program log: Instruction: TokenSellExactIn",
+   "Program log: Token has met graduation conditions and is ready to be graduated",
+   "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1783"
+  ],
+  "curveState": {
+   "lamports": 15144960,
+   "space": 2048,
+   "quoteAmount": 0,
+   "baseAmount": 0,
+   "m1grad": 0
+  },
+  "afterState": {
+   "lamports": 15144960,
+   "space": 2048,
+   "quoteAmount": 0,
+   "baseAmount": 0,
+   "m1grad": 0
+  },
+  "victimNote": "attacker owns this fixture-funded base ATA"
+ },
+ {
+  "curve": "B9wBisgXnZGzFdb9KLTuZnwmtg6t3V6pTsz6VoKP3P5p",
+  "phase": "ATTACKER graduateManual",
+  "err": null,
+  "afterState": {
+   "lamports": 15144960,
+   "space": 2048,
+   "quoteAmount": 0,
+   "baseAmount": 0,
+   "m1grad": 1
+  },
+  "logs": [
+   "Program log: Instruction: GraduateManual"
+  ]
+ },
+ {
+  "curve": "B9wBisgXnZGzFdb9KLTuZnwmtg6t3V6pTsz6VoKP3P5p",
+  "phase": "AFTER graduation",
+  "err": {
+   "InstructionError": [
+    1,
+    {
+     "Custom": 6019
+    }
+   ]
+  },
+  "afterState": {
+   "lamports": 15144960,
+   "space": 2048,
+   "quoteAmount": 0,
+   "baseAmount": 0,
+   "m1grad": 1
+  },
+  "logs": [
+   "Program log: Instruction: TokenSellExactIn",
+   "Program log: Token has met graduation conditions and is ready to be graduated",
+   "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1783"
+  ]
+ },
+ {
+  "curve": "GPa2k37AsmeiHBCFxoKsneZxw4VLtqWVRsSmr3bo7gvA",
+  "phase": "BEFORE graduation",
+  "err": {
+   "InstructionError": [
+    1,
+    {
+     "Custom": 6019
+    }
+   ]
+  },
+  "logs": [
+   "Program log: Instruction: TokenSellExactIn",
+   "Program log: Token has met graduation conditions and is ready to be graduated",
+   "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1783"
+  ],
+  "curveState": {
+   "lamports": 15144960,
+   "space": 2048,
+   "quoteAmount": 0,
+   "baseAmount": 0,
+   "m1grad": 0
+  },
+  "afterState": {
+   "lamports": 15144960,
+   "space": 2048,
+   "quoteAmount": 0,
+   "baseAmount": 0,
+   "m1grad": 0
+  },
+  "victimNote": "attacker owns this fixture-funded base ATA"
+ },
+ {
+  "curve": "GPa2k37AsmeiHBCFxoKsneZxw4VLtqWVRsSmr3bo7gvA",
+  "phase": "ATTACKER graduateManual",
+  "err": null,
+  "afterState": {
+   "lamports": 15144960,
+   "space": 2048,
+   "quoteAmount": 0,
+   "baseAmount": 0,
+   "m1grad": 1
+  },
+  "logs": [
+   "Program log: Instruction: GraduateManual"
+  ]
+ },
+ {
+  "curve": "GPa2k37AsmeiHBCFxoKsneZxw4VLtqWVRsSmr3bo7gvA",
+  "phase": "AFTER graduation",
+  "err": {
+   "InstructionError": [
+    1,
+    {
+     "Custom": 6019
+    }
+   ]
+  },
+  "afterState": {
+   "lamports": 15144960,
+   "space": 2048,
+   "quoteAmount": 0,
+   "baseAmount": 0,
+   "m1grad": 1
+  },
+  "logs": [
+   "Program log: Instruction: TokenSellExactIn",
+   "Program log: Token has met graduation conditions and is ready to be graduated",
+   "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1783"
+  ]
+ }
+]

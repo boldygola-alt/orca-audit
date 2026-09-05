@@ -1,0 +1,65 @@
+{
+ "priorEntries": 177,
+ "added": 145,
+ "total": 322,
+ "statusCounts": {
+  "NO CONFIRMED PERMISSIONLESS PROFIT PATH": 322
+ },
+ "byFlag": {
+  "executed-denied": 163,
+  "executed-success": 146,
+  "not-executed": 13
+ },
+ "byProgram": {
+  "busybox": 39,
+  "wavebreak": 138,
+  "busybox/riptide": 145
+ },
+ "valued": 43,
+ "netPositive": 15,
+ "maxPositiveUsd": 11.0635,
+ "minNetUsd": -34.3224,
+ "perMarketNetRangeUsd": {
+  "6Vzx4ASRjU": [
+   -8.4195,
+   1.5657
+  ],
+  "8hbdkPt2CU": [
+   -0.9518,
+   0.0147
+  ],
+  "9Bc7tyaZft": [
+   0.2754,
+   1.3298
+  ],
+  "9PwXMVkFzW": [
+   0.0173,
+   0.0245
+  ],
+  "CNp3etjEmW": [
+   -11.5021,
+   -0.1107
+  ],
+  "G9pQE63etk": [
+   2.2295,
+   11.0635
+  ],
+  "GtBJeuFzSC": [
+   -0.0022,
+   0.0002
+  ],
+  "GxGxQBvMQ7": [
+   -34.3224,
+   0.4812
+  ],
+  "HpGbZwwQ66": [
+   -0.6601,
+   -0.026
+  ],
+  "HxNaPy1oYA": [
+   -6.1338,
+   -1.2129
+  ]
+ },
+ "sumPositivesUsd": 19.01
+}

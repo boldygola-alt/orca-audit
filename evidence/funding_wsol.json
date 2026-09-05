@@ -1,0 +1,18 @@
+{
+ "note": "FORK-ONLY fixture funding of the attacker's own WSOL account (Surfpool surfnet_setAccount). Not exploit evidence; used so that denials are program decisions rather than empty-account artifacts (mandate rule 4/10).",
+ "ata": "HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh",
+ "after": {
+  "lamports": 2039280,
+  "space": 165,
+  "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+  "executable": false,
+  "dataHash": "7b6a67394e3354b3337e0e953ac6eecbf72b382b4363156e986e5d85cbc3267a",
+  "dataLen": 165,
+  "token": {
+   "mint": "So11111111111111111111111111111111111111112",
+   "owner": "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f",
+   "amount": 1000000000000,
+   "state": 1
+  }
+ }
+}

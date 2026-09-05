@@ -1,0 +1,290 @@
+[
+ {
+  "addr": "Pr8kEpckXpoasxBhnCYNKSARA9eSfcxTKMt9QM5Yy4b",
+  "variant": 0,
+  "validUntil": 438555755,
+  "staleBy": 5676934,
+  "resA": 0,
+  "resB": 0,
+  "seq": 3382528
+ },
+ {
+  "addr": "gToveevei3ZxJf2byHqz2kAoE3qE2PR8knH88YmTaGp",
+  "variant": 0,
+  "validUntil": 0,
+  "staleBy": 444232689,
+  "resA": 0,
+  "resB": 0,
+  "seq": 0
+ },
+ {
+  "addr": "2FiXtA6nkMWADDWMzJMFNh46gc6SHNirR4vuoNsh6xYG",
+  "variant": 0,
+  "validUntil": 0,
+  "staleBy": 444232689,
+  "resA": 0,
+  "resB": 0,
+  "seq": 0
+ },
+ {
+  "addr": "2JVQeq8rDwYzdocXZ2CYCUhxVYR3rXWb3DsZAuEssPWr",
+  "variant": 4,
+  "validUntil": 529084637,
+  "staleBy": -84851948,
+  "resA": 0,
+  "resB": 0,
+  "seq": 2
+ },
+ {
+  "addr": "2any1YNCuwq9aus6a5xHiiZ9t9W9cJc2BVxfLbnQJt7b",
+  "variant": 0,
+  "validUntil": 430450865,
+  "staleBy": 13781824,
+  "resA": 0,
+  "resB": 0,
+  "seq": 219580
+ },
+ {
+  "addr": "2de7oMLemcVNo8vaXBxJcx63DHCv2CzPCZtHxN8soRsF",
+  "variant": 0,
+  "validUntil": 0,
+  "staleBy": 444232689,
+  "resA": 0,
+  "resB": 0,
+  "seq": 0
+ },
+ {
+  "addr": "3b9qGj3HoJeM7eRYd6NUNWjPJnLmX5aqA81tHCPHJT52",
+  "variant": 0,
+  "validUntil": 0,
+  "staleBy": 444232689,
+  "resA": 0,
+  "resB": 0,
+  "seq": 0
+ },
+ {
+  "addr": "4AFfguVTj7sqSkEU6fzq79ELjw27Cu5YK4fm8HXxnTzw",
+  "variant": 0,
+  "validUntil": 443404402,
+  "staleBy": 828287,
+  "resA": 48280765628,
+  "resB": 5384659508,
+  "seq": 1299632
+ },
+ {
+  "addr": "5783KdWDm8neUV3yR7JEDnv3YjxdNXzPZuQAcN5j3rJj",
+  "variant": 0,
+  "validUntil": 427467127,
+  "staleBy": 16765562,
+  "resA": 10251,
+  "resB": 1941619797,
+  "seq": 93911
+ },
+ {
+  "addr": "5aU1HMwjZnRpVeFP1WnzEwPQgX9rgazum1xTvT6ueCiE",
+  "variant": 0,
+  "validUntil": 0,
+  "staleBy": 444232689,
+  "resA": 0,
+  "resB": 0,
+  "seq": 0
+ },
+ {
+  "addr": "6Vzx4ASRjUPW2yBxHdBT3hDam2zxB6UmhM2MYYM5k8ci",
+  "variant": 4,
+  "validUntil": 534568722,
+  "staleBy": -90336033,
+  "resA": 24986234286,
+  "resB": 25108180780,
+  "seq": 9
+ },
+ {
+  "addr": "6p6Bz97LNPZgTWgRykWoVJx4EtweKTfWkkrr5JmeJ52J",
+  "variant": 0,
+  "validUntil": 0,
+  "staleBy": 444232689,
+  "resA": 0,
+  "resB": 0,
+  "seq": 0
+ },
+ {
+  "addr": "7fd9UrdnqZhWAdA6UdkDCXedzWEbZoEQfzBbX3Neek9L",
+  "variant": 0,
+  "validUntil": 0,
+  "staleBy": 444232689,
+  "resA": 0,
+  "resB": 0,
+  "seq": 0
+ },
+ {
+  "addr": "7qvjJJZVh9fk2ZTYCpSjoexYomVPr7qtNTFF3ey4JcjQ",
+  "variant": 0,
+  "validUntil": 18446744073709551615,
+  "staleBy": -18446744073265318926,
+  "resA": 0,
+  "resB": 0,
+  "seq": 2286447
+ },
+ {
+  "addr": "8RadFPWSmbCLX9bKeYM8Az4x5rkNdyfsRt51Jk2VyYBi",
+  "variant": 4,
+  "validUntil": 531223567,
+  "staleBy": -86990878,
+  "resA": 0,
+  "resB": 0,
+  "seq": 3664703
+ },
+ {
+  "addr": "8VCQDXXksFJruJFRfNgwHfA4UkwgESE6pCVaZwmP37hY",
+  "variant": 0,
+  "validUntil": 430123690,
+  "staleBy": 14108999,
+  "resA": 0,
+  "resB": 0,
+  "seq": 4802248
+ },
+ {
+  "addr": "8hbdkPt2CUGKLw7Ywzds6rKhJj82AJdgSfEcNFVuGkia",
+  "variant": 4,
+  "validUntil": 531430377,
+  "staleBy": -87197688,
+  "resA": 3028513048,
+  "resB": 4168841739,
+  "seq": 1
+ },
+ {
+  "addr": "9Bc7tyaZftQfXrEPmWxSLt7sHQMfgj65qSqQoQPBxnUN",
+  "variant": 3,
+  "validUntil": 444232699,
+  "staleBy": -10,
+  "resA": 5358997584,
+  "resB": 11564282172,
+  "seq": 165292
+ },
+ {
+  "addr": "9HRPQ3RTJCc84tueGVY6o3j1gyLMgHYdrfbuePobWTzN",
+  "variant": 0,
+  "validUntil": 0,
+  "staleBy": 444232689,
+  "resA": 0,
+  "resB": 0,
+  "seq": 0
+ },
+ {
+  "addr": "9PwXMVkFzWk5We1FUaQi8C1mp6YekUvuLsqHLY2vyJcf",
+  "variant": 3,
+  "validUntil": 444232702,
+  "staleBy": -13,
+  "resA": 64894349076,
+  "resB": 60831700081,
+  "seq": 4069237
+ },
+ {
+  "addr": "B7gLw7KaFFg5vZ4311nfZ6mX6g9DTo5QAXRSJe9FumWm",
+  "variant": 4,
+  "validUntil": 529084510,
+  "staleBy": -84851821,
+  "resA": 0,
+  "resB": 0,
+  "seq": 3
+ },
+ {
+  "addr": "BAHUJWuq67psgvderBwWm9w4dvvPVWedg3CmFdANjbVZ",
+  "variant": 0,
+  "validUntil": 433430572,
+  "staleBy": 10802117,
+  "resA": 0,
+  "resB": 0,
+  "seq": 2869682
+ },
+ {
+  "addr": "BuCHbw2aCWHjq8m4phReDPrf2tJC59WM9EEXBwNavGda",
+  "variant": 0,
+  "validUntil": 0,
+  "staleBy": 444232689,
+  "resA": 0,
+  "resB": 0,
+  "seq": 0
+ },
+ {
+  "addr": "CNp3etjEmWP4mGuXWJR6FwT4ffX7pqhcCYW9a9eU22rd",
+  "variant": 3,
+  "validUntil": 444232701,
+  "staleBy": -12,
+  "resA": 18128871820,
+  "resB": 27843713206,
+  "seq": 341923
+ },
+ {
+  "addr": "CzuQmqj4dSdaGAXrf6t2YupR3PB6Kp1urhpU8scFwmXW",
+  "variant": 3,
+  "validUntil": 415068462,
+  "staleBy": 29164227,
+  "resA": 10900000000,
+  "resB": 500000000,
+  "seq": 642827
+ },
+ {
+  "addr": "FefUJfaS2VpkKCCR7fodHP4xzgEA3qz1NASqdxhQ8Czv",
+  "variant": 4,
+  "validUntil": 444796407,
+  "staleBy": -563718,
+  "resA": 237375719022,
+  "resB": 4167,
+  "seq": 1195
+ },
+ {
+  "addr": "G9pQE63etkaFuuX7UNGB8YnvBufNNZMo9GchQNCxrYeD",
+  "variant": 3,
+  "validUntil": 444232701,
+  "staleBy": -12,
+  "resA": 9697165867,
+  "resB": 26262005122,
+  "seq": 824854
+ },
+ {
+  "addr": "GtBJeuFzSCnDf9Eqycuf4DVxqVw1gmpv5VdsTBULV579",
+  "variant": 4,
+  "validUntil": 529084362,
+  "staleBy": -84851673,
+  "resA": 12416724,
+  "resB": 13667464,
+  "seq": 3
+ },
+ {
+  "addr": "GvTxvFaHqM6TmxjYeCjSKC4WGLiaD7jzScxZQg2rS4Sy",
+  "variant": 0,
+  "validUntil": 0,
+  "staleBy": 444232689,
+  "resA": 0,
+  "resB": 0,
+  "seq": 0
+ },
+ {
+  "addr": "GxGxQBvMQ7vUZWRM6v26umC9w8bCxu4hXTHxCtgEcopa",
+  "variant": 3,
+  "validUntil": 444232710,
+  "staleBy": -21,
+  "resA": 24651847918,
+  "resB": 46035622583,
+  "seq": 928709
+ },
+ {
+  "addr": "HpGbZwwQ667NnTQToNfp8xyXu9qvmiZ51jLdoo4LsiSG",
+  "variant": 3,
+  "validUntil": 444232706,
+  "staleBy": -17,
+  "resA": 978284337,
+  "resB": 7820822169,
+  "seq": 230438
+ },
+ {
+  "addr": "HxNaPy1oYA8xkyg2GSSzcF3VwEX5bH6Mo6BLLAHF3Ack",
+  "variant": 3,
+  "validUntil": 444232706,
+  "staleBy": -17,
+  "resA": 16598133291,
+  "resB": 49767739186,
+  "seq": 3319846
+ }
+]

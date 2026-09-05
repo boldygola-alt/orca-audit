@@ -1,0 +1,8 @@
+# Never publish fork/test private key material.
+keys/
+
+# Local runtime and transient artifacts.
+*.log
+__pycache__/
+.pytest_cache/
+

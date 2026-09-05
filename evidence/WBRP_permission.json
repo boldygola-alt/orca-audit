@@ -1,0 +1,678 @@
+{
+ "fixture": {
+  "sig": "4AzoeGJJoALnKycoKKFc9aZEyRSvMNC8DmQXwtQuh5uJsLmGeUHunDn2xZEH2AQ9irnb6DgowYe1cjMneCsV7wUT",
+  "slot": 441643234,
+  "accounts": [
+   "FyRe6exmXqBh77QQWwzYHQ4cJh2LSAkc3Pfp4XJR7enS",
+   "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi",
+   "2fbqsoevHpzejgyZVb2M1W4eRPffAsfvEVyVBr73C64s",
+   "11111111111111111111111111111111",
+   "Sysvar1nstructions1111111111111111111111111"
+  ],
+  "message": {
+   "nonce": 1370021847938669,
+   "consumerProgram": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+   "signer": "b'\\x03Y\\xc5J\\xbf\\xca<\\xe4\\xaa@\\xf7N\\xec\\x17\\xc5\\x0f\"\\xdeB\\xc1\\x00.\\x87\\x1f\\xcd\\x98\\xd3oo\\x18k+)'",
+   "subject": "FyRe6exmXqBh77QQWwzYHQ4cJh2LSAkc3Pfp4XJR7enS",
+   "validUntil": 441643521,
+   "permissionType": 0,
+   "discs": [
+    "b'\\x08'"
+   ],
+   "lenConsumed": 124
+  },
+  "parsed": {
+   "nonce": 1370021847938669,
+   "consumerProgram": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+   "signer": "0359c54abfca3ce4aa40f74eec17c50f22de42c1002e871fcd98d36f6f186b2b29",
+   "subject": "FyRe6exmXqBh77QQWwzYHQ4cJh2LSAkc3Pfp4XJR7enS",
+   "validUntil": 441643521,
+   "permissionType": 0,
+   "lenConsumed": 124
+  },
+  "discs": [
+   "08"
+  ],
+  "signature_hex": "01b2791f638e79dcc6d5ba239589c1e443f3ee735237c7f1e0ae8826e46051ff1a43c7d8716a2536a329d99897631cbb606a51d2dada7ac5970f8738b99ad28f",
+  "recoveryId": 66,
+  "consumedExistsAtFork": false
+ },
+ "forkSlot": 444225854,
+ "results": [
+  {
+   "case": "WB-RP1 verbatim replay of a live consume (attacker signs as consumer)",
+   "note": "must fail: account already exists / consumer-subject binding",
+   "forkSlotBefore": 444225855,
+   "forkSlotAfter": 444225857,
+   "sig": "4L44u1MLCe1ds8YYSPgY2oD7EVryKGraj37S9N47VTkm9vEM5FxZprStrJKeEQGtnt3BsCMmDoLbtn5NK62Kqe6r",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Permission subject FyRe6exmXqBh77QQWwzYHQ4cJh2LSAkc3Pfp4XJR7enS does not match permission consumer 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 47839 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1771"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "2fbqsoevHpzejgyZVb2M1W4eRPffAsfvEVyVBr73C64s": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963884120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "2fbqsoevHpzejgyZVb2M1W4eRPffAsfvEVyVBr73C64s": {
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "space": 256,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "6cea66d8a02c5ad76a728de434a91364ac2c1a5c51830d885b382530d6a6b4be",
+     "dataLen": 256,
+     "token": {
+      "mint": "GpzsDMxqHtt4ErXqwuSFf66dbp4SjH1nzQW4ZXhzkoY",
+      "owner": "ApyVG1RJicL25bC142XL3FZ6uJZiYFAaVQnwCGEcnzpi",
+      "amount": 10539,
+      "state": 0
+     }
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963879120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "2fbqsoevHpzejgyZVb2M1W4eRPffAsfvEVyVBr73C64s": {
+     "absent": true
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "space": 256,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "6cea66d8a02c5ad76a728de434a91364ac2c1a5c51830d885b382530d6a6b4be",
+     "dataLen": 256,
+     "token": {
+      "mint": "GpzsDMxqHtt4ErXqwuSFf66dbp4SjH1nzQW4ZXhzkoY",
+      "owner": "ApyVG1RJicL25bC142XL3FZ6uJZiYFAaVQnwCGEcnzpi",
+      "amount": 10539,
+      "state": 0
+     }
+    }
+   }
+  },
+  {
+   "case": "WB-RP2 subject replaced by the attacker, original signature kept",
+   "note": "secp256k1 recovery must not match the allowed signer set",
+   "forkSlotBefore": 444225857,
+   "forkSlotAfter": 444225859,
+   "sig": "3LzhWwEJVjqw9FRUz7T4Q4PWrWZfSTuZDUP7u7PkPuo929kukLQuV7FPuPWbiNFDq56hmq1hoFsAujswN2RwYHN8",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Account 7Rv4zDKjhGpL1nTZwcmeVcsMYc4myY5EpBSdbJuh941H has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25518 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    },
+    "7Rv4zDKjhGpL1nTZwcmeVcsMYc4myY5EpBSdbJuh941H": {
+     "absentBefore": true,
+     "absentAfter": true
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963879120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "7Rv4zDKjhGpL1nTZwcmeVcsMYc4myY5EpBSdbJuh941H": {
+     "absent": true
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963874120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "7Rv4zDKjhGpL1nTZwcmeVcsMYc4myY5EpBSdbJuh941H": {
+     "absent": true
+    }
+   }
+  },
+  {
+   "case": "WB-RP3 signer field zeroed, original signature kept",
+   "note": "must fail signature verification",
+   "forkSlotBefore": 444225859,
+   "forkSlotAfter": 444225860,
+   "sig": "39x2RyhasxcP2CARinVLvLqTPUeFa35HCE3PSpUyXBkpzPzepq4iXSTMznYESxmDG9Cz4Dk2hBRVJvY2LQV4cTNz",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConsumeTopLevel",
+    "Program log: Account 7Rv4zDKjhGpL1nTZwcmeVcsMYc4myY5EpBSdbJuh941H has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25518 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963874120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963869120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    }
+   }
+  },
+  {
+   "case": "WB-RP4 refund live consumed-permission (past safeToCloseSlot) -> attacker wallet",
+   "note": "stored refundDestination=11111111111111111111111111111111",
+   "forkSlotBefore": 444225860,
+   "forkSlotAfter": 444225861,
+   "sig": "UbPYbmFKPGMvW8bUdysSSxVjjxvrWbiA35X65ZJtFNciG3cpYNA9x5nZHgmKkJpp5yaBKtqwWhziotMyoUBwt2y",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionRefund",
+    "Program log: Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f has wrong address",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 21453 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1771"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963869120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG": {
+     "lamports": 1336320,
+     "space": 64,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "baabf3b615cbda03b9a031af14660611ec05d40b5032d154fba920fd5a9bee7a",
+     "dataLen": 64,
+     "token": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963864120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG": {
+     "lamports": 1336320,
+     "space": 64,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "baabf3b615cbda03b9a031af14660611ec05d40b5032d154fba920fd5a9bee7a",
+     "dataLen": 64,
+     "token": null
+    }
+   }
+  },
+  {
+   "case": "WB-RP5 refund live consumed-permission -> attacker WSOL ATA",
+   "note": "rent-lamport redirect attempt",
+   "forkSlotBefore": 444225861,
+   "forkSlotAfter": 444225863,
+   "sig": "4QHRcgvMUkeH5SZgMKFEeLoJmMxYA4knacfZu4PUBJ1m3h9Fkxw4Pn91yyZcM78aeznxyHd7wkB1N2m1DxYjpZsT",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionRefund",
+    "Program log: Account HMRvmgya8xKgDsbZfLGrYEjGNeFrJSe27JBhsAE2P7jh has wrong address",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 21778 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1771"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963864120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG": {
+     "lamports": 1336320,
+     "space": 64,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "baabf3b615cbda03b9a031af14660611ec05d40b5032d154fba920fd5a9bee7a",
+     "dataLen": 64,
+     "token": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963859120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG": {
+     "lamports": 1336320,
+     "space": 64,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "baabf3b615cbda03b9a031af14660611ec05d40b5032d154fba920fd5a9bee7a",
+     "dataLen": 64,
+     "token": null
+    }
+   }
+  },
+  {
+   "case": "WB-RP6 same refund twice in one tx",
+   "note": "double refund / close-after-close",
+   "forkSlotBefore": 444225863,
+   "forkSlotAfter": 444225864,
+   "sig": "2MhfBmLM4DzqDn7LVVCB7HYnyN23ihE8h6RPh3rc3zM8i4hiUqmJR9eCpoJ9hkb7vCAvhLriimbb565VnL4khiKZ",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6001
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionRefund",
+    "Program log: Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f has wrong address",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 21453 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1771"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963859120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG": {
+     "lamports": 1336320,
+     "space": 64,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "baabf3b615cbda03b9a031af14660611ec05d40b5032d154fba920fd5a9bee7a",
+     "dataLen": 64,
+     "token": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963854120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG": {
+     "lamports": 1336320,
+     "space": 64,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "baabf3b615cbda03b9a031af14660611ec05d40b5032d154fba920fd5a9bee7a",
+     "dataLen": 64,
+     "token": null
+    }
+   }
+  },
+  {
+   "case": "WB-RP7 permissionRevoke by attacker on a live consumed-permission",
+   "note": "funder binding: only the original funder may revoke",
+   "forkSlotBefore": 444225864,
+   "forkSlotAfter": 444225865,
+   "sig": "2eoFEfqqKvCGKHfCw9juvFd6prPJaEaFKmZ5Dznw6HACqa2KPpTyMA8nMo4eXid6CCnHk8hxL5ixbHjAMAKpZcxu",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6023
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionRevoke",
+    "Program log: Account 2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG has wrong seeds",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25228 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x1787"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963854120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG": {
+     "lamports": 1336320,
+     "space": 64,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "baabf3b615cbda03b9a031af14660611ec05d40b5032d154fba920fd5a9bee7a",
+     "dataLen": 64,
+     "token": null
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963849120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG": {
+     "lamports": 1336320,
+     "space": 64,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "baabf3b615cbda03b9a031af14660611ec05d40b5032d154fba920fd5a9bee7a",
+     "dataLen": 64,
+     "token": null
+    }
+   }
+  },
+  {
+   "case": "WB-RP8 permissionConfigUpdate by attacker",
+   "note": "privilege gate on the shared permission config",
+   "forkSlotBefore": 444225865,
+   "forkSlotAfter": 444225868,
+   "sig": "3pHA1vD2btty8p9STi7EwnDYpaK7XSn5BfS3DpiGh5AHqHNu2gd6G2fwaCX1GTLybhQEGgvFMzsCgvWayswDtMQ6",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConfigUpdate",
+    "Program log: Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f does not have required privilege 6",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25589 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963849120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "space": 256,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "6cea66d8a02c5ad76a728de434a91364ac2c1a5c51830d885b382530d6a6b4be",
+     "dataLen": 256,
+     "token": {
+      "mint": "GpzsDMxqHtt4ErXqwuSFf66dbp4SjH1nzQW4ZXhzkoY",
+      "owner": "ApyVG1RJicL25bC142XL3FZ6uJZiYFAaVQnwCGEcnzpi",
+      "amount": 10539,
+      "state": 0
+     }
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963844120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "space": 256,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "6cea66d8a02c5ad76a728de434a91364ac2c1a5c51830d885b382530d6a6b4be",
+     "dataLen": 256,
+     "token": {
+      "mint": "GpzsDMxqHtt4ErXqwuSFf66dbp4SjH1nzQW4ZXhzkoY",
+      "owner": "ApyVG1RJicL25bC142XL3FZ6uJZiYFAaVQnwCGEcnzpi",
+      "amount": 10539,
+      "state": 0
+     }
+    }
+   }
+  },
+  {
+   "case": "WB-RP8 permissionConfigClose by attacker",
+   "note": "privilege gate on the shared permission config",
+   "forkSlotBefore": 444225868,
+   "forkSlotAfter": 444225869,
+   "sig": "5mMBqJ9HSymxEehHVYcQUngN1MncXb7rHkpsr3RCt3dZ5ZjgHKwwxHn5Ukm3hi8p2jQtfE4CwsC2MkpZgismzsFp",
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6027
+     }
+    ]
+   },
+   "logs": [
+    "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+    "Program ComputeBudget111111111111111111111111111111 success",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF invoke [1]",
+    "Program log: Instruction: PermissionConfigClose",
+    "Program log: Account 4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f does not have required privilege 7",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF consumed 25508 of 1399850 compute units",
+    "Program waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF failed: custom program error: 0x178b"
+   ],
+   "stateDiff": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamportsDelta": -5000
+    }
+   },
+   "before": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963844120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "space": 256,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "6cea66d8a02c5ad76a728de434a91364ac2c1a5c51830d885b382530d6a6b4be",
+     "dataLen": 256,
+     "token": {
+      "mint": "GpzsDMxqHtt4ErXqwuSFf66dbp4SjH1nzQW4ZXhzkoY",
+      "owner": "ApyVG1RJicL25bC142XL3FZ6uJZiYFAaVQnwCGEcnzpi",
+      "amount": 10539,
+      "state": 0
+     }
+    }
+   },
+   "after": {
+    "4LWptHzEFd85eL3nEn1bPK3h4RZzL6Sfi4N96ZdpYZ5f": {
+     "lamports": 4994963839120,
+     "space": 0,
+     "owner": "11111111111111111111111111111111",
+     "executable": false,
+     "dataHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "dataLen": 0,
+     "token": null
+    },
+    "8Sz6ihaNiWVNQM2MRArqrZa8RpGxr7SzRYSSr5cgeDDi": {
+     "lamports": 2672640,
+     "space": 256,
+     "owner": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+     "executable": false,
+     "dataHash": "6cea66d8a02c5ad76a728de434a91364ac2c1a5c51830d885b382530d6a6b4be",
+     "dataLen": 256,
+     "token": {
+      "mint": "GpzsDMxqHtt4ErXqwuSFf66dbp4SjH1nzQW4ZXhzkoY",
+      "owner": "ApyVG1RJicL25bC142XL3FZ6uJZiYFAaVQnwCGEcnzpi",
+      "amount": 10539,
+      "state": 0
+     }
+    }
+   }
+  }
+ ]
+}

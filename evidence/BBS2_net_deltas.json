@@ -1,0 +1,2633 @@
+{
+ "evidence": "/home/user/orca-audit/evidence/BBS2_stale_sweep.json",
+ "externalPriceSlot": 444303057,
+ "mainnetSlotAtScan": 444305594,
+ "rows": [
+  {
+   "case": "exact-in A 1% (482,807,656)",
+   "market": "4AFfguVTj7",
+   "ok": false,
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "forkSlot": 444303189,
+   "validUntil": 443404402,
+   "executedAfterStoredExpiry": true,
+   "actorLegs": [],
+   "marketVaultLegs": [],
+   "actorNetUsd": 0,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 0
+   },
+   "sig": "3wEzGqfYwweTZoTBQuci732fSiajKBtKWasLGFiwTqj1e8TnJYWrvyuz8WQarmhvWPAQGQ5M6iSur95WEMCtiFh8"
+  },
+  {
+   "case": "exact-in A 1% (102)",
+   "market": "5783KdWDm8",
+   "ok": false,
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "forkSlot": 444303191,
+   "validUntil": 427467127,
+   "executedAfterStoredExpiry": true,
+   "actorLegs": [],
+   "marketVaultLegs": [],
+   "actorNetUsd": 0,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 0
+   },
+   "sig": "5y54ZuPh8FJKcn7VorTX6B7qjkWXNHzYtfBqbgrX8BM9ByPBym6eTyQ3HSsXGcWrFFSUnhG1zW5FktaeTDRJeXqU"
+  },
+  {
+   "case": "exact-in A 1% (246,499,665)",
+   "market": "6Vzx4ASRjU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303192,
+   "validUntil": 534568722,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -246499665,
+     1.0002,
+     -246.5407
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     246395227,
+     1.0,
+     246.3914
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     246499665,
+     1.0002,
+     246.5407
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -246395227,
+     1.0,
+     -246.3914
+    ]
+   ],
+   "actorNetUsd": -0.1493,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 246499665,
+    "B": -246395227
+   },
+   "sig": "qe7WH86DiiwfziphmLLBm6bEoaVy4XkncfWQ5gnTBnxfWdw26pJyLMYNWu9T1sKKeQraJhxQtmwmx7ZvP6Wzz1e"
+  },
+  {
+   "case": "exact-in A 5% (1,232,498,325)",
+   "market": "6Vzx4ASRjU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303194,
+   "validUntil": 534568722,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -1232498325,
+     1.0002,
+     -1232.7037
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     1231976137,
+     1.0,
+     1231.9571
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     1232498325,
+     1.0002,
+     1232.7037
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -1231976137,
+     1.0,
+     -1231.9571
+    ]
+   ],
+   "actorNetUsd": -0.7466,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 1232498325,
+    "B": -1231976137
+   },
+   "sig": "66fzWoh6abARZ84wSaaSGvpmk4FaAg7g2uwSG1z3N74nT4SUBDBjG9RxGPnaUaerHnjfTzHFwHgcyTdxBuZ43PsM"
+  },
+  {
+   "case": "exact-in A 25% (6,162,491,629)",
+   "market": "6Vzx4ASRjU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303195,
+   "validUntil": 534568722,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -6162491629,
+     1.0002,
+     -6163.5185
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     6155194240,
+     1.0,
+     6155.0991
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     6162491629,
+     1.0002,
+     6163.5185
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -6155194240,
+     1.0,
+     -6155.0991
+    ]
+   ],
+   "actorNetUsd": -8.4194,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 6162491629,
+    "B": -6155194240
+   },
+   "sig": "4vC1r83AhJNhRE2hRKasia11effptjbaZcNjGvbvxAa4mmSp5J9MP5QijxtMjPVnZDJtvhBL1LhzpMnb5FUqSBBN"
+  },
+  {
+   "case": "exact-in B 1% (254,446,596)",
+   "market": "6Vzx4ASRjU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303196,
+   "validUntil": 534568722,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     254660160,
+     1.0002,
+     254.7026
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -254446596,
+     1.0,
+     -254.4427
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -254660160,
+     1.0002,
+     -254.7026
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     254446596,
+     1.0,
+     254.4427
+    ]
+   ],
+   "actorNetUsd": 0.2599,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -254660160,
+    "B": 254446596
+   },
+   "sig": "2w6Lxsykefw3xyYS5HiPc2HnDvth712xhUR7QtG8pkqe9SQSwcuJ7Q3vjViux5gqqmxHnGCcJT5g5JjgabZ4jgDP"
+  },
+  {
+   "case": "exact-in B 5% (1,272,232,980)",
+   "market": "6Vzx4ASRjU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303197,
+   "validUntil": 534568722,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     1273300805,
+     1.0002,
+     1273.513
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -1272232980,
+     1.0,
+     -1272.2133
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -1273300805,
+     1.0002,
+     -1273.513
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     1272232980,
+     1.0,
+     1272.2133
+    ]
+   ],
+   "actorNetUsd": 1.2997,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -1273300805,
+    "B": 1272232980
+   },
+   "sig": "2PV9wefPSQoDahWkHCi9FjyFa2t7fjsdC3CCvVvKzYSsMP8zpkwp93XfULBLKEaZh9nx7hARMvBduFi6R6sappei"
+  },
+  {
+   "case": "exact-in B 25% (6,361,164,901)",
+   "market": "6Vzx4ASRjU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303198,
+   "validUntil": 534568722,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     6361572123,
+     1.0002,
+     6362.6322
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -6361164901,
+     1.0,
+     -6361.0665
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -6361572123,
+     1.0002,
+     -6362.6322
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     6361164901,
+     1.0,
+     6361.0665
+    ]
+   ],
+   "actorNetUsd": 1.5657,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -6361572123,
+    "B": 6361164901
+   },
+   "sig": "5Mo1WRST5ZW2UaGuUMHXdCQCycCChHY9YnE12eVapqp8PMyEMaw2VaPV9bty1GfdPS3hxhf55MFzj2JwNBSH1uYJ"
+  },
+  {
+   "case": "ROUND TRIP A->B->A in one tx (exact-in 123,249,832 then exact-out 123,249,832 A)",
+   "market": "6Vzx4ASRjU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303200,
+   "validUntil": 534568722,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     -141442,
+     1.0,
+     -0.1414
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     141442,
+     1.0,
+     0.1414
+    ]
+   ],
+   "actorNetUsd": -0.1414,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 141442
+   },
+   "sig": "EsmauKCJLYSAugXPvtWhyJT7DAqWhQ7TKcWWyDMFzUqUM9a5bVmuYWpDwREv5YuG2yjF1qpn4uxrQQGgq9pynoR"
+  },
+  {
+   "case": "exact-in A 1% (33,619,740)",
+   "market": "8hbdkPt2CU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303202,
+   "validUntil": 531430377,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     -33619740,
+     1.0003,
+     -33.629
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     33606053,
+     1.0,
+     33.6055
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     33619740,
+     1.0003,
+     33.629
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -33606053,
+     1.0,
+     -33.6055
+    ]
+   ],
+   "actorNetUsd": -0.0235,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 33619740,
+    "B": -33606053
+   },
+   "sig": "9vv8F1WzUdXoRnpiCXgbzXa5n12VHLAVQtfcuGHnTy2KRCKiQuhzjar5xEvtkFx1Em9AumzJzcB8eRLF2Ad8r4z"
+  },
+  {
+   "case": "exact-in A 5% (168,098,704)",
+   "market": "8hbdkPt2CU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303203,
+   "validUntil": 531430377,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     -168098704,
+     1.0003,
+     -168.1452
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     168030272,
+     1.0,
+     168.0277
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     168098704,
+     1.0003,
+     168.1452
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -168030272,
+     1.0,
+     -168.0277
+    ]
+   ],
+   "actorNetUsd": -0.1175,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 168098704,
+    "B": -168030272
+   },
+   "sig": "3eCnzPvji6BUYTAmutLsrziuGFVwNB3d1ub1zVA8yko52c5xmhYuwMS48BDnmTR25XKmcEnTHvpF6svEF5x4FtPR"
+  },
+  {
+   "case": "exact-in A 25% (840,493,522)",
+   "market": "8hbdkPt2CU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303204,
+   "validUntil": 531430377,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     -840493522,
+     1.0003,
+     -840.726
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     839787147,
+     1.0,
+     839.7742
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     840493522,
+     1.0003,
+     840.726
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -839787147,
+     1.0,
+     -839.7742
+    ]
+   ],
+   "actorNetUsd": -0.9518,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 840493522,
+    "B": -839787147
+   },
+   "sig": "4WxvtaHsq1i7YdkbDz2vW9ZxEhdAhedFKw7BpG2PKHbRM1YiXTv5xwbErdknmUkKSF6BYKoiUsWcaWeEsuXt2YW3"
+  },
+  {
+   "case": "exact-in B 1% (38,353,205)",
+   "market": "8hbdkPt2CU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303205,
+   "validUntil": 531430377,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     38344953,
+     1.0003,
+     38.3556
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -38353205,
+     1.0,
+     -38.3526
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     -38344953,
+     1.0003,
+     -38.3556
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     38353205,
+     1.0,
+     38.3526
+    ]
+   ],
+   "actorNetUsd": 0.003,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -38344953,
+    "B": 38353205
+   },
+   "sig": "2Dt2K5ccfNFZiXsNTpitQ6j7n8ZAik1ArGgbR779fVUVSeyBF5mAkPsMWbfPCZMMMEdTpgpWaFeh591fR61LbWQ6"
+  },
+  {
+   "case": "exact-in B 5% (191,766,029)",
+   "market": "8hbdkPt2CU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303206,
+   "validUntil": 531430377,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     191724772,
+     1.0003,
+     191.7778
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -191766029,
+     1.0,
+     -191.7631
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     -191724772,
+     1.0003,
+     -191.7778
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     191766029,
+     1.0,
+     191.7631
+    ]
+   ],
+   "actorNetUsd": 0.0147,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -191724772,
+    "B": 191766029
+   },
+   "sig": "2qqiABPweWjPQAH14nW3yWRFXUE3hZeFLVrWawWZS5oJMTfMcn4RYjFXPTLA5Z1ZooiMARECwesDhZCJPoaRJKhb"
+  },
+  {
+   "case": "exact-in B 25% (958,830,149)",
+   "market": "8hbdkPt2CU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303208,
+   "validUntil": 531430377,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     958169547,
+     1.0003,
+     958.4345
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -958830149,
+     1.0,
+     -958.8153
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "2u1tszSeqZ",
+     6,
+     -958169547,
+     1.0003,
+     -958.4345
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     958830149,
+     1.0,
+     958.8153
+    ]
+   ],
+   "actorNetUsd": -0.3808,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -958169547,
+    "B": 958830149
+   },
+   "sig": "9zzSgoE7d9sQoxG6KjeQQMVLUergiBdSSXzkTgttvwKetyaoCrMTfv5QgVKUm6k96GX7gkj5RPvVjgZD72Fk2vd"
+  },
+  {
+   "case": "ROUND TRIP A->B->A in one tx (exact-in 16,809,870 then exact-out 16,809,870 A)",
+   "market": "8hbdkPt2CU",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303209,
+   "validUntil": 531430377,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     -23080,
+     1.0,
+     -0.0231
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     23080,
+     1.0,
+     0.0231
+    ]
+   ],
+   "actorNetUsd": -0.0231,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 23080
+   },
+   "sig": "3ESCxFc6Df7BRCaQCiUXSeNujdqJgDWqrycumKGseMe3kEhF5nnPnHz39ZtaMp5n3u2QWFWu5hpFpZvgVz8mSaPZ"
+  },
+  {
+   "case": "exact-in A 1% (42,524,083)",
+   "market": "9Bc7tyaZft",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303211,
+   "validUntil": 444304815,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Xs8S1uUs1z",
+     8,
+     -42524083,
+     716.6776,
+     -304.7606
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     305040735,
+     1.0,
+     305.036
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Xs8S1uUs1z",
+     8,
+     42524083,
+     716.6776,
+     304.7606
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -305040735,
+     1.0,
+     -305.036
+    ]
+   ],
+   "actorNetUsd": 0.2754,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 42524083,
+    "B": -305040735
+   },
+   "sig": "3pcbgccf3AVBmNKyk8MkZL5h6UPBNvpDk2iGr3EVcQdCCp5RqbxPpmVDFh4qFphfrCMpyDDQgjSBohDaE8yE4Ujx"
+  },
+  {
+   "case": "exact-in A 5% (212,620,417)",
+   "market": "9Bc7tyaZft",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303212,
+   "validUntil": 444304815,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Xs8S1uUs1z",
+     8,
+     -212620417,
+     716.6776,
+     -1523.803
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     1525156369,
+     1.0,
+     1525.1328
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Xs8S1uUs1z",
+     8,
+     212620417,
+     716.6776,
+     1523.803
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -1525156369,
+     1.0,
+     -1525.1328
+    ]
+   ],
+   "actorNetUsd": 1.3298,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 212620417,
+    "B": -1525156369
+   },
+   "sig": "2jGAzvHamuVzY456h1wyp3g5Ek5bTBEub18qWmW6pyumT7rf9VHPV4suAvTQPhRf9bAf6waW7TKBxrkNfb2GirMk"
+  },
+  {
+   "case": "exact-in A 25% (1,063,102,086)",
+   "market": "9Bc7tyaZft",
+   "ok": false,
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "forkSlot": 444303214,
+   "validUntil": 444304815,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [],
+   "marketVaultLegs": [],
+   "actorNetUsd": 0,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 0
+   },
+   "sig": "2utRR1KNQrQ3bS9CqGPz9ZmaAea6N58VK8hnkd7huV4UnErdK7cvp7cuwDbN3a1CVsZrNrJXewxN1yusVGi1QojK"
+  },
+  {
+   "case": "ROUND TRIP A->B->A in one tx (exact-in 21,262,041 then exact-out 21,262,041 A)",
+   "market": "9Bc7tyaZft",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303215,
+   "validUntil": 444304815,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     -394842,
+     1.0,
+     -0.3948
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     394842,
+     1.0,
+     0.3948
+    ]
+   ],
+   "actorNetUsd": -0.3948,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 394842
+   },
+   "sig": "2oerqsJK6v14XW3Ysk7r375dohmR18HSGTzHeAfejNdjKMby4iG7Wq63NWiAMYxLYZtFBzYzCZUGHrzaVPrFhEgc"
+  },
+  {
+   "case": "exact-in A 1% (718,942,325)",
+   "market": "9PwXMVkFzW",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303217,
+   "validUntil": 444304270,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsueG8Btpq",
+     8,
+     -718942325,
+     101.0191,
+     -726.2688
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     726304551,
+     1.0,
+     726.2933
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsueG8Btpq",
+     8,
+     718942325,
+     101.0191,
+     726.2688
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -726304551,
+     1.0,
+     -726.2933
+    ]
+   ],
+   "actorNetUsd": 0.0245,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 718942325,
+    "B": -726304551
+   },
+   "sig": "4J6AecWkvMfEFonyD6Cka6QbbkRiZEifmAhoxvW7smvScbAEgtMpr1ZnkEzRK8L3yjSG9ikydZyzELYipFsq3jRT"
+  },
+  {
+   "case": "exact-in A 5% (3,594,711,625)",
+   "market": "9PwXMVkFzW",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303218,
+   "validUntil": 444304270,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsueG8Btpq",
+     8,
+     -3594711625,
+     101.0191,
+     -3631.3439
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     3631417347,
+     1.0,
+     3631.3612
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsueG8Btpq",
+     8,
+     3594711625,
+     101.0191,
+     3631.3439
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -3631417347,
+     1.0,
+     -3631.3612
+    ]
+   ],
+   "actorNetUsd": 0.0173,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 3594711625,
+    "B": -3631417347
+   },
+   "sig": "4QSAKHmqmuVsZ6tNsP1JRWxDzKPK6g2ZM45Y9yxVBYDVD7wvJHCypoJJ2QLhY8NgU5jZLhyg8HwmZkRGvrpTuTLx"
+  },
+  {
+   "case": "exact-in A 25% (17,973,558,128)",
+   "market": "9PwXMVkFzW",
+   "ok": false,
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "forkSlot": 444303219,
+   "validUntil": 444304270,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [],
+   "marketVaultLegs": [],
+   "actorNetUsd": 0,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 0
+   },
+   "sig": "2TdoG4qSbwBKmn4qt2MHkLx2qGK3EAPrty8sQUvkq6AvrHdZcahxkcAviQ6gokV3T8WfmGW4R7iqRURqnWKRQygx"
+  },
+  {
+   "case": "ROUND TRIP A->B->A in one tx (exact-in 359,471,162 then exact-out 359,471,162 A)",
+   "market": "9PwXMVkFzW",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303220,
+   "validUntil": 444304270,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     -1377931,
+     1.0,
+     -1.3779
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     1377931,
+     1.0,
+     1.3779
+    ]
+   ],
+   "actorNetUsd": -1.3779,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 1377931
+   },
+   "sig": "5QB3oKt5LA24i6Cogpp2R4sadyW1j7cjasg8PiWU4cmix6Rife38YG6Sw5XHKGft1CDP4FFjHwPVy9z518CxnX8b"
+  },
+  {
+   "case": "exact-in A 1% (177,935,154)",
+   "market": "CNp3etjEmW",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303221,
+   "validUntil": 444304832,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     -177935154,
+     141.8368,
+     -252.3775
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     251956832,
+     1.0,
+     251.9529
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     177935154,
+     141.8368,
+     252.3775
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -251956832,
+     1.0,
+     -251.9529
+    ]
+   ],
+   "actorNetUsd": -0.4246,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 177935154,
+    "B": -251956832
+   },
+   "sig": "5UNqsGhhPyQcP85Me5fEWQWtSRmGu6LADTAn9vvsSFLCNf6JRE2Tp76WVWPeFPf4dhygFrhCBZKdHQ9eM5AiauBQ"
+  },
+  {
+   "case": "exact-in A 5% (889,675,770)",
+   "market": "CNp3etjEmW",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303223,
+   "validUntil": 444304832,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     -889675770,
+     141.8368,
+     -1261.8875
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     1259755195,
+     1.0,
+     1259.7357
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     889675770,
+     141.8368,
+     1261.8875
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -1259755195,
+     1.0,
+     -1259.7357
+    ]
+   ],
+   "actorNetUsd": -2.1518,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 889675770,
+    "B": -1259755195
+   },
+   "sig": "aJFpSPkXwSWC6mCyCt9ndP9zrppvXMnCSePcU1tEEQcYJhMraAAvDVEiSr9oF4CtPodTNLa56xXNodYbwLZhJXx"
+  },
+  {
+   "case": "exact-in A 25% (4,448,378,851)",
+   "market": "CNp3etjEmW",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303224,
+   "validUntil": 444304832,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     -4448378851,
+     141.8368,
+     -6309.4376
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     6298032888,
+     1.0,
+     6297.9355
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     4448378851,
+     141.8368,
+     6309.4376
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -6298032888,
+     1.0,
+     -6297.9355
+    ]
+   ],
+   "actorNetUsd": -11.5021,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 4448378851,
+    "B": -6298032888
+   },
+   "sig": "3npUMteKGqtUpVii4jA1aXcvvGNLra1RUfpBert3AhYbMecH65bFztc37T8k22ZBdi2w29juW1M9xLN3iwWdnTJS"
+  },
+  {
+   "case": "exact-in B 1% (284,703,591)",
+   "market": "CNp3etjEmW",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303226,
+   "validUntil": 444304832,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     200645015,
+     141.8368,
+     284.5884
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -284703591,
+     1.0,
+     -284.6992
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     -200645015,
+     141.8368,
+     -284.5884
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     284703591,
+     1.0,
+     284.6992
+    ]
+   ],
+   "actorNetUsd": -0.1108,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -200645015,
+    "B": 284703591
+   },
+   "sig": "dPWWyRfn4Vp4YGqwzeJMEMFTvHQtYi7jGnBuhtEje5Ph57QJ6FjmEUtqatqSzDrkgjNehNU85pNwo56x7hi4482"
+  },
+  {
+   "case": "exact-in B 5% (1,423,517,959)",
+   "market": "CNp3etjEmW",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303227,
+   "validUntil": 444304832,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     1003198989,
+     141.8368,
+     1422.9052
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -1423517959,
+     1.0,
+     -1423.4959
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     -1003198989,
+     141.8368,
+     -1422.9052
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     1423517959,
+     1.0,
+     1423.4959
+    ]
+   ],
+   "actorNetUsd": -0.5907,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -1003198989,
+    "B": 1423517959
+   },
+   "sig": "C3Xh7tErPup97xqwvm6N4QvW5cbEcpzDWfuzZDG1MWcHHMD2j6gnnX7o64qSLWi4CeVTogwP8DGqT4BNqQdnVNr"
+  },
+  {
+   "case": "exact-in B 25% (7,117,589,795)",
+   "market": "CNp3etjEmW",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303229,
+   "validUntil": 444304832,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     5015327605,
+     141.8368,
+     7113.5795
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -7117589795,
+     1.0,
+     -7117.4797
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsP7xzNPvE",
+     8,
+     -5015327605,
+     141.8368,
+     -7113.5795
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     7117589795,
+     1.0,
+     7117.4797
+    ]
+   ],
+   "actorNetUsd": -3.9002,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -5015327605,
+    "B": 7117589795
+   },
+   "sig": "5Uvs3AjRuiTb6y215QyzGKDXzCfAoS1PKWchkeEm74GuhtTjo2F94p5zDh3XyJFsbj3AkvasZLFcK6vhWbwKCCXL"
+  },
+  {
+   "case": "ROUND TRIP A->B->A in one tx (exact-in 88,967,577 then exact-out 88,967,577 A)",
+   "market": "CNp3etjEmW",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303230,
+   "validUntil": 444304832,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     -351860,
+     1.0,
+     -0.3519
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     351860,
+     1.0,
+     0.3519
+    ]
+   ],
+   "actorNetUsd": -0.3519,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 351860
+   },
+   "sig": "43nMxvsW94fTNLAf1Qzv6AQF3YbG64DuY9L1SArAKKAYqjsZiqAj5zfFzi96RtecxiEFvb33gMRBKrAEtNj3kTGa"
+  },
+  {
+   "case": "exact-in A 1% (109,000,000)",
+   "market": "CzuQmqj4dS",
+   "ok": false,
+   "err": {
+    "InstructionError": [
+     1,
+     "InvalidAccountData"
+    ]
+   },
+   "forkSlot": 444303231,
+   "validUntil": 415068462,
+   "executedAfterStoredExpiry": true,
+   "actorLegs": [],
+   "marketVaultLegs": [],
+   "actorNetUsd": 0,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 0
+   },
+   "sig": "3nHsmgZUyNc8C7m438rYMnRRi6BypkmL6DdUdd38V1mRERzN2CENnrnTjxdeLjXPdAnbg25fNjFaQzdNGGcqiTX9"
+  },
+  {
+   "case": "exact-in A 1% (2,373,757,949)",
+   "market": "FefUJfaS2V",
+   "ok": false,
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "forkSlot": 444303233,
+   "validUntil": 444796407,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [],
+   "marketVaultLegs": [],
+   "actorNetUsd": 0,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 0
+   },
+   "sig": "5QYqoQv9LGtbgpRm3ZnPoUec5o45x1giSd2aNzLLU9sT67YvwPJvVXR8J5xtZtdDgiaSjahPtWdttxDMR8EFZfuo"
+  },
+  {
+   "case": "exact-in A 1% (74,902,135)",
+   "market": "G9pQE63etk",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303234,
+   "validUntil": 444304862,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsoCS1TfEy",
+     8,
+     -74902135,
+     769.4273,
+     -576.3175
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     578555908,
+     1.0,
+     578.547
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsoCS1TfEy",
+     8,
+     74902135,
+     769.4273,
+     576.3175
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -578555908,
+     1.0,
+     -578.547
+    ]
+   ],
+   "actorNetUsd": 2.2295,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 74902135,
+    "B": -578555908
+   },
+   "sig": "55gZCs9NEvnhxFtiAJFo5KH8EBoTsxsneL1JPVYgw1u7b76nzsRRGXgNmBvTQAzRzJqaXbHjaucFKFKpqLYg39cW"
+  },
+  {
+   "case": "exact-in A 5% (374,510,677)",
+   "market": "G9pQE63etk",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303235,
+   "validUntil": 444304862,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsoCS1TfEy",
+     8,
+     -374510677,
+     769.4273,
+     -2881.5874
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     2892695613,
+     1.0,
+     2892.6509
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsoCS1TfEy",
+     8,
+     374510677,
+     769.4273,
+     2881.5874
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -2892695613,
+     1.0,
+     -2892.6509
+    ]
+   ],
+   "actorNetUsd": 11.0635,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 374510677,
+    "B": -2892695613
+   },
+   "sig": "5En9YETXFzKM6pXW3wvr3PiYKxsw5oZgyophg4Ruhj1Fzp4z3VBMvukKGNW5nnjAHRbRcS2p7FbRfsA6WRJ5Lc4T"
+  },
+  {
+   "case": "exact-in A 25% (1,872,553,387)",
+   "market": "G9pQE63etk",
+   "ok": false,
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "forkSlot": 444303236,
+   "validUntil": 444304862,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [],
+   "marketVaultLegs": [],
+   "actorNetUsd": 0,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 0
+   },
+   "sig": "5snFqvZyCnuALvXMdFy5oZRZi2WLDyPoy7Gz849wkWb3qVKKo2X2GJWzGGYPqdEyLSWQ8mcA6CxQPbURvXqJMbcb"
+  },
+  {
+   "case": "ROUND TRIP A->B->A in one tx (exact-in 37,451,067 then exact-out 37,451,067 A)",
+   "market": "G9pQE63etk",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303238,
+   "validUntil": 444304862,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     -748888,
+     1.0,
+     -0.7489
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     748888,
+     1.0,
+     0.7489
+    ]
+   ],
+   "actorNetUsd": -0.7489,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 748888
+   },
+   "sig": "5cwL6Sy4TXczwjJSaL8C3hXxJ7wiK5eue9AqXkGBuGtDn9g28j6874dceWgV73JZKzwmwTqNdt8EYxmspJkR1PHt"
+  },
+  {
+   "case": "exact-in A 1% (121,311)",
+   "market": "GtBJeuFzSC",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303239,
+   "validUntil": 529084362,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -121311,
+     1.0002,
+     -0.1213
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     121296,
+     1.0,
+     0.1213
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     121311,
+     1.0002,
+     0.1213
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -121296,
+     1.0,
+     -0.1213
+    ]
+   ],
+   "actorNetUsd": 0.0,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 121311,
+    "B": -121296
+   },
+   "sig": "5oHTwvPw1RZ58fpVbTa7kTidZpNQmzR2KmZkm8hmG2aXFkAgr18kY517F4TjgW2apdUYcQxh7ew276W1ro2JPPg2"
+  },
+  {
+   "case": "exact-in A 5% (606,559)",
+   "market": "GtBJeuFzSC",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303241,
+   "validUntil": 529084362,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -606559,
+     1.0002,
+     -0.6067
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     606490,
+     1.0,
+     0.6065
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     606559,
+     1.0002,
+     0.6067
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -606490,
+     1.0,
+     -0.6065
+    ]
+   ],
+   "actorNetUsd": -0.0002,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 606559,
+    "B": -606490
+   },
+   "sig": "N6LC4MkN6gbffic21LUSxhGkT1c9adWetqzX7BpqdHcUZ3nn8YudJuafCyX4vYB3H9zDBi13Ae7cLWNPW4mpFbe"
+  },
+  {
+   "case": "exact-in A 25% (3,032,797)",
+   "market": "GtBJeuFzSC",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303242,
+   "validUntil": 529084362,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -3032797,
+     1.0002,
+     -3.0333
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     3031150,
+     1.0,
+     3.0311
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     3032797,
+     1.0002,
+     3.0333
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -3031150,
+     1.0,
+     -3.0311
+    ]
+   ],
+   "actorNetUsd": -0.0022,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 3032797,
+    "B": -3031150
+   },
+   "sig": "VYL8ibo1QoPe8cGwAcVxjLbz1q327qx71fwjjFh8Ldwrpi1Nc1KVvxwTVteZYTkNf5mkLUkZq2fU7ycCv2uhPvL"
+  },
+  {
+   "case": "exact-in B 1% (139,559)",
+   "market": "GtBJeuFzSC",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303244,
+   "validUntil": 529084362,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     139570,
+     1.0002,
+     0.1396
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -139559,
+     1.0,
+     -0.1396
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -139570,
+     1.0002,
+     -0.1396
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     139559,
+     1.0,
+     0.1396
+    ]
+   ],
+   "actorNetUsd": 0.0,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -139570,
+    "B": 139559
+   },
+   "sig": "4ERcJMXnjFw5Q2Y4q69oMMvEwaJLGuvsy9bdSZDNM8W59kXXqZE2PngnZ2xciUnii2p8ubAYzyzJuVRSs1GnizFy"
+  },
+  {
+   "case": "exact-in B 5% (697,798)",
+   "market": "GtBJeuFzSC",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303245,
+   "validUntil": 529084362,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     697853,
+     1.0002,
+     0.698
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -697798,
+     1.0,
+     -0.6978
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -697853,
+     1.0002,
+     -0.698
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     697798,
+     1.0,
+     0.6978
+    ]
+   ],
+   "actorNetUsd": 0.0002,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -697853,
+    "B": 697798
+   },
+   "sig": "424YmwcqwpL5XjDj5Ljet8FU8eUW8rLKtB8mwzaWKHVuoixDxGJgNBR9dFfok8ytm5TR9uu2QviYhui99tSXs6QN"
+  },
+  {
+   "case": "exact-in B 25% (3,488,993)",
+   "market": "GtBJeuFzSC",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303246,
+   "validUntil": 529084362,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     3487596,
+     1.0002,
+     3.4882
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -3488993,
+     1.0,
+     -3.4889
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Es9vMFrzaC",
+     6,
+     -3487596,
+     1.0002,
+     -3.4882
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     3488993,
+     1.0,
+     3.4889
+    ]
+   ],
+   "actorNetUsd": -0.0007,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -3487596,
+    "B": 3488993
+   },
+   "sig": "5j79UbnEWZ5ek9Bh2pRxXaco2zuCYaqmiYhH97rkdpoTJE4Go9AZjVkD5Cd7ERd1JRJDCZLGK9CTCsC1Q5HLQJs1"
+  },
+  {
+   "case": "ROUND TRIP A->B->A in one tx (exact-in 60,655 then exact-out 60,655 A)",
+   "market": "GtBJeuFzSC",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303247,
+   "validUntil": 529084362,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     -50,
+     1.0,
+     -0.0
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     50,
+     1.0,
+     0.0
+    ]
+   ],
+   "actorNetUsd": 0.0,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 50
+   },
+   "sig": "4LLQixjR5xnqa8eYfFtM7XQTQTW7QZv84To2EFyN52uUgB7xZazKMXtjEdFa5sxLZjSN7KYxSuobBDfu84Fq7npe"
+  },
+  {
+   "case": "exact-in A 1% (204,144,728)",
+   "market": "GxGxQBvMQ7",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303248,
+   "validUntil": 444304874,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     -204144728,
+     230.2985,
+     -470.1423
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     470233220,
+     1.0,
+     470.2259
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     204144728,
+     230.2985,
+     470.1423
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -470233220,
+     1.0,
+     -470.2259
+    ]
+   ],
+   "actorNetUsd": 0.0836,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 204144728,
+    "B": -470233220
+   },
+   "sig": "24zPT3HiZnAgTyHMG1mx7NxzgEccNGJVDeeXnHDmFR8u6oDpVK1NW922M4goWbCnzwUU2jxHUXatKSBCXd7T2FVn"
+  },
+  {
+   "case": "exact-in A 5% (1,020,723,642)",
+   "market": "GxGxQBvMQ7",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303250,
+   "validUntil": 444304874,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     -1020723642,
+     230.2985,
+     -2350.7115
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     2351112051,
+     1.0,
+     2351.0757
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     1020723642,
+     230.2985,
+     2350.7115
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -2351112051,
+     1.0,
+     -2351.0757
+    ]
+   ],
+   "actorNetUsd": 0.3642,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 1020723642,
+    "B": -2351112051
+   },
+   "sig": "5VGEGVuxL9jNMSiLcKf1wiYVDWD4MrDmUxJxLf5q8XxS99SUiQ8UxeKUFwhPGcGCUvxrH7J6K2Bkkv4Shn27UHs4"
+  },
+  {
+   "case": "exact-in A 25% (5,103,618,213)",
+   "market": "GxGxQBvMQ7",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303251,
+   "validUntil": 444304874,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     -5103618213,
+     230.2985,
+     -11753.5576
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     11754220560,
+     1.0,
+     11754.0388
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     5103618213,
+     230.2985,
+     11753.5576
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -11754220560,
+     1.0,
+     -11754.0388
+    ]
+   ],
+   "actorNetUsd": 0.4812,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 5103618213,
+    "B": -11754220560
+   },
+   "sig": "4X39J2PvaK5Y9LZXJvc92Tncuavmzx6Q9jTJM4NtFUkV8VNKiACvNtsQo82n2dP4dg2pJJnJts1HUVFMp7tomFeD"
+  },
+  {
+   "case": "exact-in B 1% (559,173,079)",
+   "market": "GxGxQBvMQ7",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303253,
+   "validUntil": 444304874,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     242249362,
+     230.2985,
+     557.8967
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -559173079,
+     1.0,
+     -559.1644
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     -242249362,
+     230.2985,
+     -557.8967
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     559173079,
+     1.0,
+     559.1644
+    ]
+   ],
+   "actorNetUsd": -1.2677,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -242249362,
+    "B": 559173079
+   },
+   "sig": "TEbsKoemMn8MZaeyvD8x3tYsAvcXd9yf87sDH6HF94mhEinABfENB8ytYCmyqBhkpMSKXApcz5Jh84APN6GGP6f"
+  },
+  {
+   "case": "exact-in B 5% (2,795,865,397)",
+   "market": "GxGxQBvMQ7",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303254,
+   "validUntil": 444304874,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     1211214100,
+     230.2985,
+     2789.4082
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -2795865397,
+     1.0,
+     -2795.8222
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     -1211214100,
+     230.2985,
+     -2789.4082
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     2795865397,
+     1.0,
+     2795.8222
+    ]
+   ],
+   "actorNetUsd": -6.414,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -1211214100,
+    "B": 2795865397
+   },
+   "sig": "4eNx8h2VU8tqRwy5vPjwQMXNvsUt8GsUcnyWTdfoBXWEqKGYfXPT4Adx2RsA7VeVwKdCpmFgjpgPY2xJUxhrqJNN"
+  },
+  {
+   "case": "exact-in B 25% (13,979,326,988)",
+   "market": "GxGxQBvMQ7",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303256,
+   "validUntil": 444304874,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     6055092320,
+     230.2985,
+     13944.7885
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -13979326988,
+     1.0,
+     -13979.1108
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "Xsc9qvGR1e",
+     8,
+     -6055092320,
+     230.2985,
+     -13944.7885
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     13979326988,
+     1.0,
+     13979.1108
+    ]
+   ],
+   "actorNetUsd": -34.3223,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -6055092320,
+    "B": 13979326988
+   },
+   "sig": "3HgoNESBcnDnDo2LvUbKfBnrfWdFJctjNCEwV6ymk8vFU85kJqBnyNZKYrkDP88ASgCQuPSijzeWMDDUZ9sn9qNu"
+  },
+  {
+   "case": "ROUND TRIP A->B->A in one tx (exact-in 102,072,364 then exact-out 102,072,364 A)",
+   "market": "GxGxQBvMQ7",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303257,
+   "validUntil": 444304874,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     -774553,
+     1.0,
+     -0.7745
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     774553,
+     1.0,
+     0.7745
+    ]
+   ],
+   "actorNetUsd": -0.7745,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 774553
+   },
+   "sig": "1F3sb33okwbRS5gYcJ8oknBx5Argrce6tFZxfNBfFoQh2fvufa8RcGVGqGrSexgTNKx6e3ShPsRMBaGuHazMA7Y"
+  },
+  {
+   "case": "exact-in A 1% (5,134,760)",
+   "market": "HpGbZwwQ66",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303259,
+   "validUntil": 444304889,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "6p6xgHyF7A",
+     6,
+     -5134760,
+     2.2583,
+     -11.596
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     11570183,
+     1.0,
+     11.57
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "6p6xgHyF7A",
+     6,
+     5134760,
+     2.2583,
+     11.596
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -11570183,
+     1.0,
+     -11.57
+    ]
+   ],
+   "actorNetUsd": -0.026,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 5134760,
+    "B": -11570183
+   },
+   "sig": "4z68w2FasZ44qDdPSFDuvqb5grAPwQrPq8uiayed7goBYf9tDfH6BXFPGNqAEihvmvevgUQ9AqahmoXbz3TMRcXQ"
+  },
+  {
+   "case": "exact-in A 5% (25,673,804)",
+   "market": "HpGbZwwQ66",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303261,
+   "validUntil": 444304889,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "6p6xgHyF7A",
+     6,
+     -25673804,
+     2.2583,
+     -57.98
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     57850583,
+     1.0,
+     57.8497
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "6p6xgHyF7A",
+     6,
+     25673804,
+     2.2583,
+     57.98
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -57850583,
+     1.0,
+     -57.8497
+    ]
+   ],
+   "actorNetUsd": -0.1303,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 25673804,
+    "B": -57850583
+   },
+   "sig": "N8NsjSgKj5hGhaJ8YeRbGzquNRcWJPVMAzkSAK1GJe6aJpbWiX414RU7yArSgabT1G3QMhRncnkfcuots9MnwhQ"
+  },
+  {
+   "case": "exact-in A 25% (128,369,022)",
+   "market": "HpGbZwwQ66",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303263,
+   "validUntil": 444304889,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "6p6xgHyF7A",
+     6,
+     -128369022,
+     2.2583,
+     -289.9002
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     289244553,
+     1.0,
+     289.2401
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "6p6xgHyF7A",
+     6,
+     128369022,
+     2.2583,
+     289.9002
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -289244553,
+     1.0,
+     -289.2401
+    ]
+   ],
+   "actorNetUsd": -0.6601,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 128369022,
+    "B": -289244553
+   },
+   "sig": "3sLFbcn4emCpPt5pAQzyfjJPFXUq4GZNA92VHxiCM5A2hYPrUoupDpZnc7dRATG4JmCcvHsNMXQTRJR6YJvNbG7D"
+  },
+  {
+   "case": "exact-in B 1% (88,121,662)",
+   "market": "HpGbZwwQ66",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303264,
+   "validUntil": 444304889,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "6p6xgHyF7A",
+     6,
+     38995671,
+     2.2583,
+     88.0653
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -88121662,
+     1.0,
+     -88.1203
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "6p6xgHyF7A",
+     6,
+     -38995671,
+     2.2583,
+     -88.0653
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     88121662,
+     1.0,
+     88.1203
+    ]
+   ],
+   "actorNetUsd": -0.055,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -38995671,
+    "B": 88121662
+   },
+   "sig": "3cw6188i9rmrfdNwaZLAJwvytKqTLc1SsdgTGqwS9hmAUhbgRSc8gwHEJXg4BFYcubrkCfguWX8DwanPL66rJc7h"
+  },
+  {
+   "case": "exact-in B 5% (440,608,311)",
+   "market": "HpGbZwwQ66",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303266,
+   "validUntil": 444304889,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "6p6xgHyF7A",
+     6,
+     194933332,
+     2.2583,
+     440.2247
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -440608311,
+     1.0,
+     -440.6015
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "6p6xgHyF7A",
+     6,
+     -194933332,
+     2.2583,
+     -440.2247
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     440608311,
+     1.0,
+     440.6015
+    ]
+   ],
+   "actorNetUsd": -0.3768,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": -194933332,
+    "B": 440608311
+   },
+   "sig": "3e5FCuXGpBBfxvrziJD6Nf89r6kzJAxYFAXBNUAgQBYgQGeVwXJvvA5VyVPVhAa6HPXYrvTJHkWp1MTr7SJ7QoWn"
+  },
+  {
+   "case": "exact-in B 25% (2,203,041,559)",
+   "market": "HpGbZwwQ66",
+   "ok": false,
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 6099
+     }
+    ]
+   },
+   "forkSlot": 444303267,
+   "validUntil": 444304889,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [],
+   "marketVaultLegs": [],
+   "actorNetUsd": 0,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 0
+   },
+   "sig": "2V5ZvUAHVCPzX4WDRRR2KQcE7HiDdBaCpadD1ZuUyKsbWHhpdZMwRHi8s9MbU4B91YtatihYATYb54DZdvjepD6H"
+  },
+  {
+   "case": "ROUND TRIP A->B->A in one tx (exact-in 2,567,380 then exact-out 2,567,380 A)",
+   "market": "HpGbZwwQ66",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303269,
+   "validUntil": 444304889,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     -21998,
+     1.0,
+     -0.022
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     21998,
+     1.0,
+     0.022
+    ]
+   ],
+   "actorNetUsd": -0.022,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 21998
+   },
+   "sig": "HeKQu8MM146wME75T51LmGyF3LegUWn2JBcNVB2k7P2wV5TtAzVTCGiEaF5nbS6z8Xwau4VduJmoNWbKZptfPBm"
+  },
+  {
+   "case": "exact-in A 1% (157,783,504)",
+   "market": "HxNaPy1oYA",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303270,
+   "validUntil": 444304910,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsDoVfqeBu",
+     8,
+     -157783504,
+     351.8061,
+     -555.0919
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     553887571,
+     1.0,
+     553.879
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsDoVfqeBu",
+     8,
+     157783504,
+     351.8061,
+     555.0919
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -553887571,
+     1.0,
+     -553.879
+    ]
+   ],
+   "actorNetUsd": -1.2129,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 157783504,
+    "B": -553887571
+   },
+   "sig": "3MAwbg2c6CNwsFzZSeCi6nbV5Za9bL12FroXrgBsqhE5kFmJoeSqJNosXKRgbJFqQaDoMHGWbKHU85uV9BjikKsk"
+  },
+  {
+   "case": "exact-in A 5% (788,917,524)",
+   "market": "HxNaPy1oYA",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303271,
+   "validUntil": 444304910,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "XsDoVfqeBu",
+     8,
+     -788917524,
+     351.8061,
+     -2775.4596
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     2769368633,
+     1.0,
+     2769.3258
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "XsDoVfqeBu",
+     8,
+     788917524,
+     351.8061,
+     2775.4596
+    ],
+    [
+     "EPjFWdd5Au",
+     6,
+     -2769368633,
+     1.0,
+     -2769.3258
+    ]
+   ],
+   "actorNetUsd": -6.1338,
+   "bothLegsPriced": true,
+   "marketReserveDelta": {
+    "A": 788917524,
+    "B": -2769368633
+   },
+   "sig": "39hExS3nXB3qAhYBuEXgpYc8Lf9Z6QSjXDvfRAbssz8ZLX3wVKhsHhfZjCEsxLEL5oTxe42fr2d6DZiiuYExS1yY"
+  },
+  {
+   "case": "exact-in A 25% (3,944,587,623)",
+   "market": "HxNaPy1oYA",
+   "ok": false,
+   "err": {
+    "InstructionError": [
+     1,
+     {
+      "Custom": 1
+     }
+    ]
+   },
+   "forkSlot": 444303272,
+   "validUntil": 444304910,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [],
+   "marketVaultLegs": [],
+   "actorNetUsd": 0,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 0
+   },
+   "sig": "KRm7tu3Q6HDnRvWGFSiRCQgJdmWtvsktFSgZd4buDpnNanWAhTRTcyuMb7n3xf6wa7eGafSgSJntD9FNdMBFuqB"
+  },
+  {
+   "case": "ROUND TRIP A->B->A in one tx (exact-in 78,891,752 then exact-out 78,891,752 A)",
+   "market": "HxNaPy1oYA",
+   "ok": true,
+   "err": null,
+   "forkSlot": 444303273,
+   "validUntil": 444304910,
+   "executedAfterStoredExpiry": false,
+   "actorLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     -912150,
+     1.0,
+     -0.9121
+    ]
+   ],
+   "marketVaultLegs": [
+    [
+     "EPjFWdd5Au",
+     6,
+     912150,
+     1.0,
+     0.9121
+    ]
+   ],
+   "actorNetUsd": -0.9121,
+   "bothLegsPriced": false,
+   "marketReserveDelta": {
+    "A": 0,
+    "B": 912150
+   },
+   "sig": "4y8kHu1AyBMnmzGpWSaPGKoKLikLX4LwVoZvDZTSkNLqLYYA7Nn9SogFZjWUtHJHdhyRzkyxgA9pdXAzsuwedwSJ"
+  }
+ ],
+ "netPositiveCases": 15,
+ "maxNetPositiveUsd": 11.0635,
+ "method": "actor legs = the two token accounts owned by the fresh actor keypair, valued at the external reference captured for the same scan; market vault legs reported separately"
+}

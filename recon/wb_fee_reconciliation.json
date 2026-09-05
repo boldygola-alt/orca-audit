@@ -1,0 +1,7 @@
+{
+ "curve": "DbRKfbUmxd4ytFypF9bgHUAxmyefqP6PXYmfZuw35Wq7",
+ "vault": 857068319,
+ "accounting": 857068319,
+ "divergence": 0,
+ "note": "fork-only: attacker-triggered BondingCurveCollectFees credited the privilege-1 fee authority; the vault-over-accounting excess was unclaimed fees, now reconciled"
+}

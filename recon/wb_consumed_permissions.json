@@ -1,0 +1,284 @@
+{
+ "nowSlot": 444209452,
+ "accounts": [
+  {
+   "address": "2hhYYJKj8mcF1D4dQwSVgQ3c1kmA2YisnDqGkC81G6iG",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342828624,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "37HV4FMQWJHsTc7wVsh91Pz2ssbd8ixzsuFoyMt7Lvup",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 340476834,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "3A5qz6Um4ysfDUVKmC6wpxueVhAe2hNBrHDfAvgvyxYQ",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 343043443,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "3JE7rTVwXyyyMKJhTia6Ee8TGLV1unjTqVsrP2rECd3r",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 343048132,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "4BDCDm4ixJLMTNGPUuH7VZeMWmAd1sWU7XvArdgz8hNc",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342830183,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "4LBzBkJzJbVmBQhFg3vM6BGQC55WGvapeW2xx93GyCP3",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342687067,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "4NpkdLUCkYW5y4JHbicJvwvTQZKHT3BYKTUrJgukYw3R",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 340014858,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "4TGtUkiuFdq8ywmcdJLNxELveNneePtK4u1ifyop5Wvw",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 340500417,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "4cNHt4j7NGaME59sNxgAnNKRMjsPZft1Wq1eBtrAN5N9",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342864333,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "4vH6E7ZtL7NZBbwThv5gFayR6FgQQ4kUTGKAhTxanj8k",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342851362,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "69iA58AtDJx7356RMtizVWMmzUGkmsnrDhQgiMNc2imt",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342859699,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "7HdF987q25qFViARDz1YZTXxLctiGbB9WGAvSJHF23Xm",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 338289517,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "7NfqXFCrckdvy8VumRTintqNMam6MpbY8CAwRYJV1DXF",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 340499293,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "8x6N5i53QTx5yzfETKVBzAeNeJDugCpdFtAPsdEY45u1",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342672594,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "9bwKPeFsdkL1H75iBxv2EnckUQqHk8kKiMmmbeNg2agW",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 340014459,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "9h6BAJaTpC2zAtB5fAFmJYaCZM27JtaG6BwmVf8uVfFS",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342848735,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "A7b5QwmqD2tkCeDFt8A2qPACd5NcxfWsmhZGeqhU3Q1H",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342859307,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "BJQmc79KkAhqgT81jXE1sXPg4yrs4pcdnWSvJZTiZWSD",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342829250,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "BavcUY8ioLteAVRScM8e6UZXK4ZszY9qpuVK6r7EvN3f",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342840219,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "BuFZjRZ55AdTcGZ7N8dbw56tD8cdAeSukx7hm3Xj3sdn",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342867183,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "DRpXXmz8S7182amJ9y23ssCeDNyQT9HyP6sb17wLVr2W",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342825367,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "DwPSA9RegUV5Lx8eS7jz2uA4aYxF6BFYJhVt9bvMrWpW",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342824752,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "F8Xx4jDyekejvWtomT8iupvqPZ81xpHBjZRd4wP8DZAq",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342840083,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "FJP5hfsME8bNGWBcfGvcV5faFg9w5bhLCNg3nPRfadqP",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 340474516,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "FMegpRY6YgLeC5ji2g2tFhKc48ujERqZJRt5Lt777mHC",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342846575,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "GHrFRKr5cK6gT4vmkbWETViu2cG1ewkziQFuTKmk78zY",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 343041032,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "GgFe1FEzrgwLTAKw3TvktU3iLzTBci1h5ZRKEA3n71u6",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342829982,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "GuWB116jLASuzQB2DGJLzAYH4vZi8oLpRiD3UR6Bv24s",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 340500855,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "HhcnXyPhnh3CLwt7X9HmN6ZzYp7BmGTdrr2LQUsmNMmK",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342850072,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "J1nBhotqCUNes3iReRhSqVaTZ1E2xAfFbUbGyHuQeXoG",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 340501105,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  },
+  {
+   "address": "J3sfjgxTwb5pSSAHPtih9XwE1EnQNcPGhujSxMmwNUDd",
+   "disc": 5,
+   "lamports": 1336320,
+   "safe_to_close_slot": 342828951,
+   "refund_destination": "11111111111111111111111111111111",
+   "tail": "00000000000000000000000000000000",
+   "closable_now": true
+  }
+ ]
+}
