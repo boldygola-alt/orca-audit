@@ -1,0 +1,153 @@
+{
+  "session": "WS7",
+  "branch": "arena/01a06ff8-orca-audit",
+  "date": "2026-09-05",
+  "fixtureCount": 10,
+  "description": "Fixture manifest for the Orca family defensive audit. Documents which fixtures exist, which are unavailable, and the exact reason for unavailability (missing live account, missing signer, missing historical pre-state, authority-blocked, or fixture genuinely broken).",
+  "fixtures": [
+    {
+      "id": "FIX-01",
+      "description": "Live Manual-method curve with open graduation window (Wavebreak graduateManual test)",
+      "program": "wavebreak",
+      "available": false,
+      "reasonUnavailable": "All 7 live Manual curves have graduation_time in the past (355-361 M slots). No fixture exists on mainnet.",
+      "requiredSigner": null,
+      "requiredFixtureType": "Live bonding curve record (2048 B, disc=2) with method=Manual, graduated=0, graduation_time > current slot",
+      "alternativeSource": "None (historical/archive not available in workspace).",
+      "nextAction": "Locate or archive a live Manual curve whose window is still open; execute graduateManual before graduationTime has passed.",
+      "evidenceReferences": ["recon/wb_curves.json", "recon/wb_grad_seeds.json", "recon/s4_grad_ready.json", "evidence/WBF_final.json", "evidence/WBF_forced_graduation.json"]
+    },
+    {
+      "id": "FIX-02",
+      "description": "GraduateWhirlpool end-to-end fixture (all 35 accounts intact at pre-state slot 441,655,843)",
+      "program": "wavebreak",
+      "available": false,
+      "reasonUnavailable": "The freshest live graduation fixture (slot 441,655,843) has 7 accounts already closed at both fork tips (bondingCurve, quoteVault, lpAuthorityQuoteAta, positionTokenAccount, both token badges, whirlpoolInitAuthority). The public endpoints return 'Block not available' for that slot.",
+      "requiredSigner": null,
+      "requiredFixtureType": "Historical pre-state of a complete graduation transaction (35 accounts: bonding curve, vaults, authority ATAs, position NFT, token badges, Whirlpool pool/init authority).",
+      "alternativeSource": "None (archival RPC unavailable; only live mainnet RPC available, which caps getSignaturesForAddress and refuses getProgramAccounts).",
+      "nextAction": "Obtain an archival RPC that can serve the exact pre-state at slot 441,655,843 (or an earlier graduation fixture with all accounts intact). Replay the full sequence without substituting accounts.",
+      "evidenceReferences": ["recon/wb_graduate_fixture.json", "recon/s4_grad_seeds.json", "recon/s4_grad_pool.bin", "recon/s4_grad_ready.json", "evidence/WBZ_final3.json"]
+    },
+    {
+      "id": "FIX-03",
+      "description": "Funded lp_escrow / position fixture (Wavebreak LpHarvest / LpTransfer)",
+      "program": "wavebreak",
+      "available": false,
+      "reasonUnavailable": "No lp_escrow PDA exists on mainnet (0 token-2022 positions held by any escrow). The PDA derived for both the live authority (BWyVTPPR...) and an attacker key is absent.",
+      "requiredSigner": "Position owner (for LpHarvest) or AuthorityConfig privilege 11 (for LpTakeover).",
+      "requiredFixtureType": "Live or historical lp_escrow PDA (seed-bound from authority) with a funded token-2022 position (position NFT + vault/fee ATAs).",
+      "alternativeSource": "None (mainnet scan shows 0 positions; historical fixtures not cached in workspace beyond the existing evidence).",
+      "nextAction": "If an exact historical pre-state with a funded escrow becomes available (indexer/archive), replay with the real escrow and position. Do not create a funded escrow through an authority-only instruction.",
+      "evidenceReferences": ["evidence/WBL_lp.json", "recon/wb_curves.json", "recon/wb_custody_full.json"]
+    },
+    {
+      "id": "FIX-04",
+      "description": "Genuinely expired, non-graduated curve (Wavebreak TokenRefund arithmetic)",
+      "program": "wavebreak",
+      "available": false,
+      "reasonUnavailable": "Every candidate curve from the live 1,537 curves returns 6016 (bonding curve still active) before reaching the refund arithmetic. No genuinely expired, non-graduated curve exists in the live set.",
+      "requiredSigner": "Consumer (subject) matching the stored permission; refund destination must match stored field (Pubkey::default() for 31 live consumed_permission accounts).",
+      "requiredFixtureType": "Live or historical bonding curve record (disc=2) with method=any, graduated=0, expiration_time < current slot (genuinely expired, not just past graduation window).",
+      "alternativeSource": "None (historical fixtures not cached; time-travel would manufacture state, which violates the defensive audit rules).",
+      "nextAction": "Find an expired, non-graduated curve from an indexer/archive source. Execute TokenRefund; measure quote-vault delta, base-vault delta (if any), refund destination binding (stored field vs attacker-substituted), mint binding, token-program pinning, protocol-vault delta, attacker delta. Record exact arithmetic (not just gate result).",
+      "evidenceReferences": ["evidence/WBF_final2.json", "evidence/WBG2_grad_refund.json", "recon/wb_curves.json", "recon/wb_consumed_permissions.json", "reports/runtime_WB1_auth.json"]
+    },
+    {
+      "id": "FIX-05",
+      "description": "Genuine provider-signed permission message + key (Wavebreak buy arithmetic)",
+      "program": "wavebreak",
+      "available": false,
+      "reasonUnavailable": "The single configured allowed signer (0359c54abfca..2b29) key is unavailable. No genuine signed message exists beyond replayed historical ones (recon/txs/). All 1,537 live curves require permission.",
+      "requiredSigner": "Allowed signer (0359c54abfca..2b29) — must sign a permission message that includes: subject (consumer), consumer, amount, mint, curve, quote vault, destination, expiry, and the correct secp256k1 signature.",
+      "requiredFixtureType": "A live or cached historical permission message (with valid secp256k1 signature) and the corresponding consumed-permission PDA pre-state. The message must match the live curve and vault state at replay time.",
+      "alternativeSource": "Partial: recon/txs/ contains cached raw transaction JSON with historical messages; the original slot pre-state is unavailable (fork moved on before replay). The replay must restore the exact token balances and consumed-permission PDA from the original transaction meta.",
+      "nextAction": "Replay the cached consume->buy pair verbatim at its exact pre-state (restore from recon/txs/). Then mutate one field at a time. Without a genuine signed fixture, the arithmetic path (payout/fee/rounding) remains INCOMPLETE.",
+      "evidenceReferences": ["evidence/WBC_perm_trade.json", "evidence/WBRP_permission.json", "recon/wb_permission_config.json", "recon/wb_consumed_permissions.json", "recon/txs/"]
+    },
+    {
+      "id": "FIX-06",
+      "description": "Market updater / authority fixture for Busybox lifecycle and penalty selection",
+      "program": "busybox",
+      "available": false,
+      "reasonUnavailable": "MarketInitialize is authority-gated (IncorrectAuthority for any non-authorization caller). The hardcoded initializer (CGYAxnDF1bYwmbzTtVx2pdo8xd3aviqE58WumVYRLYRH) is unavailable. No market-authority key is available for a self-owned market. No genuine deposit/withdraw/close fixture exists in recon/s4_bb_sigs.json.",
+      "requiredSigner": "Market authority (hardcoded initializer or per-market authority from the 12-authority set on 32 live markets) for Initialize/Update/Deposit/Withdraw/Close; market updater (BP8TxUroBDw97JWmc9bfg9bs8PoE6MA71SSihhBNUJR4 or 8 per-market updaters) for OracleUpdate.",
+      "requiredFixtureType": "A genuine market lifecycle from the market PDA's own transaction history (replayOf from recon/s4_bb_sigs.json) at exact pre-state, OR a controlled updater-signed OracleUpdate payload (for penalty arithmetic control).",
+      "alternativeSource": "Partial: recon/s4_bb_sigs.json contains transaction signatures for authority and updater events, but not a complete lifecycle (deposit -> swap -> withdraw -> close) with all intermediate states preserved.",
+      "nextAction": "For lifecycle: replay from recon/s4_bb_sigs.json; test substitution of accounts/recipients; measure conservation. For penalties: obtain updater key; test whether custom OracleUpdate payload suppresses or bypasses configured penalties. If neither fixture exists, document explicitly.",
+      "evidenceReferences": ["evidence/UBL_lifecycle.json", "evidence/BBA_auth_sweep.json", "recon/s4_bb_sigs.json", "recon/s4_bb_markets.json", "recon/s4_bb_markets_fresh.json", "recon/busybox_oracle_states.json"]
+    },
+    {
+      "id": "FIX-07",
+      "description": "Natural clock-crossing corroboration (Busybox validUntil gate — optional corroboration only)",
+      "program": "busybox",
+      "available": false,
+      "reasonUnavailable": "The sandbox recycled the fork before its clock crossed any untouched market's validUntil. The script (tests/bb_expiry_natural.py) is ready but requires a continuous fork session (~15 min of clock time) that the sandbox environment does not guarantee.",
+      "requiredSigner": "None (permissionless swap).",
+      "requiredFixtureType": "A funded market whose validUntil is ahead of the current slot but will be overtaken by the fork clock within a short time (e.g., 9PwXMVkFzW with validUntil ~35 slots ahead at scan time).",
+      "alternativeSource": "The single-field differential controls (BBS3-diff-*) already prove the gate; this corroboration is optional and would only confirm the result, not change it.",
+      "nextAction": "Optional only. If a stable long-running fork session becomes available, run tests/bb_expiry_natural.py. Document the result as corroboration, not as a new finding.",
+      "evidenceReferences": ["tests/bb_expiry_natural.py", "evidence/BBS3_expiry_diff.json", "BUSYBOX_DEEP_REVIEW.md"],
+      "notes": "This fixture gap does NOT change the decision. The gate is already decided by the differential control."
+    },
+    {
+      "id": "FIX-08",
+      "description": "Archival/indexer source for legacy AMM full custody and full authority history",
+      "program": "family",
+      "available": false,
+      "reasonUnavailable": "Public RPC (api.mainnet-beta and publicnode fallback) refuses getProgramAccounts on BPFLoaderUpgradeable (HTTP 403) and caps getSignaturesForAddress at 230 signatures. No indexer / GaaS endpoint is configured in the workspace.",
+      "requiredSigner": "None (read-only review).",
+      "requiredFixtureType": "Indexer / GaaS source that can enumerate all program-owned accounts for the legacy AMM (filtering by owner = program id or by ProgramData upgrade-authority bytes) and serve the full authority event history before slot 306,473,452.",
+      "alternativeSource": "Partial: recon/amm_custody.json (partial measurement); recon/s4_auth_walk_GwH3Hiv5.json (230 signatures served); recon/s4_program_upgrade_control.json (ProgramData verified). The indexer pass's full figures (~1.25 M accounts / 41.124 T lamports / 816 events) are available in the earlier pass records but not reproduced here.",
+      "nextAction": "Access an indexer source; verify full custody; verify full authority history; identify the governing multisig behind the off-curve root. Until completed, the family remains INCOMPLETE.",
+      "evidenceReferences": ["recon/amm_custody.json", "recon/s4_auth_walk_GwH3Hiv5.json", "recon/s4_program_upgrade_control.json", "recon/s4_squads_pda_search.json", "recon/squads_multisigs.json", "recon/squads_candidates.json"]
+    },
+    {
+      "id": "FIX-09",
+      "description": "Complete Whirlpool handler-level security review (live fixtures + CPI authorization tests)",
+      "program": "family",
+      "available": false,
+      "reasonUnavailable": "No complete handler-level test harness exists for Whirlpool in the workspace. The program ELF (10,485,715 B) is cached and hashed but not walked handler by handler (`WHIRLPOOL_HANDLER_REVIEW.md` is initial inventory only). The program-owned account set (indexer: 1,106,108 accounts / 156,285 pools) is unenumerated from public RPC (HTTP 403). No live fixtures with complete pool + position + escrow + fee/reward + vault binding are available.",
+      "requiredSigner": "Pool initialization authority (`whirlpool_init_authority`) and updater keys for fee/reward harvest — unavailable. User signatures for swap/position/open required for execution tests.",
+      "requiredFixtureType": "Live fixtures: a complete Whirlpool pool with active positions, fee/reward accounts, vault balances, and a valid tick array. Historical fixtures: complete pool initialization and position opening transactions at pre-state.",
+      "alternativeSource": "Partial: `recon/program_identities.json` (identity); `recon/s4_program_upgrade_control.json` (ProgramData); `WAVE_BREAK_DEEP_REVIEW.md` §1 (Whirlpool instructions referenced by Wavebreak CPI); `ORCA_COMPANION_TRIAGE.md` §1 (custody measurement; indexer figure unverified). The complete review must be performed separately using `tools/analyze_elf.py` / `sbf.py` and live fixtures.",
+      "nextAction": "Read `elf/whirlpool.bin` handler by handler; extract handler enum from rodata; map CPI targets (`SwapV2`, `InitializePoolWithAdaptiveFee`, `OpenPositionWithTokenExtensions`, `LockPosition`, etc.); verify account constraints, PDA seeds, authorization paths, recipient binding, arithmetic bounds; test permissionless substitution (fake pool PDA, fake position, redirected fee/reward recipients) on live fixtures. Until completed, `WHIRLPOOL_HANDLER_REVIEW.md` remains an initial inventory, not a complete security review.",
+      "evidenceReferences": ["WHIRLPOOL_HANDLER_REVIEW.md", "LEGACY_AMM_HANDLER_REVIEW.md", "ORCA_COMPANION_TRIAGE.md", "ORCA_DEPLOYER_FAMILY_FINAL_INVENTORY.md"],
+      "notes": "This is the largest single open item for the family. The family cannot be marked CLEAR until Whirlpool is fully reviewed."
+    },
+    {
+      "id": "FIX-10",
+      "description": "Complete Legacy AMM handler-level security review + full custody enumeration + full authority history",
+      "program": "family",
+      "available": false,
+      "reasonUnavailable": "No complete handler-level test harness exists for the Legacy AMM (`LEGACY_AMM_HANDLER_REVIEW.md` is initial inventory only). The program-owned account set (~1.25 M accounts / 41.124 T lamports, indexer figure unverified) is unenumerated from public RPC (HTTP 403). The full authority history before slot 306,473,452 is unserved (230-signature cap). The governing multisig behind the off-curve root (`GwH3Hiv5…`) is unidentified (834 Squads space-1318 accounts scanned; none match).",
+      "requiredSigner": "Market initialization authority (`23zF9Azp…` — plain key; no PDA derivation needed). Updater / fee-authority keys (unverified from available fixtures).",
+      "requiredFixtureType": "Live fixtures: complete Legacy AMM pool with active reserves, fee/reward accounts, and user ATAs. Historical fixtures: full pool initialization and swap transactions at exact pre-state for CPI authorization tests.",
+      "alternativeSource": "Partial: `recon/amm_custody.json` (partial custody); `recon/authority_events_summary.json` (71 signatures classified); `recon/s4_program_upgrade_control.json` (ProgramData verified); `evidence/BBA_auth_sweep.json` and related Busybox evidence (router CPI to Legacy AMM tested indirectly). Complete review must be performed separately using `tools/analyze_elf.py` / `sbf.py`, indexer/archive sources, and live fixtures.",
+      "nextAction": "Perform complete handler-level review (`LEGACY_AMM_HANDLER_REVIEW.md` upgrade to full security review); enumerate full custody (requires indexer/archive); verify full authority history (requires archival RPC); identify governing multisig behind off-curve root (`recon/s4_squads_pda_search.json` shows none of 834 accounts match; further scanning or direct Squads account parsing required). Until completed, the family remains INCOMPLETE.",
+      "evidenceReferences": ["LEGACY_AMM_HANDLER_REVIEW.md", "WHIRLPOOL_HANDLER_REVIEW.md", "recon/amm_custody.json", "recon/s4_auth_walk_GwH3Hiv5.json", "recon/s4_program_upgrade_control.json", "recon/s4_squads_pda_search.json", "recon/squads_multisigs.json"]
+    }
+  ],
+  "summary": {
+    "fixtureBlockedCount": 6,
+    "authorityBlockedCount": 3,
+    "fixtureAndAuthorityBlockedCount": 1,
+    "optionalOnlyCount": 1,
+    "keyMissingFixtures": [
+      "Live Manual curve with open window (FIX-01)",
+      "Complete graduation fixture with all 35 accounts intact (FIX-02)",
+      "Funded lp_escrow with position NFT (FIX-03)",
+      "Genuinely expired non-graduated curve (FIX-04)",
+      "Provider signer key + exact pre-state replay (FIX-05)",
+      "Market updater / authority key for lifecycle + penalty arithmetic (FIX-06)",
+      "Archival/indexer source for legacy custody + authority history (FIX-08)",
+      "Whirlpool complete handler review + live fixtures (FIX-09)",
+      "Legacy AMM complete handler review + full custody + full authority history + multisig identification (FIX-10)"
+    ],
+    "fixtureAvailableButNotUsed": [
+      "Live market state for 32 Busybox markets (used for swap sweep, BBS2-stale-sweep); not used for complete lifecycle (FIX-06 requires updater/authority fixture).",
+      "Historical transaction signatures in recon/s4_bb_sigs.json (used for reference; not replayed at exact pre-state for complete lifecycle).",
+      "Cached raw consume->buy pair in recon/txs/ (used for reference; not replayed at exact pre-state for arithmetic measurement — FIX-05)."
+    ]
+  }
+}

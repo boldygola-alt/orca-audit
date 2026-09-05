@@ -1,0 +1,41 @@
+{
+  "session": "WS7",
+  "date": "2026-09-05",
+  "action": "Produce initial handler inventories for Whirlpool and Legacy AMM; document INCOMPLETE status",
+  "whirlpoolReviewFile": "reports/WHIRLPOOL_HANDLER_REVIEW.md",
+  "legacyAMMReviewFile": "reports/LEGACY_AMM_HANDLER_REVIEW.md",
+  "statusForBoth": "INCOMPLETE",
+  "reasonIncomplete": "Both files are initial inventories derived from deployed ELF rodata, ProgramData verification (recon/program_identities.json, recon/s4_program_upgrade_control.json), existing CPI references (WAVE_BREAK_DEEP_REVIEW.md §1, BUSYBOX_DEEP_REVIEW.md §0), and recon custody measurements. They are NOT complete security reviews: every handler's exact account constraints, CPI authorization paths, arithmetic bounds, recipient binding, and substitution resistance remain unverified.",
+  "whirlpoolVerifiedFacts": [
+    "ProgramData verified (CtXfPzz36dH5Ws4UYKZvrQ1Xqzn42ecDW6y8NKuiN8nD, 10,485,760 B, 72,981,780,480 lamports — rent for ELF)",
+    "ELF sha256 verified (610b1e394973bd1b86de8afc983524bd21dea177e87bfae75ec289d4c350f9ae)",
+    "Upgrade authority verified (GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV — same shared root; off-curve PDA)",
+    "Not renounced (byte@12 = 0x01 present)",
+    "Whirlpool is CPI counterparty of Wavebreak GraduateWhirlpool and Busybox RouteV2 / SwapV2"
+  ],
+  "whirlpoolUnverifiedItems": [
+    "Every balance-moving handler's exact account constraints (PDA seeds, owner checks, writable flags, mint checks)",
+    "Every CPI target authorization path when called from Wavebreak or Busybox (substitution resistance for pool PDA, vault PDAs, position PDA, token badges, fee/reward recipients)",
+    "Whether any CPI target allows redirecting fee/reward recipients or substituting attacker-controlled accounts",
+    "Whether LockPosition creates an irreversible state that prevents attacker-controlled withdrawal or redirection",
+    "Swap arithmetic overflow / reserve-manipulation paths (stripped binary; arithmetic code not decompiled)",
+    "Full custody enumeration (indexer: 1,106,108 accounts / 156,285 pools; public RPC refused — HTTP 403)"
+  ],
+  "legacyAMMVerifiedFacts": [
+    "ProgramData verified (DrrJDyBzyuyYAzkkjd6Vu9ZzaDLsKRf4RPXyRE7Uk2A8, 691,149 B, 4,811,287,920 lamports — rent for ELF)",
+    "ELF sha256 verified (930a47e23fe7f8185557c1b5acabf658f97ca0f4c6cdd1f0d0510a897a9322e6)",
+    "Upgrade authority verified (23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG — separate plain on-curve key; 23.891577114 SOL)",
+    "Not renounced (byte@12 = 0x01 present; last upgrade slot 161,177,892)",
+    "Legacy AMM is CPI target of Busybox router (Swap2 / RouteV2)",
+    "Dormant control plane (zero authority activity in last 50 tx; 2,377 trades in 24 h) but active trade path",
+    "Per-account custody unenumerated (public RPC capped at 167 accounts / 1,296,458,888 lamports; indexer figure ~1.25 M accounts / 41.124 T lamports unverified)"
+  ],
+  "legacyAMMUnverifiedItems": [
+    "Every balance-moving handler's exact account constraints (PDA seeds, authorization paths, arithmetic bounds)",
+    "Every CPI authorization path when called from Busybox router (substitution resistance for pool PDA, user ATAs, fee/reward recipients)",
+    "Full custody enumeration (requires indexer / GaaS source; public RPC blocked — HTTP 403 on BPFLoaderUpgradeable)",
+    "Full authority event history before slot 306,473,452 (getSignaturesForAddress capped at 230 signatures; indexer figure unverified)",
+    "Governing multisig behind off-curve root GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV (scanned 834 Squads space-1318 accounts; none match; deriving program unidentified)"
+  ],
+  "notes": "These evidence files document that the initial inventories exist (WHIRLPOOL_HANDLER_REVIEW.md, LEGACY_AMM_HANDLER_REVIEW.md) but are explicitly marked INCOMPLETE. The family audit remains INCOMPLETE until these reviews are upgraded to complete security reviews with live fixture tests."
+}
